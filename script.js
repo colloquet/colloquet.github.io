@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	$.ajaxSetup({
+    	headers: { 'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' },
+	});
+
 	$('.mytaste').waypoint(function(direction) {
 	  $('#navtohome').toggleClass('currentpage');
 	  $('#navtotaste').toggleClass('currentpage');
@@ -59,11 +63,6 @@ function  validateForm(){
 	return true;
 }
 $(document).ready(function() {
-
-	$.ajaxSetup({
-    	headers: { 'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' },
-	});
-	
     $('.tohome').click(function(e) {
     	e.preventDefault(); 
         $('html, body').stop().animate({
@@ -119,9 +118,9 @@ $(document).ready(function() {
     });
 
 	 $('#happy-lyric').click(function() {
-			// $.get("http://lyrics.wikia.com/api.php?func=getSong&artist=Pharrell_Williams&song=Happy&fmt=realjson", function (data) {
-			// 	$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
-			// 	},"jsonp");
+			$.getJSON("http://lyrics.wikia.com/api.php?func=getSong&artist=Pharrell_Williams&song=Happy&fmt=realjson&callback=?", function (data) {
+				$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
+				},"jsonp");
 	 		$(".lyrics1").html("<iframe width='100%' height='315' src='https://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe>");
 			$(".lyrics").fadeIn();
 			$(".overlay").fadeIn();
@@ -129,23 +128,10 @@ $(document).ready(function() {
 		
 	});
 
-	
-
 	 $('#get-lucky-lyric').click(function() {
-			$.ajax({
-				url:"http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson&callback=?", 
-				contentType: 'application/json',
-				type: "GET",
-				dataType: "jsonp",
-				async: false,
-				beforeSend : function(xhr) {
-				    xhr.setRequestHeader("Authorization", "Foooo");
-				},
-				headers: { 'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' },
-				success: function (data) {
+			$.get("http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", function (data) {
 					$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
-				}
-			 });
+			 },"jsonp");
 			$(".lyrics").fadeIn();
 			$(".overlay").fadeIn();
 
