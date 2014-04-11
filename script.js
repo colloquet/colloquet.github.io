@@ -59,6 +59,11 @@ function  validateForm(){
 	return true;
 }
 $(document).ready(function() {
+
+	$.ajaxSetup({
+    	headers: { 'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' },
+	});
+	
     $('.tohome').click(function(e) {
     	e.preventDefault(); 
         $('html, body').stop().animate({
@@ -124,9 +129,7 @@ $(document).ready(function() {
 		
 	});
 
-	$.ajaxSetup({
-    	headers: { 'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' },
-	});
+	
 
 	 $('#get-lucky-lyric').click(function() {
 			$.ajax({
