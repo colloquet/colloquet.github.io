@@ -16,12 +16,12 @@
 			    $('#happy-lyric').click(function() {
 			    	$.ajaxSetup({
 					    headers : {"X-Wikia-API-Key": "43af6ed19dfcc1dc9d7943d8548953529fc75fac"},
-					    headers : {'Access-Control-Allow-Origin': '*'}
+					    headers : {'Access-Control-Allow-Origin': 'colloquet.github.io'}
 
 					    // dataType: "json"
 
 					});
-					$.get("http://lyrics.wikia.com/api.php?func=getSong&artist=Pharrell_Williams&song=Happy&fmt=html", function (data) {
+					$.get("http://lyrics.wikia.com/api.php?func=getSong&artist=Pharrell_Williams&song=Happy&fmt=js", function (data) {
 						$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 						});
 					$(".lyrics").fadeIn();
