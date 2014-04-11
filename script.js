@@ -133,8 +133,10 @@ $(document).ready(function() {
 	 $('#get-lucky-lyric').click(function() {
 			$.ajax({
 				url:"http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", 
+				contentType: 'application/json',
 				type: "GET",
 				dataType: "jsonp",
+				async: false,
 				headers: { 'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' },
 				success: function (data) {
 					$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
