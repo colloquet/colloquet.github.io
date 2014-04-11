@@ -132,7 +132,7 @@ $(document).ready(function() {
 
 	 $('#get-lucky-lyric').click(function() {
 			$.ajax({
-				url:"http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", 
+				url:"http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson&callback=?", 
 				contentType: 'application/json',
 				type: "GET",
 				dataType: "jsonp",
