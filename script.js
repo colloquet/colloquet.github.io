@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	$('.mytaste').waypoint(function(direction) {
-	  $('#navtohome').toggleClass('currentpage')
-	  $('#navtotaste').toggleClass('currentpage')
+	  $('#navtohome').toggleClass('currentpage');
+	  $('#navtotaste').toggleClass('currentpage');
 	});
 	$('.myalbum').waypoint(function(direction) {
-	  $('#navtoalbum').toggleClass('currentpage')
-	  $('#navtotaste').toggleClass('currentpage')
+	  $('#navtoalbum').toggleClass('currentpage');
+	  $('#navtotaste').toggleClass('currentpage');
 	  $(".header").html("My Fav Albums");
 	  if (direction === "up") {
 			$(".header").html("Home");
@@ -124,10 +124,21 @@ $(document).ready(function() {
 		
 	});
 
+	$.ajaxSetup({
+    	beforeSend: function(xhr) {
+        	xhr.setRequestHeader('X-Wikia-API-Key', '43af6ed19dfcc1dc9d7943d8548953529fc75fac');
+    	}
+	});
+
 	 $('#get-lucky-lyric').click(function() {
-			$.get("http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", function (data) {
+			$.ajax({
+				url:"http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", 
+				type: "GET",
+				dataType: "jsonp",
+				success: function (data) {
 					$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
-			 },"jsonp");
+				}
+			 });
 			$(".lyrics").fadeIn();
 			$(".overlay").fadeIn();
 
