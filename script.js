@@ -1,10 +1,4 @@
 $(document).ready(function() {
-	$.ajaxSetup({
-    	headers: { 
-    		'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' 
-    	},
-
-	});
 
 	$('.mytaste').waypoint(function(direction) {
 	  $('#navtohome').toggleClass('currentpage');
