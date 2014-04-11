@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="waypoints.min.js"></script>
 		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript">
+			httpChannel.setRequestHeader("X-Hello", "World", false);
 			$(document).ready(function() {
 				$.ajaxSetup({
 				    beforeSend: function(xhr) {
