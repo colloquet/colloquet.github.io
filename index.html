@@ -10,13 +10,14 @@
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="modernizr.custom.js"></script>
 		<script type="text/javascript" src="waypoints.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="script1.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$.ajaxSetup({
 			    	headers: { 
 			    		'X-Wikia-API-Key': '43af6ed19dfcc1dc9d7943d8548953529fc75fac' 
 			    	},
+			    });
 			    $('#happy-lyric').click(function() {
 					$.getJSON("http://lyrics.wikia.com/api.php?func=getSong&artist=Pharrell_Williams&song=Happy&fmt=realjson&callback=?", function (data) {
 						$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
