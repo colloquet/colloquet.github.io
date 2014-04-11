@@ -129,7 +129,7 @@ $(document).ready(function() {
 	});
 
 	 $('#get-lucky-lyric').click(function() {
-			$.get("http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", function (data) {
+			$.getJSON("http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Get_Lucky&fmt=realjson", function (data) {
 					$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 			 },"jsonp");
 			$(".lyrics").fadeIn();
