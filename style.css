@@ -73,7 +73,7 @@
   color: #fff; 
   text-shadow: 0 1px 1px rgba(0,0,0,.4); 
   font-size: 1.5em; 
-  /*width: 400px; */
+  width: 400px; 
   margin-top: -10px; 
   margin-left: 20px;
 }
@@ -124,10 +124,6 @@
   font-size: 12px;
   padding: 4px 7px 2px;
   vertical-align: top;
-}
-
-.m-sidebar {
-  display: none;
 }
 
 .footer {
@@ -435,10 +431,6 @@ hr {
   background: rgb(180, 180, 180);
 }
 
-#m-sidebar-btn {
-  display: none;
-}
-
 #m-sidebar {
   display: none;
 }
@@ -485,6 +477,6 @@ textarea {
   margin-left: auto;
 }
 
-.header {
-  display: none;
+table.m-navbar {
+	display: none;
 }

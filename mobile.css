@@ -38,10 +38,13 @@ body {
 }
 
 .index p {
+	padding-top: 20px;
 	font-size: 1em;
-	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin: 0px;
 	text-align: center;
+	width: auto;
 }
 
 p {
@@ -258,4 +261,8 @@ textarea {
 
 hr { 
   margin:30px 0; 
+}
+
+table.m-navbar {
+	display: block;
 }
