@@ -238,16 +238,12 @@ $(document).ready(function() {
 	 $('#young-lyric').click(function() {
 			$.get("http://lyrics.wikia.com/api.php?artist=Fun&song=We_Are_Young&fmt=realjson", function (data) {
 				$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/Sv6dMFF_yts' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
-				$(".lyrics").fadeIn();
-				$(".overlay").fadeIn();
 			 },"jsonp")
 				.fail(function() { 
 					$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/Sv6dMFF_yts' frameborder='0' allowfullscreen></iframe>");
-					$(".lyrics").fadeIn();
-				$(".overlay").fadeIn();
 				});;
-			// $(".lyrics").fadeIn();
-			// $(".overlay").fadeIn();
+			$(".lyrics").fadeIn();
+			$(".overlay").fadeIn();
 
 		
 	});
