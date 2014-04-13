@@ -369,7 +369,7 @@ label {
   margin-left: -300px;
   margin-top: -300px;
   border: solid 1px rgb(238, 238, 238);
-  overflow: scroll;
+  overflow: hidden;
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
