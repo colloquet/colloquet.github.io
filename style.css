@@ -298,7 +298,8 @@ label {
 .socialicon {
   position: relative;
   float: right;
-  margin-right: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
 }
 
 .button-style {
@@ -436,7 +437,7 @@ hr {
 }
 
 #musicnote {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .profilepic {
