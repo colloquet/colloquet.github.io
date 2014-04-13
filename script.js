@@ -119,7 +119,7 @@ $(document).ready(function() {
 				$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 				},"jsonp")
 				.fail(function() { 
-					$(".lyrics1").html("<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe>");
+					$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe>");
 				});;
 			$(".lyrics").fadeIn();
 			$(".overlay").fadeIn();
