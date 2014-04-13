@@ -3,7 +3,7 @@
 }
 
 .navbar {
-	height: 25px;
+	/*height: 25px;*/
 	z-index: 15000;
 }
 
@@ -119,6 +119,7 @@ h2 {
 
 .socialicon {
 	display: inline-block;
+
 }
 
 .lyric-btn {
