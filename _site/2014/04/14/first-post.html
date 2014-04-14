@@ -11,17 +11,42 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
+        <meta name="viewport" content="width=device-width" minimum-scale="1"/>
+        <link rel="stylesheet" type="text/css" href="/style.css"/>
+        <link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/jquery.js"></script>
+        <script type="text/javascript" src="/waypoints.min.js"></script>
+        <script type="text/javascript" src="/script.js"></script>
     </head>
     <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/blog.html">Colloque's Blog</a></h1>
-            <a class="extra" href="/">home</a>
+        <div class="navbar" style="height:20px;">
+          <div class="container clearfix" style="height:20px;">
+            <table class="m-navbar" width="100%">
+              <tr>
+                <td style="text-align:left;width:1%;white-space:nowrap;"><a id="m-sidebar-btn">&#9776;</a></td>
+                <td style="text-align:left;width:100%;font-size:1.3em;"><div class="header">About Me</div></td>
+                <td style="text-align:right;"><a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="/img/facebook.png" alt="Facebook"/></a></td>
+                <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a></td>
+              </tr>
+            </table>
+            <div class="navitem tohome" id="musicnote"><a href="#" style="font-size: 15px;">&#9835;</a></div>
+            <div class="navitem"><a href="/index.html">Home</a></div>
+            <div class="navitem"><a href="/index.html#mytaste">My Pick</a></div>
+            <div class="navitem"><a href="/index.html#myalbum">My Fav Albums</a></div>
+            <div class="navitem"><a href="/aboutme.html">About Me</a></div>
+            <div class="navitem"><a href="/blog.html" class="currentpage">Blog</a></div>
+            <div class="socialicon">
+              <a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a>
+            </div>
+            <div class="socialicon">
+              <a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="/img/facebook.png" alt="Facebook"/></a>
+            </div>
           </div>
+        </div>
+        <div class="site container clearfix">
+          <br/>
 
-          <h2>First post!!</h2>
+          <h2>First post!! <span class="muted" style="font-size:15px;float:right;letter-spacing: +0;padding-right:10px;"><a href="/blog.html">back</a></span></h2> 
 <p class="meta">14 Apr 2014</p>
 
 <div class="post">
