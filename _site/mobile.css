@@ -1,0 +1,267 @@
+.navitem {
+	display: none;
+}
+
+.navbar {
+	z-index: 15000;
+}
+
+.content {
+	display: block;
+	position: relative;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html {
+	width: 100vw;
+}
+
+body {
+	width: 100vw;
+	height: 100%;
+	overflow: scroll;
+}
+
+.index {
+	display: block;
+	height: 300px;
+	background-position:center; 
+	background-size: 150%;
+}
+
+.index h1 {
+	font-size: 3.5em;
+	text-align: center;
+}
+
+.index p {
+	padding-top: 20px;
+	font-size: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0px;
+	text-align: center;
+	width: auto;
+}
+
+p {
+	font-size: 1em !important;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 0px;
+}
+
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#m-sidebar {
+	font-size: 1.5em;
+	display: block;
+	position: fixed;
+	float: left;
+	background-color: #000;
+	height: 100%;
+	z-index: 13000;
+	left: -45%;
+	width: 45%;
+}
+
+#m-sidebar ul li {
+	list-style-type: none;
+	line-height: 60px;
+	margin-left: -30px;
+}
+
+#m-sidebar-btn {
+	margin-left: 10px;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.5em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    font-weight: bold;
+}
+
+.albumimg {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	vertical-align: middle;
+	border: 0;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,100);
+	margin-bottom: 40px;
+}
+
+.active {
+	display: block;
+}
+
+.socialicon {
+	display: none;
+
+}
+
+.lyric-btn {
+	display: block;
+}
+
+#album {
+	width: 100%;
+}
+
+.footer {
+	width: 100%;
+	display: block;
+}
+
+.mytaste {
+	display: none;
+}
+
+.myalbum {
+	background-color: rgb(238, 238, 238);
+	display: block;
+}
+
+.pull-right {
+	display: block;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pull-left {
+	display: block;
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.tohome {
+	display: none;
+}
+
+.totop {
+	display: block;
+}
+
+.profilepic {
+	display: block;
+	position: relative; 
+	float:none; 
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+}
+
+.contactme {
+	display: block;
+	position: relative; 
+	float:none; 
+	width: 95%; 
+	margin-left: 10px; 
+	margin-top: 10px;
+}
+
+#profilepic {
+	display: block;
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+label {
+	float: left;
+	width: 50px;
+}
+
+fieldset {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+form {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+textarea {
+	display: block;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.aboutme {
+	display: block;
+	background-color: rgb(238, 238, 238);
+}
+
+.pulldown {
+	margin-top: 10px;
+	display: none;
+}
+
+.pulldown h1 {
+	padding-right: 0px;
+	padding-left: 0px;
+	width: 80vw;
+}
+
+#facebook {
+	height: 25px;
+}
+
+#twitter {
+	height: 25px;
+}
+
+.header {
+	margin-left: 10px;
+	display: inline-block;
+	font-size: 1.3em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    font-weight: bold;
+    color: #fff;
+}
+
+.lyrics {
+	border: 0px;
+	border-radius: 0px;
+	padding: 0;
+ 	width: 100%;
+ 	margin-left: 0;
+ 	margin-top: -158px;
+ 	left: 0;
+}
+
+hr { 
+	margin:30px 0; 
+}
+
+table.m-navbar {
+	display: block;
+}
