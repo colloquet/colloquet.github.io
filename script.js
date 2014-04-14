@@ -54,6 +54,7 @@ $(document).ready(function() {
 			sidebar.animate({"left":"0px"}, 350).addClass('visible');
 		}
 		$(".overlay").fadeToggle();
+		$(".lyrics").fadeOut();
 	});
 	$('.tohome').click(function(e) {
 		e.preventDefault(); 
