@@ -16,11 +16,12 @@
         <link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
         <script type="text/javascript" src="/jquery.js"></script>
         <script type="text/javascript" src="/waypoints.min.js"></script>
-        <script type="text/javascript" src="/script.js"></script>
+        <script type="text/javascript" src="/script.min.js"></script>
     </head>
     <body>
-        <div class="navbar" style="height:20px;">
-          <div class="container clearfix" style="height:20px;">
+      <div class="overlay"></div>
+        <div class="navbar">
+          <div class="container clearfix">
             <table class="m-navbar" width="100%">
               <tr>
                 <td style="text-align:left;width:1%;white-space:nowrap;"><a id="m-sidebar-btn">&#9776;</a></td>
@@ -43,7 +44,15 @@
             </div>
           </div>
         </div>
+        <div id="m-sidebar">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/index.html#myalbum">My Albums</a></li>
+              <li><a href="/aboutme.html">About Me</a></li>
+            </ul>
+          </div>
         <div class="site container clearfix">
+
           <br/>
 
           {{ content }}
