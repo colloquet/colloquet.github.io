@@ -1,15 +1,15 @@
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 
 .clearfix:before, .clearfix:after {
-    display: table;
-    line-height: 0;
-    content: "";
+  display: table;
+  line-height: 0;
+  content: "";
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 .clearfix h1 {
@@ -486,4 +486,3 @@ textarea {
 table.m-navbar {
 	display: none;
 }
-
