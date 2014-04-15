@@ -144,32 +144,27 @@
   margin-right: auto;
 }
 
-@media (min-device-width: 768px) {
 
-  .index p {
-      width: 400px;
+@media (max-width: 768px) {
+
+  .mytaste {
+    width: 960px;
   }
 
-  @media (max-device-width: 768px) {
-
-    .mytaste {
-      width: 960px;
-    }
-
-    .myalbum {
-      width: 960px;
-    }
-
-    .index {
-      width: 960px;
-    }
-
-    .aboutme {
-      width: 960px;
-    }
-
+  .myalbum {
+    width: 960px;
   }
+
+  .index {
+    width: 960px;
+  }
+
+  .aboutme {
+    width: 960px;
+  }
+
 }
+
 
 .content {
   display: block;

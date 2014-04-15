@@ -34,7 +34,6 @@ function  validateForm(){
 	return true;
 }
 $(document).ready(function() {
-	$(".lyrics").fitVids();
 	$('.mytaste').waypoint(function(direction) {
 		$('#navtohome').toggleClass('currentpage');
 		$('#navtotaste').toggleClass('currentpage');

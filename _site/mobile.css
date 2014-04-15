@@ -29,6 +29,23 @@ body {
 	height: 300px;
 	background-position:center; 
 	background-size: 150%;
+	width: 100%;
+}
+
+.mytaste {
+  width: 100%;
+}
+
+.myalbum {
+  width: 100%;
+}
+
+.index {
+  width: 100%;
+}
+
+.aboutme {
+  width: 100%;
 }
 
 .index h1 {
