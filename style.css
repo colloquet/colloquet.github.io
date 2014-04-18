@@ -53,26 +53,27 @@
 
 .index {
   display: block;
-  height: 350px;
+  height: 300px;
   background-size: 100%;
   background-image: url("img/wallpaper.png");
-  background-color: #000;
+  background-color: rgb(40, 40, 40);
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
 }
 
 .index h1 {
-  text-shadow: 0 1px 1px rgba(0,0,0,.4); 
+  /*text-shadow: 0 1px 1px rgba(0,0,0,.4); */
   color: #fff; 
   font-weight: bold; 
-  font-size: 4em; 
+  font-size: 50px;
   margin-left: 10px;
 }
 
 .index p {
   color: #fff; 
-  text-shadow: 0 1px 1px rgba(0,0,0,.4); 
-  font-size: 1.5em; 
+  /*text-shadow: 0 1px 1px rgba(0,0,0,.4); */
+  font-size: 1.2em; 
   width: 400px; 
   margin-top: -10px; 
   margin-left: 10px;
@@ -191,7 +192,7 @@ body {
 }
 
 h1 { 
-  font-size: 50px;
+  font-size: 45px;
   font-weight: normal;
   letter-spacing: -1px;
   line-height: 50px;

@@ -8,9 +8,9 @@ function validateRequired(field,alerttxt){
 		return true;
 	}
 }
-function validateEmail(field,alerttxt){ 
-	var apos=field. value.indexOf("@"); 
-	var dotpos=field.value.lastIndexOf("."); 
+function validateEmail(field,alerttxt){
+	var apos=field. value.indexOf("@");
+	var dotpos=field.value.lastIndexOf(".");
 	if (apos<1||dotpos-apos<2){
 		// $("input#email").css("background-color", "red");
 		$("div#"+field.name+"error").css("display", "block");
@@ -19,7 +19,7 @@ function validateEmail(field,alerttxt){
 		$("div#"+field.name+"error").css("display", "none");
 		// $("input#email").css("background-color", "");
 		return true;
-	} 
+	}
 }
 function  validateForm(){
 	if (false==validateRequired(document.forms["contact"]["name"], "Name must be supplied")){
@@ -46,7 +46,7 @@ $(document).ready(function() {
 			$(".header").html("Home");
 		}
 	});
-	$("#m-sidebar-btn").click(function () {	 
+	$("#m-sidebar-btn").click(function () {
 		var sidebar = $('#m-sidebar');
 		if (sidebar.hasClass('visible')){
 			sidebar.animate({"left":"-50%"}, 350).removeClass('visible');
@@ -56,25 +56,25 @@ $(document).ready(function() {
 		$(".overlay").fadeToggle();
 	});
 	$('.tohome').click(function(e) {
-		e.preventDefault(); 
+		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: 0
 		});
 	});
 	$('#totaste').click(function(e) {
-		e.preventDefault(); 
+		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#mytaste").offset().top
 		});
 	});
 	$('#toalbum').click(function(e) {
-		e.preventDefault(); 
+		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#myalbum").offset().top
 		});
 	});
 	$('#sidebar-tohome').click(function(e) {
-		e.preventDefault(); 
+		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#top").offset().top
 		});
@@ -87,7 +87,7 @@ $(document).ready(function() {
 		$(".overlay").fadeOut();
 	});
 	$('#sidebar-toalbum').click(function(e) {
-		e.preventDefault(); 
+		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#myalbum").offset().top
 		});
@@ -100,7 +100,7 @@ $(document).ready(function() {
 		$(".overlay").fadeOut();
 	});
 	$('.header').click(function(e) {
-		e.preventDefault(); 
+		e.preventDefault();
 		$('html, body').stop().animate({
 		scrollTop: 0
 		});
@@ -109,7 +109,7 @@ $(document).ready(function() {
 		$.getJSON("http://lyrics.wikia.com/api.php?func=getSong&artist=Pharrell_Williams&song=Happy&fmt=realjson&callback=?", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		},"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/y6Sxv-sUYtM' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -120,7 +120,7 @@ $(document).ready(function() {
 		$.getJSON("http://lyrics.wikia.com/api.php?func=getSong&artist=Daft_Punk&song=Get_Lucky&fmt=realjson&callback=?", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/5NV6Rdv1a3I' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -130,7 +130,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Beyond&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/3T0NqvdUiWI' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/3T0NqvdUiWI' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -140,7 +140,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Daft_Punk&song=Within&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/cuj__JnGWLg' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/cuj__JnGWLg' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -150,7 +150,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Adele&song=Someone_like_you&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/hLQl3WQQoQ0' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/hLQl3WQQoQ0' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -160,7 +160,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Adele&song=Rolling_In_the_deep&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/rYEDA3JcQqw' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/rYEDA3JcQqw' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -170,7 +170,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Adele&song=Rumour_has_it&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/vXottBGAQp8' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/vXottBGAQp8' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -180,7 +180,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Ed_Sheeran&song=The_A_Team&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/UAWcs5H-qgQ' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/UAWcs5H-qgQ' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -190,17 +190,17 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Ed_Sheeran&song=Lego_House&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/c4BLVznuWnU' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/c4BLVznuWnU' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
 		$(".overlay").fadeIn();
 	});
-	$('#this-lyric').click(function() {
+		$('#this-lyric').click(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Ed_Sheeran&song=This&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/KqzlYTmFBGY' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/KqzlYTmFBGY' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -210,7 +210,7 @@ $(document).ready(function() {
 		$.get("http://lyrics.wikia.com/api.php?artist=Fun&song=We_Are_Young&fmt=realjson", function (data) {
 			$(".lyrics1").html("<strong>" + data.song + "<br/><span class='muted'>by " + data.artist + "</span></strong><br/><br/>" + "<iframe width='560' height='315' src='http://www.youtube.com/embed/Sv6dMFF_yts' frameborder='0' allowfullscreen></iframe><br/><br/><p>" + data.lyrics + "</p><br/><br/><a href='" + data.url + "'>" + data.url + "</a>");
 		 },"jsonp")
-			.fail(function() { 
+			.fail(function() {
 				$(".lyrics1").html("<iframe width='100%' height='315' src='http://www.youtube.com/embed/Sv6dMFF_yts' frameborder='0' allowfullscreen></iframe>");
 			});;
 		$(".lyrics").fadeIn();
@@ -224,6 +224,6 @@ $(document).ready(function() {
 		var sidebar = $('#m-sidebar');
 		if (sidebar.hasClass('visible')){
 			sidebar.animate({"left":"-50%"}, 350).removeClass('visible');
-		} 
+		}
 	});
-});  
+});
