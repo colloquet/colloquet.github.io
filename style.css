@@ -408,6 +408,8 @@ hr {
 .lyric-btn {
   padding-left: 5px;
   padding-right: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   background-color: #f9f9f9;
   color: gray;
   -webkit-border-radius: 2px;
@@ -422,6 +424,7 @@ hr {
   margin-right: 10px;
   font-size: 10px;
   vertical-align: top;
+
 }
 
 .lyric-btn:hover, .lyric-btn:focus {
