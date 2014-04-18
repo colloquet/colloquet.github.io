@@ -105,7 +105,11 @@ h2 {
 #m-sidebar ul li {
 	list-style-type: none;
 	line-height: 60px;
-	margin-left: -30px;
+	margin-left: -20px;
+}
+
+#m-sidebar ul {
+	-webkit-margin-before: 0em;
 }
 
 #m-sidebar-btn {
