@@ -13,19 +13,19 @@ $(document).ready(function() {
 			scrollTop: 0
 		});
 	});
-	$('#navtoport').click(function(e) {
+	$('.navtoport').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#portfolio").offset().top
 		});
 	});
-	$('#navtores').click(function(e) {
+	$('.navtores').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#resume").offset().top
 		});
 	});
-	$('#navtocon').click(function(e) {
+	$('.navtocon').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
 			scrollTop: $("#contact").offset().top
