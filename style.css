@@ -493,11 +493,4 @@ ul, li {
   height: 250px;
 }
 
-@media (max-width: 768px) {
-
-  .container {
-    width: 768px;
-  }
-
-}
 
