@@ -2,16 +2,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Music!</title>
+		<title>Colloque Tsui</title>
 		<meta name="viewport" content="width=device-width" minimum-scale="1"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="stylesheet" type="text/css" href="component.css"/>
+		<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.4.custom.css"/>
 		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="modernizr.custom.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>
 		<script type="text/javascript" src="waypoints.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<script>
+			$(function() {
+				$( "#accordion" ).accordion();
+				$( "#tabs" ).tabs();
+			});
+		</script>
 	</head>
 	<body>
 	<div id="fb-root"></div>
@@ -28,11 +35,10 @@
 						<td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="img/twitter.png" alt="Twitter"/></a></td>
 					</tr>
 				</table>
-				<div class="navitem tohome" id="musicnote"><a href="#" style="font-size: 15px;">&#9835;</a></div>
-				<div class="navitem tohome"><a id="navtohome" href="#" class="currentpage">Home</a></div>
-				<div class="navitem" id="totaste"><a id="navtotaste" href="#" >My Pick</a></div>
-				<div class="navitem" id="toalbum"><a id="navtoalbum" href="#" >My Fav Albums</a></div>
-				<div class="navitem"><a href="aboutme.html">About Me</a></div>
+				<div class="navitem tohome"><a id="navtohome" href="#" class="currentpage">Colloque Tsui</a></div>
+				<div class="navitem"><a id="navtoport" href="#">Portfolio</a></div>
+				<div class="navitem"><a id="navtores" href="#">Resume</a></div>
+				<div class="navitem"><a id="navtocon" href="#">Contact</a></div>
 				<div class="socialicon">
 					<a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="img/twitter.png" alt="Twitter"/></a>
 				</div>
@@ -49,181 +55,144 @@
 					<li><a href="aboutme.html">About Me</a></li>
 				</ul>
 			</div>
-			<div class="index">
-				<div class="container">
-					<br/><br/>
-					<h1>Welcome</h1>
-					<p>Welcome to my personal homepage, I will share my interest in music and some other fun stuff here, feel free to look around!</p>
-				</div>
-			</div>
-			<div class="mytaste" id="mytaste">
-				<div class="container">
-					<br/><br/>
-					<div style="text-align: center;"><h1>My taste in <span class="muted">Music&#9833;</span></h1></div>
-					<p>I like classical music and jazz music. I also like pop music. My favourite singer is <a href="http://en.wikipedia.org/wiki/Eason_Chan" title="Eason Chan's Wiki" target="top">Eason Chan</a> who is very popular in my home town - Hong Kong. Below are my top 5 favourite albums:</p>
+			<div class="aboutme clearfix" id="aboutme">
+				<div class="container clearfix">
+					<h1>About me</h1>
+					<img class="pull-right" alt="Colloque Tsui" src="img/profile.jpg" height="300" />
+					<p>I am a university student who is currently doing Master in IT at University of Aberdeen, Scotland. I got my Bachelor degree in Accounting and Finance at the same university in 2013. Before that, I finished my GCSE, AS-Level and A-Level exams at Methodist College Belfast, Northern Ireland. </p><p>I am very passionate about web design and during the course of my studies, <a href="http://homepages.abdn.ac.uk/c.tsui.09/">my website</a> was awarded the Overall Winner. As well as web desgining, I also enjoy playing video games, Street Fighter 4 is my favourite game of all time!</p>
 					<br/>
-					<br/>
-					<table id="taste">
-						<tr>
-							<td>
-								<ul class="grid cs-style-1">
-									<li>
-										<figure>
-											<img src="img/happy.jpg" alt="Happy" height="250" class="piccenter"/>
-											<figcaption>
-												<h3>Happy</h3>
-												<span>Pharell Williams</span>
-												<a href="#myalbum">View details »</a>
-											</figcaption>
-										</figure>
-									</li>
-								</ul>
-							</td>
-							<td>
-								<ul class="grid">
-									<li>
-										<img src="img/triangle.png" alt="triangle" height="250" class="piccenter" style="position: relative; z-index: 1;"/>
-									</li>
-								</ul>
-							</td>
-							<td>
-								<ul class="grid cs-style-4">
-									<li>
-										<figure>
-											<img src="img/ram.jpg" alt="RAM" height="250" class="piccenter"/>
-											<figcaption>
-												<h3>Random Access Memories</h3>
-												<span>Daft Punk</span>
-												<a href="#ram">View details »</a>
-											</figcaption>
-										</figure>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<ul class="grid">
-									<li>
-										<img src="img/square.png" alt="square" height="250" class="piccenter"/>
-									</li>
-								</ul>
-							</td>
-							<td>
-								<ul class="grid cs-style-7">
-									<li>
-										<figure>
-											<img src="img/21.jpg" alt="21" height="250" class="piccenter"/>
-											<figcaption>
-												<h3>21</h3>
-												<span>Adele</span><br/>
-												<a href="#A21">View details »</a>
-											</figcaption>
-										</figure>
-									</li>
-								</ul>
-							</td>
-							<td>
-								<ul class="grid">
-									<li>
-										<img src="img/circle.png" alt="circle" height="250" class="piccenter"/>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<ul class="grid cs-style-3">
-									<li>
-										<figure>
-											<img src="img/plus.jpg" alt="+" height="250" class="piccenter"/>
-											<figcaption>
-												<h3>+</h3>
-												<span>Ed Sheeran</span><br/>
-												<a href="#plus">View details »</a>
-											</figcaption>
-										</figure>
-									</li>
-								</ul>
-							</td>
-							<td>
-								<ul class="grid">
-									<li>
-										<img src="img/cross.png" alt="cross" height="250" class="piccenter"/>
-									</li>
-								</ul>
-							</td>
-							<td>
-								<ul class="grid cs-style-2">
-									<li>
-										<figure>
-											<img src="img/weareyoung.jpg" alt="We are young" height="250" class="piccenter"/>
-											<figcaption>
-												<h3>We Are Young</h3>
-												<span>Fun</span><br/>
-												<a href="#young">View details »</a>
-											</figcaption>
-										</figure>
-									</li>
-								</ul>
-							</td>
-						</tr>
-					</table>
 				</div>
 				<br/><br/>
 			</div>
-			<div class="myalbum" id="myalbum">
+			<div class="portfolio clearfix" id="portfolio">
 				<div class="container">
-					<br/><br/>
-					<h1>My Favourite <span class="muted">Music Albums &#9836;</span></h1>
-					<div class="clearfix">
-						<img class="pull-right albumimg" alt="Happy" src="img/happy.jpg"/>
-						<h2>Happy<span class="muted" style="font-size: 20px;"> by Pharrell Williams (2013)</span></h2>
-						<p>"Happy" is a song performed by American singer and producer Pharrell Williams, from the Despicable Me 2 soundtrack album. It also serves as the lead single from Williams' second studio album, G I R L (2014).</p>
-						<p>"Happy" - 3:53<button id="happy-lyric" class="lyric-btn">&#9658;</button></p>
+					<br/>
+					<h1>Portfolio</h1>
+					<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1">Music!</a></li>
+						<li><a href="#tabs-2">The Finance App</a></li>
+						<li><a href="#tabs-3">Premier League 2013/14</a></li>
+					</ul>
+					<div class="clearfix" id="tabs-1">
+						<h3>Music!</h3>
+						<div class="screen">
+							<img class="pull-left" alt="Screenshot" src="img/music.png" height="250" />
+						</div>
+						<div class="description">
+							<p>Music! is a website that describe my taste in music. It was awarded the Best Overall Website in my course. It is basically a showcase of various techniques that I learnt such as jQuery, php, and CSS.</p>
+							URL: <a href="http://homepages.abdn.ac.uk/c.tsui.09/">http://homepages.abdn.ac.uk/c.tsui.09/</a>
+						</div>
 					</div>
-					<hr id="ram" />
-					<div class="clearfix">
-						<img class="pull-left albumimg" alt="RAM" src="img/ram.jpg"/>
-						<h2>Random Access Memories<span class="muted" style="font-size: 20px;"> by Daft Punk (2013)</span></h2>
-						<p>Random Access Memories is the fourth studio album by French electronic music duo Daft Punk. It was released by the duo's imprint Daft Life, under exclusive license to Columbia Records, on 17 May 2013.</p>
-							<p>"Get Lucky" - 6:08<button id="get-lucky-lyric" class="lyric-btn">&#9658;</button></p>
-							<p>"Beyond" - 4:50<button id="beyond-lyric" class="lyric-btn">&#9658;</button></p>
-							<p>"Within" - 3:48<button id="within-lyric" class="lyric-btn">&#9658;</button></p>
+					<div class="clearfix" id="tabs-2">
+						<h3>The Finance App</h3>
+						<div class="screen">
+							<img class="pull-left" alt="Screenshot" src="img/financeapp.png" height="250" />
+						</div>
+						<div class="description">
+							<p>The Finance App was one of the group assignment we have done. It is basically a database of the S&amp;P 500 companies. We have implemented Google Maps API and some use of Javascript. Turns out we got full mark for it. The app is written in Ruby on Rails.</p>
+							URL: <a href="http://finance-company.herokuapp.com">http://finance-company.herokuapp.com</a>
+						</div>
 					</div>
-					<hr id="A21" />
-					<div class="clearfix">
-						<img class="pull-right albumimg" alt="21" src="img/21.jpg"/>
-						<h2>21<span class="muted" style="font-size: 20px;"> by Adele (2011)</span></h2>
-						<p>21 is the second studio album by English recording artist Adele. Released on 24 January 2011 in most of Europe, and on 22 February 2011 in North America, it was named after the age of the singer during its production.</p>
-							<p>"Someone Like You" - 4:47<button id="someone-lyric" class="lyric-btn">&#9658;</button></p>
-							<p>"Rolling in the Deep" - 3:49<button id="rolling-lyric" class="lyric-btn">&#9658;</button></p>
-							<p>"Rumour Has It" - 3:43<button id="rumour-lyric" class="lyric-btn">&#9658;</button></p>
+					<div class="clearfix" id="tabs-3">
+						<h3>Premier League 2013/14</h3>
+						<div class="screen">
+							<img class="pull-left" alt="Screenshot" src="img/premier.png" height="250" />
+						</div>
+						<div class="description">
+							<p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
+							URL: <a href="https://footballdev.herokuapp.com">https://footballdev.herokuapp.com</a>
+						</div>
 					</div>
-					<hr id="plus" />
-					<div class="clearfix">
-						<img class="pull-left albumimg" alt="&#9658;" src="img/plus.jpg"/>
-						<h2>+<span class="muted" style="font-size: 20px;"> by Ed Sheeran (2011)</span></h2>
-						<p>B+ is the debut studio album by English singer-songwriter Ed Sheeran, released on 9 September 2011 by Asylum Records and Atlantic Records. The album marks Sheeran's commercial breakthrough, having previously released five EPs independently.</p>
-							<p>"The A Team" - 4:19<button id="ateam-lyric" class="lyric-btn">&#9658;</button></p>
-							<p>"Lego House" - 3:05<button id="lego-lyric" class="lyric-btn">&#9658;</button></p>
-							<p>"This" - 3:16<button id="this-lyric" class="lyric-btn">&#9658;</button></p>
 					</div>
-					<hr id="young" />
-					<div class="clearfix">
-						<img class="pull-right albumimg" alt="We Are Young" src="img/weareyoung.jpg"/>
-						<h2>We Are Young <span class="muted" style="font-size: 20px;"> by Fun (2011)</span></h2>
-						<p>"We Are Young" is a song recorded by American band Fun featuring Janelle Monáe, for their second studio album Some Nights (2012). It was released on September 20, 2011 as the lead single from Some Nights. Musically, "We Are Young" is an anthem that incorporates the genres of indie pop, alternative rock, and power pop.</p>
-							<p>"We Are Young" - 4:10<button id="young-lyric" class="lyric-btn">&#9658;</button></p>
-					</div>
-					<hr/>
-					<div class="lyrics"><div id="lyrics1" class="lyrics1"></div></div>
 				</div>
-				<br/>
+				<br/><br/>
+			</div>
+			<div class="resume clearfix" id="resume">
+				<div class="container">
+					<br/>
+					<h1>Resume</h1>
+					<p>You can also download in pdf format from <a href="Colloque_Tsui_Resume.pdf">here</a>.</p>
+					<div id="accordion">
+						<h3>Education</h3>
+						<div class="clearfix">
+							<table>
+								<tr>
+									<td width="150" valign="top">2013-2014</td>
+									<td valign="top"><strong>MSc Information and Technology, University of Aberdeen</strong><p>The course is designed for individuals who are not coming from an IT background. Vast amount of materials are covered during the course enable us to become more familiar to programming and software design in just one year time.</p></td>
+								</tr>
+								<tr>
+									<td width="150" valign="top">2009-2013</td>
+									<td valign="top"><strong>MA (Hons) Accounting and Finance, University of Aberdeen<br/>(Second Upper Honour obtained)</strong><p>The course mainly focused on Accounting and Finance. I also did Management, Economic Statistic and Business law as complements to the course.</p></td>
+								</tr>
+							</table>
+						</div>
+						<h3>Work experience</h3>
+						<div class="clearfix">
+							<table>
+								<tr>
+									<td width="150" valign="top">Jan 2013-Present</td>
+									<td valign="top"><strong>The Manchurian Chinese Restaurant, Aberdeen, Scotland</strong><p>I am working as a part time waiter in this popular and busy Chinese restaurant. I have learnt to be a team player in order to work efficiently and provide the best service to our customers. I have acquired communication skills from different challenges I faced during working. It has also prepared me to work under pressure and balance myself between work study and life.</p></td>
+								</tr>
+								<tr>
+									<td width="150" valign="top">Summer 2012</td>
+									<td valign="top"><strong>Hong Kong Post Office, Hong Kong</strong><p>During the summer, 2012, I worked as a "Worker" at Asia Airfreight Terminal. I was responsible for sorting letters and moving them to places. </p></td>
+								</tr>
+							</table>
+						</div>
+						<h3>Skills</h3>
+						<div class="clearfix">
+							<table>
+								<tr>
+									<td width="150" valign="top"><strong>Team work and Communications</strong></td>
+									<td valign="top">I have developed my team work skill through my university life as well well as summer jobs. Being the treasurer of the Japanese society, I have improved my team work skill. When we organise events, we have to work as a team as it is more effective and efficient. The committee members and I have to meet up and discuss about it. I am responsible for managing the society’s money. If any member of the society wants to use the money on behalf of the society, we will have to discuss about it and see if it is appropriate. In addition to that, we work as a team and we share ideas and suggestions. We then discuss the viability given the resources available to us. Then the president will assign jobs to each of us and we inform each other when we get the job done.</td>
+								</tr>
+								<tr>
+									<td width="150" valign="top"><strong>Computing</strong></td>
+									<td valign="top">As I am doing MScIT, I am confident to say I possess knowledge about IT that is above average. I am familiar with Microsoft Office as I have used it frequently for my school works. Further more, I have learnt Object Oriented Languages such as PHP and Ruby on Rails. Last but not least, I love web design using HTML, CSS and JS.</td>
+								</tr>
+								<tr>
+									<td width="150" valign="top"><strong>Organisation</strong></td>
+									<td valign="top">I am a highly organised person, demonstrated through my position in the Japanese Society. As mentioned, I was responsible for the finance of the society. Hence if the account is unbalanced or if I have lost the receipts, I have to fix it using my own money. As a result, I have to be very organised in order to maintain the account. Further more, working in a busy restaurant helped develop these skills further to ensure I worked efficiently and competently under pressure.</td>
+								</tr>
+							</table>
+						</div>
+						<h3>Interests</h3>
+						<div class="clearfix">
+							<table>
+								<tr>
+									<td width="150" valign="top"><strong>Travel</strong></td>
+									<td valign="top">I enjoy travelling as I learn something new every time. I have been to a lot of places and the most remarkable countries for me thus far are Russia and India. I love to explore and experience other cultures. For example, I have been to Delhi for a Punjabi Wedding and it was such a magnificent and amazing experience. I treasure every chance by attentively planning out my trip with my friends. </td>
+								</tr>
+								<tr>
+									<td width="150" valign="top"><strong>Sports</strong></td>
+									<td valign="top">Football is one of my favourite sports, I often play football with my friends and my position is striker. As a striker, I often have to collaborate with midfielders. This developed the teamwork and communication skills among our teammates.</td>
+								</tr>
+							</table>
+						</div>
+						<h3>Referees</h3>
+						<div class="clearfix">
+							Available upon request.
+						</div>
+					</div>
+					
+				</div>
+				<br/><br/>
+			</div>
+			<div class="contact clearfix" id="contact">
+				<div class="container">
+					<h1>Contact</h1>
+					<label>Email : </label><a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top">colloquet@gmail.com</a><br/>
+					<label>UK Number : </label>+447796624200<br/>
+					<label>UK Address : </label>5 Picktillum Ave, Aberdeen, Scotland, AB25 3AZ<br/>
+					<label>Linkedin Profile : </label><a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832">https://www.linkedin.com/pub/colloque-tsui/39/855/832</a>
+
+				</div>
 			</div>
 		</div>
-		<br/>
 		<div class="footer">
+			<br/>
+			<hr/>
 			<table width="100%">
 				<tr>
 					<td width="33%" align="left" valign="bottom" style="font-size: 16px;">
@@ -244,7 +213,7 @@
 						</div>
 					</td>
 					<td width="33%" align="center" style="font-size: 16px;">
-						Created by <a href="aboutme.html">Colloque Tsui</a>
+						Created by Colloque Tsui
 					</td>
 					<td width="33%" align="right" style="font-size: 16px;">
 						<div><a href="#" class="tohome">Back to top</a></div>

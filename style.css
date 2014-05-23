@@ -12,18 +12,13 @@
   clear: both;
 }
 
-.clearfix h1 {
-  margin-left: 10px;
-  margin-right: -10px;
-}
-
 .navbar {
   position: fixed;
   top: 0px;
   margin: 0 auto;
   font-weight: normal;
   font-size: 15px;
-  background-color: #0B5FA5;
+  background-color: rgb(60, 60, 60);
   padding: 10px;
   padding-left: 0px;
   color: #b3b9bf;
@@ -51,50 +46,39 @@
   margin-right: 20px;
 }
 
-.index {
-  display: block;
-  height: 300px;
-  background-size: 100%;
-  background-image: url("img/wallpaper.jpg");
-  background-color: rgb(40, 40, 40);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-}
-
-.index h1 {
-  /*text-shadow: 0 1px 1px rgba(0,0,0,.4); */
-  color: #fff; 
-  font-weight: bold; 
-  font-size: 50px;
-  margin-left: 10px;
-}
-
-.index p {
-  color: #fff; 
-  /*text-shadow: 0 1px 1px rgba(0,0,0,.4); */
-  font-size: 1.2em; 
-  width: 400px; 
-  margin-top: -10px; 
-  margin-left: 10px;
-}
-
-.mytaste {
-  display: block;
-  background-color: rgb(238, 238, 238);
-}
-
-.myalbum {
-  /*overflow: hidden;*/
-  display: block;
-}
-
 .aboutme {
+  position: relative;
   display: block;
-  background-color: rgb(238, 238, 238);
+  background-color: #f1f1f1;
   margin-left: auto;
   margin-right: auto;
 }
+
+.portfolio {
+  position: relative;
+  display: block;
+  background-color: #f7f7f7;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume {
+  position: relative;
+  display: block;
+  background-color: #fcfcfc;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2em;
+}
+
+
 
 
 #album {
@@ -157,27 +141,6 @@
 }
 
 
-@media (max-width: 768px) {
-
-  .mytaste {
-    width: 960px;
-  }
-
-  .myalbum {
-    width: 960px;
-  }
-
-  .index {
-    width: 960px;
-  }
-
-  .aboutme {
-    width: 960px;
-  }
-
-}
-
-
 .content {
   display: block;
   position: relative;
@@ -187,7 +150,7 @@
 }
 
 html { 
-  background: #f9f9f9;
+  background: #fff;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -236,8 +199,6 @@ h2 {
 }
 
 p, li, blockquote, label{
-  margin-left: 10px;
-  margin-right: 10px;
   font-weight: 200;
   color: rgb(90, 90, 90);
   text-rendering: optimizelegibility;
@@ -257,7 +218,7 @@ a {
 }
 
 a:hover { 
-  color: #005580;
+  /*color: #005580;*/
   text-decoration: underline;
 }
 
@@ -268,7 +229,11 @@ abbr, acronym {
 }
 
 table, td, tr {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+td {
+  padding: 10px;
 }
 
 br {
@@ -350,13 +315,13 @@ label {
 
 .pull-right {
   float: right;
-  margin-left: 60px;
+  margin-left: 80px;
   margin-right: 10px;
 }
 
 .pull-left {
   float: left;
-  margin-right: 60px;
+  margin-right: 20px;
   margin-left: 10px;
 }
 
@@ -403,7 +368,7 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0; 
   padding: 0; 
-  margin:60px 0; 
+  margin:30px 0; 
 }
 
 .overlay {
@@ -555,4 +520,21 @@ table.m-navbar {
   vertical-align: middle;
   border: 0;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+}
+
+ul, li {
+  padding-left: 10px;
+  list-style: none;
+}
+
+.screen {
+  display: inline-block;
+  float: left;
+  width: 450px;
+}
+
+.description {
+  display: inline-block;
+  float: right;
+  width: 400px;
 }
