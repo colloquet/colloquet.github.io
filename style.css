@@ -106,25 +106,28 @@
   color: #333;
   margin-left: auto;
   margin-right: auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.10);
 }
 #album td, #album th {
   border-top-color: white;
-  border-bottom: 1px solid #DFDFDF;
   color: #555;
 }
 #album th {
   text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
   font-weight: normal;
   padding: 7px 7px 8px;
-  text-align: left;
+  text-align: center;
   line-height: 1.3em;
   font-size: 14px;
   font-weight: bold;
 }
 #album td {
-  font-size: 12px;
+  text-align: center;
+  font-size: 14px;
   padding: 4px 7px 2px;
-  vertical-align: top;
+  vertical-align: middle;
+  border-top: 1px solid #DFDFDF;
 }
 
 .footer {
@@ -136,6 +139,14 @@
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
+}
+
+.footer p {
+  margin: 0px;
+}
+
+.m-footer {
+  display: none;
 }
 
 .container {
@@ -183,12 +194,15 @@ html {
 }
 
 body { 
-  font-weight: normal;
+  /*font-weight: normal;*/
   font: normal 1em/1.71em;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 200;
+  color: rgb(90, 90, 90);
+  text-rendering: optimizelegibility;
 }
 
 h1 { 
@@ -208,9 +222,11 @@ h2 {
   line-height: 50px;
   color: rgb(90, 90, 90);
   text-rendering: optimizelegibility; 
+  outline: none;
+
 }
 
-strong {
+.contactme strong {
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 0px;
@@ -225,6 +241,7 @@ p, li, blockquote, label{
   font-weight: 200;
   color: rgb(90, 90, 90);
   text-rendering: optimizelegibility;
+
 }
 
 span {
@@ -236,6 +253,7 @@ span {
 a { 
   color: #0088cc;
   text-decoration:none;
+  outline: none;
 }
 
 a:hover { 
@@ -296,7 +314,7 @@ label {
   float: right;
   margin-right: 0px;
   margin-left: 10px;
-  /*height: 20px;*/
+  height: 20px;
 }
 
 .button-style {
@@ -361,7 +379,7 @@ label {
   left: 50%;
   background-color: #fff;
   border-radius: 5px;
-  height: auto;
+  height: 315px;
   width: 600px;
   margin-left: -300px;
   margin-top: -300px;
@@ -485,4 +503,56 @@ textarea {
 
 table.m-navbar {
 	display: none;
+}
+
+#taste li {
+  float: left;
+  list-style-type: none;
+  font-size: 12px;
+}
+
+#taste {
+  padding-left: 0px;
+}
+
+.postimg {
+    width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-top: 20px; 
+}
+
+.post {
+  display: inline-block;
+  position: relative; 
+  float:left; 
+  width: 600px; 
+  margin-right: -40px;
+}
+
+.postme {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postme hr {
+  margin: 0;
+}
+
+.music-chart {
+  background-color: rgb(238, 238, 238);
+}
+
+.music-chart table {
+  width: 100%;
+}
+
+.chart-cover {
+  width: 150px;
+  height: 150px;
+  vertical-align: middle;
+  border: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
 }
