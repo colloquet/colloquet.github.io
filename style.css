@@ -169,7 +169,7 @@ body {
 }
 
 h1 { 
-  font-size: 45px;
+  font-size: 40px;
   font-weight: normal;
   letter-spacing: -1px;
   line-height: 50px;
@@ -537,4 +537,8 @@ ul, li {
   display: inline-block;
   float: right;
   width: 400px;
+}
+
+.width {
+  width: 150px;
 }
