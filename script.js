@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	$('.portfolio').waypoint(function(direction) {
-		$('#navtohome').toggleClass('currentpage');
-		$('#navtoport').toggleClass('currentpage');
+		$('.navtohome').toggleClass('currentpage');
+		$('.navtoport').toggleClass('currentpage');
 	});
 	$('.resume').waypoint(function(direction) {
-		$('#navtoport').toggleClass('currentpage');
-		$('#navtores').toggleClass('currentpage');
+		$('.navtoport').toggleClass('currentpage');
+		$('.navtores').toggleClass('currentpage');
 	});
 	$('.tohome').click(function(e) {
 		e.preventDefault();
