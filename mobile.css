@@ -130,6 +130,7 @@ label {
     font-weight: bold;
     color: #fff;
     width: 100%;
+    margin-left: 0px;
 }
 
 
@@ -160,4 +161,58 @@ hr {
 
 #accordion {
 	display: none;
+}
+
+#m-sidebar-btn svg {
+	width: 18px; 
+	height: 16px;
+	margin-left: 10px;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter:alpha(opacity=60);
+  -moz-opacity:0.6;
+  -webkit-opacity:0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
+  z-index: 12000;
+  cursor: pointer;
+}
+
+#m-sidebar {
+	/*margin-top: -10px;*/
+	font-size: 1.5em;
+	display: block;
+	position: fixed;
+	float: left;
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.8) , rgba(0,0,0,0));
+	height: 100%;
+	z-index: 13000;
+	left: -50%;
+	width: 50%;
+	max-width: 50%;
+	overflow: hidden;
+}
+
+#m-sidebar ul li {
+	list-style-type: none;
+	line-height: 60px;
+	margin-left: 20px;
+}
+
+#m-sidebar ul {
+	-webkit-margin-before: 0em;
+	/*padding-left: 20px;*/
+	padding-right: 10px;
+}
+
+#m-sidebar a {
+	color: #fff;
 }

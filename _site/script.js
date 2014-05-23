@@ -37,4 +37,23 @@ $(document).ready(function() {
 		scrollTop: 0
 		});
 	});
+	$("#m-sidebar-btn").click(function() {
+		var sidebar = $('#m-sidebar');
+		if (sidebar.hasClass('visible')){
+			sidebar.animate({"left":"-50%"}, 350).removeClass('visible');
+		} else {
+			sidebar.animate({"left":"0px"}, 350).addClass('visible');
+		}
+		$(".overlay").fadeToggle();
+	});
+
+	$(".overlay").click(function() {
+		var sidebar = $('#m-sidebar');
+		if (sidebar.hasClass('visible')){
+			sidebar.animate({"left":"-50%"}, 350).removeClass('visible');
+		} else {
+			sidebar.animate({"left":"0px"}, 350).addClass('visible');
+		}
+		$(".overlay").fadeToggle();
+	});
 });

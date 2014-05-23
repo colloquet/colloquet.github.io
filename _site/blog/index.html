@@ -11,6 +11,10 @@
 	<link rel="stylesheet" type="text/css" href="/jquery-ui-1.10.4.custom.css"/>
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
     <link rel="canonical" href="http://colloque.me/blog/">
+    <script type="text/javascript" src="/jquery.js"></script>
+		<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
+		<script type="text/javascript" src="/waypoints.min.js"></script>
+		<script type="text/javascript" src="/script.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -39,15 +43,30 @@
 
 
     <body>
+    <div class="overlay"></div>
+    
     <div id="fb-root"></div>
     <div id="top" style="top: 0px; position: absolute;"></div>
     <div class="navbar">
       <div class="container clearfix">
         <table class="m-navbar" width="100%">
           <tr>
+            <td style="text-align:left;width:15%;white-space:nowrap;">
+              <a id="m-sidebar-btn">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+                      <path fill="#fff" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+                        h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                      <path fill="#fff" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+                        h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                      <path fill="#fff" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+                        c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                    </svg>
+              </a>
+            </td>
             <td style="text-align:left;width:100%;font-size:1.3em;"><div class="header1">Colloque Tsui</div></td>
-            <td style="text-align:right;"><a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="img/facebook.png" alt="Facebook"/></a></td>
-            <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="img/twitter.png" alt="Twitter"/></a></td>
+            <td style="text-align:right;"><a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="/img/facebook.png" alt="Facebook"/></a></td>
+            <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a></td>
           </tr>
         </table>
         <div class="navitem tohome"><a id="navtohome" href="/">Colloque Tsui</a></div>
@@ -65,6 +84,14 @@
     </div>
 
     <div class="page-content">
+    <div id="m-sidebar">
+      <ul>
+        <li><a href="/#portfolio">Portfolio</a></li>
+        <li><a href="/#resume">Resume</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
       <div class="wrap">
       <div class="home">
 
@@ -109,7 +136,7 @@
       <hr/>
       Created by <a href="aboutme.html">Colloque Tsui</a>
     </div>
-
+    <br/><br/><br/><br/>
 </footer>
 
 
