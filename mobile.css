@@ -195,10 +195,11 @@ hr {
 	background: #dadada;
 	height: 100%;
 	z-index: 13000;
-	left: -50%;
-	width: 50%;
-	max-width: 50%;
+	/*left: -50%;*/
+	width: 100%;
+	/*max-width: 50%;*/
 	overflow: hidden;
+	margin-top: 51px;
 }
 
 #m-sidebar ul li {

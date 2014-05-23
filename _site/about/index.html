@@ -8,10 +8,12 @@
     <meta name="description" content="Colloque Tsui's blog">
     <link rel="stylesheet" type="text/css" href="/style.css"/>
 	<link rel="stylesheet" type="text/css" href="/jquery-ui-1.10.4.custom.css"/>
+	<link rel="stylesheet" href="/jquery.mobile-1.4.2.css">
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
     <link rel="canonical" href="http://colloque.me/about/">
     <script type="text/javascript" src="/jquery.js"></script>
 		<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="/waypoints.min.js"></script>
 		<script type="text/javascript" src="/script.js"></script>
 
@@ -34,7 +36,7 @@
 			  || navigator.userAgent.match(/iPhone/i)
 			  || navigator.userAgent.match(/iPod/i)
 			  || navigator.userAgent.match(/BlackBerry/i)
-			  || navigator.userAgent.match(/Windows Phone/i)) {
+			  || navigator.userAgent.match(/Windows Phone/i) || width < 480 ) {
 			    document.write('<meta name="viewport" content="width=device-width", minimum-scale="1"/>');
 			}
 		</script>
@@ -42,16 +44,29 @@
 
 
     <body>
-    <div class="overlay"></div>
     
+    <div data-role="page" id="page2">
+    <div class="overlay"></div>
+    <div data-role="panel" id="defaultpanel" data-theme="b">
+    <div class="panel-content">
+    <div id="m-sidebar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>
+        <li><a href="/#resume">Resume</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+    </div>
+    </div>
     <div id="fb-root"></div>
     <div id="top" style="top: 0px; position: absolute;"></div>
     <div class="navbar">
-      <div class="container clearfix">
+      <div class="container clearfix"  data-role="header">
         <table class="m-navbar" width="100%">
           <tr>
             <td style="text-align:left;width:15%;white-space:nowrap;">
-              <a id="m-sidebar-btn">
+              <a id="m-sidebar-btn" href="#defaultpanel">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                        viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
                       <path fill="#fff" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
@@ -68,7 +83,7 @@
             <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a></td>
           </tr>
         </table>
-        <div class="navitem tohome"><a href="/">Colloque Tsui</a></div>
+        <div class="navitem"><a href="/">Colloque Tsui</a></div>
         <div class="navitem"><a href="/#portfolio">Portfolio</a></div>
         <div class="navitem"><a href="/#resume">Resume</a></div>
         <div class="navitem"><a href="/#contact">Contact</a></div>
@@ -81,16 +96,10 @@
         </div>
       </div>
     </div>
-
+    <div role="main" class="ui-content">
     <div class="page-content">
-    <div id="m-sidebar">
-      <ul>
-        <li><a href="/#portfolio">Portfolio</a></li>
-        <li><a href="/#resume">Resume</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-    </div>
+    
+    
       <div class="wrap">
       <div class="post">
 
@@ -134,11 +143,13 @@
     </div>
     <div class="m-footer">
       <hr/>
-      Created by <a href="aboutme.html">Colloque Tsui</a>
+      Created by Colloque Tsui
     </div>
     <br/><br/><br/><br/>
 </footer>
 
 
+    </div>
+    </div>
     </body>
 </html>
