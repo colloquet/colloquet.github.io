@@ -1,0 +1,10 @@
+# Site settings
+title: Colloque Tsui
+email: colloquet@gmail.com
+description: "Colloque Tsui's blog"
+baseurl: ""
+url: "http://colloque.me"
+
+# Build settings
+markdown: kramdown
+permalink: pretty

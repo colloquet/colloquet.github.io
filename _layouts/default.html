@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+    <div id="fb-root"></div>
+    <div id="top" style="top: 0px; position: absolute;"></div>
+    <div class="navbar">
+      <div class="container clearfix">
+        <table class="m-navbar" width="100%">
+          <tr>
+            <td style="text-align:left;width:100%;font-size:1.3em;"><div class="header1">Colloque Tsui</div></td>
+            <td style="text-align:right;"><a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="img/facebook.png" alt="Facebook"/></a></td>
+            <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="img/twitter.png" alt="Twitter"/></a></td>
+          </tr>
+        </table>
+        <div class="navitem tohome"><a id="navtohome" href="/">Colloque Tsui</a></div>
+        <div class="navitem"><a id="navtoport" href="/#portfolio">Portfolio</a></div>
+        <div class="navitem"><a id="navtores" href="/#resume">Resume</a></div>
+        <div class="navitem"><a id="navtocon" href="/#contact">Contact</a></div>
+        <div class="navitem"><a href="/blog/" class="currentpage">Blog</a></div>
+        <div class="socialicon">
+          <a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a>
+        </div>
+        <div class="socialicon">
+          <a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="/img/facebook.png" alt="Facebook"/></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="wrap">
+      {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    </body>
+</html>
