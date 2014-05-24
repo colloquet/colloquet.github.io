@@ -219,3 +219,13 @@ hr {
 #m-sidebar a {
 	color: rgb(90,90,90);
 }
+
+.aboutme h1 {
+  display: none;
+}
+
+.profilepic {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
