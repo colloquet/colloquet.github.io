@@ -26,6 +26,6 @@ However, this causes a slight problem, when I view my site on iPad, the backgrou
 </script>
 {% endhighlight %}
 
-By having that code, that meta tag will only apply to listed devices and its now working perfectly on my iPad! Magic!
+By having that code in place, the meta tag will only apply to listed devices and its now working perfectly on my iPad! Magic!
 
 [stackoverflow]: http://stackoverflow.com/questions/18134386/meta-viewport-only-for-phones
