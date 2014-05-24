@@ -163,6 +163,10 @@ hr {
 	display: none;
 }
 
+#tabs {
+	display: none;
+}
+
 #m-sidebar-btn svg {
 	width: 18px; 
 	height: 16px;
@@ -232,4 +236,12 @@ hr {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
   margin-top: 0px;
   margin-bottom: 20px;
+}
+
+#m-res {
+	display: block;
+}
+
+#m-port {
+	display: block;
 }

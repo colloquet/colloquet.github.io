@@ -451,4 +451,10 @@ ul, li {
   height: 250px;
 }
 
+#m-res {
+  display: none;
+}
 
+#m-port {
+  display: none;
+}
