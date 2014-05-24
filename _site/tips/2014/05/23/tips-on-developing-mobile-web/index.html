@@ -12,7 +12,13 @@
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
     <link rel="canonical" href="http://colloque.me/tips/2014/05/23/tips-on-developing-mobile-web/">
     <script type="text/javascript" src="/jquery.js"></script>
+    <script type="text/javascript">
+			$(document).bind("mobileinit", function () {
+			    $.mobile.ajaxEnabled = false;
+			});
+		</script>
 		<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
+
 		<script src="/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="/waypoints.min.js"></script>
 		<script type="text/javascript" src="/script.js"></script>
