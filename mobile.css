@@ -224,6 +224,10 @@ hr {
   display: none;
 }
 
+.content h1 {
+	text-align: center;
+}
+
 .profilepic {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
   margin-top: 0px;
