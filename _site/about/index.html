@@ -20,6 +20,25 @@
 		<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
 
 		<script src="/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			    $.mobile.panel.prototype._positionPanel = function() {
+			        var self = this,
+			            panelInnerHeight = self._panelInner.outerHeight(),
+			            expand = panelInnerHeight > $.mobile.getScreenHeight();
+
+			        if ( expand || !self.options.positionFixed ) {
+			            if ( expand ) {
+			                self._unfixPanel();
+			                $.mobile.resetActivePageHeight( panelInnerHeight );
+			            }
+			          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
+			        } else {
+			            self._fixPanel();
+			        }
+			    };
+			});
+		</script>
 		<script type="text/javascript" src="/waypoints.min.js"></script>
 		<script type="text/javascript" src="/script.js"></script>
 
@@ -46,6 +65,7 @@
 			    document.write('<meta name="viewport" content="width=device-width", minimum-scale="1"/>');
 			}
 		</script>
+		
 </head>
 
 
@@ -89,7 +109,7 @@
             <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a></td>
           </tr>
         </table>
-        <div class="navitem"><a href="/">Colloque Tsui</a></div>
+        <div class="navitem"><a href="/" >About me</a></div>
         <div class="navitem"><a href="/#portfolio">Portfolio</a></div>
         <div class="navitem"><a href="/#resume">Resume</a></div>
         <div class="navitem"><a href="/#contact">Contact</a></div>

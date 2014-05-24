@@ -17,6 +17,25 @@
 		<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
 
 		<script src="/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			    $.mobile.panel.prototype._positionPanel = function() {
+			        var self = this,
+			            panelInnerHeight = self._panelInner.outerHeight(),
+			            expand = panelInnerHeight > $.mobile.getScreenHeight();
+
+			        if ( expand || !self.options.positionFixed ) {
+			            if ( expand ) {
+			                self._unfixPanel();
+			                $.mobile.resetActivePageHeight( panelInnerHeight );
+			            }
+			          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
+			        } else {
+			            self._fixPanel();
+			        }
+			    };
+			});
+		</script>
 		<script type="text/javascript" src="/waypoints.min.js"></script>
 		<script type="text/javascript" src="/script.js"></script>
 
@@ -43,4 +62,5 @@
 			    document.write('<meta name="viewport" content="width=device-width", minimum-scale="1"/>');
 			}
 		</script>
+		
 </head>
