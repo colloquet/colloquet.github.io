@@ -3644,7 +3644,7 @@ fieldset.ui-controlgroup {
 .ui-listview > .ui-li-divider {
 	padding: .5em 1.143em;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: bold;
 	cursor: default;
 	outline: 0; /* Dividers in custom selectmenus have tabindex */
 }
@@ -4297,7 +4297,7 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 	line-height: normal;
 }
 .ui-table th {
-	font-weight: 500;
+	font-weight: bold;
 }
 .ui-table caption {
 	text-align: left;
@@ -4398,7 +4398,7 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 .ui-table-reflow td .ui-table-cell-label,
 .ui-table-reflow th .ui-table-cell-label { 
 	display: none;
-	font-weight: 500;
+	font-weight: bold;
 }
 /* Mobile first styles: Begin with the stacked presentation at narrow widths */ 
 @media only all {
@@ -4699,8 +4699,4 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
-}
-
-strong {
-	font-weight: 500;
 }
