@@ -7,6 +7,33 @@
     <atom:link href="http://colloque.me/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>How to build responsive web page</title>
+        <description>&lt;p&gt;The key to developing a mobile friendly web page is to make your web page responsive. It will adapt to your screen size and display contents accordingly. There are several ways to do that:&lt;/p&gt;
+
+&lt;h4 id=&quot;simply-add-this-line-to-your-head-section&quot;&gt;Simply add this line to your &amp;lt;head&amp;gt; section:&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;media=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mobile.css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will enable “mobile.css” for devices with width less than 480px.&lt;/p&gt;
+
+&lt;h4 id=&quot;or-simply-add-this-to-your-main-css-file&quot;&gt;Or simply add this to your main css file:&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;480px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;Your&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;properties&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;Example&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Anything within the @media query will be applied if device width is less than 480px! &lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 May 2014 10:42:00 +0100</pubDate>
+        <link>http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/</link>
+        <guid isPermaLink="true">http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/</guid>
+      </item>
+    
+      <item>
         <title>Tips on developing mobile web</title>
         <description>&lt;p&gt;When I started developing websites for mobile, the first problem I faced was the scaling problem. When you browse the web using your smart phone, the websites tends to be zoomed out by default. To disable such feature, I simply added this meta tag in the &amp;lt;head&amp;gt; section.&lt;/p&gt;
 
