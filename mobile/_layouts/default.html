@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+    <body>
+
+    <!-- Start of first page: #one -->
+    <div data-role="page" id="aboutme">
+
+      <div data-role="panel" id="mypanel" data-display="push" data-theme="b" data-position-fixed="true">
+        <ul data-role="listview">
+          <li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-delete" data-rel="close" data-icon="bars">Close panel</a></li>
+            <li><a href="#aboutme">About me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+          <!-- panel content goes here -->
+      </div><!-- /panel -->
+
+      <div data-role="header">
+        <h1>Colloque Tsui</h1>
+          <a href="#mypanel" data-icon="bars" class="ui-btn-left">Menu</a>
+      </div><!-- /header -->
+
+      <div data-role="content" >  
+        
+        <div class="page-content">
+          <div class="wrap">
+          {{ content }}
+          </div>
+        </div>
+        
+      </div><!-- /content -->
+
+      <div data-role="footer" data-theme="a">
+        <h4>Created by Colloque Tsui</h4>
+      </div><!-- /footer -->
+
+    </div><!-- /page one -->
+
+    </body>
+</html>

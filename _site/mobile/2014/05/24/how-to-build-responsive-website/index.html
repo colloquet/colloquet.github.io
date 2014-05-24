@@ -4,13 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Colloque Tsui</title>
+    <title>How to build responsive web page</title>
     <meta name="description" content="Colloque Tsui's blog">
     <link rel="stylesheet" type="text/css" href="/style.css"/>
 	<link rel="stylesheet" type="text/css" href="/jquery-ui-1.10.4.custom.css"/>
 	<link rel="stylesheet" href="/jquery.mobile-1.4.2.css">
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
-    <link rel="canonical" href="http://colloque.me/blog/">
+    <link rel="canonical" href="http://colloque.me/mobile/2014/05/24/how-to-build-responsive-website/">
     <script type="text/javascript" src="/jquery.js"></script>
     <script type="text/javascript">
 			$(document).bind("mobileinit", function () {
@@ -123,40 +123,55 @@
     
     
       <div class="wrap">
-      <div class="home">
+      <div class="post">
 
-  <h1>Posts</h1>
+  <header class="post-header">
+    <h1>How to build responsive web page</h1>
+    <p class="meta">May 24, 2014</p>
+  </header>
 
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">May 24, 2014</span>
-        <a class="post-link" href="/mobile/2014/05/24/how-to-build-responsive-website/">How to build responsive web page</a><br/>
-        <a href="http://colloque.me/mobile/2014/05/24/how-to-build-responsive-website/#disqus_thread"></a>
-      </li>
-    
-      <li>
-        <span class="post-date">May 24, 2014</span>
-        <a class="post-link" href="/tips/2014/05/24/how-to-build-responsive-website/">How to build responsive web page</a><br/>
-        <a href="http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/#disqus_thread"></a>
-      </li>
-    
-      <li>
-        <span class="post-date">May 23, 2014</span>
-        <a class="post-link" href="/mobile/2014/05/23/tips-on-developing-mobile-web/">Tips on developing mobile web</a><br/>
-        <a href="http://colloque.me/mobile/2014/05/23/tips-on-developing-mobile-web/#disqus_thread"></a>
-      </li>
-    
-      <li>
-        <span class="post-date">May 23, 2014</span>
-        <a class="post-link" href="/tips/2014/05/23/tips-on-developing-mobile-web/">Tips on developing mobile web</a><br/>
-        <a href="http://colloque.me/tips/2014/05/23/tips-on-developing-mobile-web/#disqus_thread"></a>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+  <p>The key to developing a mobile friendly web page is to make your web page responsive. It will adapt to your screen size and display contents accordingly. There are several ways to do that:</p>
+
+<h4 id="simply-add-this-line-to-your-head-section">Simply add this line to your &lt;head&gt; section:</h4>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">media=</span><span class="s">&quot;handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)&quot;</span> <span class="na">href=</span><span class="s">&quot;mobile.css&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+<p>This will enable “mobile.css” for devices with width less than 480px.</p>
+
+<h4 id="or-simply-add-this-to-your-main-css-file">Or simply add this to your main css file:</h4>
+
+<div class="highlight"><pre><code class="css"><span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span>
+	<span class="o">//</span><span class="nt">Your</span> <span class="nt">CSS</span> <span class="nt">properties</span>
+	<span class="o">//</span><span class="nt">Example</span>
+	<span class="nt">body</span> <span class="p">{</span>
+		<span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Anything within the @media query will be applied if device width is less than 480px! </p>
+
+  </article>
+
+  <p><a href="/blog/">Back</a></p>
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'colloque'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+     
 
 </div>
-
       </div>
     </div>
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Colloque Tsui</title> 
+	<link rel="stylesheet" href="jquery.mobile.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" /> -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+		    $("[data-role=panel]").panel().enhanceWithin();
+		});
+
+		$(document).on("pagecreate", function () {
+		    $("[data-role=panel]").one("panelbeforeopen", function () {
+		        var height = $.mobile.pageContainer.pagecontainer("getActivePage").outerHeight();
+		        $(".ui-panel-wrapper").css("height", height + 1);
+		    });
+		});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+		    $.mobile.panel.prototype._positionPanel = function() {
+		        var self = this,
+		            panelInnerHeight = self._panelInner.outerHeight(),
+		            expand = panelInnerHeight > $.mobile.getScreenHeight();
+
+		        if ( expand || !self.options.positionFixed ) {
+		            if ( expand ) {
+		                self._unfixPanel();
+		                $.mobile.resetActivePageHeight( panelInnerHeight );
+		            }
+		          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
+		        } else {
+		            self._fixPanel();
+		        }
+		    };
+		});
+	</script>
+	<style type="text/css">
+		.img-wrapper {
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head> 
+
+
+    <body>
+
+    <!-- Start of first page: #one -->
+    <div data-role="page" id="aboutme">
+
+      <div data-role="panel" id="mypanel" data-display="push" data-theme="b" data-position-fixed="true">
+        <ul data-role="listview">
+          <li><a href="#" class="ui-btn ui-btn-icon-right ui-icon-delete" data-rel="close" data-icon="bars">Close panel</a></li>
+            <li><a href="#aboutme">About me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+          <!-- panel content goes here -->
+      </div><!-- /panel -->
+
+      <div data-role="header">
+        <h1>Colloque Tsui</h1>
+          <a href="#mypanel" data-icon="bars" class="ui-btn-left">Menu</a>
+      </div><!-- /header -->
+
+      <div data-role="content" >  
+        
+        <div class="page-content">
+          <div class="wrap">
+          <div class="post">
+
+  <header class="post-header">
+    <h1>How to build responsive web page</h1>
+    <p class="meta">May 24, 2014</p>
+  </header>
+
+  <article class="post-content">
+  <p>The key to developing a mobile friendly web page is to make your web page responsive. It will adapt to your screen size and display contents accordingly. There are several ways to do that:</p>
+
+<h4 id="simply-add-this-line-to-your-head-section">Simply add this line to your &lt;head&gt; section:</h4>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">media=</span><span class="s">&quot;handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)&quot;</span> <span class="na">href=</span><span class="s">&quot;mobile.css&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+<p>This will enable “mobile.css” for devices with width less than 480px.</p>
+
+<h4 id="or-simply-add-this-to-your-main-css-file">Or simply add this to your main css file:</h4>
+
+<div class="highlight"><pre><code class="css"><span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span>
+	<span class="o">//</span><span class="nt">Your</span> <span class="nt">CSS</span> <span class="nt">properties</span>
+	<span class="o">//</span><span class="nt">Example</span>
+	<span class="nt">body</span> <span class="p">{</span>
+		<span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Anything within the @media query will be applied if device width is less than 480px! </p>
+
+  </article>
+
+</div>
+          </div>
+        </div>
+        
+      </div><!-- /content -->
+
+      <div data-role="footer" data-theme="a">
+        <h4>Created by Colloque Tsui</h4>
+      </div><!-- /footer -->
+
+    </div><!-- /page one -->
+
+    </body>
+</html>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Colloque Tsui</title>
-    <description>Colloque Tsui&#39;s blog</description>
-    <link>http://colloque.me/</link>
-    <atom:link href="http://colloque.me/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Your awesome title</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>How to build responsive web page</title>
@@ -29,8 +29,8 @@
 &lt;p&gt;Anything within the @media query will be applied if device width is less than 480px! &lt;/p&gt;
 </description>
         <pubDate>Sat, 24 May 2014 10:42:00 +0100</pubDate>
-        <link>http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/</link>
-        <guid isPermaLink="true">http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/</guid>
+        <link>http://yourdomain.com/tips/2014/05/24/how-to-build-responsive-website/</link>
+        <guid isPermaLink="true">http://yourdomain.com/tips/2014/05/24/how-to-build-responsive-website/</guid>
       </item>
     
       <item>
@@ -56,8 +56,8 @@
 
 </description>
         <pubDate>Fri, 23 May 2014 20:18:04 +0100</pubDate>
-        <link>http://colloque.me/tips/2014/05/23/tips-on-developing-mobile-web/</link>
-        <guid isPermaLink="true">http://colloque.me/tips/2014/05/23/tips-on-developing-mobile-web/</guid>
+        <link>http://yourdomain.com/tips/2014/05/23/tips-on-developing-mobile-web/</link>
+        <guid isPermaLink="true">http://yourdomain.com/tips/2014/05/23/tips-on-developing-mobile-web/</guid>
       </item>
     
   </channel>

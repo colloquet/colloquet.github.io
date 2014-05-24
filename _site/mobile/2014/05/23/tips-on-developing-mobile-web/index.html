@@ -4,13 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Colloque Tsui</title>
+    <title>Tips on developing mobile web</title>
     <meta name="description" content="Colloque Tsui's blog">
     <link rel="stylesheet" type="text/css" href="/style.css"/>
 	<link rel="stylesheet" type="text/css" href="/jquery-ui-1.10.4.custom.css"/>
 	<link rel="stylesheet" href="/jquery.mobile-1.4.2.css">
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
-    <link rel="canonical" href="http://colloque.me/blog/">
+    <link rel="canonical" href="http://colloque.me/mobile/2014/05/23/tips-on-developing-mobile-web/">
     <script type="text/javascript" src="/jquery.js"></script>
     <script type="text/javascript">
 			$(document).bind("mobileinit", function () {
@@ -123,40 +123,55 @@
     
     
       <div class="wrap">
-      <div class="home">
+      <div class="post">
 
-  <h1>Posts</h1>
+  <header class="post-header">
+    <h1>Tips on developing mobile web</h1>
+    <p class="meta">May 23, 2014</p>
+  </header>
 
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">May 24, 2014</span>
-        <a class="post-link" href="/mobile/2014/05/24/how-to-build-responsive-website/">How to build responsive web page</a><br/>
-        <a href="http://colloque.me/mobile/2014/05/24/how-to-build-responsive-website/#disqus_thread"></a>
-      </li>
-    
-      <li>
-        <span class="post-date">May 24, 2014</span>
-        <a class="post-link" href="/tips/2014/05/24/how-to-build-responsive-website/">How to build responsive web page</a><br/>
-        <a href="http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/#disqus_thread"></a>
-      </li>
-    
-      <li>
-        <span class="post-date">May 23, 2014</span>
-        <a class="post-link" href="/mobile/2014/05/23/tips-on-developing-mobile-web/">Tips on developing mobile web</a><br/>
-        <a href="http://colloque.me/mobile/2014/05/23/tips-on-developing-mobile-web/#disqus_thread"></a>
-      </li>
-    
-      <li>
-        <span class="post-date">May 23, 2014</span>
-        <a class="post-link" href="/tips/2014/05/23/tips-on-developing-mobile-web/">Tips on developing mobile web</a><br/>
-        <a href="http://colloque.me/tips/2014/05/23/tips-on-developing-mobile-web/#disqus_thread"></a>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+  <p>When I started developing websites for mobile, the first problem I faced was the scaling problem. When you browse the web using your smart phone, the websites tends to be zoomed out by default. To disable such feature, I simply added this meta tag in the &lt;head&gt; section.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width&quot;</span> <span class="na">minimum-scale=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span></code></pre></div>
+
+<p>However, this causes a slight problem, when I view my site on iPad, the background colour were not filling the whole background. Turns out that was due to my div container’s width being 940px but my device’s width is only 768px. Therefore, the background colour have only filled 768px but my contents are 940px wide. The 172px difference is left blank. To encounter that, I did a bit of research and found the solution on <a href="http://stackoverflow.com/questions/18134386/meta-viewport-only-for-phones">StackOverflow</a>. I added this piece of code to my &lt;head&gt;.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/Android/i</span><span class="p">)</span>
+	<span class="o">||</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/webOS/i</span><span class="p">)</span>
+	<span class="o">||</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/iPhone/i</span><span class="p">)</span>
+	<span class="o">||</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/iPod/i</span><span class="p">)</span>
+	<span class="o">||</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/BlackBerry/i</span><span class="p">)</span>
+	<span class="o">||</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/Windows Phone/i</span><span class="p">))</span> <span class="p">{</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; minimum-scale=&quot;1&quot;/&gt;&#39;</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<p>By having that code in place, the meta tag will only apply to listed devices and its now working perfectly on my iPad! Magic!</p>
+
+
+  </article>
+
+  <p><a href="/blog/">Back</a></p>
+  
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'colloque'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+     
 
 </div>
-
       </div>
     </div>
 

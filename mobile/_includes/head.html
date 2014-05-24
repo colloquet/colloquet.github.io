@@ -1,0 +1,47 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Colloque Tsui</title> 
+	<link rel="stylesheet" href="jquery.mobile.css">
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" /> -->
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+		    $("[data-role=panel]").panel().enhanceWithin();
+		});
+
+		$(document).on("pagecreate", function () {
+		    $("[data-role=panel]").one("panelbeforeopen", function () {
+		        var height = $.mobile.pageContainer.pagecontainer("getActivePage").outerHeight();
+		        $(".ui-panel-wrapper").css("height", height + 1);
+		    });
+		});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+		    $.mobile.panel.prototype._positionPanel = function() {
+		        var self = this,
+		            panelInnerHeight = self._panelInner.outerHeight(),
+		            expand = panelInnerHeight > $.mobile.getScreenHeight();
+
+		        if ( expand || !self.options.positionFixed ) {
+		            if ( expand ) {
+		                self._unfixPanel();
+		                $.mobile.resetActivePageHeight( panelInnerHeight );
+		            }
+		          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
+		        } else {
+		            self._fixPanel();
+		        }
+		    };
+		});
+	</script>
+	<style type="text/css">
+		.img-wrapper {
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head> 
