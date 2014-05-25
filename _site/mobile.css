@@ -245,3 +245,11 @@ hr {
 #m-port {
 	display: block;
 }
+
+#d-contact {
+	display: none;
+}
+
+#m-con {
+	display: block;
+}
