@@ -49,7 +49,7 @@
 &lt;h4 id=&quot;example-1&quot;&gt;Example&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;http://img2.wikia.nocookie.net/__cb20100218161535/streetfighter/images/0/03/Dudley3sportrait.gif&quot; alt=&quot;test&quot; class=&quot;img-centre&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This may be a better option as you can reuse the class on every image you want to centre instead of adding a div wrapper around each image.&lt;/p&gt;
+&lt;p&gt;This may be a better option as you can reuse the same class on every image you want to centre instead of adding a div wrapper around each image.&lt;/p&gt;
 </description>
         <pubDate>Mon, 26 May 2014 00:49:00 +0100</pubDate>
         <link>http://colloque.me/tips/2014/05/26/how-to-centre-an-image/</link>

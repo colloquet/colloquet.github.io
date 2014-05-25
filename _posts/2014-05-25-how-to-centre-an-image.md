@@ -54,4 +54,4 @@ Then in your CSS file:
 #### Example
 <img src="http://img2.wikia.nocookie.net/__cb20100218161535/streetfighter/images/0/03/Dudley3sportrait.gif" alt="test" class="img-centre"/>
 
-This may be a better option as you can reuse the class on every image you want to centre instead of adding a div wrapper around each image.
+This may be a better option as you can reuse the same class on every image you want to centre instead of adding a div wrapper around each image.
