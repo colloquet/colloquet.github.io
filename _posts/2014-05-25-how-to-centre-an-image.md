@@ -5,7 +5,7 @@ date:   2014-05-25 23:49:00
 categories: tips
 ---
 
-How to centre an image may be the most commonly asked question for newbies like me. It is actually very simple, you can either use a div wrapper or simply add a class to the img tag itself.
+How to centre an image may be the most commonly asked question from newbies like me. It is actually very simple, you can either use a div wrapper or simply add a class to the img tag itself.
 
 #### Using the div wrapper and CSS
 Simply add a div around the img tag:
