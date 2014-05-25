@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to generate generic menu icon"
+title:  "How to generate generic menu icon for web page"
 date:   2014-05-25 10:38:00
 categories: tips
 ---
