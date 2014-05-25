@@ -8,7 +8,7 @@ categories: tips
 A slide menu or drawer is very common amongst mobilised websites, the most commonly used one must be the 3 parallel bars. I know 3 different ways to generate one:
 
 #### Using HTML entity
-Turns out there is a handy litre HTML entity for that!
+Turns out there is a handy little HTML entity for that!
 
 {% highlight HTML %}
 &#9776;
