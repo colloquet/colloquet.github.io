@@ -12,6 +12,7 @@
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 	<script type="text/javascript">
 		$(function () {
+			$( "[data-role='footer']" ).toolbar({ theme: "a", position: "fixed" });
 		    $("[data-role=panel]").panel().enhanceWithin();
 		});
 
@@ -20,6 +21,7 @@
 		        var height = $.mobile.pageContainer.pagecontainer("getActivePage").outerHeight();
 		        $(".ui-panel-wrapper").css("height", height + 1);
 		    });
+		    
 		});
 	</script>
 	<script type="text/javascript">
@@ -55,12 +57,14 @@
 
 
 
+
+
 <!-- Start of first page: #one -->
 <div data-role="page" id="aboutme">
 
-	<div data-role="header" data-position="fixed">
+	<div data-role="header">
 		<h1>Colloque Tsui</h1>
-	    <a href="#mypanel" data-icon="bars" class="ui-btn-left">Menu</a>
+	    <a href="#mypanel" data-icon="bars" class="ui-btn-left" data-iconpos="notext">Menu</a>
 	    <div data-role="navbar" data-grid="c">
 			<ul>
 				<li><a href="#aboutme">About me</a></li>
@@ -80,10 +84,6 @@
 		
 	</div><!-- /content -->
 
-	<div data-role="footer" data-theme="a" data-position="fixed">
-		<h4>Created by Colloque Tsui</h4>
-	</div><!-- /footer -->
-
 </div><!-- /page one -->
 
 
@@ -92,7 +92,7 @@
 
 	<div data-role="header" data-position="fixed">
 		<h1>Portfolio</h1>
-		<a href="#mypanel" data-icon="bars" class="ui-btn-left">Menu</a>
+		<a href="#mypanel" data-icon="bars" class="ui-btn-left" data-iconpos="notext">Menu</a>
 		<div data-role="navbar" data-grid="c">
 			<ul>
 				<li><a href="#aboutme">About me</a></li>
@@ -131,10 +131,6 @@
 		    </div>
 		</div>
 	</div><!-- /content -->
-
-	<div data-role="footer" data-theme="a" data-position="fixed">
-		<h4>Created by Colloque Tsui</h4>
-	</div><!-- /footer -->
 	
 </div><!-- /page two -->
 
@@ -144,7 +140,7 @@
 
 	<div data-role="header" data-position="fixed">
 		<h1>Resume</h1>
-		<a href="#mypanel" data-icon="bars" class="ui-btn-left">Menu</a>
+		<a href="#mypanel" data-icon="bars" class="ui-btn-left" data-iconpos="notext">Menu</a>
 		<div data-role="navbar" data-grid="c">
 			<ul>
 				<li><a href="#aboutme">About me</a></li>
@@ -251,10 +247,6 @@
 	        </div>
 		</div>
 	</div><!-- /content -->
-
-	<div data-role="footer" data-theme="a" data-position="fixed">
-		<h4>Created by Colloque Tsui</h4>
-	</div><!-- /footer -->
 	
 </div><!-- /page popup -->
 
@@ -263,7 +255,7 @@
 
 	<div data-role="header" data-position="fixed">
 		<h1>Contact</h1>
-		<a href="#mypanel" data-icon="bars" class="ui-btn-left">Menu</a>
+		<a href="#mypanel" data-icon="bars" class="ui-btn-left" data-iconpos="notext">Menu</a>
 		<div data-role="navbar" data-grid="c">
 			<ul>
 				<li><a href="#aboutme">About me</a></li>
@@ -286,10 +278,6 @@
 		    <li>5 Picktillum Ave, Aberdeen, AB25 3AZ</li>
 		</ul>
 	</div><!-- /content -->
-	
-	<div data-role="footer" data-theme="a" data-position="fixed">
-		<h4>Created by Colloque Tsui</h4>
-	</div><!-- /footer -->
 
 </div><!-- /page two -->
 
@@ -303,6 +291,10 @@
 	</ul>
     <!-- panel content goes here -->
 </div><!-- /panel -->
+
+<div data-role="footer" data-theme="a" data-position="fixed">
+	<h4>Created by Colloque Tsui</h4>
+</div><!-- /footer -->
 
 </body>
 </html>
