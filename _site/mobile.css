@@ -37,8 +37,8 @@ body {
 
 p {
 	font-size: 1em !important;
-	padding-left: 10px;
-	padding-right: 10px;
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 0px;
@@ -47,22 +47,24 @@ p {
 h1 {
 	font-size: 2em;
 	line-height: 40px;
-	padding-left: 10px;
-	padding-right: 10px;
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
 }
 
 h2 {
 	font-size: 1.5em;
 	line-height: 30px;
-	padding-left: 10px;
-	padding-right: 10px;
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
 	margin-left: 0px;
 }
 
 .container {
-	width: 100%;
+	width: auto;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .socialicon {
@@ -252,4 +254,5 @@ hr {
 
 #m-con {
 	display: block;
+	border: 1px solid #ddd;
 }
