@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "How to generate generic menu icon for web page"
+title:  "How to generate three line menu icon"
 date:   2014-05-25 10:38:00
 categories: tips
 ---
 
-A slide menu or drawer is very common amongst mobilised websites, the most commonly used one must be the 3 parallel bars. I know 3 different ways to generate one:
+A slide menu or drawer is very common amongst mobilised websites, the most commonly used one must be the 3 parallel lines. I know 3 different ways to generate one:
 
 #### Using HTML entity
 Turns out there is a handy little HTML entity for that!
