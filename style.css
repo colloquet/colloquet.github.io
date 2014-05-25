@@ -202,12 +202,11 @@ br {
   clear: left;
 }
 
-.piccenter {
+.img-centre {
   display: block;
+  float: none;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-
 }
 
 .wordcenter {
@@ -461,4 +460,9 @@ ul, li {
 
 #m-con {
   display: none;
+}
+
+.img-wrapper {
+  width: 100%;
+  text-align: center;
 }
