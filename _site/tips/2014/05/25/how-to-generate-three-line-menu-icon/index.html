@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
 
   <head>
     <meta charset="utf-8">
@@ -10,41 +11,18 @@
     <link rel="stylesheet" type="text/css" href="/style.css"/>
 	<link rel="stylesheet" type="text/css" href="/jquery-ui-1.10.4.custom.css"/>
 	<link rel="stylesheet" href="/jquery.mobile-1.4.2.css">
+	<link rel="stylesheet" href="/css/main.css">
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
     <link rel="canonical" href="http://colloque.me/tips/2014/05/25/how-to-generate-three-line-menu-icon/">
     <script type="text/javascript" src="/jquery.js"></script>
     <script type="text/javascript">
-			$(document).bind("mobileinit", function () {
-			    $.mobile.ajaxEnabled = false;
-			});
-		</script>
-		<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
-
-		<script src="/jquery.mobile-1.4.2.min.js"></script>
-		<script type="text/javascript">
-			$(function() {
-			    $.mobile.panel.prototype._positionPanel = function() {
-			        var self = this,
-			            panelInnerHeight = self._panelInner.outerHeight(),
-			            expand = panelInnerHeight > $.mobile.getScreenHeight();
-
-			        if ( expand || !self.options.positionFixed ) {
-			            if ( expand ) {
-			                self._unfixPanel();
-			                $.mobile.resetActivePageHeight( panelInnerHeight );
-			            }
-			          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
-			        } else {
-			            self._fixPanel();
-			        }
-			    };
-			});
-		</script>
-		<!-- <script type="text/javascript" src="/waypoints.min.js"></script> -->
-		<script type="text/javascript" src="/script.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+		$(document).bind("mobileinit", function () {
+		    $.mobile.ajaxEnabled = false;
+		});
+	</script>
+	<script type="text/javascript" src="/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/script.js"></script>
     <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,7 +32,7 @@
 		  ga('create', 'UA-51297067-1', 'colloque.me');
 		  ga('send', 'pageview');
 
-		</script>		
+	</script>		
 </head>
 
 
@@ -74,39 +52,6 @@
     </div>
     <div id="fb-root"></div>
     <div id="top" style="top: 0px; position: absolute;"></div>
-    <div class="navbar">
-      <div class="container clearfix"  data-role="header">
-        <table class="m-navbar" width="100%">
-          <tr>
-            <td style="text-align:left;width:15%;white-space:nowrap;">
-              <a id="m-sidebar-btn" href="#defaultpanel">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-                      <path fill="#fff" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-                        h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-                      <path fill="#fff" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-                        h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-                      <path fill="#fff" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-                        c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-                    </svg>
-              </a>
-            </td>
-            <td style="text-align:left;width:100%;font-size:1.3em;"><div class="header1">Colloque Tsui</div></td>
-            <td style="text-align:right;"><a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="/img/facebook.png" alt="Facebook"/></a></td>
-            <td style="text-align:right;padding-right:10px;"><a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a></td>
-          </tr>
-        </table>
-        <div class="navitem"><a href="/" >About me</a></div>
-        <div class="navitem"><a href="/blog/" class="currentpage">Blog</a></div>
-        <div class="socialicon">
-          <a href="https://twitter.com/colloquet" target="top"><img id="twitter" src="/img/twitter.png" alt="Twitter"/></a>
-        </div>
-        <div class="socialicon">
-          <a href="https://www.facebook.com/colloque" target="top"><img id="facebook" src="/img/facebook.png" alt="Facebook"/></a>
-        </div>
-      </div>
-    </div>
-
     <div role="main" class="ui-content">
     <div class="page-content">
     <a id="sidebar-btn" href="#defaultpanel">
