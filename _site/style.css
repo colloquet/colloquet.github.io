@@ -109,6 +109,22 @@
   margin-right: auto;
 }
 
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
 
 .content {
   display: block;
