@@ -109,21 +109,7 @@
   margin-right: auto;
 }
 
-@media screen and (max-width: 768px) {
 
-  .container {
-    width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .footer {
-    width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-}
 
 
 .content {
@@ -297,7 +283,7 @@ label {
 }
 
 .pull-left {
-  float: left;
+  float: none;
   margin-right: 20px;
   margin-left: 10px;
 }
@@ -481,4 +467,40 @@ ul, li {
 .img-wrapper {
   width: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .screen {
+    text-align: center;
+    display: block;
+    width: 100%;
+    float: none;
+  }
+
+  .description {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pull-left {
+    float: none;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
 }
