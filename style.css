@@ -57,8 +57,7 @@
 }
 
 .aboutme h1 {
-  /*margin-top: 0px;*/
-  padding-top: 10px;
+  margin-top: 0px;
 }
 
 .portfolio {
@@ -392,6 +391,7 @@ hr {
 
 .profilepic {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  margin-top: 20px;
 }
 
 
@@ -499,6 +499,10 @@ ul, li {
     float: none;
     margin-right: 0px;
     margin-left: 0px;
+  }
+
+  .profilepic {
+    margin-top: 75px;
   }
 
   .pull-right {

@@ -1,21 +1,12 @@
 $(document).ready(function() {
-	$(function() {
-	    $.mobile.panel.prototype._positionPanel = function() {
-	        var self = this,
-	            panelInnerHeight = self._panelInner.outerHeight(),
-	            expand = panelInnerHeight > $.mobile.getScreenHeight();
-
-	        if ( expand || !self.options.positionFixed ) {
-	            if ( expand ) {
-	                self._unfixPanel();
-	                $.mobile.resetActivePageHeight( panelInnerHeight );
-	            }
-	          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
-	        } else {
-	            self._fixPanel();
-	        }
-	    };
-	});
+	// $('.portfolio').waypoint(function(direction) {
+	// 	$('.navtohome').toggleClass('currentpage');
+	// 	$('.navtoport').toggleClass('currentpage');
+	// });
+	// $('.resume').waypoint(function(direction) {
+	// 	$('.navtoport').toggleClass('currentpage');
+	// 	$('.navtores').toggleClass('currentpage');
+	// });
 	$('.tohome').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
