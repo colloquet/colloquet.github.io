@@ -503,4 +503,12 @@ ul, li {
     margin-left: 0px;
   }
 
+  .profilepic {
+    margin-top: 75px;
+  }
+
+  .pull-right {
+    margin-left: 20px;
+  }
+
 }
