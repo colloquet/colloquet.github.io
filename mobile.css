@@ -234,7 +234,7 @@ hr {
 }
 
 .aboutme h1 {
-  display: none;
+	text-align: center;
 }
 
 .content h1 {
