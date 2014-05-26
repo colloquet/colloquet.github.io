@@ -235,6 +235,7 @@ hr {
 
 .aboutme h1 {
 	text-align: center;
+	padding-top: 0px;
 }
 
 .content h1 {
@@ -264,3 +265,6 @@ hr {
 	/*border: 1px solid #ddd;*/
 }
 
+.home h1 {
+  text-align: center;
+}
