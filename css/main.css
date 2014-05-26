@@ -64,10 +64,6 @@
 
 .site-footer .column { float: left; margin-bottom: 15px; }
 
-.site-footer {
-  background-color: #f9f9f9;
-}
-
 .footer-col-1 {
   width: 270px; /*fallback*/
   width: -webkit-calc(35% - 10px);
@@ -116,7 +112,7 @@
 
 .page-content {
   /*padding: 30px 0;*/
-  background-color: #f9f9f9;
+  background-color: #fff;
   /*margin-top: 20px;*/
 }
 
