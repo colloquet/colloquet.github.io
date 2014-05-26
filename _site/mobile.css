@@ -3,7 +3,7 @@
 }
 
 .navbar {
-	padding: 0;
+	/*padding: 0;*/
 	z-index: 15000;
 }
 
@@ -16,7 +16,7 @@
 }
 
 table.m-navbar {
-	display: block;
+	display: none;
 }
 
 html {
