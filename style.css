@@ -451,15 +451,15 @@ ul, li {
 }
 
 #m-res {
-  display: none;
+  display: block;
 }
 
 #m-port {
-  display: none;
+  display: block;
 }
 
 #m-con {
-  display: none;
+  display: block;
 }
 
 .img-wrapper {
