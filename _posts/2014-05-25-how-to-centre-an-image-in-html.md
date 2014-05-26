@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to centre an image"
+title:  "How to centre an image in HTML"
 date:   2014-05-25 23:49:00
 categories: tips
 ---

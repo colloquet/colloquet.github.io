@@ -7,7 +7,7 @@
     <atom:link href="http://colloque.me/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>How to centre an image</title>
+        <title>How to centre an image in HTML</title>
         <description>&lt;p&gt;How to centre an image may be the most commonly asked question from newbies like me. It is actually very simple, you can either use a div wrapper or simply add a class to the img tag itself.&lt;/p&gt;
 
 &lt;h4 id=&quot;using-the-div-wrapper-and-css&quot;&gt;Using the div wrapper and CSS&lt;/h4&gt;
@@ -52,8 +52,8 @@
 &lt;p&gt;This may be a better option as you can reuse the same class on every image you want to centre instead of adding a div wrapper around each image.&lt;/p&gt;
 </description>
         <pubDate>Mon, 26 May 2014 00:49:00 +0100</pubDate>
-        <link>http://colloque.me/tips/2014/05/26/how-to-centre-an-image/</link>
-        <guid isPermaLink="true">http://colloque.me/tips/2014/05/26/how-to-centre-an-image/</guid>
+        <link>http://colloque.me/tips/2014/05/26/how-to-centre-an-image-in-html/</link>
+        <guid isPermaLink="true">http://colloque.me/tips/2014/05/26/how-to-centre-an-image-in-html/</guid>
       </item>
     
       <item>
