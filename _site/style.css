@@ -13,6 +13,7 @@
 }
 
 .navbar {
+  display: none;
   position: fixed;
   top: 0px;
   margin: 0 auto;
@@ -115,7 +116,7 @@
 .content {
   display: block;
   position: relative;
-  margin-top: 40px;
+  /*margin-top: 10px;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -383,9 +384,6 @@ hr {
   background: rgb(180, 180, 180);
 }
 
-#m-sidebar {
-  display: none;
-}
 
 #musicnote {
   margin-left: 0px;
@@ -511,4 +509,53 @@ ul, li {
     margin-left: 20px;
   }
 
+}
+
+#sidebar-btn svg {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 25px; 
+  height: 25px;
+  /*margin-left: 10px;*/
+  z-index: 9999999;
+}
+
+#m-sidebar {
+  /*margin-top: -10px;*/
+  font-size: 1.5em;
+  display: block;
+  position: fixed;
+  float: left;
+  /*background: #dadada;*/
+  height: 100%;
+  z-index: 13000;
+  /*left: -50%;*/
+  width: 100%;
+  /*max-width: 50%;*/
+  overflow: hidden;
+  /*margin-top: 51px;*/
+}
+
+#m-sidebar ul li {
+  list-style-type: none;
+  line-height: 60px;
+  padding-left: 30px;
+  /*background-color: #dadada;*/
+  /*border-bottom: rgb(180,180,180) solid 1px;*/
+}
+
+#m-sidebar ul {
+  /*-webkit-margin-before: 0em;*/
+  /*padding-left: 20px;*/
+  /*padding-right: 10px;*/
+}
+
+#m-sidebar a {
+  color: rgba(255,255,255,0.65);
+}
+
+#m-sidebar a:hover {
+  color: #fff;
+  text-decoration: none;
 }

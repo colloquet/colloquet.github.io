@@ -10,7 +10,7 @@
 .content {
 	display: block;
 	position: relative;
-	margin-top: 51px;
+	/*margin-top: 51px;*/
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -195,37 +195,42 @@ hr {
 }
 
 #m-sidebar {
-	/*margin-top: -10px;*/
-	font-size: 1.5em;
-	display: block;
-	position: fixed;
-	float: left;
-	background: #dadada;
-	height: 100%;
-	z-index: 13000;
-	/*left: -50%;*/
-	width: 100%;
-	/*max-width: 50%;*/
-	overflow: hidden;
-	margin-top: 51px;
+  /*margin-top: -10px;*/
+  font-size: 1.5em;
+  display: block;
+  position: fixed;
+  float: left;
+  /*background: #dadada;*/
+  height: 100%;
+  z-index: 13000;
+  /*left: -50%;*/
+  width: 100%;
+  /*max-width: 50%;*/
+  overflow: hidden;
+  /*margin-top: 51px;*/
 }
 
 #m-sidebar ul li {
-	list-style-type: none;
-	line-height: 60px;
-	padding-left: 20px;
-	background-color: #dadada;
-	border-bottom: rgb(180,180,180) solid 1px;
+  list-style-type: none;
+  line-height: 60px;
+  padding-left: 20px;
+  /*background-color: #dadada;*/
+  /*border-bottom: rgb(180,180,180) solid 1px;*/
 }
 
 #m-sidebar ul {
-	-webkit-margin-before: 0em;
-	/*padding-left: 20px;*/
-	/*padding-right: 10px;*/
+  /*-webkit-margin-before: 0em;*/
+  /*padding-left: 20px;*/
+  /*padding-right: 10px;*/
 }
 
 #m-sidebar a {
-	color: rgb(90,90,90);
+  color: rgba(255,255,255,0.65);
+}
+
+#m-sidebar a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .aboutme h1 {
