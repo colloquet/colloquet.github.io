@@ -90,6 +90,10 @@
 
 .site-footer ul { list-style: none; }
 
+.site-footer {
+  background-color: #f7f7f7;
+}
+
 .site-footer li,
 .site-footer p {
   font-size: 15px;
@@ -112,7 +116,7 @@
 
 .page-content {
   /*padding: 30px 0;*/
-  background-color: #fff;
+  background-color: #f7f7f7;
   /*margin-top: 20px;*/
 }
 

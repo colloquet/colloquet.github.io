@@ -15,8 +15,8 @@
 .navbar {
   display: block;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
-  background-color: #eaeaea;
+  border-bottom: 1px solid #bbb;
+  background-color: #ddd;
 }
 
 .aboutme {
@@ -423,11 +423,11 @@ ul, li {
 }
 
 #m-res {
-  display: block;
+  display: none;
 }
 
 #m-port {
-  display: block;
+  display: none;
 }
 
 #m-con {
