@@ -491,15 +491,31 @@ ul, li {
 
 }
 
-#sidebar-btn svg {
+#sidebar-btn {
   display: inline-block;
   margin-left: 10px;
   margin-top: 10px;
-  width: 25px; 
-  height: 25px;
+  width: 20px; 
+  height: 20px;
   /*margin-left: 10px;*/
   z-index: 9999999;
+  /*border: 2px solid #777;*/
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
 }
+
+#sidebar-btn svg path {
+  fill: #999;
+}
+
+#sidebar-btn svg:hover path {
+  fill: #999;
+}
+
+#sidebar-btn:hover {
+  border-color: #999;
+}  
 
 #m-sidebar {
   /*margin-top: -10px;*/
