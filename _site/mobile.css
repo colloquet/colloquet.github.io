@@ -2,11 +2,6 @@
 	display: none;
 }
 
-.navbar {
-	padding: 0;
-	z-index: 15000;
-}
-
 .content {
 	display: block;
 	position: relative;
