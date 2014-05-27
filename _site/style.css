@@ -14,10 +14,10 @@
 
 .navbar {
   display: block;
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
   
-  background-color: #ddd;
-  border-bottom: 1px solid #ccc;
+  background-color: #ccc;
+  border-bottom: 1px solid #bbb;
 }
 
 .aboutme {
@@ -495,8 +495,9 @@ ul, li {
   display: inline-block;
   margin-left: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
   width: 20px; 
-  height: 20px;
+  height: 18px;
   /*margin-left: 10px;*/
   z-index: 9999999;
   border: 1px solid #ccc;
@@ -506,7 +507,7 @@ ul, li {
 }
 
 #sidebar-btn svg path {
-  fill: #999;
+  fill: #aaa;
 }
 
 #sidebar-btn svg:hover path {
