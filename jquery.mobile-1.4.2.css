@@ -3642,7 +3642,7 @@ fieldset.ui-controlgroup {
 	font-weight: bold;
 	cursor: default;
 	outline: 0; /* Dividers in custom selectmenus have tabindex */
-	background-color: 			#f6f6f6;
+	background-color: 			#fcfcfc;
 }
 .ui-listview > .ui-li-has-count > .ui-btn,
 .ui-listview > .ui-li-static.ui-li-has-count,
