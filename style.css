@@ -15,7 +15,7 @@
 .navbar {
   display: block;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   background-color: #eaeaea;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .aboutme h1 {
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .portfolio {
@@ -443,8 +443,8 @@ ul, li {
 
   .container {
     width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .screen {
