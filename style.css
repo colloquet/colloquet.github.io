@@ -16,8 +16,8 @@
   display: block;
   /*padding-bottom: 10px;*/
   
-  background-color: #d3d3d3;
-  /*border-bottom: 1px solid #bbb;*/
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ddd;
 }
 
 .aboutme {
@@ -106,7 +106,7 @@ html {
 
 body { 
   /*font-weight: normal;*/
-  font: normal 1em/1.71em;
+  font-size: 18px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   margin-left: auto;
@@ -510,12 +510,12 @@ ul, li {
   fill: #aaa;
 }
 
-#sidebar-btn svg:hover path {
-  fill: #999;
+#sidebar-btn:hover path {
+  fill: #777;
 }
 
 #sidebar-btn:hover {
-  border-color: #999;
+  border-color: #777;
 }  
 
 #m-sidebar {
