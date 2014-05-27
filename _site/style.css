@@ -21,7 +21,7 @@
 }
 
 .bg {
-  background: url('https://s3.amazonaws.com/ooomf-com-files/FrW4RJXT06kQzD4Jvj3x__MG_1292-Edit.jpg') no-repeat center center;
+  background: url('img/bg.jpg') no-repeat center center;
   position: fixed;
   width: 100%;
   height: 570px; /*same height as jumbotron */
