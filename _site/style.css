@@ -13,38 +13,9 @@
 }
 
 .navbar {
-  display: none;
-  position: fixed;
-  top: 0px;
-  margin: 0 auto;
-  /*font-weight: normal;*/
-  font-size: 16px;
-  background-color: rgb(60, 60, 60);
-  padding: 10px;
-  padding-left: 0px;
-  color: #b3b9bf;
-  z-index: 10000;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
-  width: 100%;
-  }
-  .navbar a { 
-    text-decoration: none;
-      display: inline-block;
-      color: #b3b9bf;
-      /*text-shadow: 0 1px 1px rgba(0,0,0,.4);*/
-      /*font-weight: bold;*/
-    }
-    .navbar a:hover,
-    .navbar a.currentpage  { 
-      text-decoration: none;
-        color: #fff;
-        /*background-color: #0B5FA5;*/
-    }
-
-.navitem {
-  position: relative;
-  float: left;
-  margin-right: 20px;
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .aboutme {
@@ -116,7 +87,7 @@
 .content {
   display: block;
   position: relative;
-  /*margin-top: 10px;*/
+  /*margin-top: 0px;*/
   margin-left: auto;
   margin-right: auto;
 }
