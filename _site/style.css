@@ -16,12 +16,27 @@
   display: block;
   /*padding-bottom: 10px;*/
   
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
   border-bottom: 1px solid #ddd;
 }
 
+.bg {
+  background: url('img/bg3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
 .aboutme {
-  /*background: url('img/bg.jpg');*/
+  /*background: url('img/bg1.jpg');*/
   /*background-size: 100%;*/
   position: relative;
   display: block;
@@ -30,17 +45,22 @@
   margin-left: auto;
   margin-right: auto;
   /*border-bottom: 1px solid #e9e9e9;*/
-  /*background: transparent;*/
+  background: transparent;
   color: #fff;
 }
 
 .aboutme h1 {
+  font-size: 3em;
   padding-top: 20px;
-  color: #000;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  font-weight: normal;
 }
 
 .aboutme p {
-  color: #000;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  font-weight: bold;
 }
 
 .portfolio {
@@ -502,7 +522,9 @@ ul, li {
 }
 
 #sidebar-btn {
-  display: inline-block;
+  /*position: fixed;*/
+  float: left;
+  display: block;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -510,28 +532,28 @@ ul, li {
   height: 18px;
   /*margin-left: 10px;*/
   z-index: 9999999;
-  border: 1px solid #ccc;
+  border: 1px solid;
   padding: 5px;
   border-radius: 3px;
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
 }
 
 #sidebar-btn svg path {
-  fill: #aaa;
+  /*fill: #fff;*/
 }
 
 #sidebar-btn:hover path {
-  fill: #777;
+  /*fill: #fff;*/
 }
 
 #sidebar-btn:hover {
-  border-color: #777;
+  /*border-color: #777;*/
 }  
 
 #m-sidebar {
   /*margin-top: -10px;*/
   font-size: 1.5em;
-  display: block;
+  display: inline-block;
   position: fixed;
   float: left;
   /*background: #dadada;*/
