@@ -45,9 +45,9 @@
 }
 
 .title {
-  background: url('img/profile_bg3.jpg')no-repeat fixed;
+  background: url('img/profile_bg5.jpg')no-repeat fixed;
   background-size: 100%;
-  background-position: 0 -250px;
+  background-position: 0 0px;
   position: relative;
   display: block;
   background-color: #fbfbfb;
