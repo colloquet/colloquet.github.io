@@ -46,11 +46,11 @@
 
 .title {
   /*background: url('img/profile_bg5.jpg')no-repeat fixed;*/
-  background-size: 100%;
+  /*background-size: 100%;*/
   /*background-position: 0 0px;*/
   position: relative;
   display: block;
-  /*background-color: #fbfbfb;*/
+  background-color: #000;
   background-repeat: repeat-x;
   margin-left: auto;
   margin-right: auto;
@@ -615,6 +615,7 @@ ul, li {
     top: 0;
     width: 100%;
     z-index: -1;
+    background-color: #000;
 }
 #parallaxContainer img {
     width: 100%;
