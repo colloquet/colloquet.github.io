@@ -557,15 +557,15 @@ ul, li {
 }
 
 #sidebar-btn svg path {
-  fill: #aaa;
+  /*fill: #aaa;*/
 }
 
 #sidebar-btn:hover path {
-  fill: #777;
+  /*fill: #777;*/
 }
 
 #sidebar-btn:hover {
-  border-color: #777;
+  /*border-color: #777;*/
 }  
 
 #m-sidebar {
