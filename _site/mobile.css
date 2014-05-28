@@ -274,6 +274,10 @@ hr {
 	background: url('img/profile_bg3.jpg')no-repeat;
 	background-size: 100%;
 	height: auto;
+	-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 
 #sidebar-btn {
