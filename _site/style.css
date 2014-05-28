@@ -45,12 +45,12 @@
 }
 
 .title {
-  background: url('img/profile_bg5.jpg')no-repeat fixed;
+  /*background: url('img/profile_bg5.jpg')no-repeat fixed;*/
   background-size: 100%;
   /*background-position: 0 0px;*/
   position: relative;
   display: block;
-  background-color: #fbfbfb;
+  /*background-color: #fbfbfb;*/
   background-repeat: repeat-x;
   margin-left: auto;
   margin-right: auto;
@@ -58,6 +58,7 @@
   /*background: transparent;*/
   color: #fff;
   /*height: 55vh;*/
+  background: transparent;
 
 }
 
@@ -608,3 +609,14 @@ ul, li {
   text-decoration: none;
 }
 
+#parallaxContainer {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+#parallaxContainer img {
+    width: 100%;
+    height: auto;
+}
