@@ -10,11 +10,11 @@
 		<link rel="stylesheet" href="/css/main.css">
 		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="jquery.js"></script>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			$(document).bind("mobileinit", function () {
 			    $.mobile.ajaxEnabled = false;
 			});
-		</script> -->
+		</script>
 		<script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>
 		<script src="jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
@@ -59,8 +59,9 @@
 		<div role="main" class="ui-content">
 			<div class="content">
 				<div class="title clearfix" id="aboutme">
-				<div class="navbar">
-				<a id="sidebar-btn" href="#defaultpanel">
+					<div class="navbar">
+						<div class="container clearfix">
+						<a id="sidebar-btn" href="#defaultpanel">
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
 					          <path fill="#777" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
@@ -71,7 +72,13 @@
 					            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
 					        </svg>
 						</a>
+						<div class="navitem"><a class="navtoport" href="#">Portfolio</a></div>
+						<div class="navitem"><a class="navtores" href="#">Resume</a></div>
+						<div class="navitem"><a class="navtoport" href="#">About</a></div>
+						<div class="navitem"><a class="navtocon" href="#">Contact</a></div>
+						<div class="navitem1"><a href="blog/">Blog</a></div>
 						</div>
+					</div>
 					<div class="container clearfix">
 						<h1>Colloque Tsui</h1>
 						
@@ -79,7 +86,15 @@
 						
 						<br/>
 					</div>
-					<br/><br/>
+				<br/><br/>
+				</div>
+				<div class="aboutme clearfix">
+				<div class="container">
+					<h1>About me</h1>
+					<img class="pull-right profilepic" alt="Colloque Tsui" src="img/profile.jpg" height="100" />
+					<p>Hello, I am someone who is excited and passionate about web designing, I dream of becoming a professional web designer. I am currently a university student who is doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from. Before that, I finished my GCSE, AS-Level and A-Level exams at Methodist College Belfast, Northern Ireland. </p>
+					<br/>
+					</div>
 				</div>
 				<div class="portfolio clearfix" id="portfolio">
 					<div class="container">
@@ -315,14 +330,7 @@
 					</div>
 					<br/><br/>
 				</div>
-				<div class="aboutme clearfix">
-				<div class="container">
-					<h1>About me</h1>
-					<img class="pull-right profilepic" alt="Colloque Tsui" src="img/profile.jpg" height="100" />
-					<p>Hello, I am someone who is excited and passionate about web designing, I dream of becoming a professional web designer. I am currently a university student who is doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from. Before that, I finished my GCSE, AS-Level and A-Level exams at Methodist College Belfast, Northern Ireland. </p>
-					<br/>
-					</div>
-				</div>
+				
 				<div class="contact clearfix" id="contact">
 					<div class="container">
 						<h1>Contact</h1>

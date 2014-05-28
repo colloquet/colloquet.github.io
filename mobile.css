@@ -273,4 +273,5 @@ hr {
 .title {
 	background: url('img/profile_bg2.jpg')no-repeat;
 	background-size: auto 100%;
+	height: auto;
 }
