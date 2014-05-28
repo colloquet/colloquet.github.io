@@ -553,7 +553,7 @@ ul, li {
   border: 1px solid #ccc;
   padding: 5px;
   border-radius: 3px;
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
 }
 
 #sidebar-btn svg path {
