@@ -271,7 +271,11 @@ hr {
 }
 
 .title {
-	background: url('img/profile_bg2.jpg')no-repeat;
-	background-size: auto 100%;
+	background: url('img/profile_bg3.jpg')no-repeat;
+	background-size: 100%;
 	height: auto;
+}
+
+#sidebar-btn {
+	display: inline-block;
 }
