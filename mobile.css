@@ -5,35 +5,12 @@
 .content {
 	display: block;
 	position: relative;
-	/*margin-top: 51px;*/
 	margin-left: auto;
 	margin-right: auto;
 }
 
-table.m-navbar {
-	display: block;
-}
-
-html {
-	width: 100vw;
-}
-
-body {
-	width: 100vw;
-	height: 100%;
-	overflow: scroll;
-}
-
-.aboutme {
-	display: block;
-	/*padding-top: 20px;*/
-  width: 100%;
-}
-
 p {
 	font-size: 1em !important;
-	/*padding-left: 10px;*/
-	/*padding-right: 10px;*/
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 0px;
@@ -42,15 +19,11 @@ p {
 h1 {
 	font-size: 2em;
 	line-height: 40px;
-	/*padding-left: 10px;*/
-	/*padding-right: 10px;*/
 }
 
 h2 {
 	font-size: 1.5em;
 	line-height: 30px;
-	/*padding-left: 10px;*/
-	/*padding-right: 10px;*/
 	margin-left: 0px;
 }
 
@@ -62,29 +35,12 @@ h2 {
 	padding-right: 10px;
 }
 
-.socialicon {
-	display: none;
-
-}
-
-.m-footer {
-	width: 100%;
-	display: block;
-	text-align: center;
-}
-
-.footer {
-	/*display: none;*/
-}
-
 .pull-right {
 	display: block;
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-
 
 .pull-left {
 	display: block;
@@ -93,52 +49,8 @@ h2 {
 	margin-left: auto;
 }
 
-.tohome {
-	display: none;
-}
-
-.totop {
-	display: block;
-}
-
-label {
-	margin-left: 10px;
-	display: block;
-	float: left;
-	/*width: 50px;*/
-}
-
-.aboutme {
-	display: block;
-	/*background-color: rgb(238, 238, 238);*/
-}
-
-
-#facebook {
-	height: 25px;
-}
-
-#twitter {
-	height: 25px;
-}
-
-.header1 {
-	display: inline-block;
-	font-size: 1.3em;
-	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-    font-weight: bold;
-    color: #fff;
-    width: 100%;
-    margin-left: 0px;
-}
-
-
 hr { 
 	margin:30px 0; 
-}
-
-.width {
-	width: 50px;
 }
 
 .description {
@@ -154,7 +66,6 @@ hr {
 .projectimg {
 	height: auto;
 	width: 100%;
-	/*width: 100vw;*/
 	margin: 0;
 }
 
@@ -164,12 +75,6 @@ hr {
 
 #tabs {
 	display: none;
-}
-
-#m-sidebar-btn svg {
-	width: 18px; 
-	height: 16px;
-	/*margin-left: 10px;*/
 }
 
 .overlay {
@@ -190,33 +95,20 @@ hr {
 }
 
 #m-sidebar {
-  /*margin-top: -10px;*/
   font-size: 1.5em;
   display: block;
   position: fixed;
   float: left;
-  /*background: #dadada;*/
   height: 100%;
   z-index: 13000;
-  /*left: -50%;*/
   width: 100%;
-  /*max-width: 50%;*/
   overflow: hidden;
-  /*margin-top: 51px;*/
 }
 
 #m-sidebar ul li {
   list-style-type: none;
   line-height: 60px;
   padding-left: 20px;
-  /*background-color: #dadada;*/
-  /*border-bottom: rgb(180,180,180) solid 1px;*/
-}
-
-#m-sidebar ul {
-  /*-webkit-margin-before: 0em;*/
-  /*padding-left: 20px;*/
-  /*padding-right: 10px;*/
 }
 
 #m-sidebar a {
@@ -251,13 +143,8 @@ hr {
 	display: block;
 }
 
-#d-contact {
-	display: none;
-}
-
 #m-con {
 	display: block;
-	/*border: 1px solid #ddd;*/
 }
 
 .home h1 {
@@ -271,7 +158,7 @@ hr {
 }
 
 .title {
-	background: url('img/profile_bg3.jpg')no-repeat;
+	background: url('img/m_profile_bg.jpg')no-repeat;
 	background-size: 100%;
 	height: auto;
 	-webkit-background-size: cover;
