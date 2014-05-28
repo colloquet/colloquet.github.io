@@ -17,7 +17,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
   border-bottom: 1px solid #ddd;
 }
 
@@ -36,11 +36,11 @@
 
 .navitem a, .navitem1 a {
   font-size: 22px;
-  color: #777;
+  color: #fff;
 }
 
 .navitem a:hover, .navitem1 a:hover {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
