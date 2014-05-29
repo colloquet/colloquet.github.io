@@ -218,12 +218,12 @@ hr {
 
 .profilepic {
   border-radius: 75px;
-  -webkit-transition: all .2s ease-in-out;
+  /*-webkit-transition: all .2s ease-in-out;*/
 }
 
-.profilepic:hover {
+/*.profilepic:hover {
   transform:scale(1.2,1.2);
-}
+}*/
 
 ul, li {
   padding-left: 0px;
