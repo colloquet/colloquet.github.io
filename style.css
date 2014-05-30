@@ -39,8 +39,8 @@
   position: relative;
 }
 
-.navitem a, .navitem1 a {
-  font-size: 22px;
+.navitem a, .navitem1 a, .muted {
+  font-size: 18px;
   color: #ccc;
 }
 
