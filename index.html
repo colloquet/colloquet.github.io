@@ -16,39 +16,38 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
+	<!-- for jquery mobile -->
 	<div data-role="page" id="page1">
-	
-	<div data-role="panel" id="defaultpanel" data-theme="b" data-display="push" data-position-fixed="true">
-    <div class="panel-content">
-	<div id="m-sidebar">
-		<ul>
-			<li><a class="navtoport" href="#"><i class="fa fa-briefcase fa-fw"></i>&nbsp;&nbsp;Portfolio</a></li>
-			<li><a class="navtores" href="#"><i class="fa fa-file-text fa-fw"></i>&nbsp;&nbsp;Resume</a></li>
-			<li><a class="navtocon" href="#"><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;Contact</a></li>
-			<li><a href="blog/"><i class="fa fa-pencil-square fa-fw"></i>&nbsp;&nbsp;Blog</a></li>
-		</ul>
-	</div>
-	</div>
-	</div>
-	<div id="fb-root"></div>
-		<div id="top" style="top: 0px; position: absolute;"></div>
+		<!-- jquery mobile panel for mobile version -->
+		<div data-role="panel" id="defaultpanel" data-theme="b" data-display="push" data-position-fixed="true">
+		    <div class="panel-content">
+				<div id="m-sidebar">
+					<ul>
+						<li><a class="navtoport" href="#"><i class="fa fa-briefcase fa-fw"></i>&nbsp;&nbsp;Portfolio</a></li>
+						<li><a class="navtores" href="#"><i class="fa fa-file-text fa-fw"></i>&nbsp;&nbsp;Resume</a></li>
+						<li><a class="navtocon" href="#"><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;Contact</a></li>
+						<li><a href="blog/"><i class="fa fa-pencil-square fa-fw"></i>&nbsp;&nbsp;Blog</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div role="main" class="ui-content">
 			<div class="content">
-
 				<div class="title clearfix">
-				<div id="parallaxContainer">
-				    <img src="img/profile_bg5.jpg" alt="Profile background"/>
-				</div>
+					<!-- for parallax effect -->
+					<div id="parallaxContainer">
+					    <img src="img/profile_bg5.jpg" alt="Profile background"/>
+					</div>
+					<!-- navigation bar -->
 					<div class="navbar">
 						<div class="container clearfix">
-						<div class="navitem" style="display: inline-block;"><a id="sidebar-btn" href="#defaultpanel">
-							<i class="fa fa-bars fa-lg"></i>
-						</a></div>
-						<div class="navitem"><a class="navtoport" href="#">Portfolio</a></div>
-						<div class="navitem"><a class="navtores" href="#">Resume</a></div>
-						<!-- <div class="navitem"><a class="navtoport" href="#">About</a></div> -->
-						<div class="navitem"><a class="navtocon" href="#">Contact</a></div>
-						<div class="navitem1"><a href="blog/">Blog</a></div>
+							<div class="navitem" style="display: inline-block;"><a id="sidebar-btn" href="#defaultpanel">
+								<i class="fa fa-bars fa-lg"></i>
+							</a></div>
+							<div class="navitem"><a class="navtoport" href="#">Portfolio</a></div>
+							<div class="navitem"><a class="navtores" href="#">Resume</a></div>
+							<div class="navitem"><a class="navtocon" href="#">Contact</a></div>
+							<div class="navitem1"><a href="blog/">Blog</a></div>
 						</div>
 					</div>
 					<div class="container clearfix">
@@ -59,417 +58,417 @@
 					</div>
 				<br/><br/>
 				</div>
-				<div class="aboutme clearfix">
-				<div class="container">
-					<!-- <h1>About me</h1> -->
-					<br/>
-					
-					<p><img class="pull-right profilepic" alt="Colloque Tsui" src="img/profile.jpg" height="150" />Hello, I am a Hong Konger who is excited and passionate about web design, my dream is to become a professional web designer. I am currently doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from.</p>
-					<p>I am proficient in HTML5 and CSS3, as well as some experience with Ruby on Rails and php + MySQL. I am always looking for ways to make things faster, better and stronger.</p>
-					<br/>
+					<div class="aboutme clearfix">
+						<div class="container">
+							<br/>
+							<p><img class="pull-right profilepic" alt="Colloque Tsui" src="img/profile.jpg" height="150" />Hello, I am a Hong Konger who is excited and passionate about web design, my dream is to become a professional web designer. I am currently doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from.</p>
+							<p>I am proficient in HTML5 and CSS3, as well as some experience with Ruby on Rails and php + MySQL. I am always looking for ways to make things faster, better and stronger.</p>
+							<br/>
+						</div>
 					</div>
-				</div>
-				<div class="portfolio clearfix" id="portfolio">
-					<div class="container">
-						<h2>Portfolio</h2>
-						<div id="tabs">
-							<ul>
-								<li><a href="#tabs-1">Music!</a></li>
-								<li><a href="#tabs-2">The Finance App</a></li>
-								<li><a href="#tabs-3">Premier League</a></li>
-							</ul>
-							<div class="clearfix" id="tabs-1">
-								<!-- <h3>Music!</h3> --><br/>
-								<div class="screen clearfix">
-									<a href="img/music.png">
-										<img class="pull-left projectimg" alt="Music!" src="img/music.png"/>
-									</a>
+					<!-- portfolio -->
+					<div class="portfolio clearfix" id="portfolio">
+						<div class="container">
+							<h2>Portfolio</h2>
+							<div id="tabs">
+								<ul>
+									<li><a href="#tabs-1">Music!</a></li>
+									<li><a href="#tabs-2">The Finance App</a></li>
+									<li><a href="#tabs-3">Premier League</a></li>
+								</ul>
+								<div class="clearfix" id="tabs-1">
+									<!-- <h3>Music!</h3> --><br/>
+									<div class="screen clearfix">
+										<a href="img/music.png">
+											<img class="pull-left projectimg" alt="Music!" src="img/music.png"/>
+										</a>
+									</div>
+									<div class="description">
+										<p>Music! is a website that describe my taste in music. It was awarded the Best Overall Website in my course. It is basically a showcase of various techniques that I learnt such as jQuery, php, and CSS.</p>
+										<p>URL : <a href="http://homepages.abdn.ac.uk/c.tsui.09/" target="top">http://homepages.abdn.ac.uk/c.tsui.09/</a></p>
+									</div>
 								</div>
-								<div class="description">
-									<p>Music! is a website that describe my taste in music. It was awarded the Best Overall Website in my course. It is basically a showcase of various techniques that I learnt such as jQuery, php, and CSS.</p>
+								<div class="clearfix" id="tabs-2">
+									<!-- <h3>The Finance App</h3> --><br/>
+									<div class="screen clearfix">
+										<img class="pull-left projectimg" alt="The Finance App" src="img/financeapp.png"/>
+									</div>
+									<div class="description">
+										<p>The Finance App was one of the group assignment we have done. It is basically a database of the S&amp;P 500 companies. We have implemented Google Maps API and some use of Javascript. Turns out we got full mark for it. The app is written in Ruby on Rails.</p>
+										<p>URL : <a href="http://finance-company.herokuapp.com" target="top">http://finance-company.herokuapp.com</a></p>
+									</div>
+								</div>
+								<div class="clearfix" id="tabs-3">
+									<!-- <h3>Premier League 2013/14</h3> --><br/>
+									<div class="screen clearfix">
+										<img class="pull-left projectimg" alt="Premier League" src="img/premier.png"/>
+									</div>
+									<div class="description">
+										<p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
+										<p>URL : <a href="https://footballdev.herokuapp.com" target="top">https://footballdev.herokuapp.com</a></p>
+									</div>
+								</div>
+							</div>
+							<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="m-port">
+							    <div data-role="collapsible">
+							       	<h3>Music!</h3>
+							       	<div class="img-wrapper">
+										<img alt="Music!" src="img/music.png" width="100%" />
+									</div>
+							    	<p>Music! is a website that describe my taste in music. It was awarded the Best Overall Website in my course. It is basically a showcase of various techniques that I learnt such as jQuery, php, and CSS.</p>
 									<p>URL : <a href="http://homepages.abdn.ac.uk/c.tsui.09/" target="top">http://homepages.abdn.ac.uk/c.tsui.09/</a></p>
-								</div>
-							</div>
-							<div class="clearfix" id="tabs-2">
-								<!-- <h3>The Finance App</h3> --><br/>
-								<div class="screen clearfix">
-									<img class="pull-left projectimg" alt="The Finance App" src="img/financeapp.png"/>
-								</div>
-								<div class="description">
-									<p>The Finance App was one of the group assignment we have done. It is basically a database of the S&amp;P 500 companies. We have implemented Google Maps API and some use of Javascript. Turns out we got full mark for it. The app is written in Ruby on Rails.</p>
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>The Finance App</h3>
+							        <div class="img-wrapper">
+										<img alt="The Finance App" src="img/financeapp.png" width="100%" />
+									</div>
+							    	<p>The Finance App was one of the group assignment we have done. It is basically a database of the S&amp;P 500 companies. We have implemented Google Maps API and some use of Javascript. Turns out we got full mark for it. The app is written in Ruby on Rails.</p>
 									<p>URL : <a href="http://finance-company.herokuapp.com" target="top">http://finance-company.herokuapp.com</a></p>
-								</div>
-							</div>
-							<div class="clearfix" id="tabs-3">
-								<!-- <h3>Premier League 2013/14</h3> --><br/>
-								<div class="screen clearfix">
-									<img class="pull-left projectimg" alt="Premier League" src="img/premier.png"/>
-								</div>
-								<div class="description">
-									<p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Premier League</h3>
+							        <div class="img-wrapper">
+										<img alt="Premier League" src="img/premier.png" width="100%" />
+									</div>
+							    	<p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
 									<p>URL : <a href="https://footballdev.herokuapp.com" target="top">https://footballdev.herokuapp.com</a></p>
-								</div>
+							    </div>
 							</div>
 						</div>
-						<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="m-port">
-						    <div data-role="collapsible">
-						       	<h3>Music!</h3>
-						       	<div class="img-wrapper">
-									<img alt="Music!" src="img/music.png" width="100%" />
-								</div>
-						    	<p>Music! is a website that describe my taste in music. It was awarded the Best Overall Website in my course. It is basically a showcase of various techniques that I learnt such as jQuery, php, and CSS.</p>
-								<p>URL : <a href="http://homepages.abdn.ac.uk/c.tsui.09/" target="top">http://homepages.abdn.ac.uk/c.tsui.09/</a></p>
-						    </div>
-						    <div data-role="collapsible">
-						        <h3>The Finance App</h3>
-						        <div class="img-wrapper">
-									<img alt="The Finance App" src="img/financeapp.png" width="100%" />
-								</div>
-						    	<p>The Finance App was one of the group assignment we have done. It is basically a database of the S&amp;P 500 companies. We have implemented Google Maps API and some use of Javascript. Turns out we got full mark for it. The app is written in Ruby on Rails.</p>
-								<p>URL : <a href="http://finance-company.herokuapp.com" target="top">http://finance-company.herokuapp.com</a></p>
-						    </div>
-						    <div data-role="collapsible">
-						        <h3>Premier League</h3>
-						        <div class="img-wrapper">
-									<img alt="Premier League" src="img/premier.png" width="100%" />
-								</div>
-						    	<p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
-								<p>URL : <a href="https://footballdev.herokuapp.com" target="top">https://footballdev.herokuapp.com</a></p>
-						    </div>
-						</div>
+						<br/><br/>
 					</div>
-					<br/><br/>
-				</div>
-				<div class="resume clearfix" id="resume">
-					<div class="container">
-						<h2>Resume</h2>
-						<p>You can download in pdf format from here: <a href="Colloque_Tsui_CV.pdf" target="top">Colloque Tsui's Resume</a></p>
-						<div id="accordion">
-							<h3>Education</h3>
-							<div class="clearfix">
-								<table>
-									<tr>
-										<td class="width" valign="top">2013-2014</td>
-										<td valign="top"><strong>MSc Information and Technology, University of Aberdeen</strong><p>The course is designed for individuals who are not coming from an IT background. Vast amount of materials are covered during the course enable us to become more familiar to programming and software design in just one year time.</p></td>
-									</tr>
-									<tr>
-										<td class="width" valign="top">2009-2013</td>
-										<td valign="top"><strong>MA (Hons) Accounting and Finance, University of Aberdeen<br/>(Second Upper Honour obtained)</strong><p>The course mainly focused on Accounting and Finance. I also did Management, Economic Statistic and Business law as complements to the course.</p></td>
-									</tr>
-								</table>
-							</div>
-							<h3>Work experience</h3>
-							<div class="clearfix">
-								<table>
-									<tr>
-										<td class="width" valign="top">Jan 2013-Present</td>
-										<td valign="top"><strong>The Manchurian Chinese Restaurant, Aberdeen, Scotland</strong><p>I am working as a part time waiter in this popular and busy Chinese restaurant. I have learnt to be a team player in order to work efficiently and provide the best service to our customers. I have acquired communication skills from different challenges I faced during working. It has also prepared me to work under pressure and balance myself between work, study and life.</p></td>
-									</tr>
-									<tr>
-										<td class="width" valign="top">Summer 2012</td>
-										<td valign="top"><strong>Hong Kong Post Office, Hong Kong</strong><p>During the summer, 2012, I worked as a "Worker" at Asia Airfreight Terminal. I was responsible for sorting letters and moving them to places. </p></td>
-									</tr>
-								</table>
-							</div>
-							<h3>Skills</h3>
-							<div class="clearfix">
-								<table>
-									<tr>
-										<td class="width" valign="top"><strong>Team work and Communication</strong></td>
-										<td valign="top">I have developed my team work skill through my university life as well well as summer jobs. Being the treasurer of the Japanese society, I have improved my team work skill. When we organise events, we have to work as a team as it is more effective and efficient. The committee members and I have to meet up and discuss about it. I am responsible for managing the society’s money. If any member of the society wants to use the money on behalf of the society, we will have to discuss about it and see if it is appropriate. In addition to that, we work as a team and we share ideas and suggestions. We then discuss the viability given the resources available to us. Then the president will assign jobs to each of us and we inform each other when we get the job done.</td>
-									</tr>
-									<tr>
-										<td class="width" valign="top"><strong>Computing</strong></td>
-										<td valign="top">As I am doing MScIT, I am confident to say I possess knowledge about IT that is above average. I am familiar with Microsoft Office as I have used it frequently for my school works. Further more, I have learnt Object Oriented Languages such as PHP and Ruby on Rails. Last but not least, I love web design using HTML, CSS and JS.</td>
-									</tr>
-									<tr>
-										<td class="width" valign="top"><strong>Organisation</strong></td>
-										<td valign="top">I am a highly organised person, demonstrated through my position in the Japanese Society. As mentioned, I was responsible for the finance of the society. Hence if the account is unbalanced or if I have lost the receipts, I have to fix it using my own money. As a result, I have to be very organised in order to maintain the account. Further more, working in a busy restaurant helped develop these skills further to ensure I worked efficiently and competently under pressure.</td>
-									</tr>
-								</table>
-							</div>
-							<h3>Interests</h3>
-							<div class="clearfix">
-								<table>
-									<tr>
-										<td class="width" valign="top"><strong>Travel</strong></td>
-										<td valign="top">I enjoy travelling as I learn something new every time. I have been to a lot of places and the most remarkable countries for me thus far are Russia and India. I love to explore and experience other cultures. For example, I have been to Delhi for a Punjabi Wedding and it was such a magnificent and amazing experience. I treasure every chance by attentively planning out my trip with my friends. </td>
-									</tr>
-									<tr>
-										<td class="width" valign="top"><strong>Sports</strong></td>
-										<td valign="top">Football is one of my favourite sports, I often play football with my friends and my position is striker. As a striker, I often have to collaborate with midfielders. This developed the teamwork and communication skills among our teammates.</td>
-									</tr>
-								</table>
-							</div>
-							<h3>Referees</h3>
-							<div class="clearfix">
-								Available upon request.
-							</div>
-						</div>
-						<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="m-res">
-						    <div data-role="collapsible">
-						        <h3>Education</h3>
-						    	<table data-role="table" id="edu-table" data-mode="reflow" class="ui-responsive">
-						    		<thead>
-						    			<tr>
-						    				<th>Year</th>
-						    				<th>Course</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
+					<!-- resume -->
+					<div class="resume clearfix" id="resume">
+						<div class="container">
+							<h2>Resume</h2>
+							<p>You can download in pdf format from here: <a href="Colloque_Tsui_CV.pdf" target="top">Colloque Tsui's Resume</a></p>
+							<div id="accordion">
+								<h3>Education</h3>
+								<div class="clearfix">
+									<table>
 										<tr>
-											<td valign="top" style='white-space: nowrap;'>2013-2014</td>
+											<td class="width" valign="top">2013-2014</td>
 											<td valign="top"><strong>MSc Information and Technology, University of Aberdeen</strong><p>The course is designed for individuals who are not coming from an IT background. Vast amount of materials are covered during the course enable us to become more familiar to programming and software design in just one year time.</p></td>
 										</tr>
 										<tr>
-											<td valign="top">2009-2013</td>
+											<td class="width" valign="top">2009-2013</td>
 											<td valign="top"><strong>MA (Hons) Accounting and Finance, University of Aberdeen<br/>(Second Upper Honour obtained)</strong><p>The course mainly focused on Accounting and Finance. I also did Management, Economic Statistic and Business law as complements to the course.</p></td>
 										</tr>
-									</tbody>
-								</table>
-						    </div>
-						    <div data-role="collapsible">
-						        <h3>Work experience</h3>
-						    	<table data-role="table" id="work-table" data-mode="reflow" class="ui-responsive">
-						    		<thead>
-						    			<tr>
-						    				<th>Year</th>
-						    				<th>Job</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
+									</table>
+								</div>
+								<h3>Work experience</h3>
+								<div class="clearfix">
+									<table>
 										<tr>
-											<td style='white-space: nowrap;' valign="top">Jan 2013-Present</td>
+											<td class="width" valign="top">Jan 2013-Present</td>
 											<td valign="top"><strong>The Manchurian Chinese Restaurant, Aberdeen, Scotland</strong><p>I am working as a part time waiter in this popular and busy Chinese restaurant. I have learnt to be a team player in order to work efficiently and provide the best service to our customers. I have acquired communication skills from different challenges I faced during working. It has also prepared me to work under pressure and balance myself between work, study and life.</p></td>
 										</tr>
 										<tr>
-											<td valign="top">Summer 2012</td>
+											<td class="width" valign="top">Summer 2012</td>
 											<td valign="top"><strong>Hong Kong Post Office, Hong Kong</strong><p>During the summer, 2012, I worked as a "Worker" at Asia Airfreight Terminal. I was responsible for sorting letters and moving them to places. </p></td>
 										</tr>
-									</tbody>
-								</table>
-						    </div>
-						    <div data-role="collapsible">
-						        <h3>Transferable skill</h3>
-						    	<table data-role="table" id="skill-table" data-mode="reflow" class="ui-responsive">
-						    		<thead>
-						    			<tr>
-						    				<th>Skill</th>
-						    				<th>Description</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
+									</table>
+								</div>
+								<h3>Skills</h3>
+								<div class="clearfix">
+									<table>
 										<tr>
-											<td class="width" valign="top">Team work and Communication</td>
+											<td class="width" valign="top"><strong>Team work and Communication</strong></td>
 											<td valign="top">I have developed my team work skill through my university life as well well as summer jobs. Being the treasurer of the Japanese society, I have improved my team work skill. When we organise events, we have to work as a team as it is more effective and efficient. The committee members and I have to meet up and discuss about it. I am responsible for managing the society’s money. If any member of the society wants to use the money on behalf of the society, we will have to discuss about it and see if it is appropriate. In addition to that, we work as a team and we share ideas and suggestions. We then discuss the viability given the resources available to us. Then the president will assign jobs to each of us and we inform each other when we get the job done.</td>
 										</tr>
 										<tr>
-											<td class="width" valign="top">Computing</td>
+											<td class="width" valign="top"><strong>Computing</strong></td>
 											<td valign="top">As I am doing MScIT, I am confident to say I possess knowledge about IT that is above average. I am familiar with Microsoft Office as I have used it frequently for my school works. Further more, I have learnt Object Oriented Languages such as PHP and Ruby on Rails. Last but not least, I love web design using HTML, CSS and JS.</td>
 										</tr>
 										<tr>
-											<td class="width" valign="top">Organisation</td>
+											<td class="width" valign="top"><strong>Organisation</strong></td>
 											<td valign="top">I am a highly organised person, demonstrated through my position in the Japanese Society. As mentioned, I was responsible for the finance of the society. Hence if the account is unbalanced or if I have lost the receipts, I have to fix it using my own money. As a result, I have to be very organised in order to maintain the account. Further more, working in a busy restaurant helped develop these skills further to ensure I worked efficiently and competently under pressure.</td>
 										</tr>
-									</tbody>
-								</table>
-						    </div>
-						    <div data-role="collapsible">
-						        <h3>Interest</h3>
-						    	<table data-role="table" id="interest-table" data-mode="reflow" class="ui-responsive">
-						    		<thead>
-						    			<tr>
-						    				<th>Interest</th>
-						    				<th>Description</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
+									</table>
+								</div>
+								<h3>Interests</h3>
+								<div class="clearfix">
+									<table>
 										<tr>
-											<td valign="top">Travel</td>
+											<td class="width" valign="top"><strong>Travel</strong></td>
 											<td valign="top">I enjoy travelling as I learn something new every time. I have been to a lot of places and the most remarkable countries for me thus far are Russia and India. I love to explore and experience other cultures. For example, I have been to Delhi for a Punjabi Wedding and it was such a magnificent and amazing experience. I treasure every chance by attentively planning out my trip with my friends. </td>
 										</tr>
 										<tr>
-											<td valign="top">Sports</td>
+											<td class="width" valign="top"><strong>Sports</strong></td>
 											<td valign="top">Football is one of my favourite sports, I often play football with my friends and my position is striker. As a striker, I often have to collaborate with midfielders. This developed the teamwork and communication skills among our teammates.</td>
 										</tr>
-									</tbody>
-								</table>
-						    </div>
-						    <div data-role="collapsible">
-						        <h3>Referee</h3>
-						        <p>Available upon request.</p>
-					        </div>
+									</table>
+								</div>
+								<h3>Referees</h3>
+								<div class="clearfix">
+									Available upon request.
+								</div>
+							</div>
+							<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="m-res">
+							    <div data-role="collapsible">
+							        <h3>Education</h3>
+							    	<table data-role="table" id="edu-table" data-mode="reflow" class="ui-responsive">
+							    		<thead>
+							    			<tr>
+							    				<th>Year</th>
+							    				<th>Course</th>
+							    			</tr>
+							    		</thead>
+							    		<tbody>
+											<tr>
+												<td valign="top" style='white-space: nowrap;'>2013-2014</td>
+												<td valign="top"><strong>MSc Information and Technology, University of Aberdeen</strong><p>The course is designed for individuals who are not coming from an IT background. Vast amount of materials are covered during the course enable us to become more familiar to programming and software design in just one year time.</p></td>
+											</tr>
+											<tr>
+												<td valign="top">2009-2013</td>
+												<td valign="top"><strong>MA (Hons) Accounting and Finance, University of Aberdeen<br/>(Second Upper Honour obtained)</strong><p>The course mainly focused on Accounting and Finance. I also did Management, Economic Statistic and Business law as complements to the course.</p></td>
+											</tr>
+										</tbody>
+									</table>
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Work experience</h3>
+							    	<table data-role="table" id="work-table" data-mode="reflow" class="ui-responsive">
+							    		<thead>
+							    			<tr>
+							    				<th>Year</th>
+							    				<th>Job</th>
+							    			</tr>
+							    		</thead>
+							    		<tbody>
+											<tr>
+												<td style='white-space: nowrap;' valign="top">Jan 2013-Present</td>
+												<td valign="top"><strong>The Manchurian Chinese Restaurant, Aberdeen, Scotland</strong><p>I am working as a part time waiter in this popular and busy Chinese restaurant. I have learnt to be a team player in order to work efficiently and provide the best service to our customers. I have acquired communication skills from different challenges I faced during working. It has also prepared me to work under pressure and balance myself between work, study and life.</p></td>
+											</tr>
+											<tr>
+												<td valign="top">Summer 2012</td>
+												<td valign="top"><strong>Hong Kong Post Office, Hong Kong</strong><p>During the summer, 2012, I worked as a "Worker" at Asia Airfreight Terminal. I was responsible for sorting letters and moving them to places. </p></td>
+											</tr>
+										</tbody>
+									</table>
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Transferable skill</h3>
+							    	<table data-role="table" id="skill-table" data-mode="reflow" class="ui-responsive">
+							    		<thead>
+							    			<tr>
+							    				<th>Skill</th>
+							    				<th>Description</th>
+							    			</tr>
+							    		</thead>
+							    		<tbody>
+											<tr>
+												<td class="width" valign="top">Team work and Communication</td>
+												<td valign="top">I have developed my team work skill through my university life as well well as summer jobs. Being the treasurer of the Japanese society, I have improved my team work skill. When we organise events, we have to work as a team as it is more effective and efficient. The committee members and I have to meet up and discuss about it. I am responsible for managing the society’s money. If any member of the society wants to use the money on behalf of the society, we will have to discuss about it and see if it is appropriate. In addition to that, we work as a team and we share ideas and suggestions. We then discuss the viability given the resources available to us. Then the president will assign jobs to each of us and we inform each other when we get the job done.</td>
+											</tr>
+											<tr>
+												<td class="width" valign="top">Computing</td>
+												<td valign="top">As I am doing MScIT, I am confident to say I possess knowledge about IT that is above average. I am familiar with Microsoft Office as I have used it frequently for my school works. Further more, I have learnt Object Oriented Languages such as PHP and Ruby on Rails. Last but not least, I love web design using HTML, CSS and JS.</td>
+											</tr>
+											<tr>
+												<td class="width" valign="top">Organisation</td>
+												<td valign="top">I am a highly organised person, demonstrated through my position in the Japanese Society. As mentioned, I was responsible for the finance of the society. Hence if the account is unbalanced or if I have lost the receipts, I have to fix it using my own money. As a result, I have to be very organised in order to maintain the account. Further more, working in a busy restaurant helped develop these skills further to ensure I worked efficiently and competently under pressure.</td>
+											</tr>
+										</tbody>
+									</table>
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Interest</h3>
+							    	<table data-role="table" id="interest-table" data-mode="reflow" class="ui-responsive">
+							    		<thead>
+							    			<tr>
+							    				<th>Interest</th>
+							    				<th>Description</th>
+							    			</tr>
+							    		</thead>
+							    		<tbody>
+											<tr>
+												<td valign="top">Travel</td>
+												<td valign="top">I enjoy travelling as I learn something new every time. I have been to a lot of places and the most remarkable countries for me thus far are Russia and India. I love to explore and experience other cultures. For example, I have been to Delhi for a Punjabi Wedding and it was such a magnificent and amazing experience. I treasure every chance by attentively planning out my trip with my friends. </td>
+											</tr>
+											<tr>
+												<td valign="top">Sports</td>
+												<td valign="top">Football is one of my favourite sports, I often play football with my friends and my position is striker. As a striker, I often have to collaborate with midfielders. This developed the teamwork and communication skills among our teammates.</td>
+											</tr>
+										</tbody>
+									</table>
+							    </div>
+							    <div data-role="collapsible">
+							        <h3>Referee</h3>
+							        <p>Available upon request.</p>
+						        </div>
+							</div>
+						</div>
+						<br/><br/>
+					</div>		
+					<!-- contact-->
+					<div class="contact clearfix" id="contact">
+						<div class="container">
+							<h2>Contact</h2>
+							<ul data-role="listview" data-inset="true" data-divider-theme="a" id="m-con">
+								<li data-role="list-divider">Social network profile</li>
+							    <li><a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top">LinkedIn</a></li>
+							    <li><a href="https://www.facebook.com/colloque" target="top">Facebook</a></li>
+							    <li><a href="https://twitter.com/colloquet" target="top">Twitter</a></li>
+							    <li data-role="list-divider">Email</li>
+							    <li><a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top">colloquet@gmail.com</a></li>
+							</ul>
 						</div>
 					</div>
-					<br/><br/>
 				</div>
-				
-				<div class="contact clearfix" id="contact">
+				<!-- footer	 -->
+				<div class="footer clearfix">
 					<div class="container">
-						<h2>Contact</h2>
-						<ul data-role="listview" data-inset="true" data-divider-theme="a" id="m-con">
-							<li data-role="list-divider">Social network profile</li>
-						    <li><a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top">LinkedIn</a></li>
-						    <li><a href="https://www.facebook.com/colloque" target="top">Facebook</a></li>
-						    <li><a href="https://twitter.com/colloquet" target="top">Twitter</a></li>
-						    <li data-role="list-divider">Email</li>
-						    <li><a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top">colloquet@gmail.com</a></li>
-						</ul>
+					<hr/>
+					Created by Colloque Tsui
+					<br/><br/><br/><br/>
 					</div>
 				</div>
-			</div>			
-			<div class="footer clearfix">
-				<div class="container">
-				<hr/>
-				Created by Colloque Tsui
-				<br/><br/><br/><br/>
-				</div>
-			</div>
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript">
-			$(document).bind("mobileinit", function () {
-			    $.mobile.ajaxEnabled = false;
-			});
-		</script>
-		<script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>
-		<script type="text/javascript" src="jquery.mobile-1.4.2.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-		<script>
-			$(function() {
-				$( "#accordion" ).accordion({
-					collapsible: true
-				}
-				);
-				$( "#tabs" ).tabs();
-
-			});
-			
-		</script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-51297067-1', 'colloque.me');
-		  ga('send', 'pageview');
-
-		</script>
-			<script type="text/javascript" src="prefixfree.min.js"></script>
-			<script>
-			 
-			var requestAnimationFrame = window.requestAnimationFrame || 
-			                            window.mozRequestAnimationFrame || 
-			                            window.webkitRequestAnimationFrame ||
-			                            window.msRequestAnimationFrame;
-			 
-			var transforms = ["transform", 
-			                  "msTransform", 
-			                  "webkitTransform", 
-			                  "mozTransform", 
-			                  "oTransform"];
-			                   
-			var transformProperty = getSupportedPropertyName(transforms);
-			 
-			var imageContainer = document.querySelector("#parallaxContainer");
-			 
-			var scrolling = false;
-			var mouseWheelActive = false;
-			 
-			var count = 0;
-			var mouseDelta = 0;
-			 
-			//
-			// vendor prefix management
-			//
-			function getSupportedPropertyName(properties) {
-			    for (var i = 0; i < properties.length; i++) {
-			        if (typeof document.body.style[properties[i]] != "undefined") {
-			            return properties[i];
-			        }
-			    }
-			    return null;
-			}
-			 
-			function setup() {
-			    window.addEventListener("scroll", setScrolling, false);
-			     
-			    // deal with the mouse wheel
-			    // window.addEventListener("mousewheel", mouseScroll, false);
-			    // window.addEventListener("DOMMouseScroll", mouseScroll, false);
-			     
-			    animationLoop();
-			}
-			setup();
-			 
-			function mouseScroll(e) {
-			    mouseWheelActive = true;
-			         
-			    // cancel the default scroll behavior
-			    if (e.preventDefault) {
-			        e.preventDefault();
-			    }
-			     
-			    // deal with different browsers calculating the delta differently
-			    if (e.wheelDelta) {
-			        mouseDelta = e.wheelDelta / 50;
-			    } else if (e.detail) {
-			        mouseDelta = -e.detail / 3;
-			    }
-			}
-			 
-			//
-			// Called when a scroll is detected
-			//
-			function setScrolling() {
-			    scrolling = true;
-			}
-			 
-			//
-			// Cross-browser way to get the current scroll position
-			//
-			function getScrollPosition() {
-			    if (document.documentElement.scrollTop == 0) {
-			        return document.body.scrollTop;
-			    } else {
-			        return document.documentElement.scrollTop;
-			    }
-			}
-			 
-			//
-			// A performant way to shift our image up or down
-			//
-			function setTranslate3DTransform(element, yPosition) {
-			    var value = "translate3d(0px" + ", " + yPosition + "px" + ", 0)";
-			    element.style[transformProperty] = value;
-			}
-			 
-			function animationLoop() {
-			    // adjust the image's position when scrolling
-			    if (scrolling) {
-			        setTranslate3DTransform(imageContainer, 
-			                                -1 * getScrollPosition() / 2);
-			        scrolling = false;
-			    }
-			     
-			    // scroll up or down by 10 pixels when the mousewheel is used
-			    if (mouseWheelActive) {
-			        window.scrollBy(0, -mouseDelta * 10);
-			        count++;
-			         
-			        // stop the scrolling after a few moments
-			        if (count > 20) {
-			            count = 0;
-			            mouseWheelActive = false;
-			            mouseDelta = 0;
-			        }
-			    }
-			         
-			    requestAnimationFrame(animationLoop);
-			}
-			 
+			<!-- js at the end to make page content load faster -->
+			<script type="text/javascript" src="jquery.js"></script>
+			<script type="text/javascript">
+				$(document).bind("mobileinit", function () {
+				    $.mobile.ajaxEnabled = false;
+				});
 			</script>
-		</div>
+			<script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>
+			<script type="text/javascript" src="jquery.mobile-1.4.2.min.js"></script>
+			<script type="text/javascript" src="script.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					$( "#accordion" ).accordion({
+						collapsible: true
+					}
+					);
+					$( "#tabs" ).tabs();
+
+				});
+			</script>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-51297067-1', 'colloque.me');
+			  ga('send', 'pageview');
+			</script>
+				<script type="text/javascript" src="prefixfree.min.js"></script>
+				<script>
+				 
+				var requestAnimationFrame = window.requestAnimationFrame || 
+				                            window.mozRequestAnimationFrame || 
+				                            window.webkitRequestAnimationFrame ||
+				                            window.msRequestAnimationFrame;
+				 
+				var transforms = ["transform", 
+				                  "msTransform", 
+				                  "webkitTransform", 
+				                  "mozTransform", 
+				                  "oTransform"];
+				                   
+				var transformProperty = getSupportedPropertyName(transforms);
+				 
+				var imageContainer = document.querySelector("#parallaxContainer");
+				 
+				var scrolling = false;
+				var mouseWheelActive = false;
+				 
+				var count = 0;
+				var mouseDelta = 0;
+				 
+				//
+				// vendor prefix management
+				//
+				function getSupportedPropertyName(properties) {
+				    for (var i = 0; i < properties.length; i++) {
+				        if (typeof document.body.style[properties[i]] != "undefined") {
+				            return properties[i];
+				        }
+				    }
+				    return null;
+				}
+				 
+				function setup() {
+				    window.addEventListener("scroll", setScrolling, false);
+				     
+				    // deal with the mouse wheel
+				    // window.addEventListener("mousewheel", mouseScroll, false);
+				    // window.addEventListener("DOMMouseScroll", mouseScroll, false);
+				     
+				    animationLoop();
+				}
+				setup();
+				 
+				function mouseScroll(e) {
+				    mouseWheelActive = true;
+				         
+				    // cancel the default scroll behavior
+				    if (e.preventDefault) {
+				        e.preventDefault();
+				    }
+				     
+				    // deal with different browsers calculating the delta differently
+				    if (e.wheelDelta) {
+				        mouseDelta = e.wheelDelta / 50;
+				    } else if (e.detail) {
+				        mouseDelta = -e.detail / 3;
+				    }
+				}
+				 
+				//
+				// Called when a scroll is detected
+				//
+				function setScrolling() {
+				    scrolling = true;
+				}
+				 
+				//
+				// Cross-browser way to get the current scroll position
+				//
+				function getScrollPosition() {
+				    if (document.documentElement.scrollTop == 0) {
+				        return document.body.scrollTop;
+				    } else {
+				        return document.documentElement.scrollTop;
+				    }
+				}
+				 
+				//
+				// A performant way to shift our image up or down
+				//
+				function setTranslate3DTransform(element, yPosition) {
+				    var value = "translate3d(0px" + ", " + yPosition + "px" + ", 0)";
+				    element.style[transformProperty] = value;
+				}
+				 
+				function animationLoop() {
+				    // adjust the image's position when scrolling
+				    if (scrolling) {
+				        setTranslate3DTransform(imageContainer, 
+				                                -1 * getScrollPosition() / 2);
+				        scrolling = false;
+				    }
+				     
+				    // scroll up or down by 10 pixels when the mousewheel is used
+				    if (mouseWheelActive) {
+				        window.scrollBy(0, -mouseDelta * 10);
+				        count++;
+				         
+				        // stop the scrolling after a few moments
+				        if (count > 20) {
+				            count = 0;
+				            mouseWheelActive = false;
+				            mouseDelta = 0;
+				        }
+				    }
+				         
+				    requestAnimationFrame(animationLoop);
+				}
+				 
+				</script>
+			</div>
 		</div>
 	</body>
 </html>
