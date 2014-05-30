@@ -35,7 +35,7 @@
 		<div role="main" class="ui-content">
 			<div class="content">
 
-				<div class="title clearfix">
+				<div class="title clearfix" data-top="opacity: 1;" data--500-top="opacity: 0">
 				<div id="parallaxContainer">
 				    <img src="img/profile_bg5.jpg" alt="Profile background"/>
 				</div>
@@ -59,7 +59,7 @@
 					</div>
 				<br/><br/>
 				</div>
-				<div class="aboutme clearfix" >
+				<div class="aboutme clearfix">
 				<div class="container">
 					<!-- <h1>About me</h1> -->
 					<br/>
@@ -334,6 +334,10 @@
 		<script type="text/javascript" src="jquery-ui-1.10.4.custom.min.js"></script>
 		<script type="text/javascript" src="jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="skrollr.js"></script>
+		<script type="text/javascript">
+    var s = skrollr.init();
+    </script>
 		<script>
 			$(function() {
 				$( "#accordion" ).accordion({
