@@ -87,6 +87,21 @@ Just paste the following code into your HTML file:&lt;/p&gt;
 &lt;p&gt;You can google that yourself.
 Nah, &lt;a href=&quot;http://lmgtfy.com/?q=menu+icon+png&quot;&gt;I will help you out&lt;/a&gt;.&lt;/p&gt;
 
+&lt;h4 id=&quot;update&quot;&gt;Update&lt;/h4&gt;
+&lt;p&gt;Just found out about &lt;a href=&quot;http://fontawesome.io&quot;&gt;Font Awesome&lt;/a&gt;, have a look at their amazing work! You can implement Font Awesom’s CSS by adding this single line in the head section:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can then add over 400 icons using the &lt;i&gt; tag like this:&lt;/i&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fa fa-bars&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt; Menu&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;which result in:&lt;/p&gt;
+
+&lt;p&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt; Menu&lt;/p&gt;
+
+&lt;p&gt;You can then style the icon like text, how convenient! Head to &lt;a href=&quot;http://fontawesome.io&quot;&gt;Font Awesome&lt;/a&gt; for more options and example!&lt;/p&gt;
+
 </description>
         <pubDate>Sun, 25 May 2014 11:38:00 +0100</pubDate>
         <link>http://colloque.me/tips/2014/05/25/how-to-generate-three-line-menu-icon/</link>

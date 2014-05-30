@@ -40,4 +40,24 @@ Then give it a height and width:
 You can google that yourself.
 Nah, [I will help you out][lmgtfy].
 
+#### Update
+Just found out about [Font Awesome][fontawesome], have a look at their amazing work! You can implement Font Awesom's CSS by adding this single line in the head section:
+
+{% highlight CSS %}
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+{% endhighlight %}
+
+You can then add over 400 icons using the <i> tag like this:
+
+{% highlight HTML %}
+<i class="fa fa-bars"></i> Menu
+{% endhighlight %}
+
+which result in:
+
+<i class="fa fa-bars"></i> Menu
+
+You can then style the icon like text, how convenient! Head to [Font Awesome][fontawesome] for more options and example!
+
 [lmgtfy]: http://lmgtfy.com/?q=menu+icon+png
+[fontawesome]: http://fontawesome.io

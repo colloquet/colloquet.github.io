@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="/css/main.css"/>
 	<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/mobile.css" type="text/css" rel="stylesheet" />
     <link rel="canonical" href="http://colloque.me/tips/2014/05/25/how-to-generate-three-line-menu-icon/"/>	
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<style type="text/css">
 		html {
 			background-color: #f9f9f9;
@@ -100,10 +101,25 @@ Just paste the following code into your HTML file:</p>
 <p>You can google that yourself.
 Nah, <a href="http://lmgtfy.com/?q=menu+icon+png">I will help you out</a>.</p>
 
+<h4 id="update">Update</h4>
+<p>Just found out about <a href="http://fontawesome.io">Font Awesome</a>, have a look at their amazing work! You can implement Font Awesom’s CSS by adding this single line in the head section:</p>
+
+<div class="highlight"><pre><code class="css"><span class="o">&lt;</span><span class="nt">link</span> <span class="nt">href</span><span class="o">=</span><span class="s2">&quot;//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css&quot;</span> <span class="nt">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="o">&gt;</span></code></pre></div>
+
+<p>You can then add over 400 icons using the <i> tag like this:</i></p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-bars&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Menu</code></pre></div>
+
+<p>which result in:</p>
+
+<p><i class="fa fa-bars"></i> Menu</p>
+
+<p>You can then style the icon like text, how convenient! Head to <a href="http://fontawesome.io">Font Awesome</a> for more options and example!</p>
+
 
   </article>
 
-  <p><a href="/blog/">Back</a></p>
+  <p><a href="/blog/"><i class="fa fa-chevron-circle-left"></i>&nbsp;Back</a></p>
   
   <div id="disqus_thread"></div>
     <script type="text/javascript">
