@@ -47,7 +47,7 @@ Just found out about [Font Awesome][fontawesome], have a look at their amazing w
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 {% endhighlight %}
 
-You can then add over 400 icons using the <i> tag like this:
+You can then add over 400 icons using the tag like this:
 
 {% highlight HTML %}
 <i class="fa fa-bars"></i> Menu
