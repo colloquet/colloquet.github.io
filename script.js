@@ -33,6 +33,5 @@ $(document).ready(function() {
 		$('html, body').stop().animate({
 			scrollTop: $("#contact").offset().top
 		});
-	});
-	
+	});	
 });
