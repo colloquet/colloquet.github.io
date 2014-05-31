@@ -252,6 +252,7 @@ hr {
 
 .profilepic {
   border-radius: 75px;
+  margin-bottom: 20px;
   /*-webkit-transition: all .2s ease-in-out;*/
 }
 
