@@ -174,3 +174,7 @@ hr {
 .muted {
 	text-align: center;
 }
+
+#parallaxContainer {
+	display: none;
+}

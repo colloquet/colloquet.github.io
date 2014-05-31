@@ -58,6 +58,7 @@
   margin-right: auto;
   color: #fff;
   background: transparent;
+  transition: opacity 1s;
 
 }
 
@@ -78,6 +79,7 @@
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
+  transition: opacity 1s;
 }
 
 .resume {
@@ -86,6 +88,7 @@
   background-color: #fafafa;
   margin-left: auto;
   margin-right: auto;
+  transition: opacity 1s;
 }
 
 .aboutme {
@@ -94,6 +97,7 @@
   background-color: #fafafa;
   margin-left: auto;
   margin-right: auto;
+  transition: opacity 1s;
 }
 
 .contact {
@@ -103,6 +107,7 @@
   margin-right: auto;
   line-height: 2em;
   background-color: #fff;
+  transition: opacity 1s;
 }
 
 .footer {
@@ -393,4 +398,9 @@ ul, li {
   float: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s;
 }
