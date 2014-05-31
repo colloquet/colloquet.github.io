@@ -17,6 +17,20 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  z-index: 999999999;
+  transition: background-color 1s;
+}
+.navbar.stuck {
+  background-color: #fff;
+  position: fixed;
+  display: block;
+  top: 0;
+  z-index: 99999999;
+  width: 100%;
+}
+
+.navbar.stuck a {
+  color: rgb(90,90,90);
 }
 
 .navitem {
