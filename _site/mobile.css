@@ -170,3 +170,7 @@ hr {
 #sidebar-btn {
 	display: inline-block;
 }
+
+.muted {
+	text-align: center;
+}
