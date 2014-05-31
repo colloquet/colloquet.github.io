@@ -171,7 +171,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-weight: 200;
-  color: rgb(90, 90, 90);
+  color: rgb(40, 40, 40);
   text-rendering: optimizelegibility;
 }
 
@@ -181,7 +181,7 @@ h1 {
   letter-spacing: -1px;
   line-height: 50px;
   text-rendering: optimizelegibility;
-  color: rgb(90, 90, 90);
+  color: rgb(40, 40, 40);
 }
   
 h2 { 
@@ -190,13 +190,13 @@ h2 {
   letter-spacing: -1px;
   line-height: 50px;
   text-rendering: optimizelegibility;
-  color: rgb(90, 90, 90);
+  color: rgb(40, 40, 40);
 }
 
 
 p, li, blockquote, label{
   font-weight: 200;
-  color: rgb(90, 90, 90);
+  color: rgb(40, 40, 40);
   text-rendering: optimizelegibility;
 
 }
