@@ -3,12 +3,10 @@
 <head>
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>The Cake Shop | Hong Kong</title>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="onepagescroll.min.js"></script>
-	<script type="text/javascript" src="hammer.min.js"></script>
 	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bitter|Great+Vibes|Pacifico|Playball|Amatic+SC|Satisfy' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="magnific-popup.css"> 
 	<style type="text/css">
 		body {
 			font-family: 'Bitter', serif;
@@ -67,7 +65,7 @@
 			color: #fff;
 		}
 		.main section.page3 h1 {
-			color: black;
+			color: #fff;
 			/*opacity: 0.8;*/
 		}
 		.main section h2 {
@@ -107,7 +105,7 @@
 	      box-sizing: border-box;
 	      -moz-box-sizing: border-box;
 	      -webkit-box-sizing: border-box;
-	      background: rgba(255, 255, 255, 0.5);
+	      background: rgba(255, 255, 255, 1);
 	      font-weight: bold;
 	      font-size: 13px;
 	      color: #000;
@@ -134,7 +132,7 @@
 	    	color: #fff;
 	    }
 	    .viewing-page-1 .navbar{
-	    	background: rgba(255, 255, 255, 0.5);
+	    	background: rgba(255, 255, 255, 1);
 	    }
 	    .viewing-page-1 .navbar:hover{
 	    	background: rgba(255, 255, 255, 1);
@@ -154,39 +152,31 @@
 
 
 	    }
+	    #come-in {
+	    	display: inline-block;
+	    	font-family: 'Pacifico', cursive;
+	    	color: #fff;
+	    	text-decoration: underline;
+			transform:rotate(-7deg);
+			-ms-transform:rotate(-7deg); /* IE 9 */
+			-webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
+	    }
+	    #come-in, #were {
+	    	font-size: 1.9em;
+	    }
+	    #were, #open {
+	    	font-family: 'Bitter', serif;
+	    	color: #fff;
+	    	font-weight: bold;
+	    }
+	    #open {
+	    	font-size: 4.5em;
+	    }
+	    #sign {
+	    	text-align: center;
+	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    }
 	</style>
-	<script>
-	  $(document).ready(function(){
-	      onePageScroll(".main", {
-	        sectionContainer: "section",
-	        responsiveFallback: 600,
-	        loop: true
-	      });
-	      $(".to-home").click(function(){
-	      	moveTo(".main", 1);
-	      });
-	      $(".to-aboutus").click(function(){
-	      	moveTo(".main", 2);
-	      });
-	      $(".to-classes").click(function(){
-	      	moveTo(".main", 3);
-	      });
-	      $(".to-contact").click(function(){
-	      	moveTo(".main", 4);
-	      });
-	      $(function(){
-			    var main = document.getElementById("main");
-			    
-			    Hammer(main).on("swipeup", function() {
-			          moveDown(".main"); 
-			    });
-			    
-			    Hammer(document.getElementById("main")).on("swipedown", function() {
-			          moveUp(".main"); 
-			    });
-			})
-		});
-	</script>
 </head>
 <body>
   <div class="main" id="main">
@@ -194,7 +184,8 @@
     	<div class="page-content">
 	    	<div class="container">
 				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
-				<h2 align="center" data-scroll-reveal="enter from the bottom after 0.5s">Hong Kong</h2>
+				<!-- <h2 align="center" data-scroll-reveal="enter from the bottom after 0.5s">Hong Kong</h2> -->
+				<div id="sign"><div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span></div>
 			</div>
 		</div>
     </section>
@@ -235,13 +226,47 @@
 		  	<div class="navitem to-contact">Contact</div>
 		</div>
 	</div>
+	<!-- scripts -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="onepagescroll.min.js"></script>
+	<script type="text/javascript" src="hammer.min.js"></script>
 	<script type="text/javascript" src="jquery.arctext.js"></script>
 	<script src="drop.min.js"></script>
 	<script src='scrollReveal.js'></script>
+	<script src="jquery.magnific-popup.min.js"></script> 
 	<script>
 		window.scrollReveal = new scrollReveal();
 		$(document).ready(function() {
+			onePageScroll(".main", {
+	        sectionContainer: "section",
+	        responsiveFallback: 600,
+	        loop: true
+	      });
+	      $(".to-home").click(function(){
+	      	moveTo(".main", 1);
+	      });
+	      $(".to-aboutus").click(function(){
+	      	moveTo(".main", 2);
+	      });
+	      $(".to-classes").click(function(){
+	      	moveTo(".main", 3);
+	      });
+	      $(".to-contact").click(function(){
+	      	moveTo(".main", 4);
+	      });
+	      $(function(){
+			    var main = document.getElementById("main");
+			    
+			    Hammer(main).on("swipeup", function() {
+			          moveDown(".main"); 
+			    });
+			    
+			    Hammer(document.getElementById("main")).on("swipedown", function() {
+			          moveUp(".main"); 
+			    });
+			})
 			$("#title").arctext({radius: 800})
+			$('.popup-link').magnificPopup({type:'image'});
 		});
 	</script>
 	<script>
