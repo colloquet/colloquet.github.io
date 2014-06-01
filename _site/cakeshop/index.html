@@ -121,17 +121,27 @@
 	      transition: all 500ms ease-in-out;
 	      font-family: 'Bitter', serif;
 	    }
-	    .navbar:hover {
+	    /*.navbar:hover {
 	      color: black;
 	      background: rgba(255, 255, 255, 1);
-	    }
+	    }*/
 	    .navitem {
 	    	display: inline-block;
 	    	position: relative;
 	    	float: left;
 	    	padding: 15px;
 	    	cursor: pointer;
+	    }
+	    .nav-social {
+	    	display: inline-block;
+	    	position: relative;
+	    	float: right;
+	    	padding: 15px;
+	    	/*cursor: pointer;*/
 
+	    }
+	    .nav-social a {
+	    	color: #000;
 	    }
 	    .navitem:hover {
 	    	background-color: rgba(0,0,0,0.5);
@@ -213,6 +223,9 @@
 		    	padding-left: 0px;
 		    	padding-right: 0px;
 		    }
+		    .nav-social {
+		    	display: none;
+		    }
 
 	    }
 	    #come-in {
@@ -253,6 +266,26 @@
 	    	
 		    background-color: #fff;
 	    }
+	    .footer {
+	    	position: fixed;
+	    	display: block;
+	    	bottom: 0;
+	    	width: 100%;
+	    	text-align: center;
+	    	background-color: rgba(255,255,255,0.5);
+	    	padding: 5px;
+	    	font-size: 14px;
+	    	transition: background 1s;
+	    }
+	    .footer a {
+	    	text-decoration: none;
+	    	color: black;
+	    }
+	    .footer:hover {
+	      /*color: black;*/
+	      background: rgba(255, 255, 255, 1);
+	    }
+
 	</style>
 </head>
 <body>
@@ -314,6 +347,14 @@
 		  	<div class="navitem to-gallery">Gallery</div>
 		  	<div class="navitem to-classes">Classes</div>
 		  	<div class="navitem to-contact">Contact</div>
+		  	<div class="nav-social"><a href="#"><i class="fa fa-instagram"></i></a></div>
+		  	<div class="nav-social"><a href="#"><i class="fa fa-twitter-square"></i></a></div>
+		  	<div class="nav-social"><a href="#"><i class="fa fa-facebook-square"></i></a></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			Created by <a href="http://colloque.me">Colloque Tsui</a> @ 2014
 		</div>
 	</div>
 	<!-- scripts -->
