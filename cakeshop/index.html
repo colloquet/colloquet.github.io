@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>The Cake Shop | Hong Kong</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
@@ -51,11 +52,12 @@
 		}
 		.main section h1 {
 			/*text-align: center;*/
-			font-size: 550%;
+			font-size: 5em;
 			color: #fff;
 			font-family: 'Pacifico', cursive;
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			margin-bottom: 0.5em;
 		}
 		.main section.page1 h1 {
 			color: #fff;
@@ -68,11 +70,14 @@
 			/*opacity: 0.8;*/
 		}
 		.main section h2 {
-			font-size: 200%;
+			font-size: 3em;
 			color: #fff;
 			/*font-family: 'Pacifico', cursive;*/
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			padding: 10px 0;
 		}
 		.main section p {
 			font-size: 22px;
@@ -133,6 +138,21 @@
 	    .viewing-page-1 .navbar:hover{
 	    	background: rgba(255, 255, 255, 1);
 	    }
+	    label {
+	    	display: inline-block;
+	    	width: 120px;
+	    }
+	    @media screen and (max-width: 768px) {
+	    	.container {
+	    		width: 100%;
+	    		/*padding: 10px;*/
+	    	}
+
+	    }
+	    @media screen and (max-width: 480px) {
+
+
+	    }
 	</style>
 	<script>
 	  $(document).ready(function(){
@@ -161,7 +181,7 @@
     <section class="page1 clearfix">
     	<div class="page-content">
 	    	<div class="container">
-				<h1 align="center" data-scroll-reveal="enter from the bottom">The Cake Shop</h1>
+				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
 				<h2 align="center" data-scroll-reveal="enter from the bottom after 0.5s">Hong Kong</h2>
 			</div>
 		</div>
@@ -186,28 +206,31 @@
     	<div class="page-content">
     		<div class="container">
     			<h1>Contact</h1>
-    			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;Email: example@example.com</p>
-    			<p><i class="fa fa-phone-square fa-fw"></i>&nbsp;Phone: +8523123123</p>
-    			<p><i class="fa fa-home fa-fw"></i>&nbsp;Address: qweqweqwe</p>
+    			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label> example@example.com</p>
+    			<p><i class="fa fa-phone-square fa-fw"></i>&nbsp;<label>Phone:</label> +8523123123</p>
+    			<p><i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label> qweqweqwe</p>
     			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
     		</div>
     	</div>
     </section>
     
-  </div>
-  <div class="navbar">
-  	<div class="container">
-	  	<div class="navitem to-home">Home</div>
-	  	<div class="navitem to-aboutus">About us</div>
-	  	<div class="navitem to-classes">Classes</div>
-	  	<div class="navitem to-contact">Contact</div>
-  	</div>
-  </div>
-  <script src='scrollReveal.js'></script>
-			<script>
-
-				window.scrollReveal = new scrollReveal();
-
-			</script>
+	</div>
+	<div class="navbar">
+		<div class="container">
+		  	<div class="navitem to-home">Home</div>
+		  	<div class="navitem to-aboutus">About us</div>
+		  	<div class="navitem to-classes">Classes</div>
+		  	<div class="navitem to-contact">Contact</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery.arctext.js"></script>
+	<script src="drop.min.js"></script>
+	<script src='scrollReveal.js'></script>
+	<script>
+		window.scrollReveal = new scrollReveal();
+		$(document).ready(function() {
+			$("#title").arctext({radius: 800})
+		});
+	</script>
 </body>
 </html>
