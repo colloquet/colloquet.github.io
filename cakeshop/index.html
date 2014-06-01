@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	<title>The Cake Shop | Hong Kong</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
@@ -25,7 +26,7 @@
 		}
 		.page1 {
 			/*background-color: #87CEEB;*/
-			background-image: url("bg1.jpg");
+			background-image: url("bg.jpg");
 			background-size: 100%;
 			/*background-attachment: fixed;*/
 
@@ -38,16 +39,33 @@
 		}
 		.page3 {
 			/*background-color: #f9f9f9;*/
-			background-image: url("bg3.jpeg");
+			background-image: url("bg3.jpg");
+			background-size: 100%;
+			/*background-attachment: fixed;*/
+		}
+		.page4 {
+			/*background-color: #f9f9f9;*/
+			background-image: url("bg4.jpeg");
 			background-size: 100%;
 			/*background-attachment: fixed;*/
 		}
 		.main section h1 {
-			font-size: 500%;
+			/*text-align: center;*/
+			font-size: 550%;
 			color: #fff;
 			font-family: 'Pacifico', cursive;
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+		}
+		.main section.page1 h1 {
+			color: #fff;
+		}
+		.main section.page2 h1 {
+			color: #fff;
+		}
+		.main section.page3 h1 {
+			color: black;
+			/*opacity: 0.8;*/
 		}
 		.main section h2 {
 			font-size: 200%;
@@ -83,7 +101,7 @@
 	      box-sizing: border-box;
 	      -moz-box-sizing: border-box;
 	      -webkit-box-sizing: border-box;
-	      background: rgba(255, 255, 255, 0.25);
+	      background: rgba(255, 255, 255, 0.5);
 	      font-weight: bold;
 	      font-size: 13px;
 	      color: #000;
@@ -125,8 +143,11 @@
 	      $(".to-aboutus").click(function(){
 	      	$(".main").moveTo(2);
 	      });
-	      $(".to-contact").click(function(){
+	      $(".to-classes").click(function(){
 	      	$(".main").moveTo(3);
+	      });
+	      $(".to-contact").click(function(){
+	      	$(".main").moveTo(4);
 	      });
 		});
 	</script>
@@ -136,8 +157,8 @@
     <section class="page1 clearfix">
     	<div class="page-content">
 	    	<div class="container">
-				<h1 class="to-aboutus">The Cake Shop</h1>
-				<h2>Hong Kong</h2>
+				<h1 align="center">The Cake Shop</h1>
+				<h2 align="center">Hong Kong</h2>
 			</div>
 		</div>
     </section>
@@ -152,19 +173,29 @@
     <section class="page3 clearfix">
     	<div class="page-content">
     		<div class="container">
+    			<h1>Classes</h1>
+    			<p>Curabitur tempus ante quam, id molestie lectus facilisis in. Cras dolor lorem, rhoncus ut dignissim auctor, placerat a ligula. Donec bibendum consectetur laoreet. Mauris tincidunt metus ac leo vulputate, non rhoncus diam sagittis. Cras ut felis sit amet justo eleifend tempus id sit amet libero. Duis hendrerit quam ipsum, sed venenatis lacus mattis id. Vestibulum sit amet dui consequat, posuere nisl non, tincidunt mi. Praesent ut mauris ligula. Mauris eleifend magna non augue accumsan auctor. Integer elementum semper tristique. Vestibulum porta, massa id viverra ornare, nisi enim venenatis dui, ac sollicitudin leo nisl vel diam. Fusce nibh enim, luctus eget fringilla vitae, dignissim tristique orci. Morbi consequat imperdiet tortor sit amet condimentum.</p>
+    		</div>
+    	</div>
+    </section>
+    <section class="page4 clearfix">
+    	<div class="page-content">
+    		<div class="container">
     			<h1>Contact</h1>
     			<p>Email: example@example.com</p>
-    			<p>Phone: 123123123</p>
+    			<p>Phone: +8523123123</p>
     			<p>Address: qweqweqwe</p>
     			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
     		</div>
     	</div>
     </section>
+    
   </div>
   <div class="navbar">
   	<div class="container">
 	  	<div class="navitem to-home">Home</div>
 	  	<div class="navitem to-aboutus">About us</div>
+	  	<div class="navitem to-classes">Classes</div>
 	  	<div class="navitem to-contact">Contact</div>
   	</div>
   </div>
