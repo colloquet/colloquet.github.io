@@ -301,7 +301,15 @@ ul, li {
   width: 100%;
   text-align: center;
 }
+@media screen and (max-width: 960px) {
 
+  .container {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
 @media screen and (max-width: 768px) {
 
   .container {
