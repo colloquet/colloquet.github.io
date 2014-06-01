@@ -1,9 +1,11 @@
 <!doctype html>
 <html>
 <head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>The Cake Shop | Hong Kong</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+	<script type="text/javascript" src="onepagescroll.min.js"></script>
+	<script type="text/javascript" src="hammer.min.js"></script>
 	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bitter|Great+Vibes|Pacifico|Playball|Amatic+SC|Satisfy' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -51,11 +53,12 @@
 		}
 		.main section h1 {
 			/*text-align: center;*/
-			font-size: 550%;
+			font-size: 5em;
 			color: #fff;
 			font-family: 'Pacifico', cursive;
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			margin-bottom: 0.5em;
 		}
 		.main section.page1 h1 {
 			color: #fff;
@@ -68,11 +71,14 @@
 			/*opacity: 0.8;*/
 		}
 		.main section h2 {
-			font-size: 200%;
+			font-size: 3em;
 			color: #fff;
 			/*font-family: 'Pacifico', cursive;*/
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			padding: 10px 0;
 		}
 		.main section p {
 			font-size: 22px;
@@ -81,7 +87,7 @@
 			text-rendering: optimizelegibility;
 			/*text-align: center;*/
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			background-color: rgba(0,0,0,0.3);
+			background-color: rgba(0,0,0,0.5);
 			padding: 10px;
 			border-radius: 5px;
 		}
@@ -133,35 +139,61 @@
 	    .viewing-page-1 .navbar:hover{
 	    	background: rgba(255, 255, 255, 1);
 	    }
+	    label {
+	    	display: inline-block;
+	    	width: 120px;
+	    }
+	    @media screen and (max-width: 768px) {
+	    	.container {
+	    		width: 100%;
+	    		/*padding: 10px;*/
+	    	}
+
+	    }
+	    @media screen and (max-width: 480px) {
+
+
+	    }
 	</style>
 	<script>
 	  $(document).ready(function(){
-	      $(".main").onepage_scroll({
+	      onePageScroll(".main", {
 	        sectionContainer: "section",
 	        responsiveFallback: 600,
 	        loop: true
 	      });
 	      $(".to-home").click(function(){
-	      	$(".main").moveTo(1);
+	      	moveTo(".main", 1);
 	      });
 	      $(".to-aboutus").click(function(){
-	      	$(".main").moveTo(2);
+	      	moveTo(".main", 2);
 	      });
 	      $(".to-classes").click(function(){
-	      	$(".main").moveTo(3);
+	      	moveTo(".main", 3);
 	      });
 	      $(".to-contact").click(function(){
-	      	$(".main").moveTo(4);
+	      	moveTo(".main", 4);
 	      });
+	      $(function(){
+			    var main = document.getElementById("main");
+			    
+			    Hammer(main).on("swipeup", function() {
+			          moveDown(".main"); 
+			    });
+			    
+			    Hammer(document.getElementById("main")).on("swipedown", function() {
+			          moveUp(".main"); 
+			    });
+			})
 		});
 	</script>
 </head>
 <body>
-  <div class="main">
+  <div class="main" id="main">
     <section class="page1 clearfix">
     	<div class="page-content">
 	    	<div class="container">
-				<h1 align="center" data-scroll-reveal="enter from the bottom">The Cake Shop</h1>
+				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
 				<h2 align="center" data-scroll-reveal="enter from the bottom after 0.5s">Hong Kong</h2>
 			</div>
 		</div>
@@ -186,28 +218,40 @@
     	<div class="page-content">
     		<div class="container">
     			<h1>Contact</h1>
-    			<p>Email: example@example.com</p>
-    			<p>Phone: +8523123123</p>
-    			<p>Address: qweqweqwe</p>
+    			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label> example@example.com</p>
+    			<p><i class="fa fa-phone-square fa-fw"></i>&nbsp;<label>Phone:</label> +8523123123</p>
+    			<p><i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label> qweqweqwe</p>
     			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
     		</div>
     	</div>
     </section>
     
-  </div>
-  <div class="navbar">
-  	<div class="container">
-	  	<div class="navitem to-home">Home</div>
-	  	<div class="navitem to-aboutus">About us</div>
-	  	<div class="navitem to-classes">Classes</div>
-	  	<div class="navitem to-contact">Contact</div>
-  	</div>
-  </div>
-  <script src='scrollReveal.js'></script>
-			<script>
+	</div>
+	<div class="navbar">
+		<div class="container">
+		  	<div class="navitem to-home">Home</div>
+		  	<div class="navitem to-aboutus">About us</div>
+		  	<div class="navitem to-classes">Classes</div>
+		  	<div class="navitem to-contact">Contact</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery.arctext.js"></script>
+	<script src="drop.min.js"></script>
+	<script src='scrollReveal.js'></script>
+	<script>
+		window.scrollReveal = new scrollReveal();
+		$(document).ready(function() {
+			$("#title").arctext({radius: 800})
+		});
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-				window.scrollReveal = new scrollReveal();
-
-			</script>
+	  ga('create', 'UA-51297067-1', 'colloque.me');
+	  ga('send', 'pageview');
+	</script>
 </body>
 </html>

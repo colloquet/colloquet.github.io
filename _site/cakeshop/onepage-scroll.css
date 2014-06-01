@@ -54,7 +54,7 @@ body, .onepage-wrapper, html {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(0,0,0,0.85);
+  background: #fff;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -63,8 +63,8 @@ body, .onepage-wrapper, html {
 .onepage-pagination li a.active:before{
   width: 10px;
   height: 10px;
-  background: none;
-  border: 1px solid black;
+  background: white;
+  border: 1px solid white;
   margin-top: -4px;
   left: 8px;
 }
