@@ -5,6 +5,7 @@
 	<title>The Cake Shop | Hong Kong</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="onepagescroll.min.js"></script>
+	<script type="text/javascript" src="hammer.min.js"></script>
 	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bitter|Great+Vibes|Pacifico|Playball|Amatic+SC|Satisfy' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -177,7 +178,7 @@
 	</script>
 </head>
 <body>
-  <div class="main">
+  <div class="main" id="main">
     <section class="page1 clearfix">
     	<div class="page-content">
 	    	<div class="container">
@@ -230,6 +231,10 @@
 		window.scrollReveal = new scrollReveal();
 		$(document).ready(function() {
 			$("#title").arctext({radius: 800})
+			var element = document.getElementById('main');
+		    var hammertime = Hammer(element).on("tap", function(event) {
+		        alert('hello!');
+		    });
 		});
 	</script>
 </body>
