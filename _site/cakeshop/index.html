@@ -45,7 +45,13 @@
 		}
 		.page4 {
 			/*background-color: #f9f9f9;*/
-			background-image: url("img/bg4.jpeg");
+			background-image: url("img/bg4.jpg");
+			background-size: 100%;
+			/*background-attachment: fixed;*/
+		}
+		.page5 {
+			/*background-color: #f9f9f9;*/
+			background-image: url("img/bg5.jpeg");
 			background-size: 100%;
 			/*background-attachment: fixed;*/
 		}
@@ -172,6 +178,10 @@
 				background-size: auto;
 				background-position:center; 
 			}
+			.page5 {
+				background-size: auto;
+				background-position:center; 
+			}
 			.page-content {
 	    		margin: 10px;
 	    	}
@@ -195,10 +205,10 @@
 		    	width: 90px;
 		    }
 		    .page-content .container {
-		    	margin-top: 100px;
+		    	margin-top: 70px;
 		    }
 		    .navitem {
-		    	width: 25%;
+		    	width: 20%;
 		    	text-align: center;
 		    	padding-left: 0px;
 		    	padding-right: 0px;
@@ -229,7 +239,20 @@
 	    	text-align: center;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 	    }
+	    .Collage{
+	    	font-size: 0;
+		    padding:10px;
 
+	    }
+		.Collage img{
+		    vertical-align:bottom;
+		    opacity:1;
+		    border: 5px solid #fff;
+	    }
+	    .img-wrapper {
+	    	
+		    background-color: #fff;
+	    }
 	</style>
 </head>
 <body>
@@ -247,12 +270,23 @@
     	<div class="page-content">
     		<div class="container">
     			<h1>About us</h1>
-    			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum ut sapien quis faucibus. Sed a pulvinar sapien, nec pulvinar ipsum. Curabitur gravida mauris felis. Donec egestas erat nunc, eget facilisis eros viverra ac. Sed volutpat, est ornare vehicula semper, nisi tellus molestie mi, eu interdum eros orci eu lorem. Aliquam iaculis elit et magna ullamcorper, sed pellentesque enim porta. Duis sollicitudin semper velit in pretium. Vivamus et dui nisi. Vestibulum id semper ante. Aliquam dignissim nec lectus ac suscipit. Integer fermentum semper enim sed hendrerit. Donec non neque a elit congue vulputate id at odio. Nullam arcu ligula, commodo eget auctor ut, dapibus quis lectus.</p> -->
-    			<a href="img/cupcakes.jpg" class="popup-link"><img src="img/cupcakes.jpg" alt="cup cakes"/></a>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum ut sapien quis faucibus. Sed a pulvinar sapien, nec pulvinar ipsum. Curabitur gravida mauris felis. Donec egestas erat nunc, eget facilisis eros viverra ac. Sed volutpat, est ornare vehicula semper, nisi tellus molestie mi, eu interdum eros orci eu lorem. Aliquam iaculis elit et magna ullamcorper, sed pellentesque enim porta. Duis sollicitudin semper velit in pretium. Vivamus et dui nisi. Vestibulum id semper ante. Aliquam dignissim nec lectus ac suscipit. Integer fermentum semper enim sed hendrerit. Donec non neque a elit congue vulputate id at odio. Nullam arcu ligula, commodo eget auctor ut, dapibus quis lectus.</p>
     		</div>
     	</div>
     </section>
     <section class="page3 clearfix">
+    	<div class="page-content">
+	    	<div class="container">
+	    		<h1>Gallery</h1>
+	    		<div class="Collage">
+    				<div class="img-wrapper"><a href="img/cupcakes.jpg" class="popup-link"><img src="img/cupcakes.jpg" alt="cup cakes"/></a></div>
+    				<div class="img-wrapper"><a href="img/weddingcake.jpg" class="popup-link"><img src="img/weddingcake.jpg" alt="wedding cake"/></a></div>
+    				<div class="img-wrapper"><a href="img/somekid.jpg" class="popup-link"><img src="img/somekid.jpg" alt="some kid"/></a></div>
+				</div>
+			</div>
+		</div>
+    </section>
+    <section class="page4 clearfix">
     	<div class="page-content">
     		<div class="container">
     			<h1>Classes</h1>
@@ -260,7 +294,7 @@
     		</div>
     	</div>
     </section>
-    <section class="page4 clearfix">
+    <section class="page5 clearfix">
     	<div class="page-content">
     		<div class="container">
     			<h1>Contact</h1>
@@ -277,6 +311,7 @@
 		<div class="container">
 		  	<div class="navitem to-home">Home</div>
 		  	<div class="navitem to-aboutus">About us</div>
+		  	<div class="navitem to-gallery">Gallery</div>
 		  	<div class="navitem to-classes">Classes</div>
 		  	<div class="navitem to-contact">Contact</div>
 		</div>
@@ -284,14 +319,16 @@
 	<!-- scripts -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/onepagescroll.min.js"></script>
-	<script type="text/javascript" src="js/hammer.min.js"></script>
+	<!-- <script type="text/javascript" src="js/hammer.min.js"></script> -->
 	<script type="text/javascript" src="js/jquery.arctext.js"></script>
 	<script type="text/javascript" src="js/drop.min.js"></script>
 	<script type="text/javascript" src='js/scrollReveal.js'></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.collagePlus.min.js"></script> 
 	<script type="text/javascript">
 		$(window).load(function () {
         	window.scrollReveal = new scrollReveal();
+        	$('.Collage').collagePlus();
    		 });
 		
 		$(document).ready(function() {
@@ -306,11 +343,14 @@
 	      $(".to-aboutus").click(function(){
 	      	moveTo(".main", 2);
 	      });
-	      $(".to-classes").click(function(){
+	      $(".to-gallery").click(function(){
 	      	moveTo(".main", 3);
 	      });
-	      $(".to-contact").click(function(){
+	      $(".to-classes").click(function(){
 	      	moveTo(".main", 4);
+	      });
+	      $(".to-contact").click(function(){
+	      	moveTo(".main", 5);
 	      });
 	  //     $(function(){
 			//     var main = document.getElementById("main");
