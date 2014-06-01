@@ -174,9 +174,17 @@
 	      $(".to-contact").click(function(){
 	      	moveTo(".main", 4);
 	      });
-	      $("body").hammer().on("tap", function(event) {
-			    alert("hi");
-			});
+	      $(function(){
+			    var main = document.getElementById("main");
+			    
+			    Hammer(main).on("swipeup", function() {
+			          moveDown(".main"); 
+			    });
+			    
+			    Hammer(document.getElementById("main")).on("swipedown", function() {
+			          moveUp(".main"); 
+			    });
+			})
 		});
 	</script>
 </head>
