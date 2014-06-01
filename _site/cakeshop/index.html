@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Bitter|Great+Vibes|Pacifico|Playball|Amatic+SC|Satisfy' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<style type="text/css">
+		.clearfix {
+		  *zoom: 1;
+		}
+
+		.clearfix:before, .clearfix:after {
+		  display: table;
+		  line-height: 0;
+		  content: "";
+		}
+
+		.clearfix:after {
+		  clear: both;
+		}
+		.page1 {
+			/*background-color: #87CEEB;*/
+			background-image: url("bg1.jpg");
+			background-size: 100%;
+			/*background-attachment: fixed;*/
+
+		}
+		.page2 {
+			/*background-color: #f9f9f9;*/
+			background-image: url("bg2.jpg");
+			background-size: 100%;
+			/*background-attachment: fixed;*/
+		}
+		.page3 {
+			/*background-color: #f9f9f9;*/
+			background-image: url("bg3.jpeg");
+			background-size: 100%;
+			/*background-attachment: fixed;*/
+		}
+		.main section h1 {
+			font-size: 500%;
+			color: #fff;
+			font-family: 'Pacifico', cursive;
+			text-rendering: optimizelegibility;
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+		}
+		.main section h2 {
+			font-size: 200%;
+			color: #fff;
+			font-family: 'Pacifico', cursive;
+			text-rendering: optimizelegibility;
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+		}
+		.main section p {
+			font-size: 22px;
+			color: #fff;
+			font-family: 'Bitter', serif;
+			text-rendering: optimizelegibility;
+			/*text-align: center;*/
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			background-color: rgba(0,0,0,0.3);
+			padding: 10px;
+			border-radius: 5px;
+		}
+		.container {
+			width: 940px;
+			margin: 0 auto;
+			/*background-color: rgba(0,0,0,0.3);*/
+		}
+		.navbar {
+	      position: absolute;
+	      top: 0;
+	      left: 0;
+	      /*text-align: center;*/
+	      display: block;
+	      padding: 7px;
+	      width: 100%;
+	      box-sizing: border-box;
+	      -moz-box-sizing: border-box;
+	      -webkit-box-sizing: border-box;
+	      background: rgba(255, 255, 255, 0.25);
+	      font-weight: bold;
+	      font-size: 13px;
+	      color: #000;
+	      -webkit-transition: all 500ms ease-in-out;
+	      -moz-transition: all 500ms ease-in-out;
+	      -o-transition: all 500ms ease-in-out;
+	      transition: all 500ms ease-in-out;
+	      font-family: 'Bitter', serif;
+	    }
+	    .navbar:hover {
+	      color: black;
+	      background: rgba(255, 255, 255, 0.5);
+	    }
+	    .navitem {
+	    	display: inline-block;
+	    	position: relative;
+	    	float: left;
+	    	padding: 10px;
+	    	cursor: pointer;
+
+	    }
+	    .viewing-page-1 .navbar{
+	    	background: rgba(255, 255, 255, 0.5);
+	    }
+	</style>
+	<script>
+	  $(document).ready(function(){
+	      $(".main").onepage_scroll({
+	        sectionContainer: "section",
+	        responsiveFallback: 600,
+	        loop: true
+	      });
+	      $(".to-home").click(function(){
+	      	$(".main").moveTo(1);
+	      });
+	      $(".to-aboutus").click(function(){
+	      	$(".main").moveTo(2);
+	      });
+	      $(".to-contact").click(function(){
+	      	$(".main").moveTo(3);
+	      });
+		});
+	</script>
+</head>
+<body>
+  <div class="main">
+    <section class="page1 clearfix">
+    	<div class="page-content">
+	    	<div class="container">
+				<h1 class="to-aboutus">The Cake Shop</h1>
+				<h2>Hong Kong</h2>
+			</div>
+		</div>
+    </section>
+    <section class="page2 clearfix">
+    	<div class="page-content">
+    		<div class="container">
+    			<h1>About us</h1>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum ut sapien quis faucibus. Sed a pulvinar sapien, nec pulvinar ipsum. Curabitur gravida mauris felis. Donec egestas erat nunc, eget facilisis eros viverra ac. Sed volutpat, est ornare vehicula semper, nisi tellus molestie mi, eu interdum eros orci eu lorem. Aliquam iaculis elit et magna ullamcorper, sed pellentesque enim porta. Duis sollicitudin semper velit in pretium. Vivamus et dui nisi. Vestibulum id semper ante. Aliquam dignissim nec lectus ac suscipit. Integer fermentum semper enim sed hendrerit. Donec non neque a elit congue vulputate id at odio. Nullam arcu ligula, commodo eget auctor ut, dapibus quis lectus.</p>
+    		</div>
+    	</div>
+    </section>
+    <section class="page3 clearfix">
+    	<div class="page-content">
+    		<div class="container">
+    			<h1>Contact</h1>
+    			<p>Email: example@example.com</p>
+    			<p>Phone: 123123123</p>
+    			<p>Address: qweqweqwe</p>
+    			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
+    		</div>
+    	</div>
+    </section>
+  </div>
+  <div class="navbar">
+  	<div class="container">
+	  	<div class="navitem to-home">Home</div>
+	  	<div class="navitem to-aboutus">About us</div>
+	  	<div class="navitem to-contact">Contact</div>
+  	</div>
+  </div>
+  <script src='scrollReveal.js'></script>
+			<script>
+
+				window.scrollReveal = new scrollReveal();
+
+			</script>
+</body>
+</html>
