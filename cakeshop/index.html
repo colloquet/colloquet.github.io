@@ -184,6 +184,10 @@
 			    Hammer(document.getElementById("main")).on("swipedown", function() {
 			          moveUp(".main"); 
 			    });
+
+			    Hammer(main).on("doubletap", function() {
+			          moveDown(".main"); 
+			    });
 			})
 		});
 	</script>
