@@ -72,6 +72,7 @@
 		.main section.page1 h1, #sign {
 			color: #fff;
 			/*opacity: 0;*/
+			visibility: hidden;
 		}
 		.main section.page2 h1 {
 			color: #fff;
@@ -417,6 +418,8 @@
 	<script type="text/javascript" src="js/jquery.collagePlus.min.js"></script> 
 	<script type="text/javascript">
 		$(window).load(function () {
+			$(".main section.page1 h1").css("visibility","visible");
+			$("#sign").css("visibility","visible");
         	window.scrollReveal = new scrollReveal();
         	$('.Collage').collagePlus();
 
