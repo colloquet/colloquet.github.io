@@ -70,6 +70,9 @@
 			/*margin-top: 0em;
 			padding-top: 0.83em;*/
 		}
+		.main section.page1 h1 {
+	    	font-size: 6em;
+	    }
 		.main section.page1 h1, #sign {
 			color: #fff;
 			/*opacity: 0;*/
@@ -204,96 +207,17 @@
 	    }
 	    .Collage{
 	    	font-size: 0;
-		    padding:10px;
+		    padding-right:20px;
 		    width: 60%;
 		    display: inline-block;
-		    /*border-right: 2px solid #fff;*/
+		    /*border-right: 5px solid #fff;*/
 	    }
 		.Collage img{
 		    vertical-align:bottom;
 		    opacity:1;
 		    border: 5px solid #fff;
 	    }
-	    @media screen and (max-width: 960px) {
-
-		  .container {
-		    width: auto;
-		  }
-		  .page-content {
-	    		margin: 10px;
-	    	}
-
-		}
-	    @media screen and (max-width: 768px) {
-	    	.container {
-	    		width: auto;
-	    		/*padding: 10px;*/
-	    	}
-	    	.page1 {
-				background-size: auto;
-				background-position:center; 
-			}
-			.page2 {
-				background-size: auto;
-				background-position:center; 
-			}
-			.page3 {
-				background-size: auto;
-				background-position:center; 
-			}
-			.page4 {
-				background-size: auto;
-				background-position:center; 
-			}
-			.page5 {
-				background-size: auto;
-				background-position:center; 
-			}
-			.page-content {
-	    		margin: 10px;
-	    	}
-	    	
-
-	    }
-	    @media screen and (max-width: 480px) {
-	    	.main section h1 {
-	    		font-size: 3em;
-	    		text-align: center;
-	    	}
-	    	.main section h2 {
-	    		font-size: 2em;
-	    		text-align: center;
-	    	}
-	    	.page-content {
-	    		/*margin-top: 100px;*/
-	    		margin: 10px;
-	    	}
-	    	.main section p {
-	    		font-size: 18px;
-	    	}
-	    	label {
-		    	width: 90px;
-		    }
-		    .page-content .container {
-		    	margin-top: 70px;
-		    }
-		    .navitem {
-		    	width: 20%;
-		    	text-align: center;
-		    	padding-left: 0px;
-		    	padding-right: 0px;
-		    }
-		    .nav-social {
-		    	display: none;
-		    }
-		    .m-hide {
-		    	display: none;
-		    }
-		    .Collage{
-		    	width: 70%;
-		    }
-
-	    }
+	    
 	    #come-in {
 	    	display: inline-block;
 	    	font-family: 'Pacifico', cursive;
@@ -304,7 +228,7 @@
 			-webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
 	    }
 	    #come-in, #were {
-	    	font-size: 1.9em;
+	    	font-size: 2.5em;
 	    }
 	    #were, #open {
 	    	font-family: 'Bitter', serif;
@@ -312,7 +236,7 @@
 	    	font-weight: bold;
 	    }
 	    #open {
-	    	font-size: 4.5em;
+	    	font-size: 6em;
 	    }
 	    #sign {
 	    	text-align: center;
@@ -354,7 +278,7 @@
 	    	position: relative;
 	    	vertical-align: top;
 	    	/*float: right;*/
-	    	padding: 10px;
+	    	padding-left: 20px;
 	    }
 	    .see-more a {
 	    	color: #fff;
@@ -362,21 +286,126 @@
 	    	text-decoration: none;
 	    }
 	    #try-scroll-down {
+	    	display: block;
+	    	position: absolute;
 	    	/*display: block;*/
 	    	/*position: absolute;*/
-	    	bottom: 0px;
+	    	bottom: 50px;
 	    	/*margin: 0 auto;*/
-	    	width: auto;
+	    	width: 940px;
 	    	visibility: hidden;
+	    	font-size: 1.5em;
+	    	text-align: center;
+	    	color: #fff;
+	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 	    }
 	    .down {
-	    	transition: font-size 0.2s ease-in-out;
+	    	display: inline-block;
+	    	transition: all 0.2s ease-in-out;
 	    	cursor: pointer;
 	    	font-size: 1.5em;
 	    	
 	    }
 	    .down:hover {
-	    	font-size: 2em;
+	    	transform: translate(350px,0);
+	    }
+	    @media screen and (max-width: 960px) {
+
+		  	.container {
+		    	width: auto;
+		  	}
+		  	.page-content {
+	    		margin: 10px;
+	    	}
+	    	#try-scroll-down {
+	    		width: 100%;
+	    	}
+
+		}
+	    @media screen and (max-width: 768px) {
+	    	.container {
+	    		width: auto;
+	    		/*padding: 10px;*/
+	    	}
+	    	.page1 {
+				background-size: auto;
+				background-position:center; 
+			}
+			.page2 {
+				background-size: auto;
+				background-position:center; 
+			}
+			.page3 {
+				background-size: auto;
+				background-position:center; 
+			}
+			.page4 {
+				background-size: auto;
+				background-position:center; 
+			}
+			.page5 {
+				background-size: auto;
+				background-position:center; 
+			}
+			.page-content {
+	    		margin: 10px;
+	    	}
+	    	.main section.page1 h1 {
+		    	font-size: 5em;
+		    }
+		    #come-in, #were {
+		    	font-size: 1.9em;
+		    }
+		    #open {
+		    	font-size: 4.5em;
+		    }
+	    	
+	    	
+
+	    }
+	    @media screen and (max-width: 480px) {
+	    	.main section.page1 h1 {
+	    		font-size: 3em;
+		    }
+	    	.main section h2 {
+	    		font-size: 2em;
+	    		text-align: center;
+	    	}
+	    	.page-content {
+	    		/*margin-top: 100px;*/
+	    		margin: 10px;
+	    	}
+	    	.main section p {
+	    		font-size: 18px;
+	    	}
+	    	label {
+		    	width: 90px;
+		    }
+		    .page-content .container {
+		    	margin-top: 70px;
+		    }
+		    .navitem {
+		    	width: 20%;
+		    	text-align: center;
+		    	padding-left: 0px;
+		    	padding-right: 0px;
+		    }
+		    .nav-social {
+		    	display: none;
+		    }
+		    .m-hide {
+		    	display: none;
+		    }
+		    .Collage{
+		    	width: 70%;
+		    }
+		    #come-in, #were {
+		    	font-size: 1.5em;
+		    }
+		    #open {
+		    	font-size: 4em;
+		    }
+
 	    }
 	</style>
 </head>
@@ -389,7 +418,10 @@
 				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
 				<!-- <h2 align="center" data-scroll-reveal="enter from the bottom after 0.5s">Hong Kong</h2> -->
 				<div id="sign" data-scroll-reveal="enter from the bottom after 0.5s"><div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span></div>
-				<p align="center" id="try-scroll-down" data-scroll-reveal="enter from the top after 1s">Scroll down<br/><i class="fa fa-chevron-circle-down down"></i></p>
+				<!-- <p align="center" id="try-scroll-down" data-scroll-reveal="enter from the top after 1s">Scroll down<br/><i class="fa fa-chevron-circle-down down"></i></p> -->
+				<div id="try-scroll-down" data-scroll-reveal="enter from the top after 1s">
+					<span>Scroll down</span><br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
+				</div>
 			</div>
 		</div>
 	</div>
