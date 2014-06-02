@@ -136,10 +136,6 @@
 	      transition: all 500ms ease-in-out;
 	      font-family: 'Bitter', serif;
 	    }
-	    /*.navbar:hover {
-	      color: black;
-	      background: rgba(255, 255, 255, 1);
-	    }*/
 	    .navitem {
 	    	display: inline-block;
 	    	position: relative;
@@ -149,6 +145,13 @@
 	    	border-bottom: 5px solid #fff;
 	    	/*transition: border-bottom-color 0.5s ease-in-out;*/
 	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .navitem:hover {
+	    	border-bottom-color: #000;
 	    }
 	    .navbar a {
 	    	color: #000;
@@ -167,33 +170,15 @@
 	    .nav-social a {
 	    	color: #000;
 	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
 	    }
 	    .nav-social a:hover {
 	    	opacity: 1;
 	    }
-	    .navitem:hover {
-	    	/*background-color: rgba(0,0,0,0.5);
-	    	color: #fff;*/
-	    	border-bottom-color: #000;
-	    	/*opacity: 1;*/
-	    }
-	    .viewing-page-1 .to-home{
-	    	border-bottom-color: #000;
-	    	opacity: 1;
-	    }
-	    .viewing-page-2 .to-aboutus{
-	    	border-bottom-color: #000;
-	    	opacity: 1;
-	    }
 	    .to-gallery{
-	    	border-bottom-color: #000;
-	    	opacity: 1;
-	    }
-	    .viewing-page-4 .to-classes{
-	    	border-bottom-color: #000;
-	    	opacity: 1;
-	    }
-	    .viewing-page-5 .to-contact{
 	    	border-bottom-color: #000;
 	    	opacity: 1;
 	    }
@@ -281,56 +266,7 @@
 		    	color: #fff;
 		    }
 
-	    }
-	    #come-in {
-	    	display: inline-block;
-	    	font-family: 'Pacifico', cursive;
-	    	color: #fff;
-	    	text-decoration: underline;
-			transform:rotate(-7deg);
-			-ms-transform:rotate(-7deg); /* IE 9 */
-			-webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
-	    }
-	    #come-in, #were {
-	    	font-size: 1.9em;
-	    }
-	    #were, #open {
-	    	font-family: 'Bitter', serif;
-	    	color: #fff;
-	    	font-weight: bold;
-	    }
-	    #open {
-	    	font-size: 4.5em;
-	    }
-	    #sign {
-	    	text-align: center;
-	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-	    }
-	    
-	    .img-wrapper {
-	    	
-		    /*background-color: #fff;*/
-	    }
-	    .footer {
-	    	position: fixed;
-	    	display: block;
-	    	bottom: 0;
-	    	width: 100%;
-	    	text-align: center;
-	    	background-color: rgb(255,255,255);
-	    	padding: 5px;
-	    	font-size: 14px;
-	    	transition: opacity 1s;
-	    	opacity: 0.3;
-	    }
-	    .footer a {
-	    	text-decoration: underline;
-	    	color: black;
-	    }
-	    .footer:hover {
-	      /*color: black;*/
-	      opacity: 1;
-	    }
+		}
 	    .overlay {
 	    	height: 100%;
 	    	width: 100%;
@@ -376,6 +312,14 @@
     				<div class="img-wrapper"><a href="img/gallery/23.jpeg" class="image-link"><img src="img/gallery/23.jpeg" alt="some kid"/></a></div>
     				<div class="img-wrapper"><a href="img/gallery/24.jpeg" class="image-link"><img src="img/gallery/24.jpeg" alt="some kid"/></a></div>
     				<div class="img-wrapper"><a href="img/gallery/25.jpeg" class="image-link"><img src="img/gallery/25.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/26.jpeg" class="image-link"><img src="img/gallery/26.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/27.jpeg" class="image-link"><img src="img/gallery/27.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/28.jpeg" class="image-link"><img src="img/gallery/28.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/29.jpeg" class="image-link"><img src="img/gallery/29.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/30.jpeg" class="image-link"><img src="img/gallery/30.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/31.jpeg" class="image-link"><img src="img/gallery/31.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/32.jpeg" class="image-link"><img src="img/gallery/32.jpeg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/gallery/33.jpeg" class="image-link"><img src="img/gallery/33.jpeg" alt="some kid"/></a></div>
 				</div>
 				<div class="back-to-gallery"><a href="index.html#3"><i class="fa fa-chevron-circle-left"></i></a>
 			</div>
@@ -403,7 +347,6 @@
 	<script type="text/javascript" src="js/waypoints-sticky.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function () {
-        	window.scrollReveal = new scrollReveal();
         	$('.Collage').collagePlus();
 			$('.image-link').magnificPopup({
 			  type: 'image',
@@ -412,7 +355,7 @@
 			  }
 			});
 			$('.back-to-gallery').waypoint('sticky', {
-				offset: 50 // Apply "stuck" when element 30px from top
+				offset: 50
 			});
 		});
 	</script>
