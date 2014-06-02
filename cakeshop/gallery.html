@@ -397,7 +397,12 @@
 		$(window).load(function () {
         	window.scrollReveal = new scrollReveal();
         	$('.Collage').collagePlus();
-			$('.image-link').magnificPopup({type:'image'});
+			$('.image-link').magnificPopup({
+  type: 'image',
+  gallery:{
+    enabled:true
+  }
+});
 		});
 	</script>
 	<script type="text/javascript">
