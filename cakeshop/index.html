@@ -63,6 +63,8 @@
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
 			margin-bottom: 0.5em;
+			margin-top: 0em;
+			padding-top: 0.83em;
 		}
 		.main section.page1 h1 {
 			color: #fff;
@@ -91,7 +93,7 @@
 			text-rendering: optimizelegibility;
 			/*text-align: center;*/
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			background-color: rgba(0,0,0,0.5);
+			/*background-color: rgba(0,0,0,0.5);*/
 			padding: 20px;
 			border-radius: 5px;
 			/*border: 5px solid #fff;*/
@@ -286,11 +288,17 @@
 	      /*color: black;*/
 	      background: rgba(255, 255, 255, 1);
 	    }
+	    .overlay {
+	    	height: 100%;
+	    	width: 100%;
+	    	background: rgba(0,0,0,0.4);
+	    }
 	</style>
 </head>
 <body>
   <div class="main" id="main">
     <section class="page1 clearfix">
+    <div class="overlay">
     	<div class="page-content">
 	    	<div class="container">
 				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
@@ -298,16 +306,20 @@
 				<div id="sign" data-scroll-reveal="enter from the bottom after 0.5s"><div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span></div>
 			</div>
 		</div>
+		</div>
     </section>
     <section class="page2 clearfix">
+    <div class="overlay">
     	<div class="page-content">
     		<div class="container">
     			<h1>About us</h1>
     			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum ut sapien quis faucibus. Sed a pulvinar sapien, nec pulvinar ipsum. Curabitur gravida mauris felis. Donec egestas erat nunc, eget facilisis eros viverra ac. Sed volutpat, est ornare vehicula semper, nisi tellus molestie mi, eu interdum eros orci eu lorem. Aliquam iaculis elit et magna ullamcorper, sed pellentesque enim porta. Duis sollicitudin semper velit in pretium. Vivamus et dui nisi. Vestibulum id semper ante. Aliquam dignissim nec lectus ac suscipit. Integer fermentum semper enim sed hendrerit. Donec non neque a elit congue vulputate id at odio. Nullam arcu ligula, commodo eget auctor ut, dapibus quis lectus.</p>
     		</div>
     	</div>
+    	</div>
     </section>
     <section class="page3 clearfix">
+    <div class="overlay">
     	<div class="page-content">
 	    	<div class="container">
 	    		<h1>Gallery</h1>
@@ -318,16 +330,20 @@
 				</div>
 			</div>
 		</div>
+		</div>
     </section>
     <section class="page4 clearfix">
+    	<div class="overlay">
     	<div class="page-content">
     		<div class="container">
     			<h1>Classes</h1>
     			<p>Curabitur tempus ante quam, id molestie lectus facilisis in. Cras dolor lorem, rhoncus ut dignissim auctor, placerat a ligula. Donec bibendum consectetur laoreet. Mauris tincidunt metus ac leo vulputate, non rhoncus diam sagittis. Cras ut felis sit amet justo eleifend tempus id sit amet libero. Duis hendrerit quam ipsum, sed venenatis lacus mattis id. Vestibulum sit amet dui consequat, posuere nisl non, tincidunt mi. Praesent ut mauris ligula. Mauris eleifend magna non augue accumsan auctor. Integer elementum semper tristique. Vestibulum porta, massa id viverra ornare, nisi enim venenatis dui, ac sollicitudin leo nisl vel diam. Fusce nibh enim, luctus eget fringilla vitae, dignissim tristique orci. Morbi consequat imperdiet tortor sit amet condimentum.</p>
     		</div>
     	</div>
+    	</div>
     </section>
     <section class="page5 clearfix">
+    <div class="overlay">
     	<div class="page-content">
     		<div class="container">
     			<h1>Contact</h1>
@@ -336,6 +352,7 @@
     			<i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label> qweqweqwe</p>
     			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
     		</div>
+    	</div>
     	</div>
     </section>
     
