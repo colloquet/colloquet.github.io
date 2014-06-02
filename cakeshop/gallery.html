@@ -11,9 +11,17 @@
 		body {
 			font-family: 'Bitter', serif;
 			margin: 0;
-			background-image: url("img/bg6.jpeg");
-			background-size: 100%;
-			background-attachment: fixed;
+		}
+		#background_wrap {
+		    z-index: -1;
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    width: 100%;
+		    background-size: 100%;
+		    background-image: url('img/bg2.jpg');
+		    background-attachment: fixed;
 		}
 		.clearfix {
 		  *zoom: 1;
@@ -334,7 +342,7 @@
 	    .overlay {
 	    	height: 100%;
 	    	width: 100%;
-	    	background: rgba(0,0,0,0.4);
+	    	/*background: rgba(0,0,0,0.4);*/
 	    }
 	    
 	    .stuck {
@@ -344,6 +352,7 @@
 	</style>
 </head>
 <body>
+<div id="background_wrap"></div>
   <div class="main" id="main">
     <section class="page3 clearfix">
     <div class="overlay clearfix">
