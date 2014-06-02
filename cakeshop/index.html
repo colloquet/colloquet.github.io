@@ -69,8 +69,10 @@
 			/*margin-top: 0em;
 			padding-top: 0.83em;*/
 		}
-		.main section.page1 h1 {
+		.main section.page1 h1, #sign {
 			color: #fff;
+			/*opacity: 0;*/
+			z-index: -1;
 		}
 		.main section.page2 h1 {
 			color: #fff;
@@ -418,6 +420,7 @@
 		$(window).load(function () {
         	window.scrollReveal = new scrollReveal();
         	$('.Collage').collagePlus();
+
    		 });
 		
 		$(document).ready(function() {
