@@ -12,17 +12,6 @@
 			font-family: 'Bitter', serif;
 			margin: 0;
 		}
-		#background_wrap {
-		    z-index: -1;
-		    position: fixed;
-		    top: 0;
-		    left: 0;
-		    height: 100%;
-		    width: 100%;
-		    background-size: 100%;
-		    background-image: url('img/bg6.jpeg');
-		    background-attachment: fixed;
-		}
 		.clearfix {
 		  *zoom: 1;
 		}
@@ -51,7 +40,10 @@
 		}
 		.page3 {
 			/*background-color: #f9f9f9;*/
-			
+			background-image: url("img/bg2.jpg");
+			background-size: auto;
+			background-attachment: fixed;
+			/*background-position: fixed;*/
 		}
 		.page4 {
 			/*background-color: #f9f9f9;*/
@@ -252,10 +244,6 @@
 		    	font-size: 3em;
 		    	color: #fff;
 		    }
-		    #background_wrap {
-		    	background-size: auto;
-				background-position:center; 
-		    }
 	    }
 	    @media screen and (max-width: 480px) {
 	    	.main section h1 {
@@ -347,8 +335,6 @@
 	    	height: 100%;
 	    	width: 100%;
 	    	background: rgba(0,0,0,0.4);
-	    	position: fixed;
-	    	z-index: -1;
 	    }
 	    
 	    .stuck {
@@ -358,10 +344,9 @@
 	</style>
 </head>
 <body>
-<div id="background_wrap"></div>
   <div class="main" id="main">
     <section class="page3 clearfix">
-    <div class="overlay clearfix"></div>
+    <div class="overlay clearfix">
     	<div class="page-content">
 	    	<div class="container">
 	    		<h1>Gallery</h1>
@@ -394,6 +379,7 @@
 				</div>
 				<div class="back-to-gallery"><a href="index.html#3"><i class="fa fa-chevron-circle-left"></i></a>
 			</div>
+		</div>
 		</div>
     </section> 
 	</div>
