@@ -200,6 +200,18 @@
 	    	width: 120px;
 	    	margin-bottom: 10px;
 	    }
+	    .Collage{
+	    	font-size: 0;
+		    padding:10px;
+		    width: 90%;
+		    float: right;
+
+	    }
+		.Collage img{
+		    vertical-align:bottom;
+		    /*opacity:1;*/
+		    border: 5px solid #fff;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  .container {
@@ -218,7 +230,10 @@
 			.page-content {
 	    		margin: 10px;
 	    	}
+	    	.Collage{
+		    	width: 80%;
 
+		    }
 	    }
 	    @media screen and (max-width: 480px) {
 	    	.main section h1 {
@@ -277,16 +292,7 @@
 	    	text-align: center;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 	    }
-	    .Collage{
-	    	font-size: 0;
-		    padding:10px;
-
-	    }
-		.Collage img{
-		    vertical-align:bottom;
-		    /*opacity:1;*/
-		    border: 5px solid #fff;
-	    }
+	    
 	    .img-wrapper {
 	    	
 		    /*background-color: #fff;*/
@@ -315,6 +321,14 @@
 	    	height: 100%;
 	    	width: 100%;
 	    	background: rgba(0,0,0,0.4);
+	    }
+	    .back-to-gallery a {
+	    	font-size: 4em;
+	    	color: #fff;
+	    }
+	    .stuck {
+	    	position: fixed;
+	    	top: 50px;
 	    }
 	</style>
 </head>
@@ -352,7 +366,7 @@
     				<div class="img-wrapper"><a href="img/gallery/24.jpeg" class="image-link"><img src="img/gallery/24.jpeg" alt="some kid"/></a></div>
     				<div class="img-wrapper"><a href="img/gallery/25.jpeg" class="image-link"><img src="img/gallery/25.jpeg" alt="some kid"/></a></div>
 				</div>
-				<h2><a href="index.html#3"><i class="fa fa-chevron-circle-left"></i> Back</a></h2>
+				<div class="back-to-gallery"><a href="index.html#3"><i class="fa fa-chevron-circle-left"></i></a>
 			</div>
 		</div>
 		</div>
@@ -379,6 +393,8 @@
 	<script type="text/javascript" src='js/scrollReveal.js'></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
 	<script type="text/javascript" src="js/jquery.collagePlus.min.js"></script> 
+	<script src="waypoints.min.js"></script>
+	<script src="waypoints-sticky.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function () {
         	window.scrollReveal = new scrollReveal();
@@ -388,6 +404,9 @@
 			  gallery:{
 			    enabled:true
 			  }
+			});
+			$('.back-to-gallery').waypoint('sticky', {
+				offset: 50 // Apply "stuck" when element 30px from top
 			});
 		});
 	</script>
