@@ -139,7 +139,8 @@
 	    	padding: 15px 15px 10px 15px;
 	    	cursor: pointer;
 	    	border-bottom: 5px solid #fff;
-	    	transition: border-bottom-color 0.5s ease-in-out;
+	    	/*transition: border-bottom-color 0.5s ease-in-out;*/
+	    	opacity: 0.5;
 	    }
 	    .nav-social {
 	    	display: inline-block;
@@ -151,30 +152,41 @@
 	    }
 	    .nav-social a {
 	    	color: #000;
+	    	opacity: 0.5;
+	    }
+	    .nav-social a:hover {
+	    	opacity: 1;
 	    }
 	    .navitem:hover {
 	    	/*background-color: rgba(0,0,0,0.5);
 	    	color: #fff;*/
 	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    .viewing-page-1 .to-home{
 	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    .viewing-page-2 .to-aboutus{
 	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    .viewing-page-3 .to-gallery{
 	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    .viewing-page-4 .to-classes{
 	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    .viewing-page-5 .to-contact{
 	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    label {
 	    	display: inline-block;
 	    	width: 120px;
+	    	margin-bottom: 10px;
 	    }
 	    @media screen and (max-width: 960px) {
 
@@ -293,18 +305,19 @@
 	    	bottom: 0;
 	    	width: 100%;
 	    	text-align: center;
-	    	background-color: rgba(255,255,255,0.5);
+	    	background-color: rgb(255,255,255);
 	    	padding: 5px;
 	    	font-size: 14px;
-	    	transition: background 1s;
+	    	transition: opacity 1s;
+	    	opacity: 0.3;
 	    }
 	    .footer a {
-	    	text-decoration: none;
+	    	text-decoration: underline;
 	    	color: black;
 	    }
 	    .footer:hover {
 	      /*color: black;*/
-	      background: rgba(255, 255, 255, 1);
+	      opacity: 1;
 	    }
 	    .overlay {
 	    	height: 100%;
