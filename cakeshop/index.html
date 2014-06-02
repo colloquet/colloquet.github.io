@@ -212,6 +212,7 @@
 	    	font-size: 6em;
 	    }
 	    #sign {
+	    	display: block;
 	    	text-align: center;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 	    }
@@ -219,27 +220,6 @@
 	    .img-wrapper {
 	    	
 		    background-color: #fff;
-	    }
-	    .footer {
-	    	position: fixed;
-	    	display: block;
-	    	bottom: 0;
-	    	width: 100%;
-	    	text-align: center;
-	    	background-color: rgb(255,255,255);
-	    	padding: 5px;
-	    	font-size: 14px;
-	    	transition: opacity 1s;
-	    	-ms-transition: opacity 1s;
-	    	-webkit-transition: opacity 1s;
-	    	opacity: 0.3;
-	    }
-	    .footer a {
-	    	text-decoration: underline;
-	    	color: black;
-	    }
-	    .footer:hover {
-	      opacity: 1;
 	    }
 	    .overlay {
 	    	height: 100%;
@@ -259,14 +239,15 @@
 	    }
 	    #try-scroll-down {
 	    	display: block;
-	    	position: absolute;
+	    	position: fixed;
 	    	bottom: 50px;
-	    	width: 940px;
+	    	width: 100%;
 	    	visibility: hidden;
 	    	font-size: 1.5em;
 	    	text-align: center;
 	    	color: #fff;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    	/*margin: 0 auto;*/
 	    }
 	    .down {
 	    	display: inline-block;
@@ -292,6 +273,7 @@
 	    	#try-scroll-down {
 	    		width: 100%;
 	    	}
+
 
 		}
 	    @media screen and (max-width: 768px) {
@@ -389,21 +371,24 @@
     <section class="page1 clearfix">
     <div class="overlay clearfix" style="background: rgba(0,0,0,0.1);">
     	<div class="page-content">
-	    	<div class="container">
+	    	<div class="container clearfix">
 				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
-				<div id="sign" data-scroll-reveal="enter from the bottom after 0.5s"><div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span></div>
-				<div id="try-scroll-down" data-scroll-reveal="enter top move 50px after 1s">
-					<span>Scroll down</span><br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
+				<div id="sign" data-scroll-reveal="enter from the bottom after 0.5s">
+					<div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span>
 				</div>
+				
 			</div>
 		</div>
+	</div>
+	<div id="try-scroll-down" data-scroll-reveal="enter top move 50px after 1s" class="clearfix">
+		Scroll down<br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
 	</div>
     </section>
     <!-- Page 2 -->
     <section class="page2 clearfix">
     <div class="overlay clearfix">
     	<div class="page-content">
-    		<div class="container">
+    		<div class="container clearfix">
     			<h1>About us</h1>
     			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum ut sapien quis faucibus. Sed a pulvinar sapien, nec pulvinar ipsum. Curabitur gravida mauris felis. Donec egestas erat nunc, eget facilisis eros viverra ac. Sed volutpat, est ornare vehicula semper, nisi tellus molestie mi, eu interdum eros orci eu lorem. Aliquam iaculis elit et magna ullamcorper, sed pellentesque enim porta. Duis sollicitudin semper velit in pretium. Vivamus et dui nisi. Vestibulum id semper ante. Aliquam dignissim nec lectus ac suscipit. Integer fermentum semper enim sed hendrerit. Donec non neque a elit congue vulputate id at odio. Nullam arcu ligula, commodo eget auctor ut, dapibus quis lectus.</p>
     		</div>
@@ -414,7 +399,7 @@
     <section class="page3 clearfix">
     <div class="overlay clearfix">
     	<div class="page-content">
-	    	<div class="container">
+	    	<div class="container clearfix">
 	    		<h1>Gallery</h1>
 	    		<div class="Collage">
     				<div class="img-wrapper"><a href="img/gallery/13.jpeg" class="image-link"><img src="img/gallery/13.jpeg" alt="cup cakes"/></a></div>
@@ -429,7 +414,7 @@
     <section class="page4 clearfix">
     	<div class="overlay clearfix" style="background: rgba(0,0,0,0.6);">
     	<div class="page-content">
-    		<div class="container">
+    		<div class="container clearfix">
     			<h1>Classes</h1>
     			<p>Curabitur tempus ante quam, id molestie lectus facilisis in. Cras dolor lorem, rhoncus ut dignissim auctor, placerat a ligula. Donec bibendum consectetur laoreet. Mauris tincidunt metus ac leo vulputate, non rhoncus diam sagittis. Cras ut felis sit amet justo eleifend tempus id sit amet libero. Duis hendrerit quam ipsum, sed venenatis lacus mattis id. Vestibulum sit amet dui consequat, posuere nisl non, tincidunt mi. Praesent ut mauris ligula. Mauris eleifend magna non augue accumsan auctor. Integer elementum semper tristique. Vestibulum porta, massa id viverra ornare, nisi enim venenatis dui, ac sollicitudin leo nisl vel diam. Fusce nibh enim, luctus eget fringilla vitae, dignissim tristique orci. Morbi consequat imperdiet tortor sit amet condimentum.</p>
     		</div>
@@ -440,7 +425,7 @@
     <section class="page5 clearfix">
     <div class="overlay clearfix" style="background: rgba(0,0,0,0.3);">
     	<div class="page-content">
-    		<div class="container">
+    		<div class="container clearfix">
     			<h1>Contact</h1>
     			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label><a href="mailto:example@email.com?Subject=Hello" target="_top">example@email.com</a><br/>
     			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label><a href="tel:++85212345678">+852 12345678</a><br/>
