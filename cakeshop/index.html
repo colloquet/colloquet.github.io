@@ -339,9 +339,9 @@
 	    	<div class="container">
 	    		<h1>Gallery</h1>
 	    		<div class="Collage">
-    				<div class="img-wrapper"><a href="img/cupcakes.jpg" class="popup-link"><img src="img/cupcakes.jpg" alt="cup cakes"/></a></div>
-    				<div class="img-wrapper"><a href="img/weddingcake.jpg" class="popup-link"><img src="img/weddingcake.jpg" alt="wedding cake"/></a></div>
-    				<div class="img-wrapper"><a href="img/somekid.jpg" class="popup-link"><img src="img/somekid.jpg" alt="some kid"/></a></div>
+    				<div class="img-wrapper"><a href="img/cupcakes.jpg" class="image-link"><img src="img/cupcakes.jpg" alt="cup cakes"/></a></div>
+    				<div class="img-wrapper"><a href="img/weddingcake.jpg" class="image-link"><img src="img/weddingcake.jpg" alt="wedding cake"/></a></div>
+    				<div class="img-wrapper"><a href="img/somekid.jpg" class="image-link"><img src="img/somekid.jpg" alt="some kid"/></a></div>
 				</div>
 			</div>
 		</div>
@@ -364,7 +364,7 @@
     			<h1>Contact</h1>
     			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label> example@example.com<br/>
     			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label> +8523123123<br/>
-    			<i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label> qweqweqwe</p>
+    			<i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label> <a href="https://www.google.co.uk/maps/place/5+Picktillum+Ave/@57.1618666,-2.1189532,17z/data=!3m1!4b1!4m2!3m1!1s0x488411e2b0fc6203:0xf199615296d1664b" class="iframe-link">qweqweqwe</a></p>
     			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
     		</div>
     	</div>
@@ -386,7 +386,7 @@
 	</div>
 	<div class="footer">
 		<div class="container">
-			Created by <a href="http://colloque.me">Colloque Tsui</a> @ 2014
+			Created by <a href="http://colloque.me">Colloque Tsui</a>
 		</div>
 	</div>
 	<!-- scripts -->
@@ -437,7 +437,8 @@
 			//     });
 			// })
 			$("#title").arctext({radius: 800})
-			$('.popup-link').magnificPopup({type:'image'});
+			$('.image-link').magnificPopup({type:'image'});
+			$('.iframe-link').magnificPopup({type:'iframe'});
 		});
 	</script>
 	<script type="text/javascript">
