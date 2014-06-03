@@ -186,6 +186,29 @@
 	    	color: #fff;
 	    	font-size: 2em;
 	    }
+	    .overlay {
+	    	height: 100%;
+	    	width: 100%;
+	    	background: rgba(0,0,0,0.4);
+	    	/*position: fixed;*/
+	    }
+	    
+	    .stuck {
+	    	position: fixed;
+	    	top: 50px;
+	    }
+	    .grid li a {
+	    	background-color: #fff;
+	    }
+	    .grid li img {
+	    	border: 5px solid #fff;
+	    }
+	    .grid li img:hover {
+	    	opacity: 0.9;
+	    }
+	    .grid {
+	    	margin-bottom: 200px;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  .container {
@@ -215,6 +238,9 @@
 		    .navbar {
 	    		font-size: 15px;
 	    	}
+	    	.grid {
+		    	margin-bottom: 0px;
+		    }
 	    }
 	    @media screen and (max-width: 480px) {
 	    	.main section h1 {
@@ -255,30 +281,11 @@
 		    .page-content .container{
 		    	margin-top: 30px;
 		    }
-	    }
-	    .overlay {
-	    	height: 100%;
-	    	width: 100%;
-	    	background: rgba(0,0,0,0.4);
-	    	/*position: fixed;*/
+		    .grid {
+		    	margin-bottom: 0px;
+		    }
 	    }
 	    
-	    .stuck {
-	    	position: fixed;
-	    	top: 50px;
-	    }
-	    .grid li a {
-	    	background-color: #fff;
-	    }
-	    .grid li img {
-	    	border: 5px solid #fff;
-	    }
-	    .grid li img:hover {
-	    	opacity: 0.9;
-	    }
-	    .grid {
-	    	margin-bottom: 200px;
-	    }
 
 	</style>
 </head>
