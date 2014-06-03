@@ -126,7 +126,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  line-height: 2em;
+  /*line-height: 2em;*/
   background-color: #fff;
   transition: opacity 1s;
 }
