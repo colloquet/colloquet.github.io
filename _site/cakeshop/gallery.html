@@ -171,6 +171,21 @@
 	    	width: 90%;
 	    	float: right;
 	    }
+	    .loading-overlay {
+	    	display: table;
+	    	position: fixed;
+	    	height: 100%;
+	    	width: 100%;
+	    	background-color: rgba(0,0,0,0.5);
+	    	z-index: 9999;	    	
+	    }
+	    .loading {
+	    	display: table-cell;
+	    	text-align: center;
+	    	vertical-align: middle;
+	    	color: #fff;
+	    	font-size: 2em;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  .container {
@@ -256,6 +271,7 @@
 	</style>
 </head>
 <body>
+<div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
   <div class="main" id="main">
     <section class="page3 clearfix">
     <div class="overlay">
@@ -336,6 +352,9 @@
 	<script type="text/javascript" src="js/waypoints-sticky.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function () {
+			$(".loading-overlay").fadeOut(function() {
+				$(".loading-overlay").html("");
+			});
 			$('.image-link').magnificPopup({
 			  type: 'image',
 			  gallery:{
