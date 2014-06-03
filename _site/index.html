@@ -18,6 +18,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet prefetch' type='text/css'>
 		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" rel="stylesheet" />
 		<style type="text/css">
+		/*To prevent title and about me being visible before being revealed*/
 		.container {
 			visibility: hidden;
 		}
@@ -496,6 +497,7 @@
 			<script src='scrollReveal.js'></script>
 			<script>
 				$(window).load(function () {
+					// Make it visible after its revealed
 					$(".container").css("visibility","visible");
 			  		window.scrollReveal = new scrollReveal();
 			  	});
