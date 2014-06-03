@@ -31,7 +31,7 @@ $(document).ready(function() {
 	$('.navtocon').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
-			scrollTop: $("#contact").offset().top
+			scrollTop: $("#contact").offset().top -20
 		});
 	});
 });
