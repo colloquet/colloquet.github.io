@@ -31,7 +31,7 @@
 		opacity: 1
 	}
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 	/* Effect 1: opacity */
 	.grid.effect-1 li.animate {
 		-webkit-animation: fadeIn 0.65s ease forwards;
