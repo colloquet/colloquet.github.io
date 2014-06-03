@@ -19,6 +19,7 @@ p {
 h1 {
 	font-size: 2em;
 	line-height: 60px;
+	-webkit-margin-before: 0.5em;
 }
 
 h2 {
