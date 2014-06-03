@@ -34,4 +34,10 @@ $(document).ready(function() {
 			scrollTop: $("#contact").offset().top - 10
 		});
 	});
+	$('#to-top').click(function(e) {
+		e.preventDefault();
+		$('html, body').stop().animate({
+			scrollTop: 0
+		});
+	});
 });

@@ -366,7 +366,7 @@ ul, li {
   display: none;
   z-index: 9999999;
   /*color: #ccc;*/
-  margin-top: 3px;
+  /*margin-top: 3px;*/
 }
 
 #sidebar-btn:hover {
