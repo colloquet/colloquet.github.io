@@ -229,6 +229,10 @@
 	    	
 		    background-color: #fff;
 	    }
+	    .img-wrapper img:hover {
+	    	
+		    opacity: 0.9;
+	    }
 	    .overlay {
 	    	height: 100%;
 	    	width: 100%;
@@ -437,8 +441,7 @@
 	    	<div class="container clearfix">
 	    		<h1>Gallery</h1>
 	    		<div class="Collage clearfix">
-    				<div class="img-wrapper"><a href="img/gallery/13.jpeg" class="image-link"><img src="img/gallery/13.jpeg" alt="cup cakes"/></a></div>
-    				<!-- <div class="img-wrapper"><a href="img/gallery/2.jpeg" class="image-link"><img src="img/gallery/2.jpeg" alt="wedding cake"/></a></div> -->
+    				<div class="img-wrapper"><a href="img/gallery/13.jpeg" class="image-link" title="Caption goes here"><img src="img/gallery/13.jpeg" alt="cup cakes"/></a></div>
 				</div>
 				<div class="see-more"><a href="gallery.html"><span class="m-hide">See more </span><i class="fa fa-chevron-circle-right"></i></a></div>
 			</div>
@@ -527,7 +530,7 @@
 				moveDown(".main"); 
 			});
 			$("#title").arctext({radius: 800})
-			$('.image-link').magnificPopup({type:'image'});
+			$('.image-link').magnificPopup({type:'image',removalDelay: 200,mainClass: 'mfp-fade'});
 			$('.iframe-link').magnificPopup({type:'iframe'});
 		});
 	</script>
