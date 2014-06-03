@@ -376,7 +376,7 @@ ul, li {
   display: none;
   /*margin-top: -10px;*/
   font-size: 1.5em;
-  display: block;
+  /*display: block;*/
   position: fixed;
   float: left;
   /*background: #dadada;*/
