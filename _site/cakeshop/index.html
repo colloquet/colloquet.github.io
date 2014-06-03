@@ -267,6 +267,23 @@
 	    .down:hover {
 	    	opacity: 1;
 	    }
+	    .loading-overlay {
+	    	position: fixed;
+	    	height: 100%;
+	    	width: 100%;
+	    	background-color: rgba(0,0,0,0.3);
+	    	z-index: 9999;
+	    	transition: opacity 0.2s ease-in-out;
+	    }
+	    .loading {
+	    	position: absolute;
+	    	left: 50%;
+	    	top: 50%;
+	    	height: 32px;
+	    	width: 32px;
+	    	margin-top: -16px;
+	    	margin-left: -16px;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  	.container {
@@ -373,6 +390,7 @@
 	</style>
 </head>
 <body>
+<div class="loading-overlay"><img src="img/ajax-loader.gif" alt="loading" class="loading" /></div>
   <div class="main" id="main">
   	<!-- Page 1 -->
     <section class="page1 clearfix">
@@ -465,11 +483,12 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
 	<script type="text/javascript">
 		$(window).load(function () {
+			$(".loading-overlay").css("opacity","0");
+
 			$(".main section.page1 h1").css("visibility","visible");
 			$("#sign").css("visibility","visible");
 			$("#try-scroll-down").css("visibility","visible");
         	window.scrollReveal = new scrollReveal();
-
    		 });
 		
 		$(document).ready(function() {
