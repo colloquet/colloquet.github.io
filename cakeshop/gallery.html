@@ -280,7 +280,7 @@
 	    		<h1>Gallery</h1>
 				<div class="gallery">
 				<ul class="grid effect-2" id="grid">
-					<li><a href="img/gallery/13.jpeg" class="image-link"><img src="img/gallery/thumbnails/13_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/13.jpeg" class="image-link" title="Caption goes here"><img src="img/gallery/thumbnails/13_mini.jpeg" alt="some kid"/></a></li>
 					<li><a href="img/gallery/1.jpeg" class="image-link"><img src="img/gallery/thumbnails/1_mini.jpeg" alt="cup cakes"/></a></li>
 					<li><a href="img/gallery/2.jpeg" class="image-link"><img src="img/gallery/thumbnails/2_mini.jpeg" alt="wedding cake"/></a></li>
 					<li><a href="img/gallery/3.jpeg" class="image-link"><img src="img/gallery/thumbnails/3_mini.jpeg" alt="some kid"/></a></li>
@@ -359,7 +359,9 @@
 			  type: 'image',
 			  gallery:{
 			    enabled:true
-			  }
+			  },
+			  removalDelay: 300,
+			  mainClass: 'mfp-fade'
 			});
 			$('.back-to-gallery').waypoint('sticky', {
 				offset: 50
