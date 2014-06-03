@@ -193,6 +193,7 @@
 		    vertical-align:bottom;
 		    opacity:1;
 		    border: 5px solid #fff;
+		    width: 100%;
 	    }
 	    
 	    #come-in {
@@ -407,7 +408,7 @@
     	<div class="page-content">
 	    	<div class="container clearfix">
 	    		<h1>Gallery</h1>
-	    		<div class="Collage">
+	    		<div class="Collage clearfix">
     				<div class="img-wrapper"><a href="img/gallery/13.jpeg" class="image-link"><img src="img/gallery/13.jpeg" alt="cup cakes"/></a></div>
     				<!-- <div class="img-wrapper"><a href="img/gallery/2.jpeg" class="image-link"><img src="img/gallery/2.jpeg" alt="wedding cake"/></a></div> -->
 				</div>
@@ -462,14 +463,12 @@
 	<script type="text/javascript" src="js/jquery.arctext.js"></script>
 	<script type="text/javascript" src='js/scrollReveal.js'></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
-	<script type="text/javascript" src="js/jquery.collagePlus.min.js"></script> 
 	<script type="text/javascript">
 		$(window).load(function () {
 			$(".main section.page1 h1").css("visibility","visible");
 			$("#sign").css("visibility","visible");
 			$("#try-scroll-down").css("visibility","visible");
         	window.scrollReveal = new scrollReveal();
-        	$('.Collage').collagePlus();
 
    		 });
 		
