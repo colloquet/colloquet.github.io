@@ -54,16 +54,16 @@
 							<div class="navitem1"><a href="blog/">Blog</a></div>
 						</div>
 					</div>
-					<div class="container clearfix">
-						<h1 data-scroll-reveal>Colloque Tsui</h1>
+					<div class="container clearfix" data-scroll-reveal>
+						<h1>Colloque Tsui</h1>
 						<p><span class="muted">Work hard, Play harder</span></p>
 						<p>Web Design<br/>Hong Kong</p>
 						<br class="m-hide" />
 					</div>
-				<br/><br class="m-hide" />
-				</div>
+					<br/><br class="m-hide" />
+					</div>
 					<div class="aboutme clearfix">
-						<div class="container">
+						<div class="container" data-scroll-reveal="after 0.5s">
 							<br/>
 							<p><img class="pull-right profilepic" alt="Colloque Tsui" src="img/profile.jpg" height="150" />Hello, I am a Hong Konger who is excited and passionate about web design, my dream is to become a professional web designer. I am currently doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from.</p>
 							<p>I am proficient in HTML5 and CSS3, as well as some experience with Ruby on Rails and php + MySQL. I am always looking for ways to make things faster, better and stronger.</p><p>Keep it Classy!</p>
@@ -72,7 +72,7 @@
 					</div>
 					<!-- portfolio -->
 					<div class="portfolio clearfix" id="portfolio">
-						<div class="container">
+						<div class="container"  data-scroll-reveal>
 						<br/>
 							<h2>Portfolio</h2>
 							<div id="tabs">
@@ -145,7 +145,7 @@
 					</div>
 					<!-- resume -->
 					<div class="resume clearfix" id="resume">
-						<div class="container">
+						<div class="container"  data-scroll-reveal>
 						<br/>
 							<h2>Resume</h2>
 							<p>You can download in pdf format from here: <a href="Colloque_Tsui_CV.pdf" target="top">Colloque Tsui's Resume</a></p>
@@ -310,7 +310,7 @@
 					</div>		
 					<!-- contact-->
 					<div class="contact clearfix" id="contact">
-						<div class="container">
+						<div class="container" data-scroll-reveal>
 						<br/>
 							<h2>Contact</h2>
 							<ul data-role="listview" data-inset="true" data-divider-theme="a" id="m-con">
@@ -326,7 +326,7 @@
 				</div>
 				<!-- footer	 -->
 				<div class="footer clearfix">
-					<div class="container">
+					<div class="container" data-scroll-reveal>
 					<hr/>
 					Created by Colloque Tsui
 					<br/><br/><br/><br/>
@@ -483,9 +483,17 @@
 				
 				$(document).ready(function() {
 					$('.navbar').waypoint('sticky', {
-						offset: -20 // Apply "stuck" when element 30px from top
+						offset: -20 // Apply "stuck" when element 20px from top
 					});
 				});
+
+			</script>
+			<script src='scrollReveal.js'></script>
+			<script>
+				$(window).load(function () {
+					$(".container").css("visibility","visible");
+			  		window.scrollReveal = new scrollReveal();
+			  	});
 
 			</script>
 	</body>
