@@ -540,22 +540,28 @@
 	        sectionContainer: "section",
 	        loop: true
 			});
-			$(".to-home").click(function(){
+			$(".to-home").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 1);
 			});
-			$(".to-aboutus").click(function(){
+			$(".to-aboutus").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 2);
 			});
-			$(".to-gallery").click(function(){
+			$(".to-gallery").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 3);
 			});
-			$(".to-classes").click(function(){
+			$(".to-classes").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 4);
 			});
-			$(".to-contact").click(function(){
+			$(".to-contact").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 5);
 			});
-			$(".down").click(function(){
+			$(".down").click(function(e){
+				e.preventDefault();
 				moveDown(".main"); 
 			});
 			$("#title").arctext({radius: 800})
