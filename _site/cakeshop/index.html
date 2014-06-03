@@ -1,6 +1,8 @@
+<!-- Created by Colloque Tsui@2014 http://colloque.me -->
 <!doctype html>
 <html>
 <head>
+	<!-- Disable zooming on mobile devices -->
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>The Cake Shop | Hong Kong</title>
 	<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
@@ -12,51 +14,47 @@
 			font-family: 'Bitter', serif;
 		}
 		.clearfix {
-		  *zoom: 1;
+			*zoom: 1;
 		}
 
 		.clearfix:before, .clearfix:after {
-		  display: table;
-		  line-height: 0;
-		  content: "";
+			display: table;
+			line-height: 0;
+			content: "";
 		}
 
 		.clearfix:after {
 		  clear: both;
 		}
 		.page1 {
-			/*background-color: #87CEEB;*/
 			background-image: url("img/bg.jpg");
 			background-size: 100%;
-			/*background-attachment: fixed;*/
-
+			/*background-color: rgba(209, 237, 237, 1);*/
 		}
 		.page2 {
-			/*background-color: #f9f9f9;*/
 			background-image: url("img/bg3.jpg");
 			background-size: 100%;
-			/*background-attachment: fixed;*/
+			/*background-color: rgba(209, 237, 237, 1);*/
 		}
 		.page3 {
-			/*background-color: #f9f9f9;*/
 			background-image: url("img/bg2.jpg");
 			background-size: 100%;
-			/*background-attachment: fixed;*/
+			background-color: #F26565;
 		}
 		.page4 {
-			/*background-color: #f9f9f9;*/
 			background-image: url("img/bg4.jpg");
 			background-size: 100%;
-			/*background-attachment: fixed;*/
+			/*background-color: rgba(137, 174, 239, 1);*/
 		}
 		.page5 {
-			/*background-color: #f9f9f9;*/
-			background-image: url("img/bg5.jpeg");
+			background-image: url("img/bg5.jpg");
 			background-size: 100%;
-			/*background-attachment: fixed;*/
+			/*background-color: rgba(143, 237, 134, 1);*/
+		}
+		.main section.page5 a{
+			color: #fff;
 		}
 		.main section h1 {
-			/*text-align: center;*/
 			font-size: 5em;
 			color: #fff;
 			font-family: 'Pacifico', cursive;
@@ -65,113 +63,227 @@
 			margin-bottom: 0.5em;
 		}
 		.main section.page1 h1 {
+	    	font-size: 6em;
+	    }
+		.main section.page1 h1, #sign {
 			color: #fff;
+			visibility: hidden;
 		}
 		.main section.page2 h1 {
 			color: #fff;
 		}
 		.main section.page3 h1 {
 			color: #fff;
-			/*opacity: 0.8;*/
 		}
 		.main section h2 {
-			font-size: 3em;
+			font-size: 2em;
 			color: #fff;
-			/*font-family: 'Pacifico', cursive;*/
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			border-top: 1px solid white;
-			border-bottom: 1px solid white;
-			padding: 10px 0;
+			padding: 10px 20px;
 		}
 		.main section p {
-			font-size: 22px;
+			font-size: 20px;
 			color: #fff;
 			font-family: 'Bitter', serif;
 			text-rendering: optimizelegibility;
-			/*text-align: center;*/
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			background-color: rgba(0,0,0,0.5);
 			padding: 20px;
-			border-radius: 5px;
-			/*border: 5px solid #fff;*/
+			line-height: 1.3em;
 		}
 		.container {
 			width: 940px;
 			margin: 0 auto;
-			/*background-color: rgba(0,0,0,0.3);*/
 		}
 		.navbar {
-	      position: absolute;
-	      top: 0;
-	      left: 0;
-	      /*text-align: center;*/
-	      display: block;
-	      padding: 0px;
-	      width: 100%;
-	      box-sizing: border-box;
-	      -moz-box-sizing: border-box;
-	      -webkit-box-sizing: border-box;
-	      background: rgba(255, 255, 255, 1);
-	      font-weight: bold;
-	      font-size: 13px;
-	      color: #000;
-	      -webkit-transition: all 500ms ease-in-out;
-	      -moz-transition: all 500ms ease-in-out;
-	      -o-transition: all 500ms ease-in-out;
-	      transition: all 500ms ease-in-out;
-	      font-family: 'Bitter', serif;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			padding: 0px;
+			width: 100%;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			background: rgba(255, 255, 255, 1);
+			font-weight: bold;
+			font-size: 13px;
+			color: #000;
+			-webkit-transition: all 500ms ease-in-out;
+			-moz-transition: all 500ms ease-in-out;
+			-o-transition: all 500ms ease-in-out;
+			transition: all 500ms ease-in-out;
+			font-family: 'Bitter', serif;
 	    }
-	    /*.navbar:hover {
-	      color: black;
-	      background: rgba(255, 255, 255, 1);
-	    }*/
+	    .navbar a {
+	    	color: #000;
+	    	text-decoration: none;
+	    }
 	    .navitem {
 	    	display: inline-block;
 	    	position: relative;
 	    	float: left;
-	    	padding: 15px;
+	    	padding: 15px 15px 10px 15px;
 	    	cursor: pointer;
+	    	border-bottom: 5px solid #fff;
+	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
 	    }
 	    .nav-social {
 	    	display: inline-block;
 	    	position: relative;
 	    	float: right;
-	    	padding: 15px;
-	    	/*cursor: pointer;*/
+	    	padding: 10px;
+	    	line-height: 0;
+	    	font-size: 1.6em;
+	    	
 
 	    }
 	    .nav-social a {
 	    	color: #000;
+	    	opacity: 0.5;
+	    	line-height: 0;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .nav-social a:hover {
+	    	opacity: 1;
 	    }
 	    .navitem:hover {
-	    	background-color: rgba(0,0,0,0.5);
-	    	color: #fff;
+	    	color: #000;
+	    	border-bottom-color: #000;
 	    }
-	    .viewing-page-1 .navbar{
-	    	background: rgba(255, 255, 255, 1);
+	    .viewing-page-1 .to-home{
+	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
-	    .viewing-page-1 .navbar:hover{
-	    	background: rgba(255, 255, 255, 1);
+	    .viewing-page-2 .to-aboutus{
+	    	border-bottom-color: #000;
+	    	opacity: 1;
+	    }
+	    .viewing-page-3 .to-gallery{
+	    	border-bottom-color: #000;
+	    	opacity: 1;
+	    }
+	    .viewing-page-4 .to-classes{
+	    	border-bottom-color: #000;
+	    	opacity: 1;
+	    }
+	    .viewing-page-5 .to-contact{
+	    	border-bottom-color: #000;
+	    	opacity: 1;
 	    }
 	    label {
 	    	display: inline-block;
 	    	width: 120px;
+	    	margin-bottom: 10px;
+	    }
+	    .Collage{
+	    	font-size: 0;
+		    padding-right:20px;
+		    width: 60%;
+		    display: inline-block;
+	    }
+		.Collage img{
+		    vertical-align:bottom;
+		    opacity:1;
+		    border: 5px solid #fff;
+		    width: 100%;
+	    }
+	    
+	    #come-in {
+	    	display: inline-block;
+	    	font-family: 'Pacifico', cursive;
+	    	color: #fff;
+	    	text-decoration: underline;
+			transform:rotate(-7deg);
+			-ms-transform:rotate(-7deg);
+			-webkit-transform:rotate(-7deg);
+	    }
+	    #come-in, #were {
+	    	font-size: 2.5em;
+	    }
+	    #were, #open {
+	    	font-family: 'Bitter', serif;
+	    	color: #fff;
+	    	font-weight: bold;
+	    }
+	    #open {
+	    	font-size: 6em;
+	    }
+	    #sign {
+	    	display: block;
+	    	text-align: center;
+	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    }
+	    
+	    .img-wrapper {
+	    	
+		    background-color: #fff;
+	    }
+	    .overlay {
+	    	height: 100%;
+	    	width: 100%;
+	    	background: rgba(0,0,0,0.4);
+	    }
+	    .see-more {
+	    	display: inline-block;
+	    	position: relative;
+	    	vertical-align: top;
+	    	padding-left: 20px;
+	    }
+	    .see-more a {
+	    	color: #fff;
+	    	font-size: 2em;
+	    	text-decoration: none;
+	    }
+	    #try-scroll-down {
+	    	display: block;
+	    	position: fixed;
+	    	bottom: 50px;
+	    	width: 100%;
+	    	visibility: hidden;
+	    	font-size: 1.5em;
+	    	text-align: center;
+	    	color: #fff;
+	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    	/*margin: 0 auto;*/
+	    }
+	    .down {
+	    	display: inline-block;
+	    	transition: all 0.2s ease-in-out;
+	    	-ms-transition: all 0.2s ease-in-out;
+	    	-webkit-transition: all 0.2s ease-in-out;
+	    	cursor: pointer;
+	    	font-size: 1.5em;
+	    	opacity: 0.5;
+	    	
+	    }
+	    .down:hover {
+	    	opacity: 1;
 	    }
 	    @media screen and (max-width: 960px) {
 
-		  .container {
-		    width: auto;
-		  }
-		  .page-content {
+		  	.container {
+		    	width: auto;
+		  	}
+		  	.page-content {
 	    		margin: 10px;
 	    	}
+	    	#try-scroll-down {
+	    		width: 100%;
+	    	}
+
 
 		}
 	    @media screen and (max-width: 768px) {
 	    	.container {
 	    		width: auto;
-	    		/*padding: 10px;*/
 	    	}
 	    	.page1 {
 				background-size: auto;
@@ -196,27 +308,44 @@
 			.page-content {
 	    		margin: 10px;
 	    	}
+	    	.main section.page1 h1 {
+		    	font-size: 5em;
+		    }
+		    #come-in, #were {
+		    	font-size: 1.9em;
+		    }
+		    #open {
+		    	font-size: 4.5em;
+		    }
+	    	
+	    	
 
 	    }
 	    @media screen and (max-width: 480px) {
-	    	.main section h1 {
+	    	.main section.page1 h1 {
+	    		font-size: 2.5em;
+	    		-webkit-margin-before: 0.83em;
+		    }
+		    .main section h1 {
 	    		font-size: 3em;
-	    	}
+	    		-webkit-margin-before: 0.3em;
+		    }
 	    	.main section h2 {
-	    		font-size: 2em;
+	    		font-size: 1.5em;
+	    		padding: 0;
 	    	}
 	    	.page-content {
-	    		/*margin-top: 100px;*/
 	    		margin: 10px;
 	    	}
 	    	.main section p {
 	    		font-size: 18px;
+	    		padding: 0px;
 	    	}
 	    	label {
 		    	width: 90px;
 		    }
 		    .page-content .container {
-		    	margin-top: 70px;
+		    	margin-top: 30px;
 		    }
 		    .navitem {
 		    	width: 20%;
@@ -227,196 +356,158 @@
 		    .nav-social {
 		    	display: none;
 		    }
+		    .m-hide {
+		    	display: none;
+		    }
+		    .Collage{
+		    	width: 70%;
+		    }
+		    #come-in, #were {
+		    	font-size: 1.5em;
+		    }
+		    #open {
+		    	font-size: 4em;
+		    }
 
 	    }
-	    #come-in {
-	    	display: inline-block;
-	    	font-family: 'Pacifico', cursive;
-	    	color: #fff;
-	    	text-decoration: underline;
-			transform:rotate(-7deg);
-			-ms-transform:rotate(-7deg); /* IE 9 */
-			-webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
-	    }
-	    #come-in, #were {
-	    	font-size: 1.9em;
-	    }
-	    #were, #open {
-	    	font-family: 'Bitter', serif;
-	    	color: #fff;
-	    	font-weight: bold;
-	    }
-	    #open {
-	    	font-size: 4.5em;
-	    }
-	    #sign {
-	    	text-align: center;
-	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-	    }
-	    .Collage{
-	    	font-size: 0;
-		    padding:10px;
-
-	    }
-		.Collage img{
-		    vertical-align:bottom;
-		    opacity:1;
-		    border: 5px solid #fff;
-	    }
-	    .img-wrapper {
-	    	
-		    background-color: #fff;
-	    }
-	    .footer {
-	    	position: fixed;
-	    	display: block;
-	    	bottom: 0;
-	    	width: 100%;
-	    	text-align: center;
-	    	background-color: rgba(255,255,255,0.5);
-	    	padding: 5px;
-	    	font-size: 14px;
-	    	transition: background 1s;
-	    }
-	    .footer a {
-	    	text-decoration: none;
-	    	color: black;
-	    }
-	    .footer:hover {
-	      /*color: black;*/
-	      background: rgba(255, 255, 255, 1);
-	    }
-
 	</style>
 </head>
 <body>
   <div class="main" id="main">
+  	<!-- Page 1 -->
     <section class="page1 clearfix">
+    <div class="overlay clearfix" style="background: rgba(0,0,0,0.1);">
     	<div class="page-content">
-	    	<div class="container">
+	    	<div class="container clearfix">
 				<h1 align="center" data-scroll-reveal="enter from the bottom" id="title">The Cake Shop</h1>
-				<!-- <h2 align="center" data-scroll-reveal="enter from the bottom after 0.5s">Hong Kong</h2> -->
-				<div id="sign" data-scroll-reveal="enter from the bottom after 0.5s"><div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span></div>
+				<div id="sign" data-scroll-reveal="enter from the bottom after 0.5s">
+					<div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span>
+				</div>
+				
 			</div>
 		</div>
+	</div>
+	<div id="try-scroll-down" data-scroll-reveal="enter top move 100px after 1s" class="clearfix">
+		Scroll down<br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
+	</div>
     </section>
+    <!-- Page 2 -->
     <section class="page2 clearfix">
+    <div class="overlay clearfix">
     	<div class="page-content">
-    		<div class="container">
+    		<div class="container clearfix">
     			<h1>About us</h1>
     			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum ut sapien quis faucibus. Sed a pulvinar sapien, nec pulvinar ipsum. Curabitur gravida mauris felis. Donec egestas erat nunc, eget facilisis eros viverra ac. Sed volutpat, est ornare vehicula semper, nisi tellus molestie mi, eu interdum eros orci eu lorem. Aliquam iaculis elit et magna ullamcorper, sed pellentesque enim porta. Duis sollicitudin semper velit in pretium. Vivamus et dui nisi. Vestibulum id semper ante. Aliquam dignissim nec lectus ac suscipit. Integer fermentum semper enim sed hendrerit. Donec non neque a elit congue vulputate id at odio. Nullam arcu ligula, commodo eget auctor ut, dapibus quis lectus.</p>
     		</div>
     	</div>
+    	</div>
     </section>
+    <!-- Page 3 -->
     <section class="page3 clearfix">
+    <div class="overlay clearfix">
     	<div class="page-content">
-	    	<div class="container">
+	    	<div class="container clearfix">
 	    		<h1>Gallery</h1>
-	    		<div class="Collage">
-    				<div class="img-wrapper"><a href="img/cupcakes.jpg" class="popup-link"><img src="img/cupcakes.jpg" alt="cup cakes"/></a></div>
-    				<div class="img-wrapper"><a href="img/weddingcake.jpg" class="popup-link"><img src="img/weddingcake.jpg" alt="wedding cake"/></a></div>
-    				<div class="img-wrapper"><a href="img/somekid.jpg" class="popup-link"><img src="img/somekid.jpg" alt="some kid"/></a></div>
+	    		<div class="Collage clearfix">
+    				<div class="img-wrapper"><a href="img/gallery/13.jpeg" class="image-link"><img src="img/gallery/13.jpeg" alt="cup cakes"/></a></div>
+    				<!-- <div class="img-wrapper"><a href="img/gallery/2.jpeg" class="image-link"><img src="img/gallery/2.jpeg" alt="wedding cake"/></a></div> -->
 				</div>
+				<div class="see-more"><a href="gallery.html"><span class="m-hide">See more </span><i class="fa fa-chevron-circle-right"></i></a></div>
 			</div>
 		</div>
+		</div>
     </section>
+    <!-- Page 4 -->
     <section class="page4 clearfix">
+    	<div class="overlay clearfix" style="background: rgba(0,0,0,0.6);">
     	<div class="page-content">
-    		<div class="container">
+    		<div class="container clearfix">
     			<h1>Classes</h1>
     			<p>Curabitur tempus ante quam, id molestie lectus facilisis in. Cras dolor lorem, rhoncus ut dignissim auctor, placerat a ligula. Donec bibendum consectetur laoreet. Mauris tincidunt metus ac leo vulputate, non rhoncus diam sagittis. Cras ut felis sit amet justo eleifend tempus id sit amet libero. Duis hendrerit quam ipsum, sed venenatis lacus mattis id. Vestibulum sit amet dui consequat, posuere nisl non, tincidunt mi. Praesent ut mauris ligula. Mauris eleifend magna non augue accumsan auctor. Integer elementum semper tristique. Vestibulum porta, massa id viverra ornare, nisi enim venenatis dui, ac sollicitudin leo nisl vel diam. Fusce nibh enim, luctus eget fringilla vitae, dignissim tristique orci. Morbi consequat imperdiet tortor sit amet condimentum.</p>
     		</div>
     	</div>
+    	</div>
     </section>
+    <!-- Page 5 -->
     <section class="page5 clearfix">
+    <div class="overlay clearfix" style="background: rgba(0,0,0,0.2);">
     	<div class="page-content">
-    		<div class="container">
+    		<div class="container clearfix">
     			<h1>Contact</h1>
-    			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label> example@example.com<br/>
-    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label> +8523123123<br/>
-    			<i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label> qweqweqwe</p>
-    			<h2>Follow us: <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square"></i>&nbsp;&nbsp;<i class="fa fa-instagram"></i></h2>
+    			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label><a href="mailto:example@email.com?Subject=Hello" target="_top">example@email.com</a><br/>
+    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label><a href="tel:++85212345678">+852 12345678</a><br/>
+    			<i class="fa fa-home fa-fw"></i>&nbsp;<label>Address:</label><a href="https://maps.google.com/maps?q=5+Picktillum+Ave+Aberdeen" class="iframe-link">5 Picktillum Ave, Aberdeen</a></p>
+    			<h2>Follow us:  <a href="#"><i class="fa fa-facebook-square fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-twitter-square fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-instagram fa-fw"></i></a></h2>
     		</div>
+    	</div>
     	</div>
     </section>
     
 	</div>
+	<!-- Navigation bar -->
 	<div class="navbar">
 		<div class="container">
-		  	<div class="navitem to-home">Home</div>
-		  	<div class="navitem to-aboutus">About us</div>
-		  	<div class="navitem to-gallery">Gallery</div>
-		  	<div class="navitem to-classes">Classes</div>
-		  	<div class="navitem to-contact">Contact</div>
-		  	<div class="nav-social"><a href="#"><i class="fa fa-instagram"></i></a></div>
-		  	<div class="nav-social"><a href="#"><i class="fa fa-twitter-square"></i></a></div>
-		  	<div class="nav-social"><a href="#"><i class="fa fa-facebook-square"></i></a></div>
+		  	<a href="#1"><div class="navitem to-home">Home</div></a>
+		  	<a href="#2"><div class="navitem to-aboutus">About us</div></a>
+		  	<a href="#3"><div class="navitem to-gallery">Gallery</div></a>
+		  	<a href="#4"><div class="navitem to-classes">Classes</div></a>
+		  	<a href="#5"><div class="navitem to-contact">Contact</div></a>
+		  	<div class="nav-social"><a href="#" style="color: #663300;"><i class="fa fa-instagram"></i></a></div>
+		  	<div class="nav-social"><a href="#" style="color: #4099FF;"><i class="fa fa-twitter-square"></i></a></div>
+		  	<div class="nav-social"><a href="#" style="color: #3B5998;"><i class="fa fa-facebook-square"></i></a></div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="container">
-			Created by <a href="http://colloque.me">Colloque Tsui</a> @ 2014
-		</div>
-	</div>
-	<!-- scripts -->
+	<!-- Scripts -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/onepagescroll.min.js"></script>
-	<!-- <script type="text/javascript" src="js/hammer.min.js"></script> -->
 	<script type="text/javascript" src="js/jquery.arctext.js"></script>
-	<script type="text/javascript" src="js/drop.min.js"></script>
 	<script type="text/javascript" src='js/scrollReveal.js'></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
-	<script type="text/javascript" src="js/jquery.collagePlus.min.js"></script> 
 	<script type="text/javascript">
 		$(window).load(function () {
+			$(".main section.page1 h1").css("visibility","visible");
+			$("#sign").css("visibility","visible");
+			$("#try-scroll-down").css("visibility","visible");
         	window.scrollReveal = new scrollReveal();
-        	$('.Collage').collagePlus();
+
    		 });
 		
 		$(document).ready(function() {
 			onePageScroll(".main", {
 	        sectionContainer: "section",
-	        // responsiveFallback: 600,
 	        loop: true
-	      });
-	      $(".to-home").click(function(){
-	      	moveTo(".main", 1);
-	      });
-	      $(".to-aboutus").click(function(){
-	      	moveTo(".main", 2);
-	      });
-	      $(".to-gallery").click(function(){
-	      	moveTo(".main", 3);
-	      });
-	      $(".to-classes").click(function(){
-	      	moveTo(".main", 4);
-	      });
-	      $(".to-contact").click(function(){
-	      	moveTo(".main", 5);
-	      });
-	  //     $(function(){
-			//     var main = document.getElementById("main");
-			    
-			//     Hammer(main).on("swipeup", function() {
-			//           moveDown(".main"); 
-			//     });
-			    
-			//     Hammer(document.getElementById("main")).on("swipedown", function() {
-			//           moveUp(".main"); 
-			//     });
-			// })
+			});
+			$(".to-home").click(function(){
+				moveTo(".main", 1);
+			});
+			$(".to-aboutus").click(function(){
+				moveTo(".main", 2);
+			});
+			$(".to-gallery").click(function(){
+				moveTo(".main", 3);
+			});
+			$(".to-classes").click(function(){
+				moveTo(".main", 4);
+			});
+			$(".to-contact").click(function(){
+				moveTo(".main", 5);
+			});
+			$(".down").click(function(){
+				moveDown(".main"); 
+			});
 			$("#title").arctext({radius: 800})
-			$('.popup-link').magnificPopup({type:'image'});
+			$('.image-link').magnificPopup({type:'image'});
+			$('.iframe-link').magnificPopup({type:'iframe'});
 		});
 	</script>
 	<script type="text/javascript">
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-51297067-1', 'colloque.me');
-	  ga('send', 'pageview');
+		ga('create', 'UA-51297067-1', 'colloque.me');
+		ga('send', 'pageview');
 	</script>
 </body>
 </html>
