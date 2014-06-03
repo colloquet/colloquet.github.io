@@ -178,3 +178,7 @@ hr {
 #parallaxContainer {
 	display: none;
 }
+
+.m-hide {
+	display: none;
+}
