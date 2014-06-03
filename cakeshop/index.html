@@ -83,7 +83,7 @@
 			color: #fff;
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			padding: 10px 20px;
+			padding: 10px 10px;
 		}
 		.main section p {
 			font-size: 20px;
@@ -243,11 +243,20 @@
 	    	position: relative;
 	    	vertical-align: top;
 	    	padding-left: 20px;
+
 	    }
 	    .see-more a {
 	    	color: #fff;
 	    	font-size: 2em;
 	    	text-decoration: none;
+	    	opacity: 0.8;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .see-more a:hover {
+	    	opacity: 1;
 	    }
 	    #try-scroll-down {
 	    	display: block;
@@ -350,7 +359,7 @@
 		    	font-size: 4.5em;
 		    }
 	    	.main section p {
-	    		padding: 10px;
+	    		padding: 10px 20px 10px 10px;
 	    	}
 	    	.navbar {
 	    		font-size: 15px;
@@ -377,7 +386,7 @@
 	    	}
 	    	.main section p {
 	    		font-size: 18px;
-	    		padding: 0px;
+	    		padding: 0px 20px 0px 0px;
 	    	}
 	    	label {
 		    	width: 90px;
@@ -497,7 +506,7 @@
 	    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>Address:</label><a href="https://maps.google.com/maps?q=5+Picktillum+Ave+Aberdeen" class="iframe-link">5 Picktillum Ave, Aberdeen</a><br/>
 	    			This website is a work in progress, if you have any feedback, fire me an email at <a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top">colloquet@gmail.com</a>. Any feedback would be much appreciated, Thanks. 
     			</p>
-    			<h2>Follow us:  <a href="#"><i class="fa fa-facebook-square fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-twitter-square fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-instagram fa-fw"></i></a></h2>
+    			<h2>Follow us:  <a href="#"><i class="fa fa-facebook fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-twitter fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-instagram fa-fw"></i></a></h2>
     		</div>
     	</div>
     	</div>
