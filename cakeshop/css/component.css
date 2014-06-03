@@ -10,7 +10,7 @@
 	float: left;
 	padding: 7px;
 	width: 33%;
-	opacity: 1;
+	opacity: 0;
 }
 
 .grid li.shown,
@@ -26,10 +26,12 @@
 	display: block;
 	max-width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 	.grid li {
-		opacity: 0;
+		opacity: 1
 	}
+}
+@media screen and (min-width: 768px) {
 	/* Effect 1: opacity */
 	.grid.effect-1 li.animate {
 		-webkit-animation: fadeIn 0.65s ease forwards;
