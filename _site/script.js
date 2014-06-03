@@ -19,19 +19,19 @@ $(document).ready(function() {
 	$('.navtoport').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
-			scrollTop: $("#portfolio").offset().top - 20
+			scrollTop: $("#portfolio").offset().top - 10
 		});
 	});
 	$('.navtores').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
-			scrollTop: $("#resume").offset().top -20
+			scrollTop: $("#resume").offset().top - 10
 		});
 	});
 	$('.navtocon').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
-			scrollTop: $("#contact").offset().top -20
+			scrollTop: $("#contact").offset().top - 10
 		});
 	});
 });
