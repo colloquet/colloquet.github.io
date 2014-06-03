@@ -32,5 +32,25 @@
 		  color: #000;
 		  text-decoration: none;
 		}
+		.loading-overlay {
+	    	display: table;
+	    	position: fixed;
+	    	height: 100%;
+	    	width: 100%;
+	    	background-color: rgba(0,0,0,0.5);
+	    	z-index: 9999;
+	    	visibility: visible;
+	    	transition: all 0.2s ease-in-out;
+	    	-ms-transition: all 0.2s ease-in-out;
+	    	-webkit-transition: all 0.2s ease-in-out;
+	    	
+	    }
+	    .loading {
+	    	display: table-cell;
+	    	text-align: center;
+	    	vertical-align: middle;
+	    	color: #fff;
+	    	font-size: 2em;
+	    }
 	</style>
 </head>

@@ -36,12 +36,32 @@
 		  color: #000;
 		  text-decoration: none;
 		}
+		.loading-overlay {
+	    	display: table;
+	    	position: fixed;
+	    	height: 100%;
+	    	width: 100%;
+	    	background-color: rgba(0,0,0,0.5);
+	    	z-index: 9999;
+	    	visibility: visible;
+	    	transition: all 0.2s ease-in-out;
+	    	-ms-transition: all 0.2s ease-in-out;
+	    	-webkit-transition: all 0.2s ease-in-out;
+	    	
+	    }
+	    .loading {
+	    	display: table-cell;
+	    	text-align: center;
+	    	vertical-align: middle;
+	    	color: #fff;
+	    	font-size: 2em;
+	    }
 	</style>
 </head>
 
 
     <body>
-    
+    <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
     <div data-role="page" id="page2">
     <div class="overlay"></div>
     <div data-role="panel" id="defaultpanel" data-theme="b">
@@ -181,6 +201,13 @@
             s.src = '//' + disqus_shortname + '.disqus.com/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
+        </script>
+        <script type="text/javascript">
+            $(window).load(function () {
+                $(".loading-overlay").fadeOut(function() {
+                    $(".loading-overlay").html("");
+                });
+            });
         </script>
     </body>
 </html>
