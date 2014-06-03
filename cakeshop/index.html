@@ -525,7 +525,9 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
 	<script type="text/javascript">
 		$(window).load(function () {
-			$(".loading-overlay").fadeOut();
+			$(".loading-overlay").fadeOut(function() {
+				$(".loading-overlay").html("");
+			});
 
 			$(".main section.page1 h1").css("visibility","visible");
 			$("#sign").css("visibility","visible");
