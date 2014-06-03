@@ -19,13 +19,13 @@ $(document).ready(function() {
 	$('.navtoport').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
-			scrollTop: $("#portfolio").offset().top - 10
+			scrollTop: $("#portfolio").offset().top - 20
 		});
 	});
 	$('.navtores').click(function(e) {
 		e.preventDefault();
 		$('html, body').stop().animate({
-			scrollTop: $("#resume").offset().top -10
+			scrollTop: $("#resume").offset().top -20
 		});
 	});
 	$('.navtocon').click(function(e) {
