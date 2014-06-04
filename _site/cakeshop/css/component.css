@@ -215,15 +215,16 @@
 		100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
 	}
 
-	@media screen and (max-width: 900px) {
-		.grid li {
-			width: 50%;
-		}
-	}
+}
 
-	@media screen and (max-width: 400px) {
-		.grid li {
-			width: 100%;
-		}
+@media screen and (max-width: 480px) {
+	.grid li {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.grid li {
+		width: 100%;
 	}
 }

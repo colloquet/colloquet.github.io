@@ -364,9 +364,7 @@ ul, li {
 
 #sidebar-btn {
   display: none;
-  z-index: 9999999;
-  /*color: #ccc;*/
-  /*margin-top: 3px;*/
+
 }
 
 #sidebar-btn:hover {
@@ -400,7 +398,7 @@ ul, li {
 }
 
 #m-sidebar ul {
-  -webkit-margin-before: 0.5em;
+  -webkit-margin-before: 0em;
   /*padding-left: 20px;*/
   /*padding-right: 10px;*/
 }

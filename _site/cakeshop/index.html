@@ -66,7 +66,7 @@
 			margin-bottom: 0.5em;
 		}
 		.main section.page1 h1 {
-	    	font-size: 6em;
+	    	font-size: 5.5em;
 	    }
 		.main section.page1 h1, #sign {
 			color: #fff;
@@ -83,7 +83,7 @@
 			color: #fff;
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			padding: 10px 20px;
+			padding: 10px 10px;
 		}
 		.main section p {
 			font-size: 20px;
@@ -91,7 +91,7 @@
 			font-family: 'Bitter', serif;
 			text-rendering: optimizelegibility;
 			text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			padding: 20px;
+			padding: 10px;
 			line-height: 1.3em;
 		}
 		.container {
@@ -209,7 +209,7 @@
 			-webkit-transform:rotate(-7deg);
 	    }
 	    #come-in, #were {
-	    	font-size: 2.5em;
+	    	font-size: 2.2em;
 	    }
 	    #were, #open {
 	    	font-family: 'Bitter', serif;
@@ -217,7 +217,7 @@
 	    	font-weight: bold;
 	    }
 	    #open {
-	    	font-size: 6em;
+	    	font-size: 5.5em;
 	    }
 	    #sign {
 	    	display: block;
@@ -243,11 +243,20 @@
 	    	position: relative;
 	    	vertical-align: top;
 	    	padding-left: 20px;
+
 	    }
 	    .see-more a {
 	    	color: #fff;
 	    	font-size: 2em;
 	    	text-decoration: none;
+	    	opacity: 0.8;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .see-more a:hover {
+	    	opacity: 1;
 	    }
 	    #try-scroll-down {
 	    	display: block;
@@ -350,7 +359,7 @@
 		    	font-size: 4.5em;
 		    }
 	    	.main section p {
-	    		padding: 10px;
+	    		padding: 10px 20px 10px 10px;
 	    	}
 	    	.navbar {
 	    		font-size: 15px;
@@ -365,7 +374,8 @@
 		    }
 		    .main section h1 {
 	    		font-size: 3em;
-	    		-webkit-margin-before: 0.3em;
+	    		-webkit-margin-before: 0.5em;
+	    		text-align: center;
 		    }
 	    	.main section h2 {
 	    		font-size: 1.5em;
@@ -376,7 +386,7 @@
 	    	}
 	    	.main section p {
 	    		font-size: 18px;
-	    		padding: 0px;
+	    		padding: 0px 20px 0px 0px;
 	    	}
 	    	label {
 		    	width: 90px;
@@ -397,7 +407,14 @@
 		    	display: none;
 		    }
 		    .Collage{
-		    	width: 70%;
+		    	width: 100%;
+		    	padding-right: 0px;
+		    }
+		    .Collage img {
+		    	max-width: 98%;
+		    	padding: 1%;
+		    	background-color: white;
+		    	border: 0;
 		    }
 		    #come-in, #were {
 		    	font-size: 1.6em;
@@ -409,6 +426,14 @@
 		    	right: 0;
 		    	top:45%;
 		    }
+		    .see-more {
+		    	padding: 0;
+		    	width: 100%;
+		    	text-align: center;
+		    }
+		    .navbar {
+	    		font-size: 13px;
+	    	}
 
 	    }
 	</style>
@@ -422,14 +447,14 @@
     	<div class="page-content">
 	    	<div class="container clearfix">
 				<h1 align="center" data-scroll-reveal="enter from the bottom after 0.5s" id="title">The Cake Shop</h1>
-				<div id="sign" data-scroll-reveal="enter from the bottom after 1s">
+				<div id="sign" data-scroll-reveal="enter from the bottom after 1.2s">
 					<div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span>
 				</div>
 				
 			</div>
 		</div>
 	</div>
-	<div id="try-scroll-down" data-scroll-reveal="enter top move 100px after 1.5s" class="clearfix">
+	<div id="try-scroll-down" data-scroll-reveal="enter top move 100px after 1.9s" class="clearfix">
 		Scroll down<br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
 	</div>
     </section>
@@ -453,7 +478,7 @@
 	    		<div class="Collage clearfix">
     				<div class="img-wrapper"><a href="img/gallery/13.jpeg" class="image-link" title="Caption goes here"><img src="img/gallery/13.jpeg" alt="cup cakes"/></a></div>
 				</div>
-				<div class="see-more"><a href="gallery.html"><span class="m-hide">See more </span><i class="fa fa-chevron-circle-right"></i></a></div>
+				<div class="see-more"><a href="gallery.html"><span class="m-hide1">See more </span><i class="fa fa-chevron-circle-right"></i></a></div>
 			</div>
 		</div>
 		</div>
@@ -471,14 +496,17 @@
     </section>
     <!-- Page 5 -->
     <section class="page5 clearfix">
-    <div class="overlay clearfix" style="background: rgba(0,0,0,0.2);">
+    <div class="overlay clearfix" style="background: rgba(0,0,0,0.4);">
     	<div class="page-content">
     		<div class="container clearfix">
     			<h1>Contact</h1>
-    			<p><i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label><a href="mailto:example@email.com?Subject=Hello" target="_top">example@email.com</a><br/>
-    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label><a href="tel:++85212345678">+852 12345678</a><br/>
-    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>Address:</label><a href="https://maps.google.com/maps?q=5+Picktillum+Ave+Aberdeen" class="iframe-link">5 Picktillum Ave, Aberdeen</a></p>
-    			<h2>Follow us:  <a href="#"><i class="fa fa-facebook-square fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-twitter-square fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-instagram fa-fw"></i></a></h2>
+    			<p>
+	    			<i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label><a href="mailto:example@email.com?Subject=Hello" target="_top">example@email.com</a><br/>
+	    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label><a href="tel:++85212345678">+852 12345678</a><br/>
+	    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>Address:</label><a href="https://maps.google.com/maps?q=5+Picktillum+Ave+Aberdeen" class="iframe-link">5 Picktillum Ave, Aberdeen</a><br/>
+	    			This website is a work in progress, if you have any feedback, fire me an email at <a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top">colloquet@gmail.com</a>. Any feedback would be much appreciated, Thanks. 
+    			</p>
+    			<h2>Follow us:  <a href="#"><i class="fa fa-facebook fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-twitter fa-fw"></i></a>&nbsp;<a href="#"><i class="fa fa-instagram fa-fw"></i></a></h2>
     		</div>
     	</div>
     	</div>
@@ -489,7 +517,7 @@
 	<div class="navbar">
 		<div class="container">
 		  	<a href="#1"><div class="navitem to-home">Home</div></a>
-		  	<a href="#2"><div class="navitem to-aboutus">About us</div></a>
+		  	<a href="#2"><div class="navitem to-aboutus">About</div></a>
 		  	<a href="#3"><div class="navitem to-gallery">Gallery</div></a>
 		  	<a href="#4"><div class="navitem to-classes">Classes</div></a>
 		  	<a href="#5"><div class="navitem to-contact">Contact</div></a>
@@ -521,22 +549,28 @@
 	        sectionContainer: "section",
 	        loop: true
 			});
-			$(".to-home").click(function(){
+			$(".to-home").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 1);
 			});
-			$(".to-aboutus").click(function(){
+			$(".to-aboutus").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 2);
 			});
-			$(".to-gallery").click(function(){
+			$(".to-gallery").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 3);
 			});
-			$(".to-classes").click(function(){
+			$(".to-classes").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 4);
 			});
-			$(".to-contact").click(function(){
+			$(".to-contact").click(function(e){
+				e.preventDefault();
 				moveTo(".main", 5);
 			});
-			$(".down").click(function(){
+			$(".down").click(function(e){
+				e.preventDefault();
 				moveDown(".main"); 
 			});
 			$("#title").arctext({radius: 800})

@@ -166,6 +166,14 @@
 	    	font-size: 3em;
 	    	color: #fff;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .back-to-gallery a:hover {
+	    	opacity: 1;
 	    }
 	    .gallery {
 	    	width: 90%;
@@ -185,6 +193,32 @@
 	    	vertical-align: middle;
 	    	color: #fff;
 	    	font-size: 2em;
+	    }
+	    .overlay {
+	    	height: 100%;
+	    	width: 100%;
+	    	background: rgba(0,0,0,0.4);
+	    	/*position: fixed;*/
+	    }
+	    
+	    .stuck {
+	    	position: fixed;
+	    	top: 50px;
+	    }
+	    .grid li a {
+	    	/*background-color: #fff;*/
+	    }
+	    .grid li img {
+	    	border: 5px solid #fff;
+	    }
+	    .grid li img:hover {
+	    	opacity: 0.9;
+	    }
+	    .grid {
+	    	margin-bottom: 200px;
+	    }
+	    .image-link {
+	    	background-color: white;
 	    }
 	    @media screen and (max-width: 960px) {
 
@@ -215,6 +249,9 @@
 		    .navbar {
 	    		font-size: 15px;
 	    	}
+	    	.grid {
+		    	margin-bottom: 0px;
+		    }
 	    }
 	    @media screen and (max-width: 480px) {
 	    	.main section h1 {
@@ -255,30 +292,14 @@
 		    .page-content .container{
 		    	margin-top: 30px;
 		    }
-	    }
-	    .overlay {
-	    	height: 100%;
-	    	width: 100%;
-	    	background: rgba(0,0,0,0.4);
-	    	/*position: fixed;*/
+		    .grid {
+		    	margin-bottom: 0px;
+		    }
+		    .navbar {
+	    		font-size: 13px;
+	    	}
 	    }
 	    
-	    .stuck {
-	    	position: fixed;
-	    	top: 50px;
-	    }
-	    .grid li a {
-	    	background-color: #fff;
-	    }
-	    .grid li img {
-	    	border: 5px solid #fff;
-	    }
-	    .grid li img:hover {
-	    	opacity: 0.9;
-	    }
-	    .grid {
-	    	margin-bottom: 200px;
-	    }
 
 	</style>
 </head>
@@ -337,7 +358,7 @@
 	<div class="navbar">
 		<div class="container">
 		  	<a href="index.html"><div class="navitem to-home">Home</div></a>
-		  	<a href="index.html#2"><div class="navitem to-aboutus">About us</div></a>
+		  	<a href="index.html#2"><div class="navitem to-aboutus">About</div></a>
 		  	<a href="index.html#3"><div class="navitem to-gallery">Gallery</div></a>
 		  	<a href="index.html#4"><div class="navitem to-classes">Classes</div></a>
 		  	<a href="index.html#5"><div class="navitem to-contact">Contact</div></a>
@@ -372,7 +393,7 @@
 			  gallery:{
 			    enabled:true
 			  },
-			  removalDelay: 150,
+			  removalDelay: 500,
 			  mainClass: 'mfp-fade'
 			});
 			$('.back-to-gallery').waypoint('sticky', {
