@@ -1,5 +1,5 @@
 .navitem {
-	display: none;
+	/*display: none;*/
 }
 
 .content {
@@ -170,7 +170,7 @@ hr {
 }
 
 #sidebar-btn {
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 .muted {
