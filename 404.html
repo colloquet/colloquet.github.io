@@ -28,7 +28,7 @@
 	    .navitem a:hover, .navitem1 a:hover {
 	    	color: black;
 	    }
-	    h1 {
+	    .not-found {
 	    	text-align: center;
 	    }
 	    .footer {
@@ -49,7 +49,9 @@
 					</div>
 				</div>
 				<div class="not-found">
-					<div class="container"><h1>404<br/>PAGE NOT FOUND</h1></div>
+					<div class="container"><h1 style="-webkit-animation: grow 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000);">404<br/>PAGE NOT FOUND</h1>
+					<p>Just walk away, nothing to see here...or are there?</p>
+				</div>
 				</div>
 			</div>
 			<!-- footer	 -->
@@ -61,6 +63,13 @@
 			</div>
 		</div>
 		<!-- js at the end to make page content load faster -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="konami.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var easter_egg = new Konami(function() { alert('Congratulations! You found the ester egg!')});
+			});
+		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
