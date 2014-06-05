@@ -36,6 +36,9 @@
 	    	bottom: 50px;
 	    	width: 100%;
 	    }
+	    .easter-egg {
+	    	display: none;
+	    }
 		</style>
 	</head>
 	<body>
@@ -49,8 +52,15 @@
 					</div>
 				</div>
 				<div class="not-found">
-					<div class="container"><h1 style="-webkit-animation: grow 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000);">404<br/>PAGE NOT FOUND</h1>
-					<p>Just walk away, nothing to see here...or are there?</p>
+					<div class="container">
+					<div class="to-hide">
+						<h1>404<br/>PAGE NOT FOUND</h1>
+						<p>Just walk away, nothing to see here...or are there?<br/>(hint: enter the cheat code!)</p>
+					</div>
+					<div class="easter-egg">
+						<h1>Enjoy!</h1>
+						<iframe width="420" height="315" src="//www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
 				</div>
 			</div>
@@ -67,7 +77,11 @@
 		<script type="text/javascript" src="konami.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var easter_egg = new Konami(function() { alert('Congratulations! You found the ester egg!')});
+				var easter_egg = new Konami(function() { 
+					alert('Congratulations! You have entered the konami code to unlock Rick Roll!')
+					$(".easter-egg").css("display","block");
+					$(".to-hide").css("display","none");
+				});
 			});
 		</script>
 		<script>
