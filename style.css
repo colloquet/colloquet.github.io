@@ -62,7 +62,7 @@
 
 .navitem a, .navitem1 a, .muted {
   font-size: 18px;
-  color: #ccc;
+  color: #fff;
 }
 
 .navitem a:hover, .navitem1 a:hover {
@@ -80,18 +80,20 @@
   color: #fff;
   background: transparent;
   transition: opacity 1s;
-
+  height: 500px;
 }
 
 .title h1 {
-  font-size: 3em;
+  font-size: 4em;
   padding-top: 20px;
   color: #fff;
+  text-align: center;
 }
 
 .title p {
   color: #fff;
-  font-size: 22px;
+  font-size: 24px;
+  text-align: center;
 }
 
 .portfolio {
@@ -302,65 +304,7 @@ ul, li {
   width: 100%;
   text-align: center;
 }
-@media screen and (max-width: 960px) {
 
-  .container {
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-}
-@media screen and (max-width: 768px) {
-
-  .container {
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .screen {
-    text-align: center;
-    display: block;
-    width: 100%;
-    float: none;
-  }
-
-  .description {
-    display: block;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .footer {
-    width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .pull-left {
-    float: none;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .profilepic {
-    /*margin-top: 75px;*/
-  }
-
-  .pull-right {
-    margin-left: 20px;
-  }
-
-  h1 {
-    /*text-align: center;*/
-  }
-  .title {
-  
-  }
-
-}
 
 #sidebar-btn {
   display: none;
@@ -435,4 +379,71 @@ ul, li {
 .hidden {
   opacity: 0;
   transition: opacity 1s;
+}
+
+@media screen and (max-width: 960px) {
+
+  .container {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+
+}
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .screen {
+    text-align: center;
+    display: block;
+    width: 100%;
+    float: none;
+  }
+
+  .description {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pull-left {
+    float: none;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .profilepic {
+    /*margin-top: 75px;*/
+  }
+
+  .pull-right {
+    margin-left: 20px;
+  }
+
+  h1 {
+    /*text-align: center;*/
+  }
+  .title {
+  
+  }
+
+    #parallaxContainer img {
+    width: auto;
+    height: 500px;
+}
+
 }

@@ -36,7 +36,7 @@
 		  color: #000;
 		  text-decoration: none;
 		}
-		.loading-overlay {
+		/*.loading-overlay {
 	    	display: table;
 	    	position: fixed;
 	    	height: 100%;
@@ -55,7 +55,7 @@
 	    	vertical-align: middle;
 	    	color: #fff;
 	    	font-size: 2em;
-	    }
+	    }*/
 	    @media screen and (max-width: 480px) {
 		    .video-container {
 			    position: relative;
@@ -78,7 +78,7 @@
 
 
     <body>
-    <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
+    <!-- <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div> -->
     <div data-role="page" id="page2">
     <div class="overlay"></div>
     <div data-role="panel" id="defaultpanel" data-theme="b">
@@ -190,12 +190,12 @@
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
         </script>
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             $(window).load(function () {
                 $(".loading-overlay").fadeOut(function() {
                     $(".loading-overlay").html("");
                 });
             });
-        </script>
+        </script> -->
     </body>
 </html>
