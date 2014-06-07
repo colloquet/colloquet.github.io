@@ -63,11 +63,17 @@
 .navitem a, .navitem1 a, .muted {
   font-size: 18px;
   color: #fff;
+  
+}
+
+.navitem a, .navitem1 a {
+  opacity: 0.7;
 }
 
 .navitem a:hover, .navitem1 a:hover {
   color: #fff;
   text-decoration: none;
+  opacity: 1;
 }
 
 .title {
