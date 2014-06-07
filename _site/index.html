@@ -19,6 +19,9 @@
 		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" rel="stylesheet" />
 		<style type="text/css">
 		/*To prevent title and about me being visible before being revealed*/
+		.navbar {
+			visibility: hidden;
+		}
 		.container {
 			visibility: hidden;
 		}
@@ -74,7 +77,7 @@
 					    <img src="img/bg.jpg" alt="Profile background"/>
 					</div>
 					<!-- navigation bar -->
-					<div class="navbar">
+					<div class="navbar" data-scroll-reveal="enter from top after 1.9s">
 						<div class="container clearfix" id="fixnav">
 							<div class="navitem" style="display: inline-block;"><a id="sidebar-btn" href="#defaultpanel">
 								<i class="fa fa-bars fa-lg"></i>
@@ -528,6 +531,7 @@
 	    //                 $(".loading-overlay").html("");
 	    //             });
 					// Make it visible after its revealed
+					$(".navbar").css("visibility","visible");
 					$(".container").css("visibility","visible");
 					$("#m-sidebar").css("visibility","visible");
 					var config = {
