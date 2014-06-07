@@ -395,17 +395,6 @@ ul, li {
     padding-right: 20px;
   }
 
-
-
-}
-@media screen and (max-width: 768px) {
-
-  .container {
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .screen {
     text-align: center;
     display: block;
