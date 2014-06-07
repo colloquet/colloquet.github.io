@@ -363,13 +363,14 @@ ul, li {
 }
 
 #parallaxContainer {
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    background-color: #000;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  background-color: #000;
 }
+
 #parallaxContainer img {
     width: 100%;
     height: auto;
@@ -421,24 +422,12 @@ ul, li {
     margin-left: 0px;
   }
 
-  .profilepic {
-    /*margin-top: 75px;*/
-  }
-
   .pull-right {
     margin-left: 20px;
   }
 
-  h1 {
-    /*text-align: center;*/
-  }
-  .title {
-  
-  }
-
-    #parallaxContainer img {
+  #parallaxContainer img {
     width: auto;
     height: 500px;
-}
-
+  }
 }
