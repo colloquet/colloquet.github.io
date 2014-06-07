@@ -226,6 +226,9 @@
 	    .image-link {
 	    	background-color: white;
 	    }
+	    .globe {
+	    	display: none;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  .container {
@@ -283,7 +286,7 @@
 		    	margin-top: 70px;
 		    }
 		    .navitem {
-		    	width: 20%;
+		    	width: 18%;
 		    	text-align: center;
 		    	padding-left: 0px;
 		    	padding-right: 0px;
@@ -303,6 +306,15 @@
 		    }
 		    .navbar {
 	    		font-size: 13px;
+	    	}
+	    	.globe {
+	    		display: inline-block;
+	    		width: 10%;
+	    	}
+	    	.nav-lang {
+	    		display: none;
+	    		text-align: center;
+	    		width: 100%;
 	    	}
 	    }
 	    
@@ -368,6 +380,7 @@
 		  	<a href="index_chi.html#3"><div class="navitem to-gallery">作品</div></a>
 		  	<a href="index_chi.html#4"><div class="navitem to-classes">課程</div></a>
 		  	<a href="index_chi.html#5"><div class="navitem to-contact">聯絡</div></a>
+		  	<a href="#"><div class="navitem globe"><i class="fa fa-globe fa-lg"></i></div></a>
 		  	<div class="nav-lang"><a href="gallery_chi.html">中</a> ｜ <a href="gallery.html">Eng</a></div>
 		  	<div class="nav-social"><a href="#" style="color: #663300;"><i class="fa fa-instagram"></i></a></div>
 		  	<div class="nav-social"><a href="#" style="color: #4099FF;"><i class="fa fa-twitter-square"></i></a></div>
@@ -405,6 +418,10 @@
 			});
 			$('.back-to-gallery').waypoint('sticky', {
 				offset: 50
+			});
+			$(".globe").click(function(e){
+				e.preventDefault();
+				$(".nav-lang").slideToggle();
 			});
 		});
 	</script>
