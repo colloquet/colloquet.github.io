@@ -105,6 +105,7 @@ hr {
   z-index: 13000;
   width: 100%;
   overflow: hidden;
+  visibility: visible;
 }
 
 #m-sidebar ul li {
