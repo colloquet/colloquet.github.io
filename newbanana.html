@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		var d = new Date();
+		var year = d.getFullYear();
+		var month = d.getMonth() + 1;
+		if (month<=10) {
+			month = "0"+month;
+		};
+		var date = d.getDate() + 1;
+		var today = String(year)+String(month)+String(date);
+		var weekday = new Array(7);
+			weekday[0]=  "星期日";
+			weekday[1] = "星期一";
+			weekday[2] = "星期二";
+			weekday[3] = "星期三";
+			weekday[4] = "星期四";
+			weekday[5] = "星期五";
+			weekday[6] = "星期六";
+		var today_day = weekday[d.getDay()];
+	</script>
+</head>
+<body>
+	<h1>新香蕉俱樂部節目重溫</h1>
+	<p>今日 (<script type="text/javascript">document.write(today_day+" "+today);</script>)</p>
+	<ul>
+		<li><script type="text/javascript">document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0000.mp3'>00:00</a>");</script></li>
+		<li><script type="text/javascript">document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0030.mp3'>00:30</a>");</script></li>
+		<li><script type="text/javascript">document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0100.mp3'>01:00</a>");</script></li>
+		<li><script type="text/javascript">document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0130.mp3'>01:30</a>");</script></li>
+	</ul>
+</body>
+</html>
