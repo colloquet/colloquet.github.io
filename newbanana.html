@@ -3,8 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>新香蕉俱樂部節目重溫</title>
+	<style type="text/css">
+		ul, li {
+			list-style: none;
+			padding-left: 0;
+		}
+		.container {
+			width: 960px;
+			margin: 0 auto;
+		}
+		.na {
+			display: none;
+		}
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		var d = new Date();
+		var d = new Date(2014,5,15);
 		var year = d.getFullYear();
 		var month = d.getMonth() + 1;
 		if (month<=10) {
@@ -21,16 +35,23 @@
 			weekday[5] = "星期五";
 			weekday[6] = "星期六";
 		var today_day = weekday[d.getDay()];
+		if (d.getDay()==6||d.getDay()==0) {
+			$('.today-list').css("display","none");
+			$('.na').css("display","block");
+		}
 	</script>
 </head>
 <body>
+	<div class="container">
 	<h1>新香蕉俱樂部節目重溫</h1>
 	<p>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+date+"日");</script>)</p>
-	<ul>
+	<ul class="today-list">
 		<li>第一節<br/><script type="text/javascript">document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0000.mp3' type='audio/mpeg'><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0000.mp3'>00:00</a></audio>");</script></li>
 		<li>第二節<br/><script type="text/javascript">document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0030.mp3' type='audio/mpeg'><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0030.mp3'>00:30</a></audio>");</script></li>
 		<li>第三節<br/><script type="text/javascript">document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0100.mp3' type='audio/mpeg'><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0100.mp3'>01:00</a></audio>");</script></li>
 		<li>第四節<br/><script type="text/javascript">document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0130.mp3' type='audio/mpeg'><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0130.mp3'>01:30</a></audio>");</script></li>
 	</ul>
+	<div class="na">Today is either Saturday or Sunday, New Banana Club is not available.</div>
+	</div>
 </body>
 </html>
