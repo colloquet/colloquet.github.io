@@ -65,6 +65,9 @@
 			width: 307px;
 			border: 1px solid #000;
 		}
+		#datepicker {
+			margin-bottom: 20px;
+		}
 		.today {
 			position: relative;
 			display: inline-block;
@@ -103,6 +106,9 @@
 			width: 100%;
 			text-align: center;
 		}
+		.d-hide {
+			display: none;
+		}
 
 		@media screen and (max-width: 500px) {
 			h1 {
@@ -130,6 +136,12 @@
 			}
 			.ui-datepicker {
 				margin: 0 auto;
+			}
+			.m-hide {
+				display: none;
+			}
+			.d-hide {
+				display: inline-block;
 			}
 		}
 	</style>
@@ -232,7 +244,7 @@
 					</script>
 				</li>
 			</ul>
-			<p class="na"><i class="fa fa-exclamation-circle"></i> 新香蕉俱樂部只在星期一至五播出，請在右邊選擇日期重溫。</p>
+			<p class="na"><i class="fa fa-exclamation-circle"></i> 新香蕉俱樂部只在星期一至五播出，請在<span class="m-hide">右邊</span><span class="d-hide">下方</span>選擇日期重溫。</p>
 
 
 			<div class="select-date"></div>
@@ -240,7 +252,22 @@
 
 		<div class="datepicker">
 			<p><i class="fa fa-calendar"></i> 請選擇日期: <hr/></p><div id="datepicker"></div>
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcolloque.me%2Fnewbanana.html&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=155786951179530" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width: 130px;" allowTransparency="true"></iframe>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="colloquet">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone" data-size="medium"></div>
+
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/platform.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
 		</div>
+			
 		<div class="footer"><hr/><p>Created by <a href="http://colloque.me">Colloque Tsui</a></p></div>
 	</div>
 	<script type="text/javascript">
