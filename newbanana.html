@@ -25,6 +25,11 @@
 		a:hover {
 			text-decoration: underline;
 		}
+		#wrap {min-height: 100%;}
+		#main {
+  overflow:auto;
+  padding-bottom: 50px; /* must be same height as the footer */
+}
 		.clearfix {
 		*zoom: 1;
 		}
@@ -101,10 +106,20 @@
 			color: white;
 		}
 		.footer {
-			float: left;
-			display: block;
+			position: relative;;
+			/*bottom: 0;*/
+			/*float: left;*/
+			/*display: block;*/
 			width: 100%;
 			text-align: center;
+			background: #000;
+			color: #fff;
+			margin-top: -50px;
+			height: 50px;
+			clear: both;
+		}
+		.footer a {
+			color: #8358C3;
 		}
 		.d-hide {
 			display: none;
@@ -210,11 +225,13 @@
 	</script>
 </head>
 <body>
+	<div id="wrap">
 	<div class="header clearfix">
 		<div class="container">
 			<h1>新香蕉俱樂部 - 節目重溫</h1>
 		</div>
 	</div>
+	<div id="main">
 	<div class="container clearfix">
 		<div class="today">
 			<p><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p><hr/>
@@ -255,8 +272,11 @@
 			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcolloque.me%2Fnewbanana.html&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=155786951179530" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
 		</div>
 			
-		<div class="footer"><hr/><p>Created by <a href="http://colloque.me">Colloque Tsui</a></p></div>
+		
 	</div>
+	</div>
+	</div>
+	<div class="footer clearfix"><p>Created by <a href="http://colloque.me">Colloque Tsui</a></p></div>
 	<script type="text/javascript">
 		if (d.getDay()==6||d.getDay()==0) {
 			$('.today-list').css("display","none");
