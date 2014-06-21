@@ -40,11 +40,21 @@
 			float: right;
 			position: relative;
 			display: inline-block;
+			border-left: 1px solid #e6e6e6;
+			padding-left: 30px;
 		}
 		.today {
 			position: relative;
 			display: inline-block;
 			float: left;
+		}
+		hr {
+			display: block;
+			height: 1px;
+			border: 0;
+			border-top: 1px solid #e6e6e6;
+			padding: 0;
+			margin:20px 0;
 		}
 	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -101,8 +111,9 @@
 <body>
 	<div class="container clearfix">
 		<h1>新香蕉俱樂部節目重溫</h1>
+		<hr/>
 		<div class="today">
-			<p>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</p>
+			<p><strong>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</strong></p>
 			<ul class="today-list">
 				<li>
 					<script type="text/javascript">
@@ -134,7 +145,7 @@
 		</div>
 
 		<div class="datepicker">
-			日期: <div id="datepicker"></div>
+			<p>日期: </p><div id="datepicker"></div>
 		</div>
 	</div>
 	<script type="text/javascript">
