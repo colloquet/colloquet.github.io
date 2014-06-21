@@ -36,9 +36,7 @@
 			min-height: 100%;
 		}
 		.na {
-			position: relative;
-			display: none;
-			float: left;
+			visibility: hidden;
 		}
 		.datepicker {
 			float: right;
@@ -158,7 +156,7 @@
 					var yy = String(minDate.getFullYear());
 					var selectedDate = yy+mm+dd;
 					$(".select-date").fadeOut(function(){
-					$(".select-date").html("<br/><br/><hr/><p><strong>已選擇："+date+"</strong></p><ul><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
+					$(".select-date").html("<hr/><p><strong>已選擇："+date+"</strong></p><ul><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
 				});
 					$(".select-date").fadeIn();
 				}
@@ -171,7 +169,7 @@
 		<h1>新香蕉俱樂部節目重溫</h1>
 		<hr/>
 		<div class="today">
-			<p><strong>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</strong></p>
+			<p><strong>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</strong></p><hr/>
 			<ul class="today-list">
 				<li>
 					<script type="text/javascript">
@@ -198,19 +196,20 @@
 					</script>
 				</li>
 			</ul>
-			<div class="na"><p>新香蕉俱樂部只在星期一至五播出，請在右邊選擇日期重溫。</p></div>
+			<p class="na">新香蕉俱樂部只在星期一至五播出，請在右邊選擇日期重溫。</p>
+
 
 			<div class="select-date"></div>
 		</div>
 
 		<div class="datepicker">
-			<p><i class="fa fa-calendar"></i> 請選擇日期: </p><div id="datepicker"></div>
+			<p><i class="fa fa-calendar"></i> 請選擇日期: <hr/></p><div id="datepicker"></div>
 		</div>
 	</div>
 	<script type="text/javascript">
 		if (d.getDay()==6||d.getDay()==0) {
 			$('.today-list').css("display","none");
-			$('.na').css("display","inline-block");
+			$('.na').css("visibility","visible");
 		}
 	</script>
 	<script>
