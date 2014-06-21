@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-	<title>新香蕉俱樂部節目重溫</title>
+	<title>新香蕉俱樂部 - 節目重溫</title>
 	<meta name="keywords" content="新香蕉俱樂部, 節目重溫"/>
 	<meta name="description" content="重溫新香蕉俱樂部"/>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -81,7 +81,7 @@
 		h1 {
 			font-size: 2.5em;
 		}
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 500px) {
 			h1 {
 				font-size: 1.5em;
 				text-align: center;
@@ -137,15 +137,17 @@
 			weekday[6] = "星期六";
 		var today_day = weekday[d.getDay()];
 		$(function() {
-			$.datepicker.setDefaults({dateFormat: 'yymmdd'});
+			$.datepicker.setDefaults({dateFormat: 'yy年mm月dd日'});
 			$( "#datepicker" ).datepicker({
-				dateFormat: "yymmdd",
+				maxDate: year + "年" + month + "月" + today_date + "日",
+				beforeShowDay: disableSpecificWeekDays,
 				onSelect: function(date) {
 					var minDate = $(this).datepicker('getDate');
-            	if (minDate) {
-                  minDate.setDate(minDate.getDate() + 1);
-            	}
+	            	if (minDate) {
+	                  minDate.setDate(minDate.getDate() + 1);
+	            	}
 					var dd = String(minDate.getDate());
+					var ddd = minDate.getDate()-1;
 					if (dd<10) {
 						dd = "0"+dd;
 					};
@@ -155,21 +157,29 @@
 					};
 					var yy = String(minDate.getFullYear());
 					var selectedDate = yy+mm+dd;
+					var selected_day = weekday[minDate.getDay()-1];
 					$(".select-date").fadeOut(function(){
-					$(".select-date").html("<hr/><p><strong>已選擇："+date+"</strong></p><ul><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
-				});
+						$(".select-date").html("<hr/><p><strong>自選："+selected_day+" "+date+"</strong></p><ul><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
+					});
 					$(".select-date").fadeIn();
 				}
 			});
 		});
+		function disableSpecificWeekDays(date) {
+		    if(date.getDay()==0||date.getDay()==6){
+		        return [false];
+		    }else{
+		        return [true];
+		    }
+		}
 	</script>
 </head>
 <body>
 	<div class="container clearfix">
-		<h1>新香蕉俱樂部節目重溫</h1>
+		<h1>新香蕉俱樂部 - 節目重溫</h1>
 		<hr/>
 		<div class="today">
-			<p><strong>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</strong></p><hr/>
+			<p><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p><hr/>
 			<ul class="today-list">
 				<li>
 					<script type="text/javascript">
