@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>新香蕉俱樂部節目重溫</title>
 	<meta name="keywords" content="新香蕉俱樂部, 節目重溫"/>
 	<meta name="description" content="重溫新香蕉俱樂部"/>
@@ -82,6 +82,31 @@
 		}
 		h1 {
 			font-size: 2.5em;
+		}
+		@media screen and (max-width: 480px) {
+			h1 {
+				font-size: 2em;
+				text-align: center;
+			}
+			.container {
+				width: 100%;
+			}
+			.today {
+				display: block;
+				width: 92%;
+				padding: 2%;
+				margin: 2%;
+			}
+			.datepicker {
+				text-align: center;
+				float: left;
+				display: block;
+				width: 92%;
+				/*padding: 0px 10px 20px 10px;*/
+				/*padding: 0;*/
+				padding: 2%;
+				margin: 2%;
+			}
 		}
 	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
