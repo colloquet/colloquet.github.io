@@ -4,7 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>新香蕉俱樂部節目重溫</title>
+	<meta name="keywords" content="新香蕉俱樂部, 節目重溫"/>
+	<meta name="description" content="重溫新香蕉俱樂部"/>
 	<style type="text/css">
+		body {
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		}
+		.clearfix {
+		*zoom: 1;
+		}
+
+		.clearfix:before, .clearfix:after {
+		display: table;
+		line-height: 0;
+		content: "";
+		}
+
+		.clearfix:after {
+		clear: both;
+		}
 		ul, li {
 			list-style: none;
 			padding-left: 0;
@@ -14,18 +32,35 @@
 			margin: 0 auto;
 		}
 		.na {
+			position: relative;
 			display: none;
+			float: left;
+		}
+		.datepicker {
+			float: right;
+			position: relative;
+			display: inline-block;
+		}
+		.today {
+			position: relative;
+			display: inline-block;
+			float: left;
 		}
 	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 	<script type="text/javascript">
 		var d = new Date();
 		var year = d.getFullYear();
 		var month = d.getMonth() + 1;
-		if (month<=10) {
+		if (month<10) {
 			month = "0"+month;
 		};
 		var today_date = d.getDate();
+		if (today_date<10) {
+			today_date = "0"+today_date;
+		};
 		var tomorrow_date = d.getDate() + 1;
 		var tomorrow = String(year)+String(month)+String(tomorrow_date);
 		var today = String(year)+String(month)+String(today_date);
@@ -38,45 +73,84 @@
 			weekday[5] = "星期五";
 			weekday[6] = "星期六";
 		var today_day = weekday[d.getDay()];
+		$(function() {
+			$.datepicker.setDefaults({dateFormat: 'yymmdd'});
+			$( "#datepicker" ).datepicker({
+				dateFormat: "yymmdd",
+				onSelect: function(date) {
+					var minDate = $(this).datepicker('getDate');
+            	if (minDate) {
+                  minDate.setDate(minDate.getDate() + 1);
+            	}
+					var dd = String(minDate.getDate());
+					if (dd<10) {
+						dd = "0"+dd;
+					};
+					var mm = String(minDate.getMonth() + 1);
+					if (mm<10) {
+						mm = "0"+mm;
+					};
+					var yy = String(minDate.getFullYear());
+					var selectedDate = yy+mm+dd;
+					$(".select-date").html("<br/><p><strong>已選擇："+date+"</strong></p><ul><li><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
+				}
+			});
+		});
 	</script>
 </head>
 <body>
-	<div class="container">
-	<h1>新香蕉俱樂部節目重溫</h1>
-	<p>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</p>
-	<ul class="today-list">
-		<li>
-			<script type="text/javascript">
-				document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a><br/>");
-				document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
-			</script>
-		</li>
-		<li>
-			<script type="text/javascript">
-				document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a><br/>");
-				document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
-			</script>
-		</li>
-		<li>
-			<script type="text/javascript">
-				document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a><br/>");
-				document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
-			</script>
-		</li>
-		<li>
-			<script type="text/javascript">
-				document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a><br/>");
-				document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
-			</script>
-		</li>
-	</ul>
-	<div class="na">Today is either Saturday or Sunday, New Banana Club is not available.</div>
+	<div class="container clearfix">
+		<h1>新香蕉俱樂部節目重溫</h1>
+		<div class="today">
+			<p>今天 (<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script>)</p>
+			<ul class="today-list">
+				<li>
+					<script type="text/javascript">
+						document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+				<li>
+					<script type="text/javascript">
+						document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+				<li>
+					<script type="text/javascript">
+						document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+				<li>
+					<script type="text/javascript">
+						document.write("<a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+			</ul>
+			<div class="na">今天是星期六或星期日，新香蕉俱樂部只在星期一至五播出，請在右邊選擇日期重溫。</div>
+			<div class="select-date"></div>
+		</div>
+
+		<div class="datepicker">
+			日期: <div id="datepicker"></div>
+		</div>
 	</div>
 	<script type="text/javascript">
 		if (d.getDay()==6||d.getDay()==0) {
 			$('.today-list').css("display","none");
-			$('.na').css("display","block");
+			$('.na').css("display","inline-block");
 		}
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-51297067-1', 'colloque.me');
+		ga('send', 'pageview');
 	</script>
 </body>
 </html>
