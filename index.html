@@ -29,7 +29,7 @@
 		.fa-lg {
 			line-height: 24px;
 		}
-		/*.loading-overlay {
+		.loading-overlay {
 	    	display: table;
 	    	position: fixed;
 	    	height: 100%;
@@ -48,12 +48,12 @@
 	    	vertical-align: middle;
 	    	color: #fff;
 	    	font-size: 2em;
-	    }*/
+	    }
 	    
 		</style>
 	</head>
 	<body>
-	<!-- <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div> -->
+	<div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
 	<!-- for jquery mobile -->
 	<div data-role="page" id="page1">
 		<!-- jquery mobile panel for mobile version -->
@@ -525,22 +525,14 @@
 				});
 
 			</script>
-			<!-- <script src='/js/scrollReveal.js'></script>
+			<script src='/js/scrollReveal.js'></script>
 			<script>
 				$(window).load(function () {
-					// $(".loading-overlay").fadeOut(function() {
-	    //                 $(".loading-overlay").html("");
-	    //             });
-					// Make it visible after its revealed
-					$(".navbar").css("visibility","visible");
-					$(".container").css("visibility","visible");
-					$("#m-sidebar").css("visibility","visible");
-					var config = {
-			            viewportFactor: 0
-			          };
-			  		window.scrollReveal = new scrollReveal(config);
+					$(".loading-overlay").fadeOut(function() {
+	                $(".loading-overlay").html("");
+	                });
 			  	});
 
-			</script> -->
+			</script>
 	</body>
 </html>
