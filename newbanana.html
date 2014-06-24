@@ -47,6 +47,9 @@
 			display: block;
 			position: relative;
 			background-color: #2B1151;
+			background-image: url('img/banner1.jpg');
+			background-size: 100%;
+			background-position: center;
 			top: 0;
 			width: 100%;
 			margin-bottom: 20px;
@@ -56,7 +59,7 @@
 			margin: 0 auto;
 		}
 		.na {
-			visibility: hidden;
+			display: none;
 		}
 		.datepicker {
 			float: right;
@@ -131,6 +134,9 @@
 		}
 
 		@media screen and (max-width: 500px) {
+			.header {
+				margin-bottom: 0;
+			}
 			h1 {
 				font-size: 1.5em;
 				text-align: center;
@@ -285,7 +291,7 @@
 	<script type="text/javascript">
 		if (d.getDay()==6||d.getDay()==0) {
 			$('.today-list').css("display","none");
-			$('.na').css("visibility","visible");
+			$('.na').css("display","block");
 		}
 	</script>
 	<script>
