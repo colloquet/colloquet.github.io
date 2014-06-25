@@ -36,10 +36,6 @@
   color: #555;
 }
 
-.navbar.stuck a:hover {
-  color: #555;
-}
-
 .navitem {
   display: inline-block;
   position: relative;
@@ -71,7 +67,6 @@
 }
 
 .navitem a:hover, .navitem1 a:hover {
-  color: #fff;
   text-decoration: none;
   opacity: 1;
 }
