@@ -179,8 +179,12 @@ hr {
 	width: 100%;
 	height: 35px;
 	display: table;
-	border-bottom: 0;
 
+
+}
+
+.sticky-wrapper .navbar {
+	border-bottom: 0;
 }
 
 .navbar .container {
