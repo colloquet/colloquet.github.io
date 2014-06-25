@@ -156,6 +156,7 @@ hr {
 
 .title h1 {
 	font-size: 3em;
+	padding-top: 0px;
 }
 
 .title p, .title h1 {
@@ -179,6 +180,10 @@ hr {
 }
 
 .navbar.stuck a {
+  color: rgba(255,255,255,0.87);
+}
+
+.navbar.stuck a:hover {
   color: rgba(255,255,255,0.87);
 }
 
