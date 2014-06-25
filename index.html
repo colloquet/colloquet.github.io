@@ -28,12 +28,12 @@
 		}*/
 		body {
 			opacity: 0;
-			transition: opacity 1s;
+			transition: opacity 0.5s;
 		}
 		.fa-lg {
 			line-height: 24px;
 		}
-		/*.loading-overlay {
+		.loading-overlay {
 	    	display: table;
 	    	position: fixed;
 	    	height: 100%;
@@ -52,12 +52,12 @@
 	    	vertical-align: middle;
 	    	color: #fff;
 	    	font-size: 2em;
-	    }*/
+	    }
 	    
 		</style>
 	</head>
 	<body>
-	<!-- <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div> -->
+	<div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
 	<!-- for jquery mobile -->
 	<div data-role="page" id="page1">
 		<!-- jquery mobile panel for mobile version -->
@@ -552,10 +552,11 @@
 			<!-- <script src='/js/scrollReveal.js'></script> -->
 			<script>
 				$(window).load(function () {
-					// $(".loading-overlay").fadeOut(function() {
-	    //             $(".loading-overlay").html("");
-	    //             });
-					$('body').css("opacity","1");
+					$(".loading-overlay").fadeOut(function() {
+		                $(".loading-overlay").html("");
+		                $('body').css("opacity","1");
+	                });
+					
 			  	});
 
 			</script>
