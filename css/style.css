@@ -33,11 +33,11 @@
 }
 
 .navbar.stuck a {
-  color: #888;
+  color: #555;
 }
 
 .navbar.stuck a:hover {
-  color: #000;
+  color: #555;
 }
 
 .navitem {
@@ -62,7 +62,7 @@
 
 .navitem a, .navitem1 a, .muted {
   font-size: 18px;
-  color: #fff;
+  color: rgba(255,255,255,0.87);
   
 }
 
@@ -177,12 +177,13 @@ html {
 body { 
   font-size: 18px;
   /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 200;
-  color: rgb(40, 40, 40);
+  font-weight: 300;
+  color: rgba(40, 40, 40, 0.87);
   text-rendering: optimizelegibility;
 }
 
@@ -192,7 +193,7 @@ h1 {
   letter-spacing: -1px;
   line-height: 50px;
   text-rendering: optimizelegibility;
-  color: rgb(40, 40, 40);
+  color: rgba(40, 40, 40, 0.87);
 }
   
 h2 { 
@@ -201,13 +202,19 @@ h2 {
   letter-spacing: -1px;
   line-height: 50px;
   text-rendering: optimizelegibility;
-  color: rgb(40, 40, 40);
+  color: rgba(40, 40, 40, 0.87);
+}
+
+h3 { 
+  font-weight: 300;
+  text-rendering: optimizelegibility;
+  color: rgba(40, 40, 40, 0.87);
 }
 
 
 p, li, blockquote, label{
-  font-weight: 200;
-  color: rgb(40, 40, 40);
+  font-weight: 300;
+  color: rgba(40, 40, 40, 0.87);
   text-rendering: optimizelegibility;
 
 }
@@ -274,6 +281,10 @@ hr {
 ul, li {
   padding-left: 0px;
   list-style: none;
+}
+
+strong {
+  font-weight: 400;
 }
 
 .screen {

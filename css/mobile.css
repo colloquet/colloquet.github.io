@@ -161,17 +161,26 @@ hr {
 .title p, .title h1 {
 	text-align: center;
 	color: #fff;
-	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	/*text-shadow: 0 1px 1px rgba(0,0,0,.4);*/
 }
 
 .title {
-	background: url('/img/bg1.jpg')no-repeat;
+	background: #607d8b;
 	background-size: 100%;
 	height: auto;
 	-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+}
+
+.navbar.stuck {
+	background-color: #607d8b;
+	border: 0;
+}
+
+.navbar.stuck a {
+  color: rgba(255,255,255,0.87);
 }
 
 #sidebar-btn {
