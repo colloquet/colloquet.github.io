@@ -215,13 +215,15 @@ p, li, blockquote, label{
 }
 
 a { 
-  color: #0088cc;
+  color: #02A9F4;
   text-decoration:none;
   outline: none;
+  transition: color 260ms ease-out;
 }
 
 a:hover { 
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  color: #81d4fa;
 }
 
 abbr, acronym {	
