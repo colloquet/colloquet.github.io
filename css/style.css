@@ -96,6 +96,7 @@
   padding-top: 20px;
   color: #fff;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .title p {
@@ -129,6 +130,10 @@
   margin-left: auto;
   margin-right: auto;
   transition: opacity 1s;
+}
+
+.aboutme p {
+  color: rgba(80, 80, 80, 0.87);
 }
 
 .contact {
@@ -183,7 +188,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-weight: 300;
-  color: rgba(40, 40, 40, 0.87);
+  color: rgba(80, 80, 80, 0.87);
   text-rendering: optimizelegibility;
 }
 
@@ -214,7 +219,7 @@ h3 {
 
 p, li, blockquote, label{
   font-weight: 300;
-  color: rgba(40, 40, 40, 0.87);
+  color: rgba(80, 80, 80, 0.87);
   text-rendering: optimizelegibility;
 
 }
