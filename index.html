@@ -26,6 +26,10 @@
 		.container {
 			visibility: hidden;
 		}*/
+		body {
+			opacity: 0;
+			transition: opacity 1s;
+		}
 		.fa-lg {
 			line-height: 24px;
 		}
@@ -546,13 +550,14 @@
 
 			</script>
 			<!-- <script src='/js/scrollReveal.js'></script> -->
-			<!-- <script>
+			<script>
 				$(window).load(function () {
-					$(".loading-overlay").fadeOut(function() {
-	                $(".loading-overlay").html("");
-	                });
+					// $(".loading-overlay").fadeOut(function() {
+	    //             $(".loading-overlay").html("");
+	    //             });
+					$('body').css("opacity","1");
 			  	});
 
-			</script> -->
+			</script>
 	</body>
 </html>
