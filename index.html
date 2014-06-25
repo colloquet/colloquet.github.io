@@ -542,18 +542,12 @@
 					$('.navbar').waypoint('sticky', {
 						offset: -2 // Apply "stuck" when element 20px from top
 					});
+					$(".loading-overlay").fadeOut(function() {
+		                $(".loading-overlay").html("");
+	                });
 				});
 
 			</script>
 			<!-- <script src='/js/scrollReveal.js'></script> -->
-			<script>
-				$(window).load(function () {
-					$(".loading-overlay").fadeOut(function() {
-		                $(".loading-overlay").html("");
-	                });
-					
-			  	});
-
-			</script>
 	</body>
 </html>
