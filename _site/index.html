@@ -17,7 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<link rel="stylesheet" href="/css/main.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet prefetch' type='text/css'>
-		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
+		<link media="handheld, only screen and (max-width: 550px), only screen and (max-device-width: 550px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 		<style type="text/css">
 		/*To prevent title and about me being visible before being revealed*/
 		/*.navbar {
@@ -29,7 +29,7 @@
 		.fa-lg {
 			line-height: 24px;
 		}
-		.loading-overlay {
+		/*.loading-overlay {
 	    	display: table;
 	    	position: fixed;
 	    	height: 100%;
@@ -48,12 +48,12 @@
 	    	vertical-align: middle;
 	    	color: #fff;
 	    	font-size: 2em;
-	    }
+	    }*/
 	    
 		</style>
 	</head>
 	<body>
-	<div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
+	<!-- <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div> -->
 	<!-- for jquery mobile -->
 	<div data-role="page" id="page1">
 		<!-- jquery mobile panel for mobile version -->
@@ -74,9 +74,9 @@
 			<div class="content">
 				<div class="title clearfix">
 					<!-- for parallax effect -->
-					<div id="parallaxContainer">
+					<!-- <div id="parallaxContainer">
 					    <img src="img/bg.jpg" alt="Profile background"/>
-					</div>
+					</div> -->
 					<!-- navigation bar -->
 					<div class="navbar">
 						<div class="container clearfix" id="fixnav">
@@ -420,7 +420,7 @@
 		  ga('create', 'UA-51297067-1', 'colloque.me');
 		  ga('send', 'pageview');
 		</script>
-			<script type="text/javascript" src="/js/prefixfree.min.js"></script>
+<!-- 			<script type="text/javascript" src="/js/prefixfree.min.js"></script>
 			<script>
 			 
 			var requestAnimationFrame = window.requestAnimationFrame || 
@@ -533,7 +533,7 @@
 			    requestAnimationFrame(animationLoop);
 			}
 			 
-			</script>
+			</script> -->
 			<script src="/js/waypoints.min.js"></script>
 			<script src="/js/waypoints-sticky.min.js"></script>
 			<script type="text/javascript">
@@ -546,13 +546,13 @@
 
 			</script>
 			<script src='/js/scrollReveal.js'></script>
-			<script>
+			<!-- <script>
 				$(window).load(function () {
 					$(".loading-overlay").fadeOut(function() {
 	                $(".loading-overlay").html("");
 	                });
 			  	});
 
-			</script>
+			</script> -->
 	</body>
 </html>
