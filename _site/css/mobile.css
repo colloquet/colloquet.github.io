@@ -33,8 +33,8 @@ h2 {
 	width: auto;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .pull-right {
@@ -166,7 +166,7 @@ hr {
 }
 
 .title {
-	background: #607d8b;
+	background: #009688;
 	background-size: 100%;
 	height: auto;
 	-webkit-background-size: cover;
@@ -183,7 +183,12 @@ hr {
 
 }
 
-.sticky-wrapper .navbar {
+.page-content .navbar {
+	background-color: #e91e63;
+	box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.navbar {
 	border-bottom: 0;
 }
 
@@ -193,18 +198,18 @@ hr {
 }
 
 .navbar.stuck {
-	background-color: #607d8b;
+	background-color: #009688;
 	width: 100%;
 	height: 35px;
 	display: table;
 	box-shadow: 0 2px 5px rgba(0,0,0,.26);
 }
 
-.navbar.stuck a {
-  color: rgba(255,255,255,0.87);
+.navbar a, .navitem {
+  color: rgba(255,255,255,0.87) !important;
 }
 
-.navbar.stuck a:hover {
+.navbar a:hover {
   color: rgba(255,255,255,0.87);
 }
 
