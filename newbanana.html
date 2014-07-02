@@ -201,6 +201,9 @@
 			today_date = "0"+today_date;
 		};
 		var tomorrow_date = d.getDate() + 1;
+		if (tomorrow_date<10) {
+			tomorrow_date = "0"+tomorrow_date;
+		};
 		var tomorrow = String(year)+String(month)+String(tomorrow_date);
 		var today = String(year)+String(month)+String(today_date);
 		var weekday = new Array(7);
