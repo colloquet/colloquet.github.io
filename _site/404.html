@@ -13,6 +13,7 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<link rel="stylesheet" href="/css/main.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet prefetch' type='text/css'>
 		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 		<style type="text/css">
@@ -49,7 +50,7 @@
 			    padding-bottom: 56.25%;
 			    padding-top: 30px; height: 0; overflow: hidden;
 			}
-			 
+
 			.video-container iframe,
 			.video-container object,
 			.video-container embed {
@@ -90,8 +91,8 @@
 				</div>
 				</div>
 			</div>
-			
-			
+
+
 		</div>
 		<!-- footer	 -->
 		<div class="footer clearfix">
@@ -105,9 +106,9 @@
 		<script type="text/javascript" src="/js/konami.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				var easter_egg = new Konami(function() { 
+				var easter_egg = new Konami(function() {
 					alert('Congratulations! You have entered the konami code to unlock Rick Roll!');
-					$(".easter-egg").html('<h1>Enjoy!</h1><div class="video-container"><iframe width="400" height="315" src="//www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe></div>');
+					$(".easter-egg").html( '<h1>Enjoy!</h1><div class="video-container"><iframe width="400" height="315" src="//www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe></div>' );
 					$(".easter-egg").css("display","block");
 					$(".to-hide").css("display","none");
 				});

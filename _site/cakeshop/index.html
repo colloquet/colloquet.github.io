@@ -6,6 +6,7 @@
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title>The Cake Shop | Hong Kong</title>
 	<meta charset="utf-8"> 
+	<link href='css/animate.css' rel='stylesheet' type='text/css'>
 	<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Bitter|Great+Vibes|Pacifico|Playball|Amatic+SC|Satisfy' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -68,10 +69,12 @@
 		}
 		.main section.page1 h1 {
 	    	font-size: 5.5em;
+	    	-webkit-animation-delay: 1s;
+			  -moz-animation-delay: 1s;
 	    }
 		.main section.page1 h1, #sign {
 			color: #fff;
-			visibility: hidden;
+			/*visibility: hidden;*/
 		}
 		.main section.page2 h1 {
 			color: rgba(255,255,255,0.87);
@@ -227,6 +230,8 @@
 	    	display: block;
 	    	text-align: center;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    	-webkit-animation-delay: 2s;
+			  -moz-animation-delay: 2s;
 	    }
 
 	    .img-wrapper {
@@ -267,12 +272,14 @@
 	    	position: fixed;
 	    	bottom: 50px;
 	    	width: 100%;
-	    	visibility: hidden;
+	    	/*visibility: hidden;*/
 	    	font-size: 1.5em;
 	    	text-align: center;
 	    	color: #fff;
 	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 	    	/*margin: 0 auto;*/
+	    	-webkit-animation-delay: 3s;
+			  -moz-animation-delay: 3s;
 	    }
 	    .down {
 	    	display: inline-block;
@@ -463,15 +470,15 @@
     <div class="overlay clearfix" style="background: rgba(0,0,0,0.1);">
     	<div class="page-content">
 	    	<div class="container clearfix">
-				<h1 align="center" data-scroll-reveal="enter from the bottom after 0.5s" id="title">The Cake Shop</h1>
-				<div id="sign" data-scroll-reveal="enter from the bottom after 1.2s">
+				<h1 align="center" id="title">The Cake Shop</h1>
+				<div id="sign">
 					<div id="come-in"><span>Come in</span></div><span id="were"> WE'RE</span><br/><span id="open">OPEN</span>
 				</div>
 
 			</div>
 		</div>
 	</div>
-	<div id="try-scroll-down" data-scroll-reveal="enter top move 100px after 1.9s" class="clearfix">
+	<div id="try-scroll-down" class="clearfix">
 		Scroll down<br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
 	</div>
     </section>
@@ -556,13 +563,16 @@
 				$(".loading-overlay").html("");
 			});
 
-			$(".main section.page1 h1").css("visibility","visible");
-			$("#sign").css("visibility","visible");
-			$("#try-scroll-down").css("visibility","visible");
-        	window.scrollReveal = new scrollReveal();
+			// $(".main section.page1 h1").css("visibility","visible");
+			// $("#sign").css("visibility","visible");
+			// $("#try-scroll-down").css("visibility","visible");
+   //      	window.scrollReveal = new scrollReveal();
    		});
 
 		$(document).ready(function() {
+			$('.main section.page1 h1').addClass('animated fadeInUp');
+		    $('#sign').addClass('animated fadeInUp');
+		    $('#try-scroll-down').addClass('animated fadeInDown');
 			onePageScroll(".main", {
 	        sectionContainer: "section",
 	        loop: true
