@@ -51,7 +51,6 @@
 	    	color: #666;
 	    	font-size: 2em;
 	    }
-	    
 		</style>
 	</head>
 	<body>
@@ -474,12 +473,19 @@
 
 		</script>
 		<!-- <script src='/js/scrollReveal.js'></script> -->
+		<script type="text/javascript" src="/js/slidr.min.js"></script>
 		<script>
 			$(window).load(function () {
 				$(".loading-overlay").fadeOut(function() {
 	                $(".loading-overlay").html("");
                 });
-				
+				slidr.create('slidr-img', {
+				  breadcrumbs: true,
+				  touch: true,
+				  theme: '#222',
+				  keyboard: true,
+				  transition: 'fade'
+				}).start();
 		  	});
 
 		</script>
