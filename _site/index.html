@@ -19,6 +19,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 		<link media="handheld, only screen and (max-width: 550px), only screen and (max-device-width: 550px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
+		<link href="/css/validetta.css" rel="stylesheet" type="text/css" media="screen" >
 		<style type="text/css">
 		/*To prevent title and about me being visible before being revealed*/
 		/*.navbar {
@@ -58,6 +59,9 @@
 	    }
 	    #contact_form input, #contact_form textarea {
 	    	padding: 9px;
+	    }
+	    #contact_form textarea {
+	    	height: 10em !important;
 	    }
 		</style>
 	</head>
@@ -392,17 +396,17 @@
     
 					        <div class="form-group">
 					            <label for="exampleInputName">Name</label>
-					            <input name="Name" type="text" class="form-control" id="exampleInputName" placeholder="Enter name">
+					            <input name="Name" type="text" class="form-control" id="exampleInputName" placeholder="Enter name" data-validetta="required">
 					        </div>
 					    
 					        <div class="form-group">
 					            <label for="exampleInputEmail1">Email</label>
-					            <input name="Email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					            <input name="Email" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" data-validetta="required,email">
 					        </div>
 					    
 					        <div class="form-group">
 					            <label for="exampleTextArea">Message</label>
-					            <textarea name="Message" class="form-control" rows="3" placeholder="Enter message"></textarea>    
+					            <textarea name="Message" class="form-control" rows="10" placeholder="Enter message" data-validetta="required"></textarea>    
 					        </div>
 					              
 					        <input type="submit" value="Send">
@@ -443,6 +447,7 @@
 
 			});
 		</script>
+		<script type="text/javascript" src="/js/validetta-min.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -457,6 +462,13 @@
 		<script type="text/javascript">
 			
 			$(document).ready(function() {
+				$('#contact_form').validetta({
+			        realTime : true,
+			        display : 'inline',
+			        errorClass : 'validetta-inline',
+			        errorClose : false,
+			        errorCloseClass : null
+			    }); 
 				$('.navbar').waypoint('sticky', {
 					offset: -2 // Apply "stuck" when element 20px from top
 				});
