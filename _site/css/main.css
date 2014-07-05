@@ -7,8 +7,8 @@
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
 .wrap {
-  max-width: 940px;
-  padding: 20px;
+  max-width: 960px;
+  padding: 15px;
   margin: 0 auto;
   zoom: 1;
 }

@@ -55,6 +55,7 @@
   float: right;
   display: inline-block;
   position: relative;
+  margin-left: 20px;
 }
 
 .navitem a, .navitem1 a, .muted {
