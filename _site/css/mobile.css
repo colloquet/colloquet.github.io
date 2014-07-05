@@ -186,7 +186,8 @@ hr {
 
 .page-content .navbar {
 	background-color: #e91e63;
-	box-shadow: 0 2px 5px rgba(0,0,0,.26);
+	/*box-shadow: 0 2px 5px rgba(0,0,0,.26);*/
+	/*border-bottom: 1px solid #880e4f;*/
 }
 
 .navbar {
@@ -204,7 +205,7 @@ hr {
 	height: 35px;
 	display: table;
 	box-shadow: none;
-	border-bottom: 1px solid #00695c;
+	/*border-bottom: 1px solid #00695c;*/
 }
 
 .navbar a, .navitem {

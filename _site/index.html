@@ -51,6 +51,14 @@
 	    	color: #666;
 	    	font-size: 2em;
 	    }
+	    #contact_form {
+	    	max-width: 500px;
+	    	margin: 0 auto;
+	    	/*float: left;*/
+	    }
+	    #contact_form input, #contact_form textarea {
+	    	padding: 9px;
+	    }
 		</style>
 	</head>
 	<body>
@@ -103,7 +111,8 @@
 				</div>
 				<div class="aboutme clearfix">
 					<div class="container">
-						<br/>
+						<!-- <br/> -->
+						<h2>About me</h2>
 						<p><img class="pull-right profilepic" alt="Colloque Tsui" src="img/profile.jpg" height="150" />Hello, I am Colloque Tsui. I am a Hong Konger who is excited and passionate about web design, my dream is to become a professional web designer. I am currently doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from.</p>
 						<p>I am proficient in HTML5 and CSS3, as well as some experience with Ruby on Rails and php + MySQL. I am always looking for ways to make things faster, better and stronger.</p><p>Keep it Classy!</p>
 						<br/>
@@ -112,7 +121,7 @@
 				<!-- portfolio -->
 				<div class="portfolio clearfix" id="portfolio">
 					<div class="container" >
-					<br/>
+					<!-- <br/> -->
 						<h2>Portfolio</h2>
 						<div id="tabs">
 							<ul>
@@ -205,7 +214,7 @@
 				<!-- resume -->
 				<div class="resume clearfix" id="resume">
 					<div class="container" >
-					<br/>
+					<!-- <br/> -->
 						<h2>Resume</h2>
 						<p>You can download in pdf format from here: <a href="Colloque_Tsui_CV.pdf" target="top">Colloque Tsui's Resume</a></p>
 						<div id="accordion">
@@ -370,16 +379,35 @@
 				<!-- contact-->
 				<div class="contact clearfix" id="contact">
 					<div class="container">
-					<br/>
-						<h2>Contact</h2>
-						<ul data-role="listview" data-inset="true" data-divider-theme="a" id="m-con">
+					<!-- <br/> -->
+						<h2 align="center">Contact</h2>
+						<!-- <ul data-role="listview" data-inset="true" data-divider-theme="a" id="m-con">
 							<li data-role="list-divider">Social network profile</li>
-						    <li><a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw"></i>&nbsp;LinkedIn</a></li>
-						    <li><a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw"></i>&nbsp;Facebook</a></li>
-						    <li><a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw"></i>&nbsp;Twitter</a></li>
-						    <li data-role="list-divider">Email</li>
-						    <li><a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top"><i class="fa fa-envelope-square fa-fw"></i>&nbsp;colloquet@gmail.com</a></li>
-						</ul>
+						    <li><a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"></i>&nbsp;LinkedIn</a></li>
+						    <li><a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw" style="color:#3b5998;"></i>&nbsp;Facebook</a></li>
+						    <li><a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw" style="color:#00aced;"></i>&nbsp;Twitter</a></li>
+						</ul> -->
+						<form method="POST" action="http://forms.brace.io/colloquet@gmail.com" id="contact_form">
+    
+					        <div class="form-group">
+					            <label for="exampleInputName">Name</label>
+					            <input name="Name" type="text" class="form-control" id="exampleInputName" placeholder="Enter name">
+					        </div>
+					    
+					        <div class="form-group">
+					            <label for="exampleInputEmail1">Email</label>
+					            <input name="Email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					        </div>
+					    
+					        <div class="form-group">
+					            <label for="exampleTextArea">Message</label>
+					            <textarea name="Message" class="form-control" rows="3" placeholder="Enter message"></textarea>    
+					        </div>
+					              
+					        <input type="submit" value="Send">
+
+					    </form>
+
 					</div>
 				</div>
 			</div>
@@ -387,7 +415,10 @@
 			<div class="footer clearfix">
 				<div class="container">
 				<hr/>
-				&copy; Colloque Tsui 2014
+				&copy; Colloque Tsui 2014<br/><br/>
+				<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw fa-lg" style="color:#007bb6;"></i></a>
+				<a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw fa-lg" style="color:#3b5998;"></i></a>
+				<a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw fa-lg" style="color:#00aced;"></i></a>
 				<br/><br/><br/><br/>
 				</div>
 			</div>
@@ -448,19 +479,19 @@
 				$('.navtoport').click(function(e) {
 					e.preventDefault();
 					$('html, body').stop().animate({
-						scrollTop: $("#portfolio").offset().top - 20
+						scrollTop: $("#portfolio").offset().top - 40
 					});
 				});
 				$('.navtores').click(function(e) {
 					e.preventDefault();
 					$('html, body').stop().animate({
-						scrollTop: $("#resume").offset().top - 20
+						scrollTop: $("#resume").offset().top - 40
 					});
 				});
 				$('.navtocon').click(function(e) {
 					e.preventDefault();
 					$('html, body').stop().animate({
-						scrollTop: $("#contact").offset().top - 20
+						scrollTop: $("#contact").offset().top - 40
 					});
 				});
 				$('#to-top').click(function(e) {
