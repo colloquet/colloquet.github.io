@@ -29,7 +29,7 @@
   /*box-shadow: 0 2px 5px rgba(0,0,0,.26);*/
 }
 
-.navbar.stuck a {
+.navbar.stuck a, .navbar.stuck .muted{
   color: #555;
 }
 
