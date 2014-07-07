@@ -15,9 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.4.custom.css"/>
 		<link rel="stylesheet" href="/css/jquery.mobile-1.4.2.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
-		<link rel="stylesheet" href="/css/main.css"/>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500|Open+Sans:300' rel='stylesheet' type='text/css'>
 		<link media="handheld, only screen and (max-width: 550px), only screen and (max-device-width: 550px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 		<link href="/css/validetta.css" rel="stylesheet" type="text/css" media="screen" >
 		<style type="text/css">
@@ -430,23 +428,6 @@
 			    }); 
 				$('.navbar').waypoint('sticky', {
 					offset: -2 // Apply "stuck" when element 20px from top
-				});
-				$(function() {
-				    $.mobile.panel.prototype._positionPanel = function() {
-				        var self = this,
-				            panelInnerHeight = self._panelInner.outerHeight(),
-				            expand = panelInnerHeight > $.mobile.getScreenHeight();
-
-				        if ( expand || !self.options.positionFixed ) {
-				            if ( expand ) {
-				                self._unfixPanel();
-				                $.mobile.resetActivePageHeight( panelInnerHeight );
-				            }
-				          //window.scrollTo( 0, $.mobile.defaultHomeScroll );
-				        } else {
-				            self._fixPanel();
-				        }
-				    };
 				});
 				$('.navtoport').click(function(e) {
 					e.preventDefault();
