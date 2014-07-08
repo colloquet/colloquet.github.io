@@ -74,7 +74,7 @@
 		.main section.page1 h1 {
 	    	font-size: 5.5em;
 	    	-webkit-animation-delay: 1s;
-			  -moz-animation-delay: 1s;
+			-moz-animation-delay: 1s;
 	    }
 		.main section.page1 h1, #sign {
 			color: #fff;
@@ -562,12 +562,17 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/onepagescroll.min.js"></script>
 	<script type="text/javascript" src="js/jquery.arctext.js"></script>
-	<script type="text/javascript" src='js/scrollReveal.js'></script>
+	<!-- <script type="text/javascript" src='js/scrollReveal.js'></script> -->
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function () {
-			$(".loading-overlay").fadeOut(function() {
+			// $(".loading-overlay").fadeOut(function() {
+			// 	$(".loading-overlay").html("");
+			// });
+			$(".loading-overlay").addClass('animated fadeOut');
+			$('.loading-overlay').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 				$(".loading-overlay").html("");
+				$(".loading-overlay").hide();
 			});
 
 			// $(".main section.page1 h1").css("visibility","visible");

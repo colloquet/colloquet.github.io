@@ -419,6 +419,7 @@
 				$(".loading-overlay").addClass('animated fadeOut');
 				$('.loading-overlay').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 					$(".loading-overlay").html("");
+					$(".loading-overlay").hide();
 				});
 		  	});
 		  	$(function() {
