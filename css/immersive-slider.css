@@ -20,7 +20,7 @@ Class Definitions
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding: 50px 100px;
+  padding: 50px 80px;
   position: absolute;
 }
 .immersive_slider .is-slide .image  {
