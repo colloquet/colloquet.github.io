@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="/css/jquery.mobile-1.4.2.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<link href='css/animate.css' rel='stylesheet' type='text/css'>
+		<link href='css/immersive-slider.css' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500|Open+Sans:300' rel='stylesheet' type='text/css'>
 		<link media="handheld, only screen and (max-width: 550px), only screen and (max-device-width: 550px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 		<link href="/css/validetta.css" rel="stylesheet" type="text/css" media="screen" >
@@ -86,7 +87,61 @@
 				<div class="portfolio clearfix" id="portfolio">
 					<div class="container" >
 						<h2>Portfolio</h2>
-						<div id="tabs">
+						<div id="immersive_slider">
+						    <div class="slide">
+						      <div class="screen clearfix">
+									<img class="projectimg" alt="The Cake Shop" src="img/thecakeshop.png"/>
+								</div>
+								<div class="description">
+									<h3>The Cake Shop</h3>
+									<p>The Cake Shop is a little experiment built with <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html">one page scroll</a> jquery plugin. </p>
+									<p>URL : <a href="http://colloque.me/cakeshop/" target="top">http://colloque.me/cakeshop/</a></p>
+								</div>
+						    </div>
+						    <div class="slide">
+						    	<div class="screen clearfix">
+									<img class="projectimg" alt="Music!" src="img/music.png"/>
+								</div>
+								<div class="description">
+									<h3>Music!</h3>
+									<p>Music! is a website that describe my taste in music. It was awarded the Best Overall Website in my course. It is basically a showcase of various techniques that I learnt such as jQuery, php, and CSS.</p>
+									<p>URL : <a href="http://homepages.abdn.ac.uk/c.tsui.09/" target="top">http://homepages.abdn.ac.uk/c.tsui.09/</a></p>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="screen clearfix">
+									<img class="projectimg" alt="The Finance App" src="img/financeapp.png"/>
+								</div>
+								<div class="description">
+									<h3>The Finance App</h3>
+									<p>The Finance App was one of the group assignment we have done. It is basically a database of the S&amp;P 500 companies. We have implemented Google Maps API and some use of Javascript. The app is written in Ruby on Rails.</p>
+									<p>URL : <a href="http://finance-company.herokuapp.com" target="top">http://finance-company.herokuapp.com</a></p>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="screen clearfix">
+									<img class="projectimg" alt="Premier League" src="img/premier.png"/>
+								</div>
+								<div class="description">
+									<h3>Premier League</h3>
+									<p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
+									<p>URL : <a href="https://footballdev.herokuapp.com" target="top">https://footballdev.herokuapp.com</a></p>
+								</div>
+							</div>
+							<div class="slide">
+								<div class="screen clearfix">
+									<img class="projectimg" alt="New Banana's Club" src="img/newbanana.png"/>
+								</div>
+								<div class="description">
+									<h3>New Banana Club</h3>
+									<p>This is a little web app I made using javascript to parse URL for the famous Hong Kong radio show "New Banana Club". You can listen to the archive of the show.</p>
+									<p>URL : <a href="http://colloque.me/newbanana.html" target="top">http://colloque.me/newbanana.html</a></p>
+								</div>
+							</div>
+						    <a href="#" class="is-prev">&laquo;</a>
+						    <a href="#" class="is-next">&raquo;</a>
+						  </div>
+						<!-- <div id="tabs">
 							<ul>
 								<li><a href="#tabs-1">The Cake Shop</a></li>
 								<li><a href="#tabs-2">Music!</a></li>
@@ -144,7 +199,7 @@
 									<p>URL : <a href="http://colloque.me/newbanana.html" target="top">http://colloque.me/newbanana.html</a></p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div data-role="collapsible-set" data-theme="a" data-content-theme="a" id="m-port">
 							<div data-role="collapsible">
 						       	<h3>The Cake Shop</h3>
@@ -413,6 +468,7 @@
 		<script type="text/javascript" src="/js/validetta.js"></script>
 		<script src="/js/waypoints.min.js"></script>
 		<script src="/js/waypoints-sticky.min.js"></script>
+		<script src="/js/jquery.immersive-slider.min.js"></script>
 		<script type="text/javascript">
 			// hide loading screen when page finish loading
 			$(window).load(function () {
@@ -429,6 +485,11 @@
 				$( "#tabs" ).tabs();
 			});
 			$(document).ready(function() {
+				$("#immersive_slider").immersive_slider({
+					animation: "slide",
+					cssBlur: false,
+					autoStart: false
+				});
 				$('#contact_form').validetta({
 			        realTime : true,
 			        display : 'inline',
