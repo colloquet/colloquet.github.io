@@ -328,6 +328,9 @@
 	    .globe {
 	    	display: none;
 	    }
+	    .d-hide {
+	    	display: none;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  	.container {
@@ -470,6 +473,9 @@
 	    		border-top: 1px solid #ccc;
 	    		border-bottom: 1px solid #ccc;
 	    	}
+	    	.d-hide {
+		    	display: block;
+		    }
 	    }
 	</style>
 </head>
@@ -536,9 +542,9 @@
     		<div class="container clearfix">
     			<h1>聯絡我們</h1>
     			<p>
-	    			<i class="fa fa-envelope fa-fw"></i>&nbsp;<label>電郵:</label><a href="mailto:thecakeshophk@gmail.com?Subject=Hello" target="_top">thecakeshophk@gmail.com</a><br/>
-	    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>電話:</label><a href="tel:++85228589228">+852 2858 9228</a><br/>
-	    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>地址:</label><a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link">Room 211, 2/F, Kam Ling Court, 532 Queen's Road West, Hong Kong</a><br/>
+	    			<i class="fa fa-envelope fa-fw"></i>&nbsp;<label>電郵:</label><br class="d-hide" /><a href="mailto:thecakeshophk@gmail.com?Subject=Hello" target="_top">thecakeshophk@gmail.com</a><br/><br class="d-hide" />
+	    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>電話:</label><br class="d-hide" /><a href="tel:++85228589228">+852 2858 9228</a><br/><br class="d-hide" />
+	    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>地址:</label><br class="d-hide" /><a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link">Room 211, 2/F, Kam Ling Court, 532 Queen's Road West, Hong Kong</a><br/>
     			</p>
     			<h2>關注我們:  
 	    			<a href="http://www.facebook.com/thecakeshophk"><i class="fa fa-facebook-square fa-fw"></i></a>
