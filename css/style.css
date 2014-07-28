@@ -23,6 +23,8 @@
   top: 0;
   z-index: 99999999;
   width: 100%;
+  border-bottom: 0;
+  box-shadow: #eee 0 4px 0;
 }
 .navbar.stuck a, .navbar.stuck a:hover{
   color: #555;
