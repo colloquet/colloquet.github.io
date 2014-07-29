@@ -210,6 +210,7 @@ hr {
 .profilepic {
   border-radius: 75px;
   margin-bottom: 20px;
+  box-shadow: #ddd 4px 4px 0;
 }
 ul, li {
   padding-left: 0px;
