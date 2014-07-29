@@ -161,6 +161,12 @@ h1, h2, h3 {
   font-weight: 300;
   color: rgba(40, 40, 40, 0.87);
 }
+
+h2 {
+  text-shadow: #ddd 2px 2px 0;
+  -webkit-text-shadow: #ddd 2px 2px 0;
+}
+
 p, li, blockquote, label{
   font-weight: 300;
   color: rgba(80, 80, 80, 0.87);
