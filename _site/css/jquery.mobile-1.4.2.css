@@ -4680,4 +4680,6 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	/*padding: .2em;*/
+	box-shadow: #eee 4px 4px 0;
+	-webkit-box-shadow: #f7f7f7 4px 4px 0;
 }

@@ -15,6 +15,7 @@
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   z-index: 999999999;
+  transition: background-color 0.26s;
 }
 .navbar.stuck {
   background-color: #fff;
@@ -52,7 +53,7 @@
 }
 
 .navitem a:hover, .navitem1 a:hover {
-  color: rgba(255,255,255,0.87); 
+  color: rgba(255,255,255,0.87);
   text-decoration: none;
   opacity: 1;
 }
@@ -121,7 +122,7 @@
   box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
-  
+
 }
 
 .content {
@@ -131,7 +132,7 @@
   margin-right: auto;
 }
 
-html { 
+html {
   background: #fff;
   height: 100%;
   margin-left: auto;
@@ -141,7 +142,7 @@ html {
   text-rendering: optimizelegibility;
 }
 
-body { 
+body {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -151,26 +152,27 @@ body {
   color: rgba(80, 80, 80, 0.87);
 }
 
-h1, h2 { 
+h1, h2 {
   font-size: 40px;
   letter-spacing: -1px;
   line-height: 50px;
 }
 
-h1, h2, h3 { 
+h1, h2, h3 {
   font-weight: 300;
   color: rgba(40, 40, 40, 0.87);
 }
+
 p, li, blockquote, label{
   font-weight: 300;
   color: rgba(80, 80, 80, 0.87);
 }
-a { 
+a {
   color: #3cbce1;
   text-decoration:none;
   outline: none;
 }
-a:hover { 
+a:hover {
   /*color: #81d4fa;*/
   opacity: 0.7;
 }
@@ -197,19 +199,21 @@ br {
   margin-right: 20px;
 }
 
-hr { 
-  display: block; 
+hr {
+  display: block;
   height: 1px;
-  border: 0; 
+  border: 0;
   border-top: 1px solid #e6e6e6;
-  margin: 1em 0; 
-  padding: 0; 
-  margin:30px 0; 
+  margin: 1em 0;
+  padding: 0;
+  margin:30px 0;
 }
 
 .profilepic {
   border-radius: 75px;
   margin-bottom: 20px;
+  box-shadow: #ddd 4px 4px 0;
+  -webkit-box-shadow: #ddd 4px 4px 0;
 }
 ul, li {
   padding-left: 0px;
@@ -268,7 +272,7 @@ strong {
   transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
-  
+
 }
 .loading {
   display: table-cell;
