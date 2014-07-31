@@ -68,11 +68,15 @@
 	  .panel1 {
 	          padding: 15px 0;
 	    }
+	  h3, .today-list {
+		  text-align: center;
+	  }
 	  @media screen and (max-width: 500px) {
 		  .col-md-8,.col-md-4 {
 			  padding-left: 0 !important;
 			  padding-right: 0 !important;
 		  }
+		  
 	  }
       /*.panel {
         background: #FFF59E;
@@ -146,7 +150,7 @@
     <div class="container">
 	    <div class="col-md-4">
 	      <div class="panel1">
-	          <h3><span class="glyphicon glyphicon-info-sign"></span> 新香蕉俱樂部</h3>
+	          <h3>新香蕉俱樂部</h3>
 	          <hr>
 			  <p>新香蕉俱樂部（英文：New Banana Club）為新城知訊台 的一個phone-in節目，內容以嬉笑手法解決聽眾的感情問題為主，為同時段各大電台中的冠軍收聽率長壽節目。</p>
 			  <p>新香蕉俱樂部星期一 - 星期五：12:00 - 2：00am<br/>Ben，妹頭，強尼，關逸基，塔羅小公主selina</p>
@@ -154,32 +158,32 @@
 	  </div>
       <div class="col-md-4 col-sm-6">
         <div class="panel1">
-          <h3><span class="glyphicon glyphicon-headphones"></span> 重溫今天或選擇日期</h3>
+          <h3>重溫今天或選擇日期</h3>
           <hr>
           <div id="list">
-            <p><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
-            <ul class="list-group">
-              <li class="list-group-item today-list">
+            <p align="center"><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
+            <ul class="list-group today-list">
+              <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a></h4>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a></h4>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a></h4>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a></h4>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
@@ -190,7 +194,7 @@
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="panel1">
-          <h3><span class="glyphicon glyphicon-calendar"></span> 請選擇日期</h3>
+          <h3>請選擇日期</h3>
           <hr>
           <div id="datepicker"></div>
         </div>
@@ -234,7 +238,7 @@
             var selectedDate = yy+mm+dd;
             var selected_day = weekday[minDate.getDay()-1];
             $("#list").fadeOut(function(){
-              $("#list").html("<p><strong>自選："+selected_day+" "+date+"</strong></p><ul class='list-group'><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
+              $("#list").html("<p align='center'><strong>自選："+selected_day+" "+date+"</strong></p><ul class='list-group today-list'><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
             });
             $("#list").fadeIn();
           }
