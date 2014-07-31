@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新香蕉俱樂部節目重溫</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      body {
+        /* Margin bottom by footer height */
+        margin-bottom: 80px;
+/*        background-color: #FFF069;*/
+      }
+      /*a {
+        color: #6836B3;
+        text-decoration:none;
+        outline: none;
+      }
+      a:hover {
+        color: #6836B3;
+        text-decoration: underline;
+      }*/
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #f5f5f5;
+      }
+      .container-fluid .text-muted {
+        margin: 20px 0;
+      }
+      .navbar {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+      }
+      .na {
+        display: none;
+      }
+      .ui-datepicker {
+        margin: 0 auto;
+      }
+	  .jumbotron {
+		  padding: 30px;
+	  }
+      /*.panel {
+        background: #FFF59E;
+        -webkit-box-shadow: #FCE203 0 4px 0;
+        box-shadow: #FCE203 0 4px 0;
+        padding: 15px;
+      }
+      .jumbotron {
+        background-color: #2B1151;
+        color: white;
+      }
+      hr {
+        border-color: #2B1151;
+      }
+      .footer {
+        background-color: #000;
+      }
+      .list-group-item {
+        background: #FFF59E;
+        border-color: #2B1151;
+      }
+      .ui-datepicker-header {
+        color: white !important;
+        background-color: #2B1151 !important;
+      }
+      .ui-widget-content {
+        background: #FFF59E !important;
+      }*/
+    </style>
+    <script type="text/javascript">
+      var d = new Date();
+      var year = d.getFullYear();
+      var month = d.getMonth() + 1;
+      if (month<10) {
+        month = "0"+month;
+      };
+      var today_date = d.getDate();
+      if (today_date<10) {
+        today_date = "0"+today_date;
+      };
+      var tomorrow_date = d.getDate() + 1;
+      if (tomorrow_date<10) {
+        tomorrow_date = "0"+tomorrow_date;
+      };
+      var tomorrow = String(year)+String(month)+String(tomorrow_date);
+      var today = String(year)+String(month)+String(today_date);
+      var weekday = new Array(7);
+        weekday[0]=  "星期日";
+        weekday[1] = "星期一";
+        weekday[2] = "星期二";
+        weekday[3] = "星期三";
+        weekday[4] = "星期四";
+        weekday[5] = "星期五";
+        weekday[6] = "星期六";
+      var today_day = weekday[d.getDay()];
+    </script>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>新香蕉俱樂部</h1>
+        <p class="text-muted">節目重溫</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-8">
+        <div class="panel1">
+          <p><strong>重溫今天節目或選擇日期重溫。</strong></p>
+          <hr>
+          <div id="list">
+            <p><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
+            <ul class="list-group">
+              <li class="list-group-item today-list">
+                <script type="text/javascript">
+                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a><br/><br/>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
+                </script>
+              </li>
+              <li class="list-group-item">
+                <script type="text/javascript">
+                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a><br/><br/>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
+                </script>
+              </li>
+              <li class="list-group-item">
+                <script type="text/javascript">
+                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a><br/><br/>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
+                </script>
+              </li>
+              <li class="list-group-item">
+                <script type="text/javascript">
+                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a><br/><br/>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
+                </script>
+              </li>
+            </ul>
+            <p class="na"><span class="glyphicon glyphicon-exclamation-sign"></span> 新香蕉俱樂部只在星期一至五播出，請選擇日期重溫。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel1">
+          <p><strong><span class="glyphicon glyphicon-calendar"></span> 請選擇日期: </strong></p>
+          <hr>
+          <div id="datepicker"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container-fluid">
+        <p class="text-muted text-center">&copy; Colloque Tsui 2014</p>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+      if (d.getDay()==6||d.getDay()==0) {
+        $('.today-list').css("display","none");
+        $('.na').css("display","block");
+      }
+      $(function() {
+        $.datepicker.setDefaults({dateFormat: 'yy年mm月dd日'});
+        $( "#datepicker" ).datepicker({
+          maxDate: year + "年" + month + "月" + today_date + "日",
+          beforeShowDay: disableSpecificWeekDays,
+          onSelect: function(date) {
+            var minDate = $(this).datepicker('getDate');
+                  if (minDate) {
+                      minDate.setDate(minDate.getDate() + 1);
+                  }
+            var dd = String(minDate.getDate());
+            var ddd = minDate.getDate()-1;
+            if (dd<10) {
+              dd = "0"+dd;
+            };
+            var mm = String(minDate.getMonth() + 1);
+            if (mm<10) {
+              mm = "0"+mm;
+            };
+            var yy = String(minDate.getFullYear());
+            var selectedDate = yy+mm+dd;
+            var selected_day = weekday[minDate.getDay()-1];
+            $("#list").fadeOut(function(){
+              $("#list").html("<p><strong>自選："+selected_day+" "+date+"</strong></p><ul class='list-group'><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
+            });
+            $("#list").fadeIn();
+          }
+        });
+      });
+      function disableSpecificWeekDays(date) {
+          if(date.getDay()==0||date.getDay()==6){
+              return [false];
+          }else{
+              return [true];
+          }
+      }
+    </script>
+  </body>
+</html>
