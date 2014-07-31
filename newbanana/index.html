@@ -61,6 +61,13 @@
 		  background-color: #2B1151;
 		  color: #fff;
 	  }
+	  .jumbotron h1 {
+	  	font-weight: bold;
+		font-size: 3.5em;
+	  }
+	  .panel1 {
+	          padding: 15px 0;
+	    }
 	  @media screen and (max-width: 500px) {
 		  .col-md-8,.col-md-4 {
 			  padding-left: 0 !important;
@@ -137,34 +144,42 @@
       </div>
     </div>
     <div class="container">
-      <div class="col-md-8">
+	    <div class="col-md-4">
+	      <div class="panel1">
+	          <h3><span class="glyphicon glyphicon-info-sign"></span> 新香蕉俱樂部</h3>
+	          <hr>
+			  <p>新香蕉俱樂部（英文：New Banana Club）為新城知訊台 的一個phone-in節目，內容以嬉笑手法解決聽眾的感情問題為主，為同時段各大電台中的冠軍收聽率長壽節目。</p>
+			  <p>新香蕉俱樂部星期一 - 星期五：12:00 - 2：00am<br/>Ben，妹頭，強尼，關逸基，塔羅小公主selina</p>
+		  </div>
+	  </div>
+      <div class="col-md-4 col-sm-6">
         <div class="panel1">
-          <p><strong><span class="glyphicon glyphicon-headphones"></span> 重溫今天節目或選擇日期重溫。</strong></p>
+          <h3><span class="glyphicon glyphicon-headphones"></span> 重溫今天或選擇日期</h3>
           <hr>
           <div id="list">
             <p><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
             <ul class="list-group">
               <li class="list-group-item today-list">
                 <script type="text/javascript">
-                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a><br/><br/>");
+                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a><br/><br/>");
+                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a><br/><br/>");
+                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a><br/><br/>");
+                  document.write("<h4><span class='glyphicon glyphicon-play'></span> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a></h4>");
                   document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
@@ -173,9 +188,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-6">
         <div class="panel1">
-          <p><strong><span class="glyphicon glyphicon-calendar"></span> 請選擇日期: </strong></p>
+          <h3><span class="glyphicon glyphicon-calendar"></span> 請選擇日期</h3>
           <hr>
           <div id="datepicker"></div>
         </div>
