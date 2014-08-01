@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/modernizr-custom-v2.7.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link href='css/animate.css' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -98,7 +99,7 @@
       </div><!-- /.container-fluid -->
     </nav>
     
-    <div class="container">
+    <div class="container content">
       <div class="row">
         <div id="gallery" class="col-md-12">
           <h1 class="text-center">Gallery</h1>
@@ -156,6 +157,7 @@
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+        $('.content').addClass('animated bounceInUp');
         $('.image-link').magnificPopup({
           type: 'image',
           gallery:{
