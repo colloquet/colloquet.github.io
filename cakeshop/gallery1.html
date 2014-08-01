@@ -33,7 +33,10 @@
         /* Margin bottom by footer height */
         padding-top: 50px;
         margin-bottom: 80px;
-        background: rgba(247, 238, 219, 0.47);
+        background: -webkit-linear-gradient(rgba(247, 238, 219, 0.47), #fafafa); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(rgba(247, 238, 219, 0.47), #fafafa); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(rgba(247, 238, 219, 0.47), #fafafa); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(rgba(247, 238, 219, 0.47), #fafafa); /* Standard syntax */
       }
       h1, h2, .navbar-brand {
         font-family: 'Pacifico', cursive;
