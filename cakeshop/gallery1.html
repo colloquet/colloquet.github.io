@@ -66,6 +66,9 @@
       .image-link {
         background-color: white;
       }
+      .breadcrumb {
+        background-color: transparent;
+      }
     </style>
   </head>
   <body>
@@ -87,8 +90,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="test.html">Home</a></li>
             <li class="active"><a href="gallery1.html">Gallery</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
           <!-- <ul class="nav navbar-nav navbar-right">
             <li><a href="http://www.facebook.com/thecakeshophk" style="color: #3B5998;"><i class="fa fa-facebook-square"></i></a></li>
@@ -98,7 +101,14 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="test.html">Home</a></li>
+          <li class="active">Gallery</li>
+        </ol>
+      </div>
+    </div>
     <div class="container content">
       <div class="row">
         <div id="gallery" class="col-md-12">
@@ -153,7 +163,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!-- <script type="text/javascript" src="js/holder.js"></script> -->
-    <script type="text/javascript" src="js/jquery.arctext.js"></script>
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
