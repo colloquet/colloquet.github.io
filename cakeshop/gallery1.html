@@ -32,7 +32,7 @@
         /* Margin bottom by footer height */
         padding-top: 50px;
         margin-bottom: 80px;
-        /*background: #F7EEDB;*/
+        background: rgba(247, 238, 219, 0.47);
       }
       h1, h2, .navbar-brand {
         font-family: 'Pacifico', cursive;
@@ -53,75 +53,20 @@
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
       }
-      label {
-        width: 100px;
+      .grid li a {
+        /*background-color: #fff;*/
       }
-      .jumbotron {
-        color: white;
-        background: url('img/bg1.jpg') center center;
-        background-size: 100% auto;
-        margin-bottom: 0;
+      .grid li img {
+        border: 5px solid #fff;
       }
-      #come-in {
-        display: inline-block;
-        font-family: 'Pacifico', cursive;
-        /*color: #fff;*/
-        text-decoration: underline;
-        transform:rotate(-7deg);
-        -ms-transform:rotate(-7deg);
-        -webkit-transform:rotate(-7deg);
+      .grid li img:hover {
+        opacity: 0.9;
       }
-      #come-in, #were {
-        font-size: 2em;
+      .grid {
+        margin-bottom: 200px;
       }
-      #were, #open {
-        font-family: 'Bitter', serif;
-        /*color: #fff;*/
-        font-weight: bold;
-      }
-      #open {
-        font-size: 5em;
-      }
-      #sign {
-        display: block;
-        text-align: center;
-        text-shadow: 0 1px 1px rgba(0,0,0,.4);
-        margin-top: 50px;
-      }
-      .about {
-        text-align: center;
-      }
-      .aboutdiv {
-        background-color: rgba(247, 238, 219, 0.47);
-        padding-top: 30px;
-        padding-bottom: 30px;
-      }
-      .title {
-        position: absolute;
-        z-index: 100;
-        width: 600px;
-        left: 50%;
-        top: 22%;
-        margin-left: -300px;
-        text-align: center;
-        color: white;
-      }
-      #title {
-        text-shadow: 0 1px 1px rgba(0,0,0,.4);
-        font-size: 72px;
-      }
-      @media (min-width: 992px) {
-        .jumbotron {
-          height: 450px;
-        }
-      }
-      @media (max-width: 500px) {
-        #sign {
-          display: none;
-        }
-        #title {
-          font-size: 36px;
-        }
+      .image-link {
+        background-color: white;
       }
     </style>
   </head>
@@ -136,7 +81,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">The Cake Shop</a>
+          <a class="navbar-brand" href="test.html">The Cake Shop</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
