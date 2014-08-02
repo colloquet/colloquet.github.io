@@ -161,7 +161,7 @@
           <br/><h2 class="text-center">Gallery</h2><br/>
           <div class="row">
             <div class="col-sm-6 col-md-3">
-              <a href="img/gallery/1.jpeg" class="thumbnail image-link">
+              <a href="img/gallery/1.jpeg" class="thumbnail image-link" data-effect="mfp-zoom-in">
                 <img data-src="holder.js/300x300" src="img/gallery/thumbnails/1_mini.jpeg">
               </a>
             </div>
@@ -231,7 +231,14 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $("#title").arctext({radius: 800});
-        $('.image-link').magnificPopup({type:'image',removalDelay: 200,mainClass: 'mfp-fade'});
+        $('.image-link').magnificPopup({
+          type: 'image',
+          gallery:{
+            enabled:true
+          },
+          removalDelay: 500,
+          mainClass: 'mfp-fade'
+        });
         $('.flicker').flicker(
         {
             auto_flick: true,
