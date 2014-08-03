@@ -19,6 +19,12 @@
 		body {
 			font-family: 'Bitter', serif;
 		}
+		a {
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
 		.onepage-pagination {
 	    	top:45%;
 	    }
@@ -47,9 +53,9 @@
 			/*background-color: rgba(209, 237, 237, 1);*/
 		}
 		.page3 {
-			background-image: url("img/bg3.jpg");
+			background-image: url("img/bg11.jpg");
 			background-size: 100%;
-			background-color: #F26565;
+			/*background-color: #F26565;*/
 		}
 		.page4 {
 			background-image: url("img/bg4.jpg");
@@ -333,6 +339,10 @@
 	    .d-hide {
 	    	display: none;
 	    }
+	    .table td {
+			color: white;
+			vertical-align: top;
+	    }
 	    @media screen and (max-width: 960px) {
 
 		  	.container {
@@ -355,7 +365,7 @@
 				background-position:center;
 			}
 			.page3 {
-				background-image: url("img/bg3.jpg");
+				background-image: url("img/bg11.jpg");
 				background-size: auto 100%;
 				background-position:center;
 			}
@@ -392,7 +402,7 @@
 	    		padding: 10px 20px 10px 10px;
 	    	}
 	    	.navbar {
-	    		font-size: 15px;
+	    		/*font-size: 15px;*/
 	    	}
 
 
@@ -497,7 +507,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="try-scroll-down" class="clearfix">
+	<div id="try-scroll-down">
 		Scroll down<br/><span class="down"><i class="fa fa-chevron-circle-down"></i></span>
 	</div>
     </section>
@@ -543,11 +553,29 @@
     	<div class="page-content">
     		<div class="container clearfix">
     			<h1>Contact</h1>
-    			<p>
+    			<!-- <p>
 	    			<i class="fa fa-envelope fa-fw"></i>&nbsp;<label>Email:</label><br class="d-hide" /><a href="mailto:thecakeshophk@gmail.com?Subject=Hello" target="_top">thecakeshophk@gmail.com</a><br/><br class="d-hide" />
 	    			<i class="fa fa-phone fa-fw"></i>&nbsp;<label>Phone:</label><br class="d-hide" /><a href="tel:++85228589228">+852 2858 9228</a><br/><br class="d-hide" />
-	    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>Address:</label><br class="d-hide" /><a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link">Room 211, 2/F, Kam Ling Court, 532 Queen's Road West, Hong Kong</a><br/>
-    			</p>
+	    			<i class="fa fa-map-marker fa-fw"></i>&nbsp;<label>Address:</label><br class="d-hide" /><a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link">Room 211, 2/F, Kam Ling Court<br/>532 Queen's Road West<br/>Hong Kong</a><br/>
+    			</p> -->
+    			<table class="table">
+                  <tr>
+                    <td class="text-nowrap"><i class="fa fa-map-marker fa-fw"></i>&nbsp;Address:&nbsp;&nbsp;</td>
+                    <td>
+                      <a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link" data-toggle="tooltip" data-placement="top" title="Find us on Google Maps!">
+                        Room 211, 2/F, Kam Ling Court<br/>532 Queen's Road West<br/>Hong Kong
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-nowrap"><i class="fa fa-phone fa-fw"></i>&nbsp;Phone:</td>
+                    <td><a href="tel:++85228589228" data-toggle="tooltip" data-placement="right" title="Call us today!">2858 9228</a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-nowrap"><i class="fa fa-envelope fa-fw"></i>&nbsp;Email:</td>
+                    <td><a href="mailto:thecakeshophk@gmail.com?Subject=Hello" target="_top" data-toggle="tooltip" data-placement="right" title="Send us an email!">thecakeshophk@gmail.com</a></td>
+                  </tr>
+              </table>
     			<h2>Follow us:  
 	    			<a href="http://www.facebook.com/thecakeshophk"><i class="fa fa-facebook-square fa-fw"></i></a>
 	    			&nbsp;<a href="#"><i class="fa fa-twitter-square fa-fw"></i></a>
@@ -581,25 +609,23 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function () {
-			// $(".loading-overlay").fadeOut(function() {
-			// 	$(".loading-overlay").html("");
-			// });
 			$(".loading-overlay").addClass('animated fadeOut');
 			$('.loading-overlay').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 				$(".loading-overlay").html("");
 				$(".loading-overlay").hide();
 			});
-
-			// $(".main section.page1 h1").css("visibility","visible");
-			// $("#sign").css("visibility","visible");
-			// $("#try-scroll-down").css("visibility","visible");
-   //      	window.scrollReveal = new scrollReveal();
    		});
 
 		$(document).ready(function() {
-			$('.main section.page1 h1').addClass('animated fadeInUp');
-		    $('#sign').addClass('animated fadeInUp');
-		    $('#try-scroll-down').addClass('animated fadeInDown');
+			$('.main section.page1 h1').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	          $(this).removeClass();
+	        });
+		    $('#sign').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	          $(this).removeClass();
+	        });
+		    $('#try-scroll-down').addClass('animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	          $(this).removeClass();
+	        });
 			onePageScroll(".main", {
 	        sectionContainer: "section",
 	        loop: true
