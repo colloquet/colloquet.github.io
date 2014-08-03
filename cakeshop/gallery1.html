@@ -66,7 +66,7 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+    <div class="container content">
       <div class="row">
         <div id="gallery" class="col-md-12">
           <h1 class="text-center">Gallery</h1>
@@ -131,6 +131,9 @@
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+        $('.content').addClass('animated bounceInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass('animated bounceInUp');
+        });
         $('.image-link').magnificPopup({
           type: 'image',
           gallery:{

@@ -11,6 +11,7 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +59,7 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+    <div class="container content">
       <h1 class="text-center">Classes</h1><br/>
       <div class="panel panel-default">
         <div class="panel-heading">Class 1</div>
@@ -228,6 +229,9 @@
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+        $('.content').addClass('animated bounceInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass('animated bounceInUp');
+        });
         $('.iframe-link').magnificPopup({type:'iframe'});
       });
     </script>
