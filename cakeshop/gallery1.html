@@ -135,9 +135,9 @@
         $('.content').addClass('animated bounceInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
           $(this).removeClass('animated bounceInUp');
         });
-        $(function() {
-          FastClick.attach(document.body);
-        });
+        window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+        }, false);
         $('.image-link').magnificPopup({
           type: 'image',
           gallery:{
