@@ -1,0 +1,104 @@
+p {
+	font-size: 1em !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 60px;
+	-webkit-margin-before: 0.5em;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 30px;
+	margin-left: 0px;
+	text-align: center;
+}
+
+hr { 
+	margin:30px 0; 
+}
+
+.description {
+	float: left;
+	width: auto;
+}
+
+.screen {
+	width: auto;
+	text-align: center;
+}
+
+.projectimg {
+	height: auto;
+	width: 100%;
+	margin: 0;
+}
+
+
+.aboutme h1 {
+	text-align: center;
+	padding-top: 0px;
+}
+
+.content h1 {
+	text-align: center;
+}
+
+.home h1 {
+  text-align: center;
+}
+
+.title h1 {
+	font-size: 2.5em;
+	padding-top: 40px;
+}
+
+.title p, .title h1 {
+	text-align: center;
+	color: #fff;
+	/*text-shadow: 0 1px 1px rgba(0,0,0,.4);*/
+}
+
+.title {
+	background: #009688;
+	height: auto;
+}
+
+.navbar {
+	/*width: 100%;*/
+	/*height: 35px;*/
+	/*display: table;*/
+	border-bottom: 0;
+	transition: none;
+}
+
+/*.navbar .container {
+	display: table-cell;
+	vertical-align: middle;
+}*/
+
+.navbar.stuck {
+	background-color: #009688;
+	/*display: table;*/
+	box-shadow: none;
+}
+
+.navbar.stuck a, .navbar-default.stuck .navbar-nav>li>a{
+  color: #fff;
+  opacity: 1;
+}
+.navbar.stuck a:hover, .navbar-default.stuck .navbar-nav>li>a:hover{
+  color: #fff;
+  opacity: 1;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+.stuck .navbar-collapse {
+    background-color: #009688;
+  }
