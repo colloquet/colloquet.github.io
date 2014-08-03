@@ -67,6 +67,7 @@ hr {
 	/*display: table;*/
 	border-bottom: 0;
 	transition: none;
+	background-color: #009688;
 }
 
 /*.navbar .container {
