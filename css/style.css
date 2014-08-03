@@ -156,6 +156,7 @@ hr {
 .profilepic {
   box-shadow: #ddd 4px 4px 0;
   -webkit-box-shadow: #ddd 4px 4px 0;
+  margin: 10px auto;
 }
 ul, li {
   padding-left: 0px;
