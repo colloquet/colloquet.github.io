@@ -182,26 +182,6 @@ strong {
   margin-right: auto;
 }
 
-.loading-overlay {
-  display: table;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  z-index: 9999;
-  visibility: visible;
-  transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-
-}
-.loading {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  color: #666;
-  font-size: 2em;
-}
 @media screen and (max-width: 768px) {
   .title {
     background-size: auto 100%;
