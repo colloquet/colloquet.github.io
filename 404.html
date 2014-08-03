@@ -13,29 +13,30 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<link rel="stylesheet" href="/css/main.css"/>
+		<link rel="stylesheet" href="/css/bootstrap.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet prefetch' type='text/css'>
 		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 		<style type="text/css">
+		body {
+		  font-size: 18px;
+		  font-family: 'Roboto', sans-serif;
+		  margin: 0;
+		  margin-left: auto;
+		  margin-right: auto;
+		  font-weight: 300;
+		  color: rgba(80, 80, 80, 0.87);
+		}
 		.navbar {
 			border:0;
 			box-shadow: #eee 0 4px 0;
 		}
-	    .navitem {
-	    	display: inline-block;
-	    }
-	    .navitem a, .navitem1 a {
-	    	color: #888;
-	    }
-	    .navitem a:hover, .navitem1 a:hover {
-	    	color: black;
-	    }
 	    .not-found {
 	    	text-align: center;
 	    }
 	    .footer {
 	    	position: absolute;
-	    	bottom: 50px;
+	    	bottom: 0;
 	    	width: 100%;
 	    }
 	    .easter-egg {
@@ -43,7 +44,7 @@
 	    }
 	    @media screen and (max-width: 480px) {
 	    	.navbar {
-	    		background-color: #607d8b;
+	    		/*background-color: #607d8b;*/
 				/*box-shadow: 0 2px 5px rgba(0,0,0,.26);*/
 	    	}
 		    .video-container {
@@ -68,15 +69,13 @@
 		</style>
 	</head>
 	<body>
-	<div data-role="page" id="page1">
-		<div role="main" class="ui-content">
-			<div class="content">
-				<div class="navbar">
-					<div class="container clearfix" id="fixnav">
-						<div class="navitem"><a href="/">Home</a></div>
-						<div class="navitem1"><a href="/blog/">Blog</a></div>
-					</div>
-				</div>
+				<nav class="navbar navbar-default" role="navigation">
+		          <div class="container">
+		            <div class="navbar-header">
+		              <a class="navbar-brand" href="index.html">Colloque Tsui</a>
+		            </div>
+		          </div>
+		        </nav>
 				<div class="not-found">
 					<div class="container">
 					<div class="to-hide">
@@ -90,21 +89,14 @@
 						</div> -->
 					</div>
 				</div>
-				</div>
-			</div>
-
-
-		</div>
 		<!-- footer	 -->
-		<div class="footer clearfix">
-				<div class="container">
-				<hr/>
-				&copy; Colloque Tsui 2014<br/><br/>
+		<div class="footer">
+			<div class="container">
 				<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw fa-lg" style="color:#007bb6;"></i></a>&nbsp;
 				<a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw fa-lg" style="color:#3b5998;"></i></a>&nbsp;
 				<a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw fa-lg" style="color:#00aced;"></i></a>
-				</div>
 			</div>
+		</div>
 		<!-- js at the end to make page content load faster -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/konami.js"></script>
