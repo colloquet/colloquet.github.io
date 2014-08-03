@@ -284,14 +284,6 @@
 		<script src="/js/waypoints.min.js"></script>
 		<script src="/js/waypoints-sticky.min.js"></script>
 		<script type="text/javascript">
-			// hide loading screen when page finish loading
-			$(window).load(function () {
-				$(".loading-overlay").addClass('animated fadeOut');
-				$('.loading-overlay').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-					$(".loading-overlay").html("");
-					$(".loading-overlay").hide();
-				});
-		  	});
 		  	$(function() {
 				$( "#tabs" ).tabs();
 				$('.collapse').collapse({parent: '.panel-group', toggle: false});
