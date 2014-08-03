@@ -16,6 +16,23 @@
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500|Open+Sans:300' rel='stylesheet' type='text/css'>
 		<link media="handheld, only screen and (max-width: 550px), only screen and (max-device-width: 550px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
+        <style type="text/css">
+        .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+          color: #fff;
+          opacity: 0.7;
+        }
+
+        .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+          color: #fff;
+          text-decoration: none;
+          opacity: 1;
+        }
+        @media screen and (max-width: 767px) {
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #fff;
+              }
+          }
+        </style>
 	</head>
 	<body>
     	<div class="title clearfix">
@@ -36,6 +53,7 @@
                     <li><a href="#" class="navtoport">Portfolio</a></li>
                     <li><a href="#" class="navtores">Resume</a></li>
                     <li><a href="#" class="navtocon">Contact</a></li>
+                    <li><a href="/blog">Blog</a></li>
                   </ul>
                 </div>
               </div>

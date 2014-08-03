@@ -82,17 +82,16 @@ hr {
 }
 
 .navbar.stuck a, .navbar-default.stuck .navbar-nav>li>a{
-  color: #fff;
+  color: #fff !important;
   opacity: 1;
 }
 .navbar.stuck a:hover, .navbar-default.stuck .navbar-nav>li>a:hover{
-  color: #fff;
+  color: #fff !important;
   opacity: 1;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff;
 }
 .stuck .navbar-collapse {
     background-color: #009688;
+  }
+.stuck .navbar-toggle .icon-bar {
+    background-color: #fff !important;
   }
