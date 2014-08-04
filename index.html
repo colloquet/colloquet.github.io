@@ -35,8 +35,8 @@
           }
         </style>
 	</head>
-	<body>
-    	<div class="title clearfix">
+	<body data-spy="scroll" data-target="navbar-collapse">
+    	<div id="title" class="clearfix">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
               <div class="container">
                 <div class="navbar-header">
@@ -50,22 +50,22 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="navtoport">Portfolio</a></li>
-                    <li><a href="#" class="navtores">Resume</a></li>
-                    <li><a href="#" class="navtocon">Contact</a></li>
-                    <li><a href="/blog">Blog</a></li>
+                  <ul class="nav navbar-nav navbar-right" role="tablist">
+                    <li class="active"><a href="#title" class="to-top">Home</a></li>
+                    <li><a href="#portfolio" class="navtoport">Portfolio</a></li>
+                    <li><a href="#contact" class="navtocon">About</a></li>
+                    <!-- <li><a href="/blog">Blog</a></li> -->
                   </ul>
                 </div>
               </div>
             </nav>
     		<h1>Colloque Tsui</h1>
-    		<p><span class="muted">Work hard, Play harder</span></p>
+    		<!-- <p><span class="muted">Work hard, Play harder</span></p> -->
     		<p>Web Design<br/>Hong Kong</p>
     		<br/>
     	</div>
     	<!-- about me -->
-    	<div class="aboutme">
+    	<!-- <div class="aboutme">
     		<div class="container">
             <div class="col-md-10 col-md-offset-1 row">
     			<h2>About me</h2>
@@ -78,11 +78,11 @@
     			</div>
             </div>
     		</div>
-    	</div>
+    	</div> -->
     	<!-- portfolio -->
     	<div class="portfolio" id="portfolio">
     		<div class="container">
-            <div class="col-md-10 col-md-offset-1 row">
+            <!-- <div class="col-md-10 col-md-offset-1 row">
     			<h2>Portfolio</h2>
     			<div id="tabs">
     				<ul>
@@ -121,12 +121,47 @@
     					</div>
     				</div>
     			</div>
-            </div>
+            </div> -->
+            <h2 align="center">Portfolio</h2>
+            <hr>
+              <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail">
+                      <img src="img/thecakeshop.png" alt="The Cake Shop">
+                      <div class="caption">
+                        <h3>The Cake Shop</h3>
+                        <p>The Cake Shop is a little experiment built with <a href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html">one page scroll</a> jquery plugin.</p>
+                        <p align="center"><a href="#" class="btn btn-default" role="button">Visit site</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail">
+                      <img src="img/premier.png" alt="Premier">
+                      <div class="caption">
+                        <h3>Premier League DB 2014</h3>
+                        <p>This is an individual assignment. This is a database of all the matches played in Premier League 2013/14. ESPN API was used and again its written in Ruby on Rails.</p>
+                        <p align="center"><a href="#" class="btn btn-default" role="button">Visit site</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4">
+                    <div class="thumbnail">
+                      <img src="img/newbanana.png" alt="New Banana Club">
+                      <div class="caption">
+                        <h3>New Banana Club</h3>
+                        <p>This is a little web app I made using javascript to parse URL for the famous Hong Kong radio show "New Banana Club". You can listen to the archive of the show.</p>
+                        <p align="center"><a href="#" class="btn btn-default" role="button">Visit site</a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            
     		</div>
     	</div>
     	<!-- portfolio -->
     	<!-- resume -->
-    	<div class="resume" id="resume">
+    	<!-- <div class="resume" id="resume">
     		<div class="container" >
             <div class="col-md-10 col-md-offset-1 row">
     			<h2>Resume</h2>
@@ -237,14 +272,27 @@
     			</div>
     		</div>
             </div>
-    	</div>
+    	</div> -->
     	<!-- resume -->
     	<!-- contact-->
+           
     	<div class="contact" id="contact">
-            <div class="container">
-                <div class="row">
-        		<div class="col-md-6 col-md-offset-3">
-        			<h2 align="center">Contact</h2>
+          <div class="container">
+          <h2 align="center"><img class="profilepic img-circle" alt="Colloque Tsui" src="img/profile.jpg" height="150"></h2>
+
+          <hr>
+            <div class="row">
+            <div class="col-md-6">
+              <h4 align="center">About me</h4>
+              <p>Hello, my name is Colloque Tsui. I am a Hong Konger who is excited and passionate in web designing, my dream is to become a professional frontend developer. I am currently doing Master in IT at University of Aberdeen, Scotland. Which I also got my Bachelor degree in Accounting and Finance from. If you want to get in touch with me, feel free to fire me an email!</p>
+              <p align="center"><a href="mailto:colloquet@gmail.com?Subject=Hello" target="_top">colloquet@gmail.com</a></p>
+              <p>Alternatively you can contact me using the contact form.</p>
+              <p>Resume: <a href="Colloque_Tsui_CV.pdf" target="top">Colloque Tsui's Resume</a></p>
+              <h4 align="center">About this site</h4>
+              <p>This website is built with <a href="http://getbootstrap.com">Bootstrap 3</a> framework and <a href="http://jquery.com">jQuery</a>. <a href="http://imakewebthings.com/jquery-waypoints/">Jquery-Waypoints</a> was used for the sticky navigation bar and <a href="http://fontawesome.io">FontAwesome</a> for the social network icons. Be sure to check out their awesome works!</p>
+            </div>  
+        		<div class="col-md-6">
+              <h4 align="center">Got a question?</h4>
         			<form method="POST" action="http://forms.brace.io/colloquet@gmail.com">
 
         		        <div class="form-group">
@@ -267,7 +315,7 @@
         		    </form>
 
         		</div>
-                </div>
+            </div>
             </div>
         </div>
 		<!-- footer	 -->
@@ -287,25 +335,26 @@
 		<script src="/js/waypoints-sticky.min.js"></script>
 		<script type="text/javascript">
 		  	$(function() {
-				$( "#tabs" ).tabs();
-				$('.collapse').collapse({parent: '.panel-group', toggle: false});
+				// $( "#tabs" ).tabs();
+				// $('.collapse').collapse({parent: '.panel-group', toggle: false});
 			});
 			$(document).ready(function() {
 				$('nav').waypoint('sticky', {
 					offset: -2 // Apply "stuck" when element 2px from top
 				});
+        $('body').scrollspy({ target: '.navbar-collapse' })
 				$('.navtoport').click(function(e) {
 					e.preventDefault();
 					$('html, body').stop().animate({
 						scrollTop: $("#portfolio").offset().top - 40
 					});
 				});
-				$('.navtores').click(function(e) {
-					e.preventDefault();
-					$('html, body').stop().animate({
-						scrollTop: $("#resume").offset().top - 40
-					});
-				});
+				// $('.navtores').click(function(e) {
+				// 	e.preventDefault();
+				// 	$('html, body').stop().animate({
+				// 		scrollTop: $("#resume").offset().top - 40
+				// 	});
+				// });
 				$('.navtocon').click(function(e) {
 					e.preventDefault();
 					$('html, body').stop().animate({
