@@ -1,0 +1,35 @@
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+body {
+  font-family: 'Bitter', serif;
+  padding-top: 50px;
+  margin-bottom: 141px;
+}
+h1, h2, .navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+a {
+  color: #3cbce1;
+  &:hover {
+    color: #7AD6F1;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 141px;
+  
+  .container {
+    margin: 20px auto;
+  }
+}
+
+.navbar {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
