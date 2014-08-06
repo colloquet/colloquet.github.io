@@ -39,7 +39,7 @@
   margin-bottom: 0;
 }
 
-.jumbotron h1{
+.jumbotron h1, .navbar-inverse .navbar-brand{
   font-family: 'Open Sans', sans-serif;
 }
 
