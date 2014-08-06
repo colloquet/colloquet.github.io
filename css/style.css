@@ -1,9 +1,20 @@
 .navbar {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0;
   transition: background-color 0.26s;
-  /*background: transparent;  */
+  background: #655643;  
+  border-bottom: 5px solid #655643;
 }
-.navbar.stuck {
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-brand:hover {
+  color: #fff;
+  opacity: 0.7;
+}
+
+/*.navbar.stuck {
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -18,7 +29,7 @@
 
 .navbar.stuck a:hover, .navbar-default.stuck .navbar-nav>li>a:hover {
   color: #555;
-  opacity: 1;
+  */opacity: 1;
 }
 
 .caption h3 {
@@ -32,19 +43,21 @@
 #title {
   position: relative;
   display: block;
-  /*background-color: #3f51b5;*/
+  background-color: #80BCA3;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
-  background-image: url('/img/bg1.jpg');
-  height: 500px;
+  /*background-image: url('/img/bg1.jpg');*/
+  /*height: 300px;*/
   background-size: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #title h1 {
   font-size: 4em;
-  padding-top: 60px;
+  /*padding-top: 60px;*/
   color: #fff;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -59,25 +72,35 @@
 }
 
 .contact {
-  background-color: #fff;
+  background-color: #E6AC27;
   /*padding-bottom: 20px;*/
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #222;
 }
-.resume, .portfolio {
-  background-color: #fafafa;
+.portfolio {
+  background-color: #F6F7BD;
+  padding-top: 50px;
+  padding-bottom: 50px;
   /*padding-bottom: 20px;*/
+  color: #222;
 }
 .aboutme p {
-  color: rgba(80, 80, 80, 0.87);
+  /*color: rgba(80, 80, 80, 0.87);*/
 }
 .footer {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   text-align: center;
   color: gray;
-  background-color: #f9f9f9;
+  background-color: #BF4D28;
 }
 .footer .container {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.footer a {
+  color: white;
 }
 
 html {
@@ -91,14 +114,16 @@ html {
 }
 
 body {
+  padding-top: 50px;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
   font-weight: 300;
-  color: rgba(80, 80, 80, 0.87);
+  /*color: rgba(80, 80, 80, 0.87);*/
   position: relative;
+  /*text-shadow: 0 1px 1px rgba(0,0,0,.4);*/
 }
 
 h1, h2 {
@@ -109,19 +134,20 @@ h1, h2 {
 
 h1, h2, h3 {
   font-weight: 300;
-  color: rgba(40, 40, 40, 0.87);
+  /*color: rgba(40, 40, 40, 0.87);*/
 }
 
 p, li, blockquote, label{
   font-weight: 300;
-  color: rgba(80, 80, 80, 0.87);
+  /*color: rgba(80, 80, 80, 0.87);*/
 }
 a {
-  color: #3cbce1;
+  color: #BF4D28;
   text-decoration:none;
   outline: none;
 }
 a:hover {
+  color: #BF4D28;
   text-decoration:none;
   opacity: 0.7;
 }
@@ -141,7 +167,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #222;
   margin: 1em 0;
   padding: 0;
   margin:30px 0;
@@ -179,11 +205,14 @@ strong {
 @media screen and (max-width: 767px) {
   #title {
     background-size: auto 100%;
-    height: 500px;
+    /*height: 500px;*/
   }
   
   .stuck .navbar-toggle .icon-bar {
     background-color: #888 !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: #888;
   }
   .navbar-collapse {
     background-color: #fff;
@@ -199,7 +228,86 @@ strong {
 @media screen and (max-width: 990px) {
 
   .title {
-    height: 500px;
+    /*height: 500px;*/
   }
 
+}
+
+@media screen and (max-width: 550px) {
+
+  h1 {
+    font-size: 2em;
+    line-height: 60px;
+    -webkit-margin-before: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 30px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  hr { 
+    margin:30px 0; 
+  }
+
+  .description {
+    float: left;
+    width: auto;
+  }
+
+  .screen {
+    width: auto;
+    text-align: center;
+  }
+
+  .projectimg {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+
+  .aboutme h1 {
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  .content h1 {
+    text-align: center;
+  }
+
+  .home h1 {
+    text-align: center;
+  }
+
+  #title h1 {
+    font-size: 2.5em;
+    /*padding-top: 40px;*/
+  }
+
+  #title p, .title h1 {
+    text-align: center;
+    color: #fff;
+    /*text-shadow: 0 1px 1px rgba(0,0,0,.4);*/
+  }
+
+  #title {
+    /*background: #009688;*/
+    height: auto;
+    background-size: 100% 100%;
+  }
+
+  .navbar {
+    /*width: 100%;*/
+    /*height: 35px;*/
+    /*display: table;*/
+    border-bottom: 0;
+    transition: none;
+    /*background-color: #009688;*/
+  }
+  .portfolio h3 {
+    text-align: center;
+  }
 }
