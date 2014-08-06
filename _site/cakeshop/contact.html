@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Cake Shop | Contact</title>
-    <link href='http://fonts.useso.com/css?family=Bitter|Pacifico' rel='stylesheet' type='text/css'>
-    <!-- <link href='http://fonts.googleapis.com/css?family=Bitter|Pacifico' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.useso.com/css?family=Bitter|Pacifico' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Bitter|Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- FontAwesome -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/animate.css" rel="stylesheet" type="text/css"> -->
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,7 +73,7 @@
                   <tr>
                     <td class="text-nowrap"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;Address</td>
                     <td>
-                      <a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link" data-toggle="tooltip" data-placement="top" title="Find us on Google Maps!">
+                      <a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link">
                         Room 211, 2/F, Kam Ling Court<br/>532 Queen's Road West<br/>Hong Kong
                       </a>
                     </td>
@@ -143,7 +143,6 @@
 
     <div class="footer">
       <div class="container">
-        <hr>
         <p class="text-muted text-center">
           &copy; The Cake Shop 2014
         </p>
@@ -162,9 +161,9 @@
     <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('.content').addClass('animated bounceInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-          $(this).removeClass('animated bounceInUp');
-        });
+        // $('.content').addClass('animated bounceInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        //   $(this).removeClass('animated bounceInUp');
+        // });
         $('.table a').tooltip();
         $('.iframe-link').magnificPopup({type:'iframe'});
       });

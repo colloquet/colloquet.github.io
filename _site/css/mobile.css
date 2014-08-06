@@ -45,20 +45,21 @@ hr {
   text-align: center;
 }
 
-.title h1 {
+#title h1 {
 	font-size: 2.5em;
 	padding-top: 40px;
 }
 
-.title p, .title h1 {
+#title p, .title h1 {
 	text-align: center;
 	color: #fff;
 	/*text-shadow: 0 1px 1px rgba(0,0,0,.4);*/
 }
 
-.title {
-	background: #009688;
+#title {
+	/*background: #009688;*/
 	height: auto;
+	background-size: 100% 100%;
 }
 
 .navbar {
@@ -67,31 +68,5 @@ hr {
 	/*display: table;*/
 	border-bottom: 0;
 	transition: none;
-	background-color: #009688;
+	/*background-color: #009688;*/
 }
-
-/*.navbar .container {
-	display: table-cell;
-	vertical-align: middle;
-}*/
-
-.navbar.stuck {
-	background-color: #009688;
-	/*display: table;*/
-	box-shadow: none;
-}
-
-.navbar.stuck a, .navbar-default.stuck .navbar-nav>li>a{
-  color: #fff !important;
-  opacity: 1;
-}
-.navbar.stuck a:hover, .navbar-default.stuck .navbar-nav>li>a:hover{
-  color: #fff !important;
-  opacity: 1;
-}
-.stuck .navbar-collapse {
-    background-color: #009688;
-  }
-.stuck .navbar-toggle .icon-bar {
-    background-color: #fff !important;
-  }
