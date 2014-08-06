@@ -122,7 +122,7 @@
 
 .home h1 { margin-bottom: 25px; padding-left: 0px;}
 
-.posts { list-style-type: none; }
+.posts { list-style-type: none; -webkit-padding-start: 0px;}
 
 .posts li { margin-bottom: 30px; }
 

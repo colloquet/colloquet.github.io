@@ -1,8 +1,9 @@
 .navbar {
-  border-bottom: 0;
-  transition: background-color 0.26s;
   background: #655643;  
-  border-bottom: 5px solid #604D36;
+  border-bottom: 5px solid #604D36 !important;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {

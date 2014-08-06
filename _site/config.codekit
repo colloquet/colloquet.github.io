@@ -3560,7 +3560,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 59863,
+		"initialSize": 46516,
 		"inputAbbreviatedPath": "\/img\/newbanana.png",
 		"outputAbbreviatedPath": "\/img\/newbanana.png",
 		"outputPathIsOutsideProject": 0,
@@ -3593,7 +3593,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 137652,
+		"initialSize": 113855,
 		"inputAbbreviatedPath": "\/img\/thecakeshop.png",
 		"outputAbbreviatedPath": "\/img\/thecakeshop.png",
 		"outputPathIsOutsideProject": 0,
@@ -3825,7 +3825,7 @@
 	"iconImageName": "compass_blue"
 	},
 "projectSettings": {
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",

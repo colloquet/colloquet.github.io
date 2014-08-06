@@ -11,43 +11,27 @@
 		<meta name="msvalidate.01" content="00109AC3B0C479B5E31744AE0C80AAA7" />
 		<link rel="canonical" href="http://colloque.me/" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
-		<link rel="stylesheet" href="/css/main.css"/>
-		<link rel="stylesheet" href="/css/bootstrap.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet prefetch' type='text/css'>
-		<link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 		<style type="text/css">
-		body {
-		  font-size: 18px;
-		  font-family: 'Roboto', sans-serif;
-		  margin: 0;
-		  margin-left: auto;
-		  margin-right: auto;
-		  font-weight: 300;
-		  color: rgba(80, 80, 80, 0.87);
-		  height: 100%;
+		body, html {
+			height: 100%;
+			background-color: #F6F7BD;
 		}
-		.navbar {
-			border:0;
-			box-shadow: #eee 0 4px 0;
+		.footer {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
 		}
 	    .not-found {
 	    	text-align: center;
-	    }
-	    .footer {
-	    	position: absolute;
-	    	bottom: 0;
-	    	width: 100%;
 	    }
 	    .easter-egg {
 	    	display: none;
 	    }
 	    @media screen and (max-width: 480px) {
-	    	.navbar {
-	    		/*background-color: #607d8b;*/
-				/*box-shadow: 0 2px 5px rgba(0,0,0,.26);*/
-	    	}
 		    .video-container {
 			    position: relative;
 			    padding-bottom: 56.25%;
@@ -64,16 +48,13 @@
 			    height: 100%;
 			}
 		}
-		.footer {
-			padding: 0;
-		}
 		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <a class="navbar-brand" href="/index.html">Colloque Tsui</a>
+              <a class="navbar-brand" href="/">Colloque Tsui</a>
             </div>
           </div>
         </nav>
@@ -81,24 +62,21 @@
 			<div class="container">
 			<div class="to-hide">
 				<h1>Error 404<br/>Page Not Found</h1>
-				<p>You can go back to <a href="/">homepage</a> or visit my <a href="/blog.html">blog</a>.</p>
+				<p>You can go back to <a href="/">Home</a> or visit my <a href="/blog.html">Blog</a>.</p>
 				<p>There are nothing to see here...or are there?<br/>(hint: enter the cheat code!)</p>
 			</div>
 			<div class="easter-egg">
-<!-- 						<h1>Enjoy!</h1>
-				<div class="video-container">
-					<iframe width="400" height="315" src="//www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
-				</div> -->
+			</div>
 			</div>
 		</div>
 		<!-- footer	 -->
 		<div class="footer">
 			<div class="container">
-				<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw fa-lg" style="color:#007bb6;"></i></a>&nbsp;
-				<a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw fa-lg" style="color:#3b5998;"></i></a>&nbsp;
-				<a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw fa-lg" style="color:#00aced;"></i></a>&nbsp;
-                <a href="http://instagram.com/colloque" target="top"><i class="fa fa-instagram fa-fw fa-lg" style="color:#663300;"></i></a>&nbsp;
-                <a href="https://plus.google.com/+ColloqueTsui/" target="top"><i class="fa fa-google-plus-square fa-fw fa-lg" style="color:#D34836;"></i></a>
+				<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw fa-lg"></i></a>&nbsp;
+				<a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw fa-lg"></i></a>&nbsp;
+				<a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw fa-lg"></i></a>&nbsp;
+                <a href="http://instagram.com/colloque" target="top"><i class="fa fa-instagram fa-fw fa-lg"></i></a>&nbsp;
+                <a href="https://plus.google.com/+ColloqueTsui/" target="top"><i class="fa fa-google-plus-square fa-fw fa-lg"></i></a>
 			</div>
 		</div>
 		<!-- js at the end to make page content load faster -->

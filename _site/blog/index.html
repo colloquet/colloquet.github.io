@@ -12,96 +12,23 @@
 	<meta name="description" content="This is Colloque Tsui's blog. He will be sharing what he learnt from web design here."/>
 	<meta name="msvalidate.01" content="00109AC3B0C479B5E31744AE0C80AAA7" />
     <title>Colloque Tsui | Blog</title>
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.4.custom.css"/>
-	
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>	
 	<link rel="stylesheet" href="/css/main.css"/>
-	<!-- <link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/css/mobile.css" type="text/css" rel="stylesheet" /> -->
     <link rel="canonical" href="http://colloque.me/blog/"/>	
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet prefetch' type='text/css'>
 	<style type="text/css">
-		.navbar {
-			background-color: #fff;
-			box-shadow: #eee 0 4px 0;
-			border-bottom: 0;
-		}
-		.navitem {
-			display: inline-block;
-		}
-		.navitem a, .navitem1 a {
-		  font-size: 18px;
-		  color: #777;
-		}
-
-		.navitem a:hover, .navitem1 a:hover {
-		  color: #000;
-		  text-decoration: none;
-		}
-
-		.fa {
-			line-height: 24px;
-			width: 24px;
-		}
-		/*.loading-overlay {
-	    	display: table;
-	    	position: fixed;
-	    	height: 100%;
-	    	width: 100%;
-	    	background-color: rgba(0,0,0,0.5);
-	    	z-index: 9999;
-	    	visibility: visible;
-	    	transition: all 0.2s ease-in-out;
-	    	-ms-transition: all 0.2s ease-in-out;
-	    	-webkit-transition: all 0.2s ease-in-out;
-	    	
-	    }
-	    .loading {
-	    	display: table-cell;
-	    	text-align: center;
-	    	vertical-align: middle;
-	    	color: #fff;
-	    	font-size: 2em;
-	    }*/
-	    @media screen and (max-width: 480px) {
-		    .video-container {
-			    position: relative;
-			    padding-bottom: 56.25%;
-			    padding-top: 30px; height: 0; overflow: hidden;
-			}
-			 
-			.video-container iframe,
-			.video-container object,
-			.video-container embed {
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    width: 100%;
-			    height: 100%;
-			}
-		}
+	body {
+		/*background-color: #F6F7BD;*/
+	}
 	</style>
 </head>
 
 
-    <body>
-    <div data-role="page" id="page2">
-    <div data-role="panel" id="defaultpanel" data-theme="b">
-    <div class="panel-content">
-    <div id="m-sidebar">
-      <ul>
-        <li><a href="/"><i class="fa fa-home fa-fw"></i>&nbsp;&nbsp;Home</a></li>
-        <li><a href="/blog/"><i class="fa fa-pencil-square fa-fw"></i>&nbsp;&nbsp;Blog</a></li>
-      </ul>
-    </div>
-    </div>
-    </div>
-    <div id="fb-root"></div>
-    <div id="top" style="top: 0px; position: absolute;"></div>
-    <div role="main" class="ui-content">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -110,20 +37,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand to-top" href="/index.html">Colloque Tsui</a>
+          <a class="navbar-brand" href="/index.html">Colloque Tsui</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" role="tablist">
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/index.html#portfolio">Portfolio</a></li>
-            <li><a href="/index.html#resume">Resume</a></li>
-            <li><a href="/index.html#contact">Contact</a></li>
+            <li><a href="/index.html#contact">About</a></li>
             <li class="active"><a href="/blog">Blog</a></li>
           </ul>
         </div>
       </div>
     </nav>
-      <div class="wrap">
+    <div class="container">
       <div class="home">
 
   <h1>Posts</h1>
@@ -132,7 +59,7 @@
     
       <li>
         <hr/>
-        <span class="post-date"><i class="fa fa-calendar"></i>Jun 6, 2014</span>
+        <span class="post-date"><i class="fa fa-calendar"></i>  Jun 6, 2014</span>
         <a class="post-link" href="/tips/2014/06/06/x-men-quicksilver-scene-background-music/">X-Men QuickSilver scene background music</a><br/>
         It was a stunning scene. BGM was well chosen.
 Jim Croce, Time in a bottle, 1973.
@@ -146,7 +73,7 @@ Jim Croce, Time in a bottle, 1973.
     
       <li>
         <hr/>
-        <span class="post-date"><i class="fa fa-calendar"></i>May 31, 2014</span>
+        <span class="post-date"><i class="fa fa-calendar"></i>  May 31, 2014</span>
         <a class="post-link" href="/tips/2014/05/31/parallax-scrolling-effect/">Parallax scrolling effect</a><br/>
         On a web page, when the content is scrolling at a different speed from the background image, this causes a 3D effect which is refers to the “Parallax scrolling effect”. If you want to see it in action, head to homepage and when you scroll, you can see the header’s...<br/>
         <p><a href="http://colloque.me/tips/2014/05/31/parallax-scrolling-effect/#disqus_thread"></a></p>
@@ -154,7 +81,7 @@ Jim Croce, Time in a bottle, 1973.
     
       <li>
         <hr/>
-        <span class="post-date"><i class="fa fa-calendar"></i>May 26, 2014</span>
+        <span class="post-date"><i class="fa fa-calendar"></i>  May 26, 2014</span>
         <a class="post-link" href="/tips/2014/05/26/how-to-centre-an-image-in-html/">How to centre an image in HTML</a><br/>
         How to centre an image may be the most commonly asked question from newbies like me. It is actually very simple, you can either use a div wrapper or simply add a class to the img tag itself. Using the div wrapper and CSS Simply add a div around the...<br/>
         <p><a href="http://colloque.me/tips/2014/05/26/how-to-centre-an-image-in-html/#disqus_thread"></a></p>
@@ -162,7 +89,7 @@ Jim Croce, Time in a bottle, 1973.
     
       <li>
         <hr/>
-        <span class="post-date"><i class="fa fa-calendar"></i>May 25, 2014</span>
+        <span class="post-date"><i class="fa fa-calendar"></i>  May 25, 2014</span>
         <a class="post-link" href="/tips/2014/05/25/how-to-generate-three-line-menu-icon/">How to generate three line menu icon</a><br/>
         A slide menu or drawer is very common amongst mobilised websites, the most commonly used one must be the 3 parallel lines. I know 3 different ways to generate one: Using HTML entity Turns out there is a handy little HTML entity for that! &amp;#9776; Using SVG According to Wikipedia,...<br/>
         <p><a href="http://colloque.me/tips/2014/05/25/how-to-generate-three-line-menu-icon/#disqus_thread"></a></p>
@@ -170,7 +97,7 @@ Jim Croce, Time in a bottle, 1973.
     
       <li>
         <hr/>
-        <span class="post-date"><i class="fa fa-calendar"></i>May 24, 2014</span>
+        <span class="post-date"><i class="fa fa-calendar"></i>  May 24, 2014</span>
         <a class="post-link" href="/tips/2014/05/24/how-to-build-responsive-website/">How to build responsive web page</a><br/>
         The key to developing a mobile friendly web page is to make your web page responsive. It will adapt to your screen size and display contents accordingly. There are several ways to do that: Simply add this line to your &lt;head&gt; section: &lt;link media=&quot;handheld, only screen and (max-width: 480px), only...<br/>
         <p><a href="http://colloque.me/tips/2014/05/24/how-to-build-responsive-website/#disqus_thread"></a></p>
@@ -178,7 +105,7 @@ Jim Croce, Time in a bottle, 1973.
     
       <li>
         <hr/>
-        <span class="post-date"><i class="fa fa-calendar"></i>May 23, 2014</span>
+        <span class="post-date"><i class="fa fa-calendar"></i>  May 23, 2014</span>
         <a class="post-link" href="/tips/2014/05/23/tips-on-developing-mobile-web/">Tips on developing mobile web</a><br/>
         When I started developing websites for mobile, the first problem I faced was the scaling problem. When you browse the web using your smart phone, the websites tends to be zoomed out by default. To disable such feature, I simply added this meta tag in the &lt;head&gt; section. &lt;meta name=&quot;viewport&quot;...<br/>
         <p><a href="http://colloque.me/tips/2014/05/23/tips-on-developing-mobile-web/#disqus_thread"></a></p>
@@ -188,20 +115,18 @@ Jim Croce, Time in a bottle, 1973.
   
 </div>
 
-      </div>
+    </div>
 
     <div class="footer">
 	<div class="container">
-		<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw fa-lg" style="color:#007bb6;"></i></a>&nbsp;
-		<a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw fa-lg" style="color:#3b5998;"></i></a>&nbsp;
-		<a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw fa-lg" style="color:#00aced;"></i></a>&nbsp;
-        <a href="http://instagram.com/colloque" target="top"><i class="fa fa-instagram fa-fw fa-lg" style="color:#663300;"></i></a>&nbsp;
-        <a href="https://plus.google.com/+ColloqueTsui/" target="top"><i class="fa fa-google-plus-square fa-fw fa-lg" style="color:#D34836;"></i></a>
+		<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top"><i class="fa fa-linkedin-square fa-fw fa-lg"></i></a>&nbsp;
+		<a href="https://www.facebook.com/colloque" target="top"><i class="fa fa-facebook-square fa-fw fa-lg"></i></a>&nbsp;
+		<a href="https://twitter.com/colloquet" target="top"><i class="fa fa-twitter-square fa-fw fa-lg"></i></a>&nbsp;
+        <a href="http://instagram.com/colloque" target="top"><i class="fa fa-instagram fa-fw fa-lg"></i></a>&nbsp;
+        <a href="https://plus.google.com/+ColloqueTsui/" target="top"><i class="fa fa-google-plus-square fa-fw fa-lg"></i></a>
 	</div>
 </div>
 
-    </div>
-    </div>
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
           <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
