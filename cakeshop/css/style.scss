@@ -4,8 +4,8 @@ $about-div-color: rgba(179,129,132, 0.2);
 $footer-color: rgba(247,228,190, 0.3);
 $btn-color: #B38184;
 $btn-border: #B38184;
-$btn-hover-color: #E1A792;
-$btn-hover-border: #B98470;
+$btn-hover-color: #A36A6D;
+$btn-hover-border: #A36A6D;
 
 html {
   position: relative;
@@ -21,9 +21,9 @@ h1, h2, .navbar-brand {
   font-family: 'Pacifico', cursive;
 }
 a {
-  color: #3cbce1;
+  color: #A36A6D;
   &:hover {
-    color: #7AD6F1;
+    color:  rgba(163, 106, 109, 0.7);
   }
 }
 .footer {
@@ -47,7 +47,7 @@ a {
   border-bottom: 0;
 }
 
-.navbar-inverse .navbar-nav>.active>a {
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover {
   background-color: transparent;
 }
 
@@ -57,6 +57,14 @@ a {
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
   color: $navitem-color;
+}
+
+.navbar-toggle {
+  border: none;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+  background-color: transparent;
 }
 
 .footer {
@@ -75,4 +83,8 @@ a {
 
 .about-div {
   background-color: $about-div-color !important;
+}
+
+.panel-heading {
+  background-color: rgba(179,129,132, 0.3) !important;
 }

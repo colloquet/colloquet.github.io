@@ -12,9 +12,9 @@ h1, h2, .navbar-brand {
   font-family: 'Pacifico', cursive; }
 
 a {
-  color: #3cbce1; }
+  color: #A36A6D; }
   a:hover {
-    color: #7AD6F1; }
+    color: rgba(163, 106, 109, 0.7); }
 
 .footer {
   position: absolute;
@@ -33,7 +33,7 @@ a {
   -moz-border-radius: 0px;
   border-bottom: 0; }
 
-.navbar-inverse .navbar-nav > .active > a {
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover {
   background-color: transparent; }
 
 .navbar-inverse {
@@ -41,6 +41,12 @@ a {
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
   color: rgba(255, 255, 255, 0.7); }
+
+.navbar-toggle {
+  border: none; }
+
+.navbar-inverse .navbar-toggle:hover {
+  background-color: transparent; }
 
 .footer {
   background-color: rgba(247, 228, 190, 0.3); }
@@ -50,8 +56,11 @@ a {
   border-color: #b38184; }
 
 .btn-info:hover {
-  background-color: #e1a792;
-  border-color: #b98470; }
+  background-color: #a36a6d;
+  border-color: #a36a6d; }
 
 .about-div {
   background-color: rgba(179, 129, 132, 0.2) !important; }
+
+.panel-heading {
+  background-color: rgba(179, 129, 132, 0.3) !important; }
