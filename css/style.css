@@ -11,7 +11,7 @@
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-brand:hover {
   color: #fff;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .navbar-toggle {
@@ -25,6 +25,7 @@
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover {
   background-color: transparent;
   font-weight: 400;
+  opacity: 1;
 }
 
 .caption h3 {
@@ -39,7 +40,8 @@
   margin-bottom: 0;
 }
 
-.jumbotron h1, .navbar-inverse .navbar-brand{
+.jumbotron h1, h2, h3, h4, .navbar-inverse .navbar-brand{
+  font-weight: 400;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -71,13 +73,6 @@
   color: white;
 }
 
-html {
-  background: #fff;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 body {
   padding-top: 50px;
   font-size: 18px;
@@ -89,27 +84,17 @@ body {
   position: relative;
 }
 
-h1, h2 {
-  font-size: 40px;
-  letter-spacing: -1px;
-}
 
-h1, h2, h3 {
-  font-weight: 300;
-}
-
-p, li, blockquote, label{
-  font-weight: 300;
-}
 a {
   color: #BF4D28;
   text-decoration:none;
   outline: none;
+  opacity: 0.7;
 }
 a:hover {
   color: #BF4D28;
   text-decoration:none;
-  opacity: 0.7;
+  opacity: 1;
 }
 a:focus {
   outline: none;
