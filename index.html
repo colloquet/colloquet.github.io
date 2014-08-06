@@ -12,7 +12,7 @@
 		<meta name="msvalidate.01" content="00109AC3B0C479B5E31744AE0C80AAA7" />
 		<link rel="canonical" href="http://colloque.me/" />
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500|Open+Sans:300,400' rel='stylesheet' type='text/css'>
 	</head>
@@ -113,9 +113,13 @@
 		<!-- js at the end to make page content load faster -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/fastclick.js"></script>
 		<script type="text/javascript">
+      window.addEventListener('load', function() {
+          FastClick.attach(document.body);
+      }, false);
 			$(document).ready(function() {
-                $('body').scrollspy({ target: '.navbar-collapse' })
+        $('body').scrollspy({ target: '.navbar-collapse' })
 				$('.navtoport').click(function(e) {
 					e.preventDefault();
 					$('html, body').stop().animate({
