@@ -3610,17 +3610,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/newbanana.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 59863,
-		"inputAbbreviatedPath": "\/img\/newbanana.png",
-		"outputAbbreviatedPath": "\/img\/newbanana.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/premier.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3639,17 +3628,6 @@
 		"initialSize": 21746,
 		"inputAbbreviatedPath": "\/img\/profile.jpg",
 		"outputAbbreviatedPath": "\/img\/profile.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thecakeshop.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 137652,
-		"inputAbbreviatedPath": "\/img\/thecakeshop.png",
-		"outputAbbreviatedPath": "\/img\/thecakeshop.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

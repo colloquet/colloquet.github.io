@@ -33,6 +33,10 @@
   text-align: center;
 }
 
+.caption p {
+  font-style: italic;
+}
+
 .jumbotron {
   background-color: #80BCA3;
   color: #fff;
@@ -91,6 +95,7 @@ body {
 
 
 a {
+  font-weight: 400;
   color: #BF4D28;
   text-decoration:none;
   outline: none;
