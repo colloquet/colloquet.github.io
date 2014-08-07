@@ -70,7 +70,7 @@
   border-bottom: 5px solid #6FA28D !important;
 }
 
-.jumbotron h1, h2, h3, h4, .navbar-inverse .navbar-brand{
+h1, h2, h3, h4, .navbar-inverse .navbar-brand{
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
 }
