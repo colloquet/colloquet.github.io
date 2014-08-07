@@ -1,0 +1,42 @@
+<p>How to centre an image may be the most commonly asked question from newbies like me. It is actually very simple, you can either use a div wrapper or simply add a class to the img tag itself.</p>
+
+<h4 id="using-the-div-wrapper-and-css">Using the div wrapper and CSS</h4>
+<p>Simply add a div around the img tag:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;img-wrapper&quot;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/img/test.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;test&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>Then in your CSS file, add the following: </p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.img-wrapper</span> <span class="p">{</span>
+	<span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+	<span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>The div will then treat the image as text and align it to the centre. You can align image to the right using the same principle.</p>
+
+<h4 id="example">Example</h4>
+
+<div class="img-wrapper">
+	<img src="http://img2.wikia.nocookie.net/__cb20100218161535/streetfighter/images/0/03/Dudley3sportrait.gif" alt="test" />
+</div>
+
+<h4 id="adding-a-class-to-the-img-tag-itself">Adding a class to the img tag itself</h4>
+<p>This may be simpler, all you have to do is add a class to your image like the following example:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/img/test.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;test&quot;</span> <span class="na">class=</span><span class="s">&quot;.img-centre&quot;</span><span class="nt">/&gt;</span></code></pre></div>
+
+<p>Then in your CSS file:</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.img-centre</span><span class="p">{</span>
+	<span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+	<span class="k">float</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+	<span class="k">margin-left</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+	<span class="k">margin-right</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="example-1">Example</h4>
+<p><img src="http://img2.wikia.nocookie.net/__cb20100218161535/streetfighter/images/0/03/Dudley3sportrait.gif" alt="test" class="img-centre" /></p>
+
+<p>This may be a better option as you can reuse the same class on every image you want to centre instead of adding a div wrapper around each image.</p>

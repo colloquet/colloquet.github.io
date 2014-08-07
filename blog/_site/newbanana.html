@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title>新香蕉俱樂部－節目重溫</title>
+	<meta name="keywords" content="新香蕉俱樂部, 節目重溫"/>
+	<meta name="description" content="重溫新香蕉俱樂部"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<base target="_blank">
+	<style type="text/css">
+		html {
+			-webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		}
+		body {
+			font-family: 'Roboto', sans-serif;
+			margin:0;
+			text-rendering: optimizelegibility;
+			font-weight: 300;
+			color: rgba(0,0,0,0.87);
+		}
+		body, html {
+			height: 100%;
+			background: #FFF069;
+		}
+		strong, th {
+			font-weight: 400;
+		}
+		a {
+		  color: #6836B3;
+		  text-decoration:none;
+		  outline: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		#wrap {min-height: 100%;}
+		#main {
+		  /*overflow:auto;*/
+		  padding-bottom: 50px; /* must be same height as the footer */
+		}
+		.clearfix {
+		*zoom: 1;
+		}
+
+		.clearfix:before, .clearfix:after {
+		display: table;
+		line-height: 0;
+		content: "";
+		}
+
+		.clearfix:after {
+		clear: both;
+		}
+		.header {
+			display: block;
+			position: relative;
+			background-color: #2B1151;
+			background-image: url('img/banner1.jpg');
+			background-size: 100%;
+			background-position: center;
+			top: 0;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.container {
+			width: 960px;
+			margin: 0 auto;
+		}
+		.na {
+			display: none;
+		}
+		.datepicker {
+			float: right;
+			position: relative;
+			display: inline-block;
+			background: #FFF59E;
+			padding-left: 20px;
+			padding-bottom: 30px;
+			padding-right: 20px;
+			height: 100%;
+			width: 307px;
+			/*border: 1px solid #000;*/
+			-webkit-box-shadow: #FCE203 0 4px 0;
+			box-shadow: #FCE203 0 4px 0;
+			margin-bottom: 20px;
+		}
+		#datepicker {
+			margin-bottom: 20px;
+		}
+		.ui-widget-content {
+			background: #FFF59E !important;
+		}
+		.today {
+			position: relative;
+			display: inline-block;
+			float: left;
+			background: #FFF59E;
+			padding: 20px;
+			padding-top: 0;
+			width: 553px;
+			/*border: 1px solid #000;*/
+			-webkit-box-shadow: #FCE203 0 4px 0;
+			box-shadow: #FCE203 0 4px 0;
+			margin-bottom: 20px;
+		}
+		hr {
+			display: block;
+			height: 1px;
+			border: 0;
+			border-top: 1px solid #555;
+			padding: 0;
+			margin: 20px 0;
+		}
+		li {
+			list-style: none;
+			margin-bottom: 20px;
+		}
+		ul {
+			padding-left: 5px;
+		}
+		.select-date {
+			display: none;
+		}
+		h1 {
+			font-size: 2em;
+			color: #FFF;
+		}
+		.footer {
+			position: relative;;
+			width: 100%;
+			text-align: center;
+			background: #000;
+			color: #fff;
+			margin-top: -50px;
+			height: 52px;
+			clear: both;
+		}
+		.footer a {
+			color: #8358C3;
+		}
+		.d-hide {
+			display: none;
+		}
+		@media screen and (max-width: 960px) {
+			.header {
+				width: 960px;
+			}
+			.footer {
+				width: 960px;
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.header {
+				width: 100%;
+				margin-bottom: 0;
+			}
+			.footer {
+				width: 100%;
+			}
+			h1 {
+				font-size: 1.5em;
+				text-align: center;
+			}
+			.container {
+				width: 100%;
+			}
+			.today {
+				display: block;
+				width: 88%;
+				padding: 4%;
+				margin: 2%;
+			}
+			.datepicker {
+				text-align: center;
+				float: left;
+				display: block;
+				width: 88%;
+				/*padding: 0px 10px 20px 10px;*/
+				/*padding: 0;*/
+				padding: 4%;
+				margin: 2%;
+			}
+			.ui-datepicker {
+				margin: 0 auto;
+			}
+			.m-hide {
+				display: none;
+			}
+			.d-hide {
+				display: inline-block;
+			}
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="css/datepicker.css" />
+	<script type="text/javascript">
+		var d = new Date();
+		var year = d.getFullYear();
+		var month = d.getMonth() + 1;
+		if (month<10) {
+			month = "0"+month;
+		};
+		var today_date = d.getDate();
+		if (today_date<10) {
+			today_date = "0"+today_date;
+		};
+		var tomorrow_date = d.getDate() + 1;
+		if (tomorrow_date<10) {
+			tomorrow_date = "0"+tomorrow_date;
+		};
+		var tomorrow = String(year)+String(month)+String(tomorrow_date);
+		var today = String(year)+String(month)+String(today_date);
+		var weekday = new Array(7);
+			weekday[0]=  "星期日";
+			weekday[1] = "星期一";
+			weekday[2] = "星期二";
+			weekday[3] = "星期三";
+			weekday[4] = "星期四";
+			weekday[5] = "星期五";
+			weekday[6] = "星期六";
+		var today_day = weekday[d.getDay()];
+		$(function() {
+			$.datepicker.setDefaults({dateFormat: 'yy年mm月dd日'});
+			$( "#datepicker" ).datepicker({
+				maxDate: year + "年" + month + "月" + today_date + "日",
+				beforeShowDay: disableSpecificWeekDays,
+				onSelect: function(date) {
+					var minDate = $(this).datepicker('getDate');
+	            	if (minDate) {
+	                  minDate.setDate(minDate.getDate() + 1);
+	            	}
+					var dd = String(minDate.getDate());
+					var ddd = minDate.getDate()-1;
+					if (dd<10) {
+						dd = "0"+dd;
+					};
+					var mm = String(minDate.getMonth() + 1);
+					if (mm<10) {
+						mm = "0"+mm;
+					};
+					var yy = String(minDate.getFullYear());
+					var selectedDate = yy+mm+dd;
+					var selected_day = weekday[minDate.getDay()-1];
+					$(".select-date").fadeOut(function(){
+						$(".select-date").html("<hr/><p><strong>自選："+selected_day+" "+date+"</strong></p><ul><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li><i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節</a><br/><br/><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>");
+					});
+					$(".select-date").fadeIn();
+				}
+			});
+		});
+		function disableSpecificWeekDays(date) {
+		    if(date.getDay()==0||date.getDay()==6){
+		        return [false];
+		    }else{
+		        return [true];
+		    }
+		}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+	<div class="header clearfix">
+		<div class="container">
+			<h1>新香蕉俱樂部－節目重溫</h1>
+		</div>
+	</div>
+	<div id="main">
+	<div class="container clearfix">
+		<div class="today">
+			<p><strong>重溫今天節目或從<span class="m-hide">右邊</span><span class="d-hide">下方</span>選擇日期重溫。</strong></p><hr/>
+			<p><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
+			<ul class="today-list">
+				<li>
+					<script type="text/javascript">
+						document.write("<i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節</a><br/><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+				<li>
+					<script type="text/javascript">
+						document.write("<i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節</a><br/><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+				<li>
+					<script type="text/javascript">
+						document.write("<i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節</a><br/><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+				<li>
+					<script type="text/javascript">
+						document.write("<i class='fa fa-play'></i> <a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節</a><br/><br/>");
+						document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
+					</script>
+				</li>
+			</ul>
+			<p class="na"><i class="fa fa-exclamation-triangle"></i> 新香蕉俱樂部只在星期一至五播出，請在<span class="m-hide">右邊</span><span class="d-hide">下方</span>選擇日期重溫。</p>
+
+
+			<div class="select-date"></div>
+		</div>
+
+		<div class="datepicker">
+			<p><strong><i class="fa fa-calendar"></i> 請選擇日期: </strong></p><hr/><div id="datepicker"></div>
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcolloque.me%2Fnewbanana.html&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=155786951179530" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+		</div>
+
+
+	</div>
+	</div>
+	</div>
+	<div class="footer clearfix"><p>&copy; <a href="http://colloque.me" style="color:#A57AE6;">Colloque Tsui</a> 2014</p></div>
+	<script type="text/javascript">
+		if (d.getDay()==6||d.getDay()==0) {
+			$('.today-list').css("display","none");
+			$('.na').css("display","block");
+		}
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-51297067-1', 'colloque.me');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>

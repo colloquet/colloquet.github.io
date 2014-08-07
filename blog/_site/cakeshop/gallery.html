@@ -1,0 +1,442 @@
+<!-- Created by Colloque Tsui@2014 http://colloque.me -->
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title>The Cake Shop | Hong Kong</title>
+	<meta charset="utf-8"> 
+	<link href='http://fonts.googleapis.com/css?family=Bitter|Great+Vibes|Pacifico|Playball|Amatic+SC|Satisfy' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/magnific-popup.css"> 
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+	<style type="text/css">
+		*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+		body {
+			font-family: 'Bitter', serif;
+			margin: 0;
+			background-image: url("img/bg6.jpg");
+			/*background-color: #F26565;*/
+			background-size: 100%;
+			background-attachment: fixed;
+		}
+		.clearfix {
+		  *zoom: 1;
+		}
+
+		.clearfix:before, .clearfix:after {
+		  display: table;
+		  line-height: 0;
+		  content: "";
+		}
+
+		.clearfix:after {
+		  clear: both;
+		}
+		.main section h1 {
+			/*text-align: center;*/
+			font-size: 5em;
+			color: #fff;
+			font-family: 'Pacifico', cursive;
+			text-rendering: optimizelegibility;
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			margin-bottom: 0.5em;
+			/*margin-top: 0em;
+			padding-top: 0.83em;*/
+		}
+		.main section.page1 h1, #sign {
+			color: #fff;
+			/*opacity: 0;*/
+			visibility: hidden;
+		}
+		.main section.page2 h1 {
+			color: #fff;
+		}
+		.main section.page3 h1 {
+			color: #fff;
+			/*opacity: 0.8;*/
+		}
+		.main section h2 {
+			font-size: 3em;
+			color: #fff;
+			/*font-family: 'Pacifico', cursive;*/
+			text-rendering: optimizelegibility;
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			padding: 10px 0;
+		}
+		.main section h2 a {
+			color: #fff;
+			text-decoration: none;
+		}
+		.main section p {
+			font-size: 20px;
+			color: #fff;
+			font-family: 'Bitter', serif;
+			text-rendering: optimizelegibility;
+			/*text-align: center;*/
+			text-shadow: 0 1px 1px rgba(0,0,0,.4);
+			/*background-color: rgba(255,255,255,0.9);*/
+			padding: 20px;
+			/*border-radius: 5px;*/
+			/*border: 5px solid #fff;*/
+			line-height: 1.3em;
+		}
+		.container {
+			width: 940px;
+			margin: 0 auto;
+			/*background-color: rgba(0,0,0,0.3);*/
+		}
+		.navbar {
+	      position: fixed;
+	      top: 0;
+	      left: 0;
+	      /*text-align: center;*/
+	      display: block;
+	      padding: 0px;
+	      width: 100%;
+	      box-sizing: border-box;
+	      -moz-box-sizing: border-box;
+	      -webkit-box-sizing: border-box;
+	      background: rgba(255, 255, 255, 1);
+	      font-weight: bold;
+	      font-size: 13px;
+	      color: #000;
+	      -webkit-transition: all 500ms ease-in-out;
+	      -moz-transition: all 500ms ease-in-out;
+	      -o-transition: all 500ms ease-in-out;
+	      transition: all 500ms ease-in-out;
+	      font-family: 'Bitter', serif;
+	    }
+	    .navitem {
+	    	display: inline-block;
+	    	position: relative;
+	    	float: left;
+	    	padding: 15px 15px 10px 15px;
+	    	cursor: pointer;
+	    	border-bottom: 5px solid #fff;
+	    	/*transition: border-bottom-color 0.5s ease-in-out;*/
+	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .navitem:hover {
+	    	border-bottom-color: #000;
+	    }
+	    .navbar a {
+	    	color: #000;
+	    	text-decoration: none;
+	    }
+	    .nav-social {
+	    	display: inline-block;
+	    	position: relative;
+	    	float: right;
+	    	padding: 10px;
+	    	padding-top: 12px;
+	    	/*cursor: pointer;*/
+	    	line-height: 0;
+	    	font-size: 1.6em;
+
+	    }
+	    .nav-social a {
+	    	color: #000;
+	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .nav-social a:hover {
+	    	opacity: 1;
+	    }
+	    .nav-lang {
+	    	float: right;
+	    	padding: 15px;
+	    }
+	    .to-gallery{
+	    	border-bottom-color: #000;
+	    	opacity: 1;
+	    }
+	    label {
+	    	display: inline-block;
+	    	width: 120px;
+	    	margin-bottom: 10px;
+	    }
+	    .grid {
+	    	margin-top: 0px;
+	    }
+	    .back-to-gallery a {
+	    	font-size: 3em;
+	    	color: #fff;
+	    	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	    	opacity: 0.5;
+	    	-webkit-transition: all 200ms ease-in-out;
+	      	-moz-transition: all 200ms ease-in-out;
+	      	-o-transition: all 200ms ease-in-out;
+	      	transition: all 200ms ease-in-out;
+	    }
+	    .back-to-gallery a:hover {
+	    	opacity: 1;
+	    }
+	    .gallery {
+	    	width: 90%;
+	    	float: right;
+	    }
+	    .loading-overlay {
+	    	display: table;
+	    	position: fixed;
+	    	height: 100%;
+	    	width: 100%;
+	    	background-color: rgba(0,0,0,0.5);
+	    	z-index: 9999;	    	
+	    }
+	    .loading {
+	    	display: table-cell;
+	    	text-align: center;
+	    	vertical-align: middle;
+	    	color: #fff;
+	    	font-size: 2em;
+	    }
+	    .overlay {
+	    	height: 100%;
+	    	width: 100%;
+	    	background: rgba(0,0,0,0.4);
+	    	/*position: fixed;*/
+	    }
+	    
+	    .stuck {
+	    	position: fixed;
+	    	top: 50px;
+	    }
+	    .grid li a {
+	    	/*background-color: #fff;*/
+	    }
+	    .grid li img {
+	    	border: 5px solid #fff;
+	    }
+	    .grid li img:hover {
+	    	opacity: 0.9;
+	    }
+	    .grid {
+	    	margin-bottom: 200px;
+	    }
+	    .image-link {
+	    	background-color: white;
+	    }
+	    .globe {
+	    	display: none;
+	    }
+	    @media screen and (max-width: 960px) {
+
+		  .container {
+		    width: auto;
+		  }
+		  .page-content {
+	    		margin: 10px;
+	    	}
+
+		}
+	    @media screen and (max-width: 768px) {
+	    	.container {
+	    		width: auto;
+	    		/*padding: 10px;*/
+	    	}
+			.page-content {
+	    		margin: 10px;
+	    	}
+	    	.Collage{
+		    	width: 80%;
+
+		    }
+		    .back-to-gallery a {
+		    	font-size: 3em;
+		    	color: #fff;
+		    }
+		    .navbar {
+	    		font-size: 15px;
+	    	}
+	    	.grid {
+		    	margin-bottom: 0px;
+		    }
+	    }
+	    @media screen and (max-width: 480px) {
+	    	.main section h1 {
+	    		font-size: 3em;
+	    		text-align: center;
+	    		-webkit-margin-before: 0.3em;
+	    	}
+	    	.main section h2 {
+	    		font-size: 2em;
+	    		text-align: center;
+	    	}
+	    	.page-content {
+	    		/*margin-top: 100px;*/
+	    		margin: 10px;
+	    	}
+	    	.main section p {
+	    		font-size: 18px;
+	    	}
+	    	label {
+		    	width: 90px;
+		    }
+		    .page-content .container {
+		    	margin-top: 70px;
+		    }
+		    .navitem {
+		    	width: 18%;
+		    	text-align: center;
+		    	padding-left: 0px;
+		    	padding-right: 0px;
+		    }
+		    .nav-social {
+		    	display: none;
+		    }
+		    .back-to-gallery a {
+		    	font-size: 2em;
+		    	color: #fff;
+		    }
+		    .page-content .container{
+		    	margin-top: 30px;
+		    }
+		    .grid {
+		    	margin-bottom: 0px;
+		    }
+		    .navbar {
+	    		font-size: 13px;
+	    	}
+	    	.globe {
+	    		display: inline-block;
+	    		width: 10%;
+	    	}
+	    	.nav-lang {
+	    		display: none;
+	    		text-align: center;
+	    		width: 100%;
+	    		border-top: 1px solid #ccc;
+	    		border-bottom: 1px solid #ccc;
+	    	}
+
+	    }
+	    
+
+	</style>
+</head>
+<body>
+<div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
+  <div class="main" id="main">
+    <section class="page3 clearfix">
+    <div class="overlay">
+    	<div class="page-content">
+	    	<div class="container clearfix">
+	    		<h1>Gallery</h1>
+				<div class="gallery">
+				<ul class="grid effect-2" id="grid">
+					<li><a href="img/gallery/13.jpeg" class="image-link" title="Caption goes here"><img src="img/gallery/thumbnails/13_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/1.jpeg" class="image-link"><img src="img/gallery/thumbnails/1_mini.jpeg" alt="cup cakes"/></a></li>
+					<li><a href="img/gallery/2.jpeg" class="image-link"><img src="img/gallery/thumbnails/2_mini.jpeg" alt="wedding cake"/></a></li>
+					<li><a href="img/gallery/3.jpeg" class="image-link"><img src="img/gallery/thumbnails/3_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/4.jpeg" class="image-link"><img src="img/gallery/thumbnails/4_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/5.jpeg" class="image-link"><img src="img/gallery/thumbnails/5_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/6.jpeg" class="image-link"><img src="img/gallery/thumbnails/6_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/7.jpeg" class="image-link"><img src="img/gallery/thumbnails/7_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/8.jpeg" class="image-link"><img src="img/gallery/thumbnails/8_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/9.jpeg" class="image-link"><img src="img/gallery/thumbnails/9_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/10.jpeg" class="image-link"><img src="img/gallery/thumbnails/10_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/11.jpeg" class="image-link"><img src="img/gallery/thumbnails/11_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/12.jpeg" class="image-link"><img src="img/gallery/thumbnails/12_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/14.jpeg" class="image-link"><img src="img/gallery/thumbnails/14_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/15.jpeg" class="image-link"><img src="img/gallery/thumbnails/15_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/16.jpeg" class="image-link"><img src="img/gallery/thumbnails/16_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/17.jpeg" class="image-link"><img src="img/gallery/thumbnails/17_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/18.jpeg" class="image-link"><img src="img/gallery/thumbnails/18_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/19.jpeg" class="image-link"><img src="img/gallery/thumbnails/19_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/20.jpeg" class="image-link"><img src="img/gallery/thumbnails/20_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/21.jpeg" class="image-link"><img src="img/gallery/thumbnails/21_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/22.jpeg" class="image-link"><img src="img/gallery/thumbnails/22_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/23.jpeg" class="image-link"><img src="img/gallery/thumbnails/23_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/24.jpeg" class="image-link"><img src="img/gallery/thumbnails/24_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/25.jpeg" class="image-link"><img src="img/gallery/thumbnails/25_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/26.jpeg" class="image-link"><img src="img/gallery/thumbnails/26_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/27.jpeg" class="image-link"><img src="img/gallery/thumbnails/27_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/28.jpeg" class="image-link"><img src="img/gallery/thumbnails/28_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/29.jpeg" class="image-link"><img src="img/gallery/thumbnails/29_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/30.jpeg" class="image-link"><img src="img/gallery/thumbnails/30_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/31.jpeg" class="image-link"><img src="img/gallery/thumbnails/31_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/32.jpeg" class="image-link"><img src="img/gallery/thumbnails/32_mini.jpeg" alt="some kid"/></a></li>
+					<li><a href="img/gallery/33.jpeg" class="image-link"><img src="img/gallery/thumbnails/33_mini.jpeg" alt="some kid"/></a></li>
+				</ul>
+				</div>
+				<div class="back-to-gallery"><a href="index.html#3"><i class="fa fa-chevron-circle-left"></i></a>
+			</div>
+		</div>
+		</div>
+		</div>
+    </section> 
+	</div>
+	<div class="navbar">
+		<div class="container">
+		  	<a href="index.html"><div class="navitem to-home">Home</div></a>
+		  	<a href="index.html#2"><div class="navitem to-aboutus">About</div></a>
+		  	<a href="index.html#3"><div class="navitem to-gallery">Gallery</div></a>
+		  	<a href="index.html#4"><div class="navitem to-classes">Classes</div></a>
+		  	<a href="index.html#5"><div class="navitem to-contact">Contact</div></a>
+		  	<a href="#"><div class="navitem globe"><i class="fa fa-globe fa-lg"></i></div></a>
+		  	<div class="nav-lang"><a href="gallery_chi.html">中</a> ｜ <a href="gallery.html">Eng</a></div>
+		  	<div class="nav-social"><a href="#" style="color: #663300;"><i class="fa fa-instagram"></i></a></div>
+		  	<div class="nav-social"><a href="#" style="color: #4099FF;"><i class="fa fa-twitter-square"></i></a></div>
+		  	<div class="nav-social"><a href="http://www.facebook.com/thecakeshophk" style="color: #3B5998;"><i class="fa fa-facebook-square"></i></a></div>
+		</div>
+	</div>
+	<!-- scripts -->
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/AnimOnScroll.js"></script>
+	<script>
+		new AnimOnScroll( document.getElementById( 'grid' ), {
+			minDuration : 0.4,
+			maxDuration : 0.7,
+			viewportFactor : 0.2
+		} );
+	</script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/waypoints-sticky.min.js"></script>
+	<script type="text/javascript">
+		$(window).load(function () {
+			$(".loading-overlay").fadeOut(function() {
+				$(".loading-overlay").html("");
+			});
+			$('.image-link').magnificPopup({
+			  type: 'image',
+			  gallery:{
+			    enabled:true
+			  },
+			  removalDelay: 500,
+			  mainClass: 'mfp-fade'
+			});
+			$('.back-to-gallery').waypoint('sticky', {
+				offset: 50
+			});
+			$(".globe").click(function(e){
+				e.preventDefault();
+				$(".nav-lang").slideToggle();
+			});
+		});
+	</script>
+	<script type="text/javascript">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-51297067-1', 'colloque.me');
+	  ga('send', 'pageview');
+	</script>
+	
+</body>
+</html>
