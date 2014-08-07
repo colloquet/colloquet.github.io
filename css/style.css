@@ -1,6 +1,6 @@
 .navbar {
   background: #655643;  
-  border-bottom: 5px solid #604D36 !important;
+  border-bottom: 5px solid #4B4032 !important;
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -44,6 +44,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 0;
+  border-bottom: 5px solid #6FA28D !important;
 }
 
 .jumbotron h1, h2, h3, h4, .navbar-inverse .navbar-brand{
@@ -58,12 +59,14 @@
   padding-top: 50px;
   padding-bottom: 50px;
   color: #000;
+  border-bottom: 5px solid #CC9923 !important;
 }
 .portfolio {
   background-color: #F6F7BD;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #222;
+  border-bottom: 5px solid #DDDDA9 !important;
 }
 .footer {
   text-align: center;

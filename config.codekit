@@ -3663,12 +3663,12 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/fastclick.min.js": {
+	"\/js\/fastclick.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/fastclick.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/fastclick.min-min.js",
+		"inputAbbreviatedPath": "\/js\/fastclick.js",
+		"outputAbbreviatedPath": "\/js\/min\/fastclick-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
