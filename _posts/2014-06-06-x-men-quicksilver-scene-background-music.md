@@ -2,7 +2,7 @@
 layout: post
 title:  "X-Men QuickSilver scene background music"
 date:   2014-06-06 09:51:00
-categories: tips
+categories: mv
 ---
 
 It was a stunning scene. BGM was well chosen.
