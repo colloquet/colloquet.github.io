@@ -10,7 +10,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}Colloque Tsui | Blog{% endif %}</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>	
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"/>
+	<link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}"/>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>	
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
@@ -27,6 +27,12 @@
     }
     .navbar-fixed-top {
         position: relative;
+    }
+    .pagination {
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
     }
 	</style>
 </head>
