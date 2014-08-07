@@ -21,11 +21,11 @@
 }
 
 .navbar-inverse .navbar-toggle:hover {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover {
-  background-color: transparent;
+  background-color: transparent !important;
   font-weight: 400;
   opacity: 1;
 }
