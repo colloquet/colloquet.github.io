@@ -4,11 +4,11 @@ layout: default
 
 <div class="home">
 
-  <h1>Posts</h1>
+  <h1 align="center">Posts</h1>
 
   <ul class="posts">
     {% for post in site.posts %}
-      <li>
+      <li class="col-md-4 col-sm-6">
         <hr/>
         <span class="post-date"><i class="fa fa-calendar"></i>  {{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><br/>

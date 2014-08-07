@@ -18,7 +18,7 @@
 		<style type="text/css">
 		body, html {
 			height: 100%;
-			background-color: #F6F7BD;
+			background-color: #fff;
 		}
 		.footer {
 			width: 100%;
@@ -82,8 +82,12 @@
 		<!-- js at the end to make page content load faster -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/konami.js"></script>
+		<script src="/js/fastclick.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
+				window.addEventListener('load', function() {
+			          FastClick.attach(document.body);
+			      }, false);
 				var easter_egg = new Konami(function() {
 					alert('Congratulations! You have entered the konami code to unlock Rick Roll!');
 					$(".easter-egg").html( '<h1>Enjoy!</h1><div class="video-container"><iframe width="400" height="315" src="//www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe></div>' );

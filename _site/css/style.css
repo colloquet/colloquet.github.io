@@ -1,6 +1,6 @@
 .navbar {
   background: #655643;  
-  border-bottom: 5px solid #604D36 !important;
+  border-bottom: 5px solid #4B4032 !important;
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -30,6 +30,29 @@
   opacity: 1;
 }
 
+.navbar-inverse .navbar-nav>.active>a::after {
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #655643;
+  bottom: -10px;
+  content: "";
+  height: 15px;
+  left: 62.7%;
+  margin-left: -15px;
+  position: absolute;
+  width: 15px;
+  z-index: 3;
+  border-bottom: 4px solid #4B4032;
+  border-right: 4px solid #4B4032;
+}
 .caption h3 {
   text-align: center;
 }
@@ -44,6 +67,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 0;
+  border-bottom: 5px solid #6FA28D !important;
 }
 
 .jumbotron h1, h2, h3, h4, .navbar-inverse .navbar-brand{
@@ -58,12 +82,14 @@
   padding-top: 50px;
   padding-bottom: 50px;
   color: #000;
+  border-bottom: 5px solid #CC9923 !important;
 }
 .portfolio {
   background-color: #F6F7BD;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #222;
+  border-bottom: 5px solid #DDDDA9 !important;
 }
 .footer {
   text-align: center;
@@ -139,4 +165,10 @@ strong {
   float: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-inverse .navbar-nav>.active>a::after {
+    display: none;
+  }
 }
