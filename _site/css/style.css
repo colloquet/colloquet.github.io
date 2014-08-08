@@ -70,9 +70,14 @@
   border-bottom: 5px solid #6FA28D !important;
 }
 
-h1, h2, h3, h4, .navbar-inverse .navbar-brand{
+h1, h2, h3, h4{
   font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+}
+
+.navbar-inverse .navbar-brand {
+  font-weight: 400;
+  font-family: 'Dosis', sans-serif;
 }
 
 .contact {
@@ -122,7 +127,7 @@ html {
 body {
   padding-top: 50px;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dosis', sans-serif;
   /*margin: 0;*/
   margin-left: auto;
   margin-right: auto;
