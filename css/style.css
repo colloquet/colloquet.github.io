@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,400);
+
 .navbar {
   background: #655643;  
   border-bottom: 5px solid #4B4032 !important;
@@ -72,7 +74,6 @@
 
 h1, h2, h3, h4{
   font-weight: 400;
-  /*font-family: 'Open Sans', sans-serif;*/
 }
 
 .navbar-inverse .navbar-brand {
