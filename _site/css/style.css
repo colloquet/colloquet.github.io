@@ -116,6 +116,16 @@ h1, h2, h3, h4{
   bottom: 0;
   width: 100%;
   height: 66px;
+  text-shadow: rgb(172, 69, 36) 1px 1px,
+    rgb(172, 69, 36) 2px 2px,
+    rgb(172, 69, 36) 3px 3px,
+    rgb(172, 69, 36) 4px 4px,
+    rgb(175, 70, 36) 5px 5px,
+    rgb(178, 71, 37) 6px 6px,
+    rgb(181, 73, 38) 7px 7px,
+    rgb(184, 74, 38) 8px 8px,
+    rgb(187, 75, 39) 9px 9px,
+    rgb(191, 77, 40) 10px 10px;
 }
 
 .footer a {
