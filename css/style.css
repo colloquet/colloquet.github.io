@@ -87,11 +87,6 @@ h1, h2, h3, h4{
 .navbar-inverse .navbar-brand {
   font-weight: 400;
   font-family: 'Dosis', sans-serif;
-  text-shadow: rgb(91, 77, 60) 1px 1px,
-    rgb(91, 77, 60) 2px 2px,
-    rgb(91, 77, 60) 3px 3px,
-    rgb(91, 77, 60) 4px 4px,
-    rgb(91, 77, 60) 5px 5px;
 }
 
 .contact {
