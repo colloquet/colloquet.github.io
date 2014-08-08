@@ -52,7 +52,7 @@
   position: absolute;
   width: 15px;
   z-index: 3;
-  border-bottom: 4px solid #4B4032;
+  /*border-bottom: 4px solid #4B4032;*/
   border-right: 4px solid #4B4032;
 }
 .caption h3 {
@@ -73,14 +73,15 @@
 }
 
 .jumbotron h1 {
-  text-shadow: rgb(20, 145, 121) 1px 1px,
-    rgb(20, 147, 122) 2px 2px,
-    rgb(20, 148, 123) 3px 3px,
-    rgb(20, 150, 125) 4px 4px;
+  text-shadow: rgb(115, 169, 147) 1px 1px,
+    rgb(115, 169, 147) 2px 2px,
+    rgb(115, 169, 147) 3px 3px,
+    rgb(115, 169, 147) 4px 4px;
 }
 
 h1, h2, h3, h4{
   font-weight: 400;
+
 }
 
 .navbar-inverse .navbar-brand {
