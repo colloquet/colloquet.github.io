@@ -155,6 +155,10 @@ a:focus {
   outline: none;
 }
 
+a.btn:hover {
+  opacity: 1;
+}
+
 hr {
   display: block;
   height: 1px;
