@@ -124,7 +124,11 @@
 
 .posts { list-style-type: none; -webkit-padding-start: 0px;-moz-padding-start: 0px;padding-start: 0px;}
 
-.posts li { margin-bottom: 30px; }
+.posts li { margin-bottom: 30px; min-height: 230px; }
+
+@media (max-width: 767px) {
+  .posts li { min-height: 0; }
+}
 
 .posts .post-link {
   /*font-family: 'Roboto', sans-serif;*/
