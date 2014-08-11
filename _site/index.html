@@ -15,14 +15,6 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/animate.css"/>
-    <style type="text/css">
-      #title p {
-        -webkit-animation-delay: 0.3s;
-        -moz-animation-delay: 0.3s;
-        animation-delay: 0.3s;
-      }
-    </style>
 	</head>
 	<body data-spy="scroll" data-target="navbar-collapse">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -127,8 +119,6 @@
           FastClick.attach(document.body);
       }, false);
 			$(document).ready(function() {
-        $('#title h1').addClass('animated bounceInUp');
-        $('#title p').addClass('animated bounceInUp');
         $('body').scrollspy({ target: '.navbar-collapse' })
 				$('.navtoport').click(function(e) {
 					e.preventDefault();
