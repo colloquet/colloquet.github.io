@@ -5,7 +5,7 @@ date:   2014-05-31 15:32:00
 categories: tips
 ---
 
-On a web page, when the content is scrolling at a different speed from the background image, this causes a 3D effect which is refers to the "Parallax scrolling effect". If you want to see it in action, head to [homepage][homepage] and when you scroll, you can see the header's contents is actually moving faster than the background image. Its a really subtle and cool effect. 
+On a web page, when the content is scrolling at a different speed from the background image, this causes a 3D effect which is refers to the "Parallax scrolling effect". If you want to see it in action, head to [Smooth Parallax Scrolling][link1]. Its a really subtle but impressive effect. 
 
 When I was trying to implement this effect on my homepage, I found a lot of tutorials, while they produced the effect I was looking for, they were all laggy and making it a pain to scroll. Until I found this: [Smooth Parallax Scrolling][link1]. The tutorial clearly explain what parallax effect is and provide an excellent example for easy implementation. I am not going to copy and paste. Basically you can stop reading now and head to the tutorial. But I want to share a little tip that will make it even more awesome. 
 
@@ -29,5 +29,4 @@ Change "120" to something like "50", the smaller number gives you a faster scrol
 
 Until next time!
 
-[homepage]: http://colloque.me
 [link1]: http://www.kirupa.com/html5/smooth_parallax_scrolling.htm
