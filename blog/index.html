@@ -30,9 +30,9 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-left"></i> Prev</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-chevron-left"></i> Prev</a>&nbsp;&nbsp;&nbsp;
   {% else %}
-    <span><i class="fa fa-chevron-left"></i> Prev</span>
+    <span><i class="fa fa-chevron-left"></i> Prev</span>&nbsp;&nbsp;&nbsp;
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -46,9 +46,9 @@ layout: default
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next <i class="fa fa-chevron-right"></i></a>
+    &nbsp;&nbsp;&nbsp;<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next <i class="fa fa-chevron-right"></i></a>
   {% else %}
-    <span>Next <i class="fa fa-chevron-right"></i></span>
+    &nbsp;&nbsp;&nbsp;<span>Next <i class="fa fa-chevron-right"></i></span>
   {% endif %}
 </div>
 {% endif %}
