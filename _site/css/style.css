@@ -161,6 +161,9 @@ a:hover {
 }
 a:focus {
   outline: none;
+  text-decoration: none;
+  color: #BF4D28;
+  opacity: 0.7;
 }
 
 a.btn:hover {
