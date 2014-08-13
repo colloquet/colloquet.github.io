@@ -200,6 +200,7 @@ strong {
   margin-right: auto;
 }
 
+
 @media screen and (max-width: 767px) {
   .navbar-inverse .navbar-nav>.active>a::after {
     display: none;
