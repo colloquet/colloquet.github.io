@@ -2,20 +2,18 @@
 layout: default
 ---
 
-<div class="row">
   <h1 align="center">Posts</h1>
-  <ul class="posts">
+  <ul class="posts col-md-8 col-md-offset-2">
     {% for post in paginator.posts %}
-      <li class="col-md-4 col-sm-6">
+      <li>
         <hr/>
         <span class="post-date"><i class="fa fa-calendar"></i>  {{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: paginator.baseurl }}">{{ post.title }}</a><br/>
-        {{ post.content | strip_html | truncatewords:25}}<br/>
+        {{ post.content | strip_html | truncatewords:50}}<br/>
         <a href="http://colloque.me{{ post.url | prepend: paginator.baseurl }}#disqus_thread"></a>
       </li>
     {% endfor %}
   </ul>
-</div>
 
 <!-- This loops through the paginated posts -->
 <!-- {% for post in paginator.posts %}
