@@ -52,12 +52,12 @@ a {
   background-color: rgba(247, 228, 190, 0.3); }
 
 .btn-info {
-  background-color: #b38184;
-  border-color: #b38184; }
-
-.btn-info:hover {
   background-color: #a36a6d;
   border-color: #a36a6d; }
+
+.btn-info:hover {
+  background-color: #b38184;
+  border-color: #b38184; }
 
 .about-div {
   background-color: rgba(179, 129, 132, 0.2) !important; }
