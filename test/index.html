@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/menus-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css">
 	<link href='http://fonts.googleapis.com/css?family=Bitter|Pacifico' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style type="text/css">
     	body {
     		/*background: url(cake-ceremony-couple-2226.jpg);*/
+    		padding-top: 30px;
     		background-size: 100%;
     		font-family: 'Bitter', serif;
     	}
@@ -29,25 +31,30 @@
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 			    <h1 align="center" class="brand">The Cake Shop</h1>
-			    
 			    <hr>
 			    <p align="center">Your baking specialist for every occasion</p>
 				<hr>
 				<div class="row">
 					<div class="col-md-3">
-						<div class="pure-menu pure-menu-open">
+						<div class="pure-menu pure-menu-open pure-menu-horizontal hidden-md hidden-lg">
+						    <ul>
+						        <li><a href="#">Home</a></li>
+						        <li><a href="#about-us">About</a></li>
+						        <li><a href="#contact">Contact</a></li>
+						    </ul>
+						</div>
+						<div class="pure-menu pure-menu-open hidden-xs hidden-sm">
 						    <a class="pure-menu-heading">The Cake Shop</a>
 
 						    <ul>
 						        <li><a href="#">Home</a></li>
-						        <li><a href="#">Gallery</a></li>
-						        <li><a href="#">Classes</a></li>
-						        <li><a href="#">Contact</a></li>
+						        <li><a href="#about-us">About</a></li>
+						        <li><a href="#contact">Contact</a></li>
 						    </ul>
 						</div>
 						<hr class="hidden-md hidden-lg">
 					</div>
-					<div class="col-md-9">
+					<div class="col-md-9" id="about-us">
 						<img src="cake-ceremony-couple-2226.jpg" class="img-responsive">
 						<h2>About us</h2>
 						<p>Built upon a passion devoted to cake making and decorating. ZoiE is our platform to demonstrate and share this devotion with people alike as well as people who want to explore the joy this aspect of culinary art may bring. We have more than a decade of cake making and decorating experience for various occations and valuable lessons from chefs in Hong Kong, Japan and U.S.A. etc. </p>
@@ -56,11 +63,91 @@
 				</div>
 				<hr>
 				<div class="row">
-				<div class="col-md-12">
-				<img src="cake-chocolate-coffee-2230.jpg" class="img-responsive">
-				<p>ZoiE offers a range of quality services including cake decorating classes for kids and adults, private parties (birthday, holiday, play dates, baby shower & etc.) custom designed cake, and team building event. We will also try our best to provide services that you may want that are not listed.</p>
-				<p>Our mission is to make ZoiE your baking specialist for every occasion.</p>
+					<div class="col-md-12">
+						<img src="cake-chocolate-coffee-2230.jpg" class="img-responsive">
+						<p>ZoiE offers a range of quality services including cake decorating classes for kids and adults, private parties (birthday, holiday, play dates, baby shower & etc.) custom designed cake, and team building event. We will also try our best to provide services that you may want that are not listed.</p>
+						<p>Our mission is to make ZoiE your baking specialist for every occasion.</p>
+					</div>
 				</div>
+				<hr>
+				<div class="row" id="contact">
+					<div class="col-md-12">
+						<h1 class="text-center">Contact</h1>
+					      <h4 class="text-center">Got a question? Want to order?</h4>
+					          <div class="row">
+					            <div class="col-md-6 col-sm-6 ">
+					              <label>The Cake Shop HK</label>
+					              <div class="panel panel-default">
+					                <!-- <div class="panel-heading">The Cake Shop HK</div> -->
+					                <table class="table table-hover">
+					                  <tr>
+					                    <td class="text-nowrap"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;Address</td>
+					                    <td>
+					                      <a href="https://maps.google.com/maps?q=532+Queens+Road+West+Hong+Kong" class="iframe-link">
+					                        Room 211, 2/F, Kam Ling Court<br/>532 Queen's Road West<br/>Hong Kong
+					                      </a>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td class="text-nowrap"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Phone</td>
+					                    <td><a href="tel:++85228589228" data-toggle="tooltip" data-placement="top" title="Call us today!">2858 9228</a></td>
+					                  </tr>
+					                  <tr>
+					                    <td class="text-nowrap"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Email</td>
+					                    <td><a href="mailto:thecakeshophk@gmail.com?Subject=Hello" target="_top" data-toggle="tooltip" data-placement="top" title="Send us an email!">thecakeshophk@gmail.com</a></td>
+					                  </tr>
+					                  <tr>
+					                    <td class="text-nowrap"><span class="glyphicon glyphicon-heart"></span>&nbsp;Find Us</td>
+					                    <td>
+					                      <a href="http://www.facebook.com/thecakeshophk" style="color: #3B5998;" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-lg fa-fw"></i></a>
+					                      <a href="#" style="color: #4099FF;" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square fa-lg fa-fw"></i></a>
+					                      <a href="#" style="color: #663300;" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram fa-lg fa-fw"></i></a>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td class="nowrap"><span class="glyphicon glyphicon-share"></span>&nbsp;Share</td>
+					                    <td>
+					                      <!-- Facebook like and share button -->
+					                      <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.thecakeshop.hk%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35&amp;appId=155786951179530" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px; width:50px; " allowTransparency="true"></iframe>
+					                      <!-- Tweet button -->
+					                      <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					                      <a href="https://twitter.com/share" data-url="http://www.thecakeshop.hk/" class="twitter-share-button" data-lang="en" data-count="none">Tweet</a>&nbsp;
+					                      <!-- Place this tag where you want the +1 button to render. -->
+					                      <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+					                      <!-- Place this tag after the last +1 button tag. -->
+					                      <script type="text/javascript">
+					                        window.___gcfg = {lang: 'en-GB'};
+
+					                        (function() {
+					                          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					                          po.src = 'https://apis.google.com/js/platform.js';
+					                          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					                        })();
+					                      </script>
+					                    </td>
+					                  </tr>
+					                </table>
+					              </div>
+					            </div>
+					            <div class="col-md-6 col-sm-6">
+					              <form method="POST" action="http://forms.brace.io/thecakeshophk@gmail.com">
+					                <div class="form-group">
+					                  <label for="name">Name</label>
+					                  <input name="Name" type="name" class="form-control" id="name" placeholder="Enter name">
+					                </div>
+					                <div class="form-group">
+					                  <label for="email">Email address</label>
+					                  <input name="From" type="email" class="form-control" id="email" placeholder="Enter email">
+					                </div>
+					                <div class="form-group">
+					                  <label for="message">Message</label>
+					                  <textarea name="Message" class="form-control" rows="5" id="message" placeholder="Enter your message"></textarea>    
+					                </div>
+					                <p align="right"><button type="submit" class="btn btn-default">Submit</button></p>
+					              </form>
+					            </div>
+					      </div>
+					</div>
 				</div>
 				<div class="footer">
 					<hr>
@@ -70,5 +157,19 @@
 		</div>
 
 	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	        $('a[href^="#"]').on('click', function(event) {
+	            var target = $( $(this).attr('href') );
+	            if( target.length ) {
+	                event.preventDefault();
+	                $('html, body').animate({
+	                    scrollTop: target.offset().top - 10
+	                });
+	            }
+	        });
+		});
+	</script>
 </body>
 </html>
