@@ -23,10 +23,37 @@
     	.brand {
     		font-family: 'Pacifico', cursive;
     	}
+    	.counter {
+    		position: fixed;
+    		width: 40px;
+    		height: 40px;
+    		border: 1px solid #222;
+			top: 20px;
+			right: 20px;
+    	}
+    	.navbar {
+    		transition: -webkit-transform 0.5s;
+    		/*display: none;*/
+    		-webkit-transform: translateY(-100%);
+    	}
+    	.is-fixed {
+    		/*display: block;*/
+    		/*-webkit-animation: slide-down 0.26s;*/
+    		-webkit-transform: translateY(0);
+    	}
+    	@-webkit-keyframes slide-down {
+		    from {-webkit-transform: translateY(-100%);}
+		    to {-webkit-transform: translateY(0);}
+		} 
     </style>
 </head>
 
 <body>
+	<!-- <div class="counter">
+		<span id="scroll"></span><br/>
+		<span id="body"></span><br/>
+		<span id="window"></span><br/>
+	</div> -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -35,26 +62,40 @@
 			    <p align="center">Your baking specialist for every occasion</p>
 				<hr>
 				<div class="row">
-					<div class="col-md-3">
-						<div class="pure-menu pure-menu-open pure-menu-horizontal hidden-md hidden-lg">
+					<div class="col-md-12">
+						<div class="pure-menu pure-menu-open pure-menu-horizontal">
 						    <ul>
 						        <li><a href="#">Home</a></li>
 						        <li><a href="#about-us">About</a></li>
 						        <li><a href="#contact">Contact</a></li>
 						    </ul>
 						</div>
-						<div class="pure-menu pure-menu-open hidden-xs hidden-sm">
-						    <a class="pure-menu-heading">The Cake Shop</a>
+						<hr>
+						<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+						  <div class="container">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a class="navbar-brand brand" href="#">The Cake Shop</a>
+						    </div>
 
-						    <ul>
+						    <!-- Collect the nav links, forms, and other content for toggling -->
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						      <ul class="nav navbar-nav navbar-right">
 						        <li><a href="#">Home</a></li>
 						        <li><a href="#about-us">About</a></li>
 						        <li><a href="#contact">Contact</a></li>
-						    </ul>
-						</div>
-						<hr class="hidden-md hidden-lg">
+						      </ul>
+						    </div><!-- /.navbar-collapse -->
+						  </div><!-- /.container-fluid -->
+						</nav>
 					</div>
-					<div class="col-md-9" id="about-us">
+					<div class="col-md-12" id="about-us">
 						<img src="cake-ceremony-couple-2226.jpg" class="img-responsive">
 						<h2>About us</h2>
 						<p>Built upon a passion devoted to cake making and decorating. ZoiE is our platform to demonstrate and share this devotion with people alike as well as people who want to explore the joy this aspect of culinary art may bring. We have more than a decade of cake making and decorating experience for various occations and valuable lessons from chefs in Hong Kong, Japan and U.S.A. etc. </p>
@@ -158,7 +199,20 @@
 
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
+		$(window).scroll(function(){
+		    // $(".counter").html($(window).scrollTop());
+		    // $(".counter #scroll").html($(window).scrollTop());
+		    // $(".counter #body").html($("body").height());
+		    // $(".counter #window").html($(window).height());
+		    
+		    if ($(window).scrollTop() > $('.pure-menu').offset().top) {
+		    	$(".navbar").addClass("is-fixed");
+	    	} else if ($(window).scrollTop() < $('.pure-menu').offset().top) {
+	    		$(".navbar").removeClass("is-fixed");
+		    };
+		});
 		$(document).ready(function() {
 	        $('a[href^="#"]').on('click', function(event) {
 	            var target = $( $(this).attr('href') );
@@ -166,6 +220,11 @@
 	                event.preventDefault();
 	                $('html, body').animate({
 	                    scrollTop: target.offset().top - 10
+	                });
+	            } else {
+	            	event.preventDefault();
+	                $('html, body').animate({
+	                    scrollTop: 0
 	                });
 	            }
 	        });
