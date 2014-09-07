@@ -50,6 +50,10 @@
         color: #7e57c2;
         text-decoration: none;
       }
+      h1 {
+        display: inline-block;
+        position: relative;
+      }
       .footer {
         position: absolute;
         bottom: 0;
@@ -79,8 +83,12 @@
       margin-bottom: 0;
 	  }
 	  .panel1 {
-	          padding: 15px 0;
-	    }
+          padding: 15px 0;
+    }
+    .panel1:hover > hr {
+      border-color: #000;
+      -webkit-animation: slideIn 0.5s;
+    } 
 	  h3, .today-list {
 		  text-align: center;
 	  }
@@ -91,6 +99,15 @@
 		  }
 		  
 	  }
+    @-webkit-keyframes slideIn {
+      from {
+        -webkit-transform: scale(0,1);
+      }
+      
+      to {
+        -webkit-transform: scale(1);
+      }
+    }
     </style>
     <script type="text/javascript">
       var d = new Date();
@@ -149,8 +166,8 @@
 			  <p>新香蕉俱樂部（英文：New Banana Club）為新城知訊台 的一個phone-in節目，內容以嬉笑手法解決聽眾的感情問題為主，為同時段各大電台中的冠軍收聽率長壽節目。</p>
 			  <p>新香蕉俱樂部星期一 - 星期五：12:00 - 2：00am<br/>Ben，妹頭，強尼，關逸基，塔羅小公主selina<div class="fb-like" data-href="http://colloque.me/newbanana/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div><br/><br/>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="colloquet" data-hashtags="新香蕉俱樂部">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
-		  </div>
-	  </div>
+  		  </div>
+  	  </div>
       <div class="col-md-4 col-sm-6">
         <div class="panel1">
           <h3>節目重溫</h3>
