@@ -48,13 +48,13 @@
 	}
 	/*to center the grid table using transform*/
 	.center {
-		-webkit-transform: translate(-50%,-50%);
-		transform: translate(-50%,-50%);
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
 	}
 	/*apply rotation when rotate button is clicked*/
 	.rotate {
-		transform: translate(-50%,-50%) rotate(45deg);
-		-webkit-transform: translate(-50%,-50%) rotate(45deg);
+		transform: translateY(-50%) rotate(45deg);
+		-webkit-transform: translateY(-50%) rotate(45deg);
 	}
 	.grid, .grid-inverse {
 		position: relative;
@@ -113,6 +113,7 @@
 			</div>
 		</div>
 		<div class="col-md-4 col-md-offset-4">
+			<div class="row">
 			<div class="input-group">
 					<input type="text" id="grid-num" class="form-control" placeholder="Enter grid size">
 				<div class="input-group-btn">
@@ -120,12 +121,13 @@
 					<button id="rotate-btn" class="btn btn-default" onclick="rotate()">ROTATE</button>
 				</div>
 			</div>
+			</div>
 			<p align="center"></p>
 		</div>
-		<div class="grid-table center"></div>
+		<div class="center grid-table"></div>
 	</div>
 
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		function genGrid() {
 			// reset the table everytime user input a new number
@@ -165,6 +167,7 @@
 	        }
 	        table.append(row); 
 		  }
+		  table.css("margin-left", -gridSize*20);
 		};
 		function rotate() {
 			var table = $(".grid-table");
