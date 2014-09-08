@@ -171,9 +171,14 @@ i {
   transition: transform .5s ease;
 }
 
-a.btn:hover > i {
+a.btn:hover > i.fa-angle-right {
   -webkit-transform: translateX(5px);
   transform: translateX(5px);
+}
+
+a.btn:hover > i.fa-angle-left {
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 hr {
