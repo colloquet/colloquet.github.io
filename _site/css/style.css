@@ -166,6 +166,16 @@ a.btn:hover {
   opacity: 1;
 }
 
+i {
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+a.btn:hover > i {
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
 hr {
   display: block;
   height: 1px;
@@ -255,6 +265,147 @@ strong {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+.dot1 {
+  opacity: 0;
+  -webkit-animation: blink 5s infinite;
+  animation: blink 5s infinite;
+}
+
+.dot2 {
+  opacity: 0;
+  -webkit-animation: blink1 5s infinite;
+  animation: blink1 5s infinite;
+}
+
+.dot3 {
+  opacity: 0;
+  -webkit-animation: blink2 5s infinite;
+  animation: blink2 5s infinite;
+}
+
+@-webkit-keyframes blink {
+  16.7% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.7% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  16.7% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.7% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink1 {
+  16.7% {
+    opacity: 0;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  66.7% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink1 {
+  16.7% {
+    opacity: 0;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  66.7% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink2 {
+  16.7% {
+    opacity: 0;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.7% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink2 {
+  16.7% {
+    opacity: 0;
+  }
+  33.3% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.7% {
+    opacity: 0;
+  }
+  83.3% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 @media screen and (max-width: 767px) {
   .navbar-inverse .navbar-nav>.active>a::after {

@@ -134,41 +134,41 @@
 	<script type="text/javascript">
 		function genGrid() {
 			// reset the table everytime user input a new number
-			$(".grid-table").html(""); 
+			$(".grid-table").html("");
 		  	var gridSize = $("#grid-num").val();
 		  	var table = $(".grid-table");
 		  	// generate rows
 		  	for (i = 1; i <= gridSize; i++) {
-		  		var row = document.createElement("div"); 
-	        	row.className = "grid-row"; 
+		  		var row = document.createElement("div");
+	        	row.className = "grid-row";
 		        // generate cells
-		        for(var x = 1; x <= gridSize; x++){ 
+		        for(var x = 1; x <= gridSize; x++){
 	        		// if row number is even number, grid colour of odd number grid = white, even number grid = grey
-	        		if (i % 2 == 0){ 
+	        		if (i % 2 == 0){
 	        			if (x % 2 == 0) {
-	        				var cell = document.createElement("div"); 
-				            cell.className = "grid-inverse"; 
-				            row.appendChild(cell); 
+	        				var cell = document.createElement("div");
+				            cell.className = "grid-inverse";
+				            row.appendChild(cell);
 	        			} else {
-	        				var cell = document.createElement("div"); 
-				            cell.className = "grid"; 
-				            row.appendChild(cell); 
+	        				var cell = document.createElement("div");
+				            cell.className = "grid";
+				            row.appendChild(cell);
 	        			}
         			// if row number is odd number, grid colour of odd number = grey, even number = white
 	        		} else {
 	        			if (x % 2 == 0) {
-	        				var cell = document.createElement("div"); 
-				            cell.className = "grid"; 
-				            row.appendChild(cell); 
+	        				var cell = document.createElement("div");
+				            cell.className = "grid";
+				            row.appendChild(cell);
 	        			} else {
-	        				var cell = document.createElement("div"); 
-				            cell.className = "grid-inverse"; 
-				            row.appendChild(cell); 
+	        				var cell = document.createElement("div");
+				            cell.className = "grid-inverse";
+				            row.appendChild(cell);
 	        			}
 	        		}
-	            
+
 	        }
-	        table.append(row); 
+	        table.append(row);
 		  }
 		  table.css("margin-left", -gridSize*20);
 		};
@@ -183,7 +183,7 @@
 				table.removeClass("rotate");
 				table.addClass("center");
 			}
-			
+
 		}
 	</script>
 </body>
