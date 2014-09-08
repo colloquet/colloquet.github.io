@@ -6,21 +6,21 @@
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<style type="text/css">
-
 	body {
-	  background: #49a083;
+		background: #49a083;
 	}
-
 	h1 {
 		color: #fff;
 		font-weight: bold;
 	}
-
 	input, input:focus {
 		color: #49a083;
 	}
 
 	/*----------bootstrap override----------*/
+	.input-group {
+		z-index: 10;
+	}
 	.form-control, .panel-body {
 		color: #49a083;
 	}
@@ -32,18 +32,17 @@
 	}
 	/*----------*----------*/
 
-
 	#rotate-btn, #generate-btn {
 		font-weight: bold;
 		color: #49a083;
 	}
-
 	.grid-table {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		z-index: 1;
 		-webkit-transition: -webkit-transform .5s ease;
-	  transition: transform .5s ease;
+		transition: transform .5s ease;
 	}
 	/*to center the grid table using transform*/
 	.center {
@@ -55,24 +54,22 @@
 		transform: translate(-50%,-50%) rotate(45deg);
 		-webkit-transform: translate(-50%,-50%) rotate(45deg);
 	}
-
 	.grid, .grid-inverse {
-	  position: relative;
-	  display: inline-block;
-	  width: 40px;
-	  height: 40px;
-	  background-color: white;
-	  border-radius: 20px;
-	  -webkit-animation: expand .5s;
-	  animation: expand .5s;
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		background-color: white;
+		border-radius: 20px;
+		-webkit-animation: expand .5s;
+		animation: expand .5s;
 	}
-
 	.grid {
 		background-color: white;
 	}
 
 	.grid-inverse {
-	  background-color: #ccc;
+		background-color: #ccc;
 	}
 	/*animation for the grid to pop out*/
 	@-webkit-keyframes expand {
