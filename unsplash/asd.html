@@ -23,15 +23,15 @@
           alert(localStorage.imageBase64);
         });
  
-        var token = extractToken(document.location.hash);
-        if (token && JSON.parse(localStorage.doUpload)) {
+        var $token = extractToken(document.location.hash);
+        if ($token && JSON.parse(localStorage.doUpload)) {
           localStorage.doUpload = false;
  
           $.ajax({
             url: 'https://api.imgur.com/3/image',
             method: 'POST',
             headers: {
-              Authorization: 'Bearer ' + token,
+              Authorization: 'Bearer ' + $token,
               Accept: 'application/json'
             },
             data: {
@@ -64,6 +64,20 @@
             }, useCORS: true
         });
       };
+      function share() {
+        $.ajax({ 
+          url: 'https://api.imgur.com/3/image',
+          headers: {
+              Authorization: 'Bearer ' + $token,
+              Accept: 'application/json'
+          },
+          type: 'POST',
+          data: {
+              'image': $('#pic').attr('src');
+          },
+          success: function() { console.log('cool'); }
+      });
+      }
     </script>
     <style>
       #mydiv {
@@ -113,6 +127,7 @@
     <div id="download"></div>
     <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot"> -->
     <button id="test" class="post">test</button>
+    <button onclick="share()">share</button>
     <a class="post" href="https://api.imgur.com/oauth2/authorize?response_type=token&client_id=61c01ad2d489738">Post image to imgur</a>
   </body>
 </html>
