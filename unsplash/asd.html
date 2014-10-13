@@ -53,7 +53,7 @@
         $('#image').html("Loading...");
         html2canvas([document.getElementById('mydiv')], {
             onrendered: function (canvas) {
-                // $('#canvas').html(canvas);
+                $('#canvas').html(canvas);
                 var data = canvas.toDataURL('image/png');
                 // AJAX call to send `data` to a PHP file that creates an image from the dataURI string and saves it to a directory on the server
 
