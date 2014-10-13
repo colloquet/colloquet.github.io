@@ -50,6 +50,45 @@
 			    }, useCORS: true
 			});
 		};
+
+		function share(){
+			html2canvas([document.getElementById('mydiv')], {
+			    onrendered: function (canvas) {
+
+			    var img;
+			    try {
+			        img = canvas.toDataURL('image/jpeg', 0.9).split(',')[1];
+			    } catch(e) {
+			        img = canvas.toDataURL().split(',')[1];
+			    }
+			    var w = window.open();
+			    // w.document.write('Uploading to imgur.com...');
+			    $.ajax({
+			        url: 'https://api.imgur.com/3/image',
+			        type: 'POST',
+			        headers: {
+			            Authorization: 'Client-ID 77a599373b0e695'
+			        },
+			        data: {
+			            type: 'base64',
+			            name: 'neon.jpg',
+			            title: 'Nebula',
+			            description: 'Made using http://29a.ch/sandbox/2011/neonflames/',
+			            image: img
+			        },
+			        dataType: 'json'
+			    }).success(function(data) {
+			        var url = 'http://imgur.com/' + data.data.id + '?tags';
+			        _gaq.push(['_trackEvent', 'neonflames', 'share', url]);
+			        w.location.href = url;
+			    }).error(function() {
+			        alert('Could not reach api.imgur.com. Sorry :(');
+			        w.close();
+			        _gaq.push(['_trackEvent', 'neonflames', 'share', 'fail']);
+			    });
+		    }
+		});
+		}
 	</script>
 </head>
 <body>
@@ -68,6 +107,8 @@
 <p>Image:</p>
 <div id="image"></div>
 <div id="download"></div>
+
+<button id="share" onclick="share();">SHARE</button>
 
 </body>
 </html>
