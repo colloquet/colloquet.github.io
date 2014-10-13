@@ -25,7 +25,6 @@
         var token = extractToken(document.location.hash);
         if (token && JSON.parse(localStorage.doUpload)) {
           localStorage.doUpload = false;
-          $post.hide();
           $msg.show();
  
           $.ajax({
@@ -46,25 +45,25 @@
           });
         }
       });
-      function genCan() {
-        var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
-        var bg = "<img src='"+rand+".jpeg'>";
-        $("#mydiv img").replaceWith(bg);
-        $("#mydiv p").text($("#line").val());
-        $('#image').html("Loading...");
-        html2canvas([document.getElementById('mydiv')], {
-            onrendered: function (canvas) {
-                // $('#canvas').html(canvas);
-                var data = canvas.toDataURL('image/png');
-                // AJAX call to send `data` to a PHP file that creates an image from the dataURI string and saves it to a directory on the server
+      // function genCan() {
+      //   var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
+      //   var bg = "<img src='"+rand+".jpeg'>";
+      //   $("#mydiv img").replaceWith(bg);
+      //   $("#mydiv p").text($("#line").val());
+      //   $('#image').html("Loading...");
+      //   html2canvas([document.getElementById('mydiv')], {
+      //       onrendered: function (canvas) {
+      //           // $('#canvas').html(canvas);
+      //           var data = canvas.toDataURL('image/png');
+      //           // AJAX call to send `data` to a PHP file that creates an image from the dataURI string and saves it to a directory on the server
 
-                var image = new Image();
-                image.src = data;
-                $('#image').html("<img src='"+data+"'>");
-                $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
-            }, useCORS: true
-        });
-      };
+      //           var image = new Image();
+      //           image.src = data;
+      //           $('#image').html("<img src='"+data+"'>");
+      //           $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
+      //       }, useCORS: true
+      //   });
+      // };
     </script>
     <style>
       #mydiv {
