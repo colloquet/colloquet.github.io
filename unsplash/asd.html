@@ -15,17 +15,17 @@
  
         var $post = $('.post');
         var $msg = $('.hidden');
-        var $img = $('img');
+        var $img = $('#pic');
  
         $post.click(function() {
           localStorage.doUpload = true;
-          localStorage.imageBase64 = $img.attr('src').replace(/.*,/, '');
+          localStorage.imageBase64 = $('#pic').attr('src');
+          alert(localStorage.imageBase64);
         });
  
         var token = extractToken(document.location.hash);
         if (token && JSON.parse(localStorage.doUpload)) {
           localStorage.doUpload = false;
-          $msg.show();
  
           $.ajax({
             url: 'https://api.imgur.com/3/image',
@@ -112,6 +112,7 @@
     <div id="image"></div>
     <div id="download"></div>
     <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot"> -->
+    <button id="test" class="post">test</button>
     <a class="post" href="https://api.imgur.com/oauth2/authorize?response_type=token&client_id=61c01ad2d489738">Post image to imgur</a>
   </body>
 </html>
