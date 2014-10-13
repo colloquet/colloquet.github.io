@@ -7,7 +7,7 @@
 		    width: 200px;
 		    height: 200px;
 		    position: relative;
-			background-size: cover;
+
 		}
 		img {
 			height: 200px;
@@ -31,37 +31,10 @@
 		}
 	</style>
 	<script type="text/javascript">
-		function GetRandomBackground()
-		{
-		 
-		  var url = 'http://unsplash.com/rss';
-		 
-		  $.ajax({
-		    url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-		    async: false,
-		    jsonpCallback: 'jsonCallback',
-		    contentType: "application/json",
-		    dataType: 'jsonp',
-		    success: function(json) {
-		      
-		      var min = 0;
-		      var max = json.responseData.feed.entries.length;
-		      // and the formula is:
-		      var random = Math.floor(Math.random() * (max - min + 1)) + min;
-		 
-		      var str = json.responseData.feed.entries[random].content;
-		 
-		      var regex = /<img.*?src="(.*?)"/;
-		      var src = regex.exec(str)[1];
-		 
-		      $('#mydiv').css('background-image','url('+src+')');
-		      
-		    }
-		  });
-		 
-		}
 		function genCan() {
-
+			var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
+			var bg = "<img src='"+rand+".jpeg'>";
+			$("#mydiv img").replaceWith(bg);
 			$("#mydiv p").text($("#line").val());
 			html2canvas([document.getElementById('mydiv')], {
 			    onrendered: function (canvas) {
@@ -79,14 +52,13 @@
 </head>
 <body>
 <div id="mydiv">
-    <!-- <img src="https://unsplash.it/200/200?random" /> -->
+    <img src="https://unsplash.it/200/200?random" />
     <p>text!</p>
     <div id="overlay"></div>
 </div>
 <br>
 <br>
 <input type="text" name="line" id="line">
-<button id="genCanvas" onclick="GetRandomBackground();">BG</button>
 <button id="genCanvas" onclick="genCan();">CANVAS</button>
 <p>Canvas:</p>
 <div id="canvas"></div>
