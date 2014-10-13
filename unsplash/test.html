@@ -36,6 +36,7 @@
 			var bg = "<img src='"+rand+".jpeg'>";
 			$("#mydiv img").replaceWith(bg);
 			$("#mydiv p").text($("#line").val());
+			$('#canvas').html("Loading...");
 			html2canvas([document.getElementById('mydiv')], {
 			    onrendered: function (canvas) {
 			        $('#canvas').html(canvas);
@@ -52,7 +53,7 @@
 </head>
 <body>
 <div id="mydiv">
-    <img src="https://unsplash.it/200/200?random" />
+    <img src="https://placehold.it/200x200" />
     <p>text!</p>
     <div id="overlay"></div>
 </div>
