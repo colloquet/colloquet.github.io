@@ -36,7 +36,7 @@
 			var bg = "<img src='"+rand+".jpeg'>";
 			$("#mydiv img").replaceWith(bg);
 			$("#mydiv p").text($("#line").val());
-			$('#canvas').html("Loading...");
+			$('#image').html("Loading...");
 			html2canvas([document.getElementById('mydiv')], {
 			    onrendered: function (canvas) {
 			        // $('#canvas').html(canvas);
