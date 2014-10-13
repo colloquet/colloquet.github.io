@@ -69,7 +69,7 @@
           var match = hash.match(/access_token=(\w+)/);
           return !!match && match[1];
         };
-        var asd = $('#pic').attr('src');
+        var asd = $('#pic').attr('src').replace(/.*,/, '');
         var token = extractToken(document.location.hash);
         alert(asd);
         $.ajax({ 
