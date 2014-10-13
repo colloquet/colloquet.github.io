@@ -46,10 +46,6 @@
         }
       });
       function genCan() {
-        var extractToken = function(hash) {
-          var match = hash.match(/access_token=(\w+)/);
-          return !!match && match[1];
-        };
         var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
         var bg = "<img src='"+rand+".jpeg'>";
         $("#mydiv img").replaceWith(bg);
@@ -69,6 +65,10 @@
         });
       };
       function share() {
+        var extractToken = function(hash) {
+          var match = hash.match(/access_token=(\w+)/);
+          return !!match && match[1];
+        };
         var asd = $('#pic').attr('src');
         var token = extractToken(document.location.hash);
         $.ajax({ 
