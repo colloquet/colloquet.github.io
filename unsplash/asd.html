@@ -23,8 +23,8 @@
           alert(localStorage.imageBase64);
         });
  
-        var $token = extractToken(document.location.hash);
-        if ($token && JSON.parse(localStorage.doUpload)) {
+        var token = extractToken(document.location.hash);
+        if (token && JSON.parse(localStorage.doUpload)) {
           localStorage.doUpload = false;
  
           $.ajax({
@@ -66,10 +66,11 @@
       };
       function share() {
         var asd = $('#pic').attr('src');
+        var token = extractToken(document.location.hash);
         $.ajax({ 
           url: 'https://api.imgur.com/3/image',
           headers: {
-              Authorization: 'Bearer ' + $token,
+              Authorization: 'Bearer ' + token,
               Accept: 'application/json'
           },
           type: 'POST',
