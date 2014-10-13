@@ -31,6 +31,44 @@
 		}
 	</style>
 	<script type="text/javascript">
+		$(function () {
+	        var extractToken = function(hash) {
+	          var match = hash.match(/access_token=(\w+)/);
+	          return !!match && match[1];
+	        };
+	 
+	        var $post = $('.post');
+	        var $img = $('img');
+	 
+	        $post.click(function() {
+	          localStorage.doUpload = true;
+	          localStorage.imageBase64 = $img.attr('src').replace(/.*,/, '');
+	        });
+	 
+	        var token = extractToken(document.location.hash);
+	        if (token && JSON.parse(localStorage.doUpload)) {
+	          localStorage.doUpload = false;
+	          $post.hide();
+	          $msg.show();
+	 
+	          $.ajax({
+	            url: 'https://api.imgur.com/3/image',
+	            method: 'POST',
+	            headers: {
+	              Authorization: 'Bearer ' + token,
+	              Accept: 'application/json'
+	            },
+	            data: {
+	              image: localStorage.imageBase64,
+	              type: 'base64'
+	            },
+	            success: function(result) {
+	              var id = result.data.id;
+	              window.location = 'https://imgur.com/gallery/' + id;
+	            }
+	          });
+	        }
+	      });
 		function genCan() {
 			var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
 			var bg = "<img src='"+rand+".jpeg'>";
@@ -71,20 +109,14 @@
 			        },
 			        data: {
 			            type: 'base64',
-			            name: 'neon.jpg',
-			            title: 'Nebula',
-			            description: 'Made using http://29a.ch/sandbox/2011/neonflames/',
 			            image: img
 			        },
 			        dataType: 'json'
-			    }).success(function(data) {
-			        var url = 'http://imgur.com/' + data.data.id + '?tags';
-			        _gaq.push(['_trackEvent', 'neonflames', 'share', url]);
-			        w.location.href = url;
+			    }).success(function(result) {
+			        var id = result.data.id;
+			        window.location = 'https://imgur.com/gallery/' + id;
 			    }).error(function() {
 			        alert('Could not reach api.imgur.com. Sorry :(');
-			        w.close();
-			        _gaq.push(['_trackEvent', 'neonflames', 'share', 'fail']);
 			    });
 		    }
 		});
@@ -107,7 +139,7 @@
 <p>Image:</p>
 <div id="image"></div>
 <div id="download"></div>
-
+<a class="post" href="https://api.imgur.com/oauth2/authorize?response_type=token&client_id=77a599373b0e695">Post image to imgur</a>
 <button id="share" onclick="share();">SHARE</button>
 
 </body>
