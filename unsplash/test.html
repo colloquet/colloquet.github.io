@@ -9,7 +9,7 @@
 		    position: relative;
 
 		}
-		img {
+		#mydiv img {
 			height: 200px;
 			width: 200px;
 			z-index: -1;
@@ -39,13 +39,14 @@
 			$('#canvas').html("Loading...");
 			html2canvas([document.getElementById('mydiv')], {
 			    onrendered: function (canvas) {
-			        $('#canvas').html(canvas);
+			        // $('#canvas').html(canvas);
 			        var data = canvas.toDataURL('image/png');
 			        // AJAX call to send `data` to a PHP file that creates an image from the dataURI string and saves it to a directory on the server
 
 			        var image = new Image();
 			        image.src = data;
-			        $('#image').html("<a href='"+data+"' download='image.png'>Download</a>");
+			        $('#image').html("<img src='"+data+"'>");
+			        $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
 			    }, useCORS: true
 			});
 		};
@@ -61,11 +62,12 @@
 <br>
 <input type="text" name="line" id="line">
 <button id="genCanvas" onclick="genCan();">CANVAS</button>
-<p>Canvas:</p>
-<div id="canvas"></div>
+<!-- <p>Canvas:</p>
+<div id="canvas"></div> -->
     
 <p>Image:</p>
 <div id="image"></div>
+<div id="download"></div>
 
 </body>
 </html>
