@@ -20,7 +20,6 @@
         $post.click(function() {
           localStorage.doUpload = true;
           localStorage.imageBase64 = $('#pic').attr('src');
-          alert(localStorage.imageBase64);
         });
  
         var token = extractToken(document.location.hash);
@@ -79,7 +78,8 @@
           },
           type: 'POST',
           data: {
-              'image': asd
+              'image': asd,
+              type: 'base64'
           },
           success: function() { console.log('cool'); }
       });
