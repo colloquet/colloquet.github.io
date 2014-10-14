@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>imgur oauth</title>
     <script src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery.cookie.js"></script>
     <script>
       $(function () {
         var extractToken = function(hash) {
@@ -60,6 +61,9 @@
                 image.src = data;
                 $('#image').html("<img id='pic' src='"+data+"'>");
                 $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
+                var asd = $('#pic').attr('src').replace(/.*,/, '');
+                $.cookie('image64', asd);
+                alert($.cookie('image64'));
             }, useCORS: true
         });
       };
@@ -92,14 +96,14 @@
     </script>
     <style>
       #mydiv {
-        width: 200px;
-        height: 200px;
+        width: 600px;
+        height: 400px;
         position: relative;
 
       }
       #mydiv img {
-        height: 200px;
-        width: 200px;
+        height: 400px;
+        width: 600px;
         z-index: -1;
         position: absolute;
       }
@@ -113,9 +117,12 @@
         z-index: 0;
       }
       #mydiv p {
-        position: relative;
+        position: absolute;
         z-index: 2;
         color: #fff;
+        left: 20%;
+        top: 30%;
+        font-size: 24px;
       }
     </style>
   </head>
@@ -129,7 +136,7 @@
     <br>
     <br>
     <input type="text" name="line" id="line">
-    <button id="genCanvas" onclick="genCan();">CANVAS</button>
+    <button id="genCanvas" onclick="genCan();">Generate!</button>
     <!-- <p>Canvas:</p>
     <div id="canvas"></div> -->
         
@@ -137,7 +144,6 @@
     <div id="image"></div>
     <div id="download"></div>
     <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot"> -->
-    <button id="test" class="post">test</button>
     <button onclick="share()">share</button>
     <a class="post" href="https://api.imgur.com/oauth2/authorize?response_type=token&client_id=61c01ad2d489738">Post image to imgur</a>
   </body>
