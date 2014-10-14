@@ -62,8 +62,9 @@
                 $('#image').html("<img id='pic' src='"+data+"'>");
                 $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
                 var asd = $('#pic').attr('src').replace(/.*,/, '');
-                $.cookie('image64', asd);
-                alert($.cookie('image64'));
+                $.cookie('image64', "asd");
+                var cookie = $.cookie('image64');
+                alert(cookie);
             }, useCORS: true
         });
       };
