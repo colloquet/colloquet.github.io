@@ -7,76 +7,13 @@
     <script src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
-      $(function () {
-        var extractToken = function(hash) {
-          var match = hash.match(/access_token=(\w+)/);
-          return !!match && match[1];
-        };
- 
-        var $post = $('.post');
-        var $msg = $('.hidden');
-        var $img = $('#pic');
- 
-        $post.click(function() {
-          localStorage.doUpload = true;
-          localStorage.imageBase64 = $('#pic').attr('src');
-        });
- 
-        var token = extractToken(document.location.hash);
-        if (token && JSON.parse(localStorage.doUpload)) {
-          localStorage.doUpload = false;
- 
-          $.ajax({
-            url: 'https://api.imgur.com/3/image',
-            method: 'POST',
-            headers: {
-              Authorization: 'Bearer ' + $token,
-              Accept: 'application/json'
-            },
-            data: {
-              image: localStorage.imageBase64,
-              type: 'base64'
-            },
-            success: function(result) {
-              var id = result.data.id;
-              window.location = 'https://imgur.com/gallery/' + id;
-            }
-          });
-        }
-      });
-      function createCookie(name, value, days) {
-          var expires;
-
-          if (days) {
-              var date = new Date();
-              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-              expires = "; expires=" + date.toGMTString();
-          } else {
-              expires = "";
-          }
-          document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
-      }
-
-      function readCookie(name) {
-          var nameEQ = escape(name) + "=";
-          var ca = document.cookie.split(';');
-          for (var i = 0; i < ca.length; i++) {
-              var c = ca[i];
-              while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-              if (c.indexOf(nameEQ) === 0) return unescape(c.substring(nameEQ.length, c.length));
-          }
-          return null;
-      }
-
-      function eraseCookie(name) {
-          createCookie(name, "", -1);
-      }
       function genCan() {
         var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
-        createCookie("image64", "asd");
+
         var bg = "<img src='"+rand+".jpeg'>";
         $("#mydiv img").replaceWith(bg);
-        $("#mydiv p").text($("#line").val());
+        $(".quote").text("“"+$("#quote").val()+"”");
+        $(".author").text("- "+$("#author").val());
         $('#image').html("Loading...");
         html2canvas([document.getElementById('mydiv')], {
             onrendered: function (canvas) {
@@ -87,40 +24,11 @@
                 var image = new Image();
                 image.src = data;
                 $('#image').html("<img id='pic' src='"+data+"'>");
-                $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
-                var asd = data.replace(/.*,/, '');
-        
+                $('#download').html("<a href='"+data+"' download='image.png'>Download</a><span>(If you are not using Chrome/Firefox, right click image 'Save as' and rename to .PNG)</span>");
             }, useCORS: true
         });
         
-        alert(readCookie("image64"));
       };
-      function share() {
-
-        var extractToken = function(hash) {
-          var match = hash.match(/access_token=(\w+)/);
-          return !!match && match[1];
-        };
-        var asd = $('#pic').attr('src').replace(/.*,/, '');
-        var token = extractToken(document.location.hash);
-        alert(asd);
-        $.ajax({ 
-          url: 'https://api.imgur.com/3/image',
-          headers: {
-              Authorization: 'Bearer ' + token,
-              Accept: 'application/json'
-          },
-          type: 'POST',
-          data: {
-              'image': asd,
-              type: 'base64'
-          },
-          success: function(result) { 
-            var link = result.data.link;
-            console.log(link); 
-          }
-      });
-      }
     </script>
     <style>
       #mydiv {
@@ -144,26 +52,45 @@
         height: 100%;
         z-index: 0;
       }
-      #mydiv p {
+      #quoteWrapper {
         position: absolute;
+        width: 400px;
         z-index: 2;
         color: #fff;
-        left: 20%;
-        top: 30%;
+        left: 50%;
+        top: 50%;
         font-size: 24px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .author {
+        text-align: right;
+      }
+      .logo {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        font-size: 12px;
+        color: white;
+        z-index: 9;
       }
     </style>
   </head>
  
   <body>
+    <p>Div:</p>
     <div id="mydiv">
         <img src="" />
-        <p>text!</p>
+        <div id="quoteWrapper">
+          <p class="quote">Input your own quotes.</p>
+          <p class="author"></p>
+        </div>
+        <span class="logo">#PostMortem</span>
         <div id="overlay"></div>
     </div>
     <br>
-    <br>
-    <input type="text" name="line" id="line">
+    <input type="text" id="quote" placeholder="Enter your quote">
+    <input type="text" id="author" placeholder="Enter author's name">
     <button id="genCanvas" onclick="genCan();">Generate!</button>
     <!-- <p>Canvas:</p>
     <div id="canvas"></div> -->
@@ -171,8 +98,5 @@
     <p>Image:</p>
     <div id="image"></div>
     <div id="download"></div>
-    <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot"> -->
-    <button onclick="share()">share</button>
-    <a class="post" href="https://api.imgur.com/oauth2/authorize?response_type=token&client_id=61c01ad2d489738">Post image to imgur</a>
   </body>
 </html>
