@@ -83,7 +83,10 @@
               'image': asd,
               type: 'base64'
           },
-          success: function() { console.log('cool'); }
+          success: function() { 
+            var link = result.data.link;
+            console.log(link); 
+          }
       });
       }
     </script>
