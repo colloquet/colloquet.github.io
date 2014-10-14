@@ -11,71 +11,33 @@
 		<meta name="msvalidate.01" content="00109AC3B0C479B5E31744AE0C80AAA7" />
 		<link rel="canonical" href="http://colloque.me/" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 		<style type="text/css">
-	    .not-found {
-	    	text-align: center;
-	    }
-	    .easter-egg {
-	    	display: none;
-	    }
-		</style>
+	      body {
+	        background: #222;
+	      }
+	      #center {
+	        font-family: 'Dosis', sans-serif;
+	        position: absolute;
+	        left: 50%;
+	        top: 40%;
+	        -webkit-transform: translate(-50%, -50%);
+	        -moz-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	        text-align: center;
+	      }
+	      h1, p {
+	        color: #fff;
+	      }
+	      img {
+	        height: 150px;
+	        width: 150px;
+	        border-radius: 75px;
+	      }
+	    </style>
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="/">Colloque Tsui</a>
-            </div>
-          </div>
-        </nav>
-		<div class="not-found">
-			<div class="container">
-				<div class="to-hide">
-					<br/>
-					<h1>Error 404<br/>Page Not Found</h1>
-					<p>You can go back to <a href="/">Home</a> or visit my <a href="/blog/">Blog</a>.</p>
-					<p>There are nothing to see here...or are there?<br/>(hint: enter the cheat code!)</p>
-				</div>
-				<div class="easter-egg">
-				</div>
-			</div>
-		</div>
-		<!-- footer	 -->
-		<div class="footer">
-			<div class="container">
-				<a href="https://www.linkedin.com/pub/colloque-tsui/39/855/832" target="top" title="Linkedin"><i class="fa fa-linkedin-square fa-fw fa-lg"></i></a>
-				<a href="https://www.facebook.com/colloque" target="top" title="Facebook"><i class="fa fa-facebook-square fa-fw fa-lg"></i></a>
-				<a href="http://codepen.io/colloque/" target="top" title="CodePen"><i class="fa fa-codepen fa-fw fa-lg"></i></a>
-				<a href="https://twitter.com/colloquet" target="top" title="Twitter"><i class="fa fa-twitter-square fa-fw fa-lg"></i></a>
-				<a href="http://instagram.com/colloque" target="top" title="Instagram"><i class="fa fa-instagram fa-fw fa-lg"></i></a>
-			</div>
-		</div>
-		<!-- js at the end to make page content load faster -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="/js/konami.js"></script>
-		<script src="/js/fastclick.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				window.addEventListener('load', function() {
-			          FastClick.attach(document.body);
-			      }, false);
-				var easter_egg = new Konami(function() {
-					alert('Congratulations! You have entered the konami code to unlock Rick Roll!');
-					$(".easter-egg").html( '<h1>Enjoy!</h1><div class="video-container"><iframe width="400" height="315" src="//www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe></div>' );
-					$(".easter-egg").css("display","block");
-					$(".to-hide").css("display","none");
-				});
-			});
-		</script>
-		<script>
-		  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-	      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-	      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-	      e.src='//www.google-analytics.com/analytics.js';
-	      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-	      ga('create','UA-51297067-1');ga('send','pageview');
-		</script>
+		<div id="center">
+    		<h1>Page not found.</h1>
+    	</div>
 	</body>
 </html>
