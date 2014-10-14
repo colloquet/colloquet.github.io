@@ -6,7 +6,6 @@
     <title>imgur oauth</title>
     <script src="http://html2canvas.hertzen.com/build/html2canvas.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="jquery.cookie.js"></script>
     <script>
       $(function () {
         var extractToken = function(hash) {
@@ -45,8 +44,36 @@
           });
         }
       });
+      function createCookie(name, value, days) {
+          var expires;
+
+          if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toGMTString();
+          } else {
+              expires = "";
+          }
+          document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+      }
+
+      function readCookie(name) {
+          var nameEQ = escape(name) + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) === 0) return unescape(c.substring(nameEQ.length, c.length));
+          }
+          return null;
+      }
+
+      function eraseCookie(name) {
+          createCookie(name, "", -1);
+      }
       function genCan() {
         var rand = Math.floor(Math.random() * (6 - 0 + 1)) + 0;
+        createCookie("image64", "asd");
         var bg = "<img src='"+rand+".jpeg'>";
         $("#mydiv img").replaceWith(bg);
         $("#mydiv p").text($("#line").val());
@@ -61,12 +88,12 @@
                 image.src = data;
                 $('#image').html("<img id='pic' src='"+data+"'>");
                 $('#download').html("<a href='"+data+"' download='image.png'>Download</a>");
-                var asd = $('#pic').attr('src').replace(/.*,/, '');
-                $.cookie('image64', "asd");
-                var cookie = $.cookie('image64');
-                alert(cookie);
+                var asd = data.replace(/.*,/, '');
+        
             }, useCORS: true
         });
+        
+        alert(readCookie("image64"));
       };
       function share() {
 
