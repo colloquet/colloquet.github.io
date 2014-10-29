@@ -43,11 +43,11 @@
 						.add([
 							TweenMax.to(".slide4", 1, {transform: "translateX(0)"}),
 							TweenMax.from(".slide4 h1", 2, {opacity: 0, transformOrigin: 'center top', webkittransformOrigin: 'center top', rotationX:-90, delay: 1, ease:Elastic.easeOut})
-							])
-						.add(TweenLite.to(window, 1, {scrollTo:{y:h}, ease:Power2.easeOut}))
-						.add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
+							]);
+						// .add(TweenLite.to(window, 1, {scrollTo:{y:h}, ease:Power2.easeOut}))
+						// .add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
 
-			new ScrollScene({triggerElement: "section#pin", duration: 0}) // define 'scene' and add to controller. MUST! 
+			new ScrollScene({triggerElement: "section#pin", duration: 6000}) // define 'scene' and add to controller. MUST! 
 							.setTween(tweens) // point to defined Tweens
 			                .setPin("#pin") // pins the element for a scroll distance of 100px
 			                .addTo(controller); // add scene to controller
