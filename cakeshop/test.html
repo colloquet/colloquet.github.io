@@ -27,26 +27,42 @@
         padding-bottom: 20px;
       }
       .about-div {
-        background-color: rgba(247, 238, 219, 0.47);
+        background-color: #fff;
         padding-top: 30px;
         padding-bottom: 30px;
+        border-bottom: 1px solid #ddd;
       }
       .title-div {
-        position: absolute;
-        z-index: 100;
-        width: 600px;
-        left: 50%;
-        top: 22%;
-        margin-left: -300px;
+        position: relative;
+        background: url(img/bg1.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
         text-align: center;
         color: white;
       }
-      #title {
+      .title-wrapper {
+      	position: absolute;
+      	left: 50%;
+      	top: 30%;
+      	-webkit-transform: translate(-50%, -50%);
+      	-moz-transform: translate(-50%, -50%);
+      	transform: translate(-50%, -50%);
         text-shadow: 0 1px 1px rgba(0,0,0,.4);
-        font-size: 72px;
+        font-size: 24px;
       }
-      .flicker {
-        height: 500px;
+      #title {
+      	font-size: 72px;
+      }
+      .intro {
+      	padding: 50px 0;
+      	text-align: center;
+      	line-height: 1.5;
+      }
+      .intro h1 {
+      	margin-bottom: 20px;
+      	display: inline-block;
+		border-bottom: 2px solid #555;
       }
       @media (max-width: 500px) {
         .flicker {
@@ -86,22 +102,18 @@
         </div>
       </div>
     </nav>
-    <div class="flicker" data-auto-flick-delay="10" data-block-text="false">
-      <div class="title-div">
-        <h1 id="title">The Cake Shop</h1>
-      </div>
-      <ul>
-        <li data-background="img/bg1.jpg">
-            <div class="flick-title">Hong Kong</div>
-        </li>
-        <!-- <li data-background="img/bg10.jpg">
-            <div class="flick-title">Bakery</div>
-        </li> -->
-        <li data-background="img/bg11.jpg">
-            <div class="flick-title">Cake design</div>
-        </li>
-      </ul>
-    </div>
+	<div class="title-div">
+		<div class="title-wrapper">
+		    <h1 id="title">The Cake Shop</h1>
+		    <p>Hong Kong</p>
+		</div>
+	</div>
+	<div class="intro row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1 align="center">Your baking specialist for every occasion</h1>
+			<p>Built upon a passion devoted to cake making and decorating. ZoiE is our platform to demonstrate and share this devotion with people alike as well as people who want to explore the joy this aspect of culinary art may bring. ZoiE offers a range of quality services including cake decorating classes for kids and adults, private parties (birthday, holiday, play dates, baby shower & etc.) custom designed cake, and team building event. We will also try our best to provide services that you may want that are not listed. We have more than a decade of cake making and decorating experience for various occations and valuable lessons from chefs in Hong Kong, Japan and U.S.A. etc. Our mission is to make ZoiE your baking specialist for every occasion.</p>
+		</div>
+	</div>
     <div class="about-div">
       <div class="container">
         <div class="row">
