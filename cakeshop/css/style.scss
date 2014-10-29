@@ -1,6 +1,6 @@
 $navbar-color: #452632;
 $navitem-color: rgba(255,255,255,0.7);
-$about-div-color: rgba(247, 228, 190, 0.3);
+$about-div-color: rgba(179,129,132, 0.2);
 $footer-color: rgba(247,228,190, 0.3);
 $btn-color: #B38184;
 $btn-border: #B38184;
@@ -81,8 +81,8 @@ a {
   border-color: $btn-hover-border;
 }
 
-.intro {
-  background-color: $about-div-color;
+.about-div {
+  background-color: $about-div-color !important;
 }
 
 .panel-heading {
