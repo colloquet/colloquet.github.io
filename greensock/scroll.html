@@ -8,6 +8,14 @@
 	<script type="text/javascript" src="jquery.scrollmagic.min.js"></script>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css">
 	<script type="text/javascript">
+	// Tween syntax: TweenMax.to([target element], [duration], {[css properties]});
+	// Example: TweenMax.to('#box', 2, {backgroundColor: 'red'}); This will transform the element '#box' background color TO red in 2 seconds.
+	// You can replace TweenMax.to -> TweenMax.from / TweenMax.fromto
+	// Example: TweenMax.from('#box', 2, {backgroundColor: 'red'}); This will transform the element '#box' background color FROM red to the bg color in CSS.
+	// Read more on http://greensock.com/get-started-js
+
+	// Scroll workflow: initiate controller, define Tweens, create Scene
+	// More example and doc: http://janpaepke.github.io/ScrollMagic/
 		$(document).ready(function($) {
 			// init controller for ScrollMagic, MUST!
 			var controller = new ScrollMagic({
