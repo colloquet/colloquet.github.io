@@ -38,7 +38,7 @@
 							  }))
 						.add([
 							TweenMax.to(".slide4", 1, {transform: "translateX(0)"}),
-							TweenMax.from(".slide4 h1", 2, {opacity: 0, transformOrigin: 'center top', rotationX:-90, delay: 1, ease:Elastic.easeOut})
+							TweenMax.from(".slide4 h1", 2, {opacity: 0, transformOrigin: 'center top', webkittransformOrigin: 'center top', rotationX:-90, delay: 1, ease:Elastic.easeOut})
 							])
 						.add(TweenLite.to(window, 1, {scrollTo:{y:h}, ease:Power2.easeOut}))
 						.add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
@@ -58,6 +58,12 @@
 			var scene = new ScrollScene({triggerElement: "body"})
 							.setTween(tween)
 							.addTo(controller);
+
+			$('.project').hover(function() {
+				TweenMax.to($(this), .5, {scale: 1.2, ease:Elastic.easeOut});
+			}, function() {
+				TweenMax.to($(this), .2, {scale: 1});
+			});
 		});
 	</script>
 
@@ -67,9 +73,15 @@
 		margin: 0;
 		background-color: #222;
 	}
+	#logo {
+		height: 200px;
+		width: 200px;
+	}
 	.slide h1 {
 		position: relative;
 		font-size: 80px;
+		-webkit-transform: translateY(-100%);
+		-moz-transform: translateY(-100%);
 		transform: translateY(-100%);
 		top: 50%;
 		text-align: center;
@@ -91,7 +103,7 @@
 		
 	}
 	.content {
-		padding: 100px 0;
+		padding: 100px 0 200px 0;
 		position: relative;
 		float: left;
 		min-height: 100vh;
@@ -117,16 +129,24 @@
 	.slide2 {
 		/*background-image: url(2.jpg);*/
 		background-color: #f9f9f9;
+		-webkit-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
 		transform: translateX(-100%);
 	}
 	.slide3 {
 		background-color: #eeeeee;
+		-webkit-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
 		transform: translateX(-100%);
 	}
 	.slide4 {
 		/*background-image: url(3.jpg);*/
 		background-color: #e6e6e6;
+		-webkit-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
 		transform: translateX(-100%);
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
 		perspective: 800px;
 	}
 	.slide4 h1 {
@@ -137,6 +157,13 @@
 		color: black;
 		padding: 20px;
 		border: 4px solid;
+		transition: all .3s ease;
+	}
+	.quote:hover {
+		text-decoration: none;
+		color: white;
+		background: black;
+		border-color: black;
 	}
 	.projects {
 		max-width: 1200px;
@@ -154,12 +181,24 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 		text-align: center;
+	}
+	.footer {
+		position: absolute;
+		background-color: #222;
+		width: 100%;
+		text-align: center;
+		padding: 20px 0;
+		color: gray;
+		bottom: 0;
 	}
 	</style>
 </head>
 <body>
+	
 	<section id="pin" class="scroll-magic-section">
 		<div class="slide slide0">
 			<div class="wrapper">
@@ -170,7 +209,7 @@
 			</div>
 		</div>
 		<div class="slide slide1">
-			<h1>Grayscale Hong Kong</h1>
+			<h1><img src="http://grayscale.com.hk/assets/images/logo-122px.png" alt="" id="logo"><br>Grayscale Hong Kong</h1>
 		</div>
 		<div class="slide slide2">
 			<h1>Get another viewpoint on Hong Kong web design</h1>
@@ -183,7 +222,7 @@
 		</div>
 	</section>
 	<section class="content">
-		<h2 align="center">Project list</h2>
+		<h1 align="center">Project list</h1>
 		<div class="pure-g projects">
 			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
 				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
@@ -212,9 +251,11 @@
 			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
 				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
 			</div>
-
 		</div>
 		<h2 align="center"><a href="#" class="quote">Get a free quote</a></h2>
+		<div class="footer">
+			<p>Grayscale Web Design 2014</p>
+		</div>
 	</section>
 </body>
 </html>
