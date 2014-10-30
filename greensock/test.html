@@ -17,6 +17,8 @@
 	// Scroll workflow: initiate controller, define Tweens, create Scene
 	// More example and doc: http://janpaepke.github.io/ScrollMagic/
 		$(document).ready(function($) {
+			var h = window.innerHeight;
+			var counter = { var: 0 }; // define counter here for later use
 			// init controller for ScrollMagic, MUST!
 			var controller = new ScrollMagic({
 			    globalSceneOptions: {
@@ -29,34 +31,25 @@
 			// create a new timeline, can add Tweens using .add(), each .add will perform after each other
 			var tweens = new TimelineMax()
 						.add([
-							TweenMax.from(".slide1 h1", 1, {opacity: 0}),
-							TweenMax.to(".slide1", 1, {transform: "translateY(0)"})
-							]) 
-						.add(TweenMax.to(".slide1 img", 2, {rotation: 720, scale: 1, ease:Elastic.easeOut}))
-						.add([
-							TweenMax.to(".slide2", 1, {transform: "translateX(0)"}),
-							TweenMax.to(".slide2 h1", 2, {opacity: 1, scale: 1, delay: 1})
-							])
-						.add([
-							TweenMax.to(".slide2", 1, {left: '100%'}),
-							TweenMax.to(".slide3", 1, {transform: "translateX(0)"})
-							])
-						.add(TweenMax.to(counter, 4, { //count from counter=0 to 100 in 4 seconds
+							TweenMax.to(".slide0", 1, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide1", 2, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide2", 3, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide3", 4, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide4", 5, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(counter, 7, { //count from counter=0 to 100 in 4 seconds
 							      var: 100, 
 							      onUpdate: function () {
 							          $('#projectNum').html(Math.ceil(counter.var)); // while its counting, update the html element
 							      },
 							      ease:Strong.easeOut // update number with EASE!!! COOL!
-							  }))
-						.add([
-							TweenMax.to(".slide4", 1, {transform: "translateX(0)"}),
-							TweenMax.from(".slide4 h1", 2, {opacity: 0, transformOrigin: 'center top', webkittransformOrigin: 'center top', rotationX:-90, delay: 1, ease:Elastic.easeOut})
+							  }),
+							TweenMax.to(".slide5", 6, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide6", 7, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide7", 8, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide8", 9, {transform: 'translateZ(0)', opacity: 1.5, ease:Expo.easeIn})
 							])
 						.add([
-							TweenLite.to(window, 1, {scrollTo:{y:h}, ease:Power2.easeOut}),
-							TweenMax.to(".slide4", 1, {scale: 0, backgroundColor: "#000", ease:Circ.easeOut}),
-							TweenMax.to(".slide3", 1, {scale: 0, backgroundColor: "#000", ease:Circ.easeOut}),
-							TweenMax.to(".slide2", 1, {scale: 0, backgroundColor: "#000", ease:Circ.easeOut})
+							TweenLite.to(window, 2, {scrollTo:{y:h}, ease:Power2.easeOut, delay: 1}),
 							])
 						.add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
 
@@ -64,25 +57,6 @@
 							.setTween(tweens) // point to defined Tweens
 			                .setPin("#pin") // pins the element for a scroll distance of 100px
 			                .addTo(controller); // add scene to controller
-
-
-			var tween = new TimelineMax()
-						.add([
-							TweenMax.to(".slide0", 1, {backgroundColor: "#e6e6e6"}),
-							TweenMax.staggerTo(".slide0 p", 1.5, {opacity: 1,
-                       									repeat:-1, yoyo:true}, 0.2)
-							]);
-
-			// build scene
-			var scene = new ScrollScene({triggerElement: "body"})
-							.setTween(tween)
-							.addTo(controller);
-
-			$('.project').hover(function() { //hover effect using Tween
-				TweenMax.to($(this), .5, {scale: 1.2, ease:Elastic.easeOut});
-			}, function() {
-				TweenMax.to($(this), .2, {scale: 1});
-			});
 		});
 	</script>
 
@@ -90,23 +64,17 @@
 	body,html {
 		height: 100%;
 		margin: 0;
-		background-color: #222;
+		background-color: #aaa;
+		background-image: url(cover-home.jpg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-attachment: fixed;
+		background-size: cover;
+		background-blend-mode: multiply;
 	}
 	#logo {
 		height: 150px;
 		width: 150px;
-		-webkit-transform: scale(0);
-		-moz-transform: scale(0);
-		transform: scale(0);
-	}
-	.slide h1 {
-		position: relative;
-		font-size: 80px;
-		-webkit-transform: translateY(-100%);
-		-moz-transform: translateY(-100%);
-		transform: translateY(-100%);
-		top: 50%;
-		text-align: center;
 	}
 	#pin {
 		overflow: hidden;
@@ -120,55 +88,84 @@
 		top: 0;
 		height: 100%;
 		width: 100%;
-		overflow: hidden;
+		overflow: visible;
 		background-size: cover;
-	}
-	.content {
-		padding: 100px 0 200px 0;
-		position: relative;
-		float: left;
-		min-height: 100vh;
-		width: 100%;
-		overflow: hidden;
-		background-color: #fff;	
-	}
-	.slide0 p{
-		position: relative;
+		color: white;
 		opacity: 0;
+	}
+	.slide h1 {
+		font-size: 80px;
+		
+	}
+	.slide0 h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
 	}
 	.slide1 {
-		color: white;
-		background-color: #222;
-		-webkit-transform: translateY(-100%);
-		-moz-transform: translateY(-100%);
-		transform: translateY(-100%);
+		transform: translateZ(-1px);
 	}
-	.slide2 h1 {
-		opacity: 0;
+	.slide1 h1 {
+		position: absolute;
+		top: 10%;
+		left: 50%;
 	}
 	.slide2 {
-		background-color: #f9f9f9;
-		-webkit-transform: translateX(-100%);
-		-moz-transform: translateX(-100%);
-		transform: translateX(-100%);
+		transform: translateZ(-2px);
+	}
+	.slide2 h1 {
+		position: absolute;
+		top: 50%;
+		left: 10%;
 	}
 	.slide3 {
-		background-color: #eeeeee;
-		-webkit-transform: translateX(-100%);
-		-moz-transform: translateX(-100%);
-		transform: translateX(-100%);
+		transform: translateZ(-3px);
+	}
+	.slide3 h1 {
+		position: absolute;
+		top: 20%;
+		left: 30%;
 	}
 	.slide4 {
-		background-color: #e6e6e6;
-		-webkit-transform: translateX(-100%);
-		-moz-transform: translateX(-100%);
-		transform: translateX(-100%);
-		-webkit-perspective: 800px;
-		-moz-perspective: 800px;
-		perspective: 800px;
+		transform: translateZ(-4px);
 	}
 	.slide4 h1 {
-		opacity: 1;
+		position: absolute;
+		top: 40%;
+		left: 40%;
+	}
+	.slide5 {
+		transform: translateZ(-5px);
+	}
+	.slide5 h1 {
+		position: absolute;
+		top: 70%;
+		left: 20%;
+	}
+	.slide6 {
+		transform: translateZ(-6px);
+	}
+	.slide6 h1 {
+		position: absolute;
+		top: 30%;
+		left: 70%;
+	}
+	.slide7 {
+		transform: translateZ(-7px);
+	}
+	.slide7 h1 {
+		position: absolute;
+		top: 90%;
+		left: 10%;
+	}
+	.slide8 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translateZ(-8px);
+	}
+	.slide8 h1 {
+		text-align: center;
 	}
 	.quote {
 		text-decoration: none;
@@ -183,6 +180,15 @@
 		background: black;
 		border-color: black;
 	}
+	.content {
+		padding: 100px 0 200px 0;
+		position: relative;
+		float: left;
+		min-height: 100vh;
+		width: 100%;
+		overflow: hidden;
+		background-color: #fff;	
+	}
 	.projects {
 		max-width: 1200px;
 		margin: 0 auto;
@@ -195,15 +201,6 @@
 		width: 100%;
 		height: auto;
 	}
-	.wrapper {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		text-align: center;
-	}
 	.footer {
 		position: absolute;
 		background-color: #222;
@@ -213,39 +210,37 @@
 		color: gray;
 		bottom: 0;
 	}
-	@media screen and (max-width: 549px) {
-		.slide h1 {
-			font-size: 20px;
-		}
-		#logo {
-			height: 50px;
-			width: 50px;
-		}
-	}
 	</style>
 </head>
 <body>
 	
 	<section id="pin" class="scroll-magic-section">
 		<div class="slide slide0">
-			<div class="wrapper">
-				<h1>Grayscale</h1>
-				<p>&#8595;</p>
-				<p>&#8595;</p>
-				<p>&#8595;</p>
-			</div>
+			<h1>Web design</h1>
 		</div>
 		<div class="slide slide1">
-			<h1><img src="http://grayscale.com.hk/assets/images/logo-122px.png" alt="" id="logo"><br>Grayscale Hong Kong</h1>
+			<h1>Logo design</h1>
 		</div>
 		<div class="slide slide2">
-			<h1>Get another viewpoint on Hong Kong web design</h1>
+			<h1>Over 80 projects</h1>
 		</div>
 		<div class="slide slide3">
-			<h1>We have done <span id="projectNum">0</span> projects to date</h1>
+			<h1>Hong Kong No. 1</h1>
 		</div>
 		<div class="slide slide4">
-			<h1><a href="#" class="quote">Get a free quote</a></h1>
+			<h1>We have done <span id="projectNum">0</span> projects to date</h1>
+		</div>
+		<div class="slide slide5">
+			<h1>YOLO</h1>
+		</div>
+		<div class="slide slide6">
+			<h1>WOW</h1>
+		</div>
+		<div class="slide slide7">
+			<h1>VERY GOOD</h1>
+		</div>
+		<div class="slide slide8">
+			<h1><img src="http://grayscale.com.hk/assets/images/logo-122px.png" alt="" id="logo"><br>Grayscale HK</h1>
 		</div>
 	</section>
 	<section class="content">
