@@ -31,11 +31,11 @@
 			// create a new timeline, can add Tweens using .add(), each .add will perform after each other
 			var tweens = new TimelineMax()
 						.add([
-							TweenMax.to(".slide0", 1, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide1", 2, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide2", 3, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide3", 4, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide4", 5, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
+							TweenMax.to(".slide0", 1, {transform: 'translateZ(1px)'}),
+							TweenMax.to(".slide1", 2, {transform: 'translateZ(1px)'}),
+							TweenMax.to(".slide2", 3, {transform: 'translateZ(1px)'}),
+							TweenMax.to(".slide3", 4, {transform: 'translateZ(1px)'}),
+							TweenMax.to(".slide4", 5, {transform: 'translateZ(1px)'}),
 							TweenMax.to(counter, 7, { //count from counter=0 to 100 in 4 seconds
 							      var: 100, 
 							      onUpdate: function () {
@@ -43,15 +43,10 @@
 							      },
 							      ease:Strong.easeOut // update number with EASE!!! COOL!
 							  }),
-							TweenMax.to(".slide5", 6, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide6", 7, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide7", 8, {transform: 'translateZ(1px)', opacity: 1.5, ease:Circ.easeIn}),
-							TweenMax.to(".slide8", 9, {transform: 'translateZ(0)', opacity: 1.5, ease:Expo.easeIn})
-							])
-						.add([
-							TweenLite.to(window, 1, {scrollTo:{y:h}, ease:Power2.easeOut, delay: 1}),
-							])
-						.add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
+							TweenMax.to(".slide5", 6, {transform: 'translateZ(1px)'}),
+							TweenMax.to(".slide6", 8, {transform: 'translateZ(1px)'})
+							]);
+						// .add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
 
 			new ScrollScene({triggerElement: "section#pin", duration: 0}) // define 'scene' and add to controller. MUST! 
 							.setTween(tweens) // point to defined Tweens
@@ -64,13 +59,14 @@
 	body,html {
 		height: 100%;
 		margin: 0;
-		background-color: #aaa;
-		background-image: url(cover-home.jpg);
+		background-color: #C8D3DB;
+		background-attachment: fixed;
+		/*background-image: url(cover-home.jpg);
 		background-repeat: no-repeat;
 		background-position: center bottom;
 		background-attachment: fixed;
 		background-size: cover;
-		background-blend-mode: multiply;
+		background-blend-mode: multiply;*/
 	}
 	#logo {
 		height: 150px;
@@ -92,7 +88,10 @@
 		overflow: visible;
 		background-size: cover;
 		color: white;
-		opacity: 0;
+		background-repeat: no-repeat;
+		/*background-position: center;*/
+		background-attachment: fixed;
+		background-size: cover;
 	}
 	.slide h1 {
 		font-size: 80px;
@@ -104,8 +103,10 @@
 		left: 50%;
 	}
 	.slide1 {
-		-webkit-transform: translateZ(-1px);
-		transform: translateZ(-1px);
+		background-image: url(s1-front.png);
+		-webkit-transform: translateZ(-1px) scale(2);
+		transform: translateZ(-1px) scale(2);
+		z-index: 9;
 	}
 	.slide1 h1 {
 		position: absolute;
@@ -113,8 +114,10 @@
 		left: 50%;
 	}
 	.slide2 {
-		-webkit-transform: translateZ(-2px);
-		transform: translateZ(-2px);
+		background-image: url(s1-mid.png);
+		-webkit-transform: translateZ(-2px) scale(3);
+		transform: translateZ(-2px) scale(3);
+		z-index: 8;
 	}
 	.slide2 h1 {
 		position: absolute;
@@ -122,8 +125,10 @@
 		left: 10%;
 	}
 	.slide3 {
-		-webkit-transform: translateZ(-3px);
-		transform: translateZ(-3px);
+		background-image: url(s1-back.png);
+		-webkit-transform: translateZ(-3px) scale(4);
+		transform: translateZ(-3px) scale(4);
+		z-index: 7;
 	}
 	.slide3 h1 {
 		position: absolute;
@@ -131,8 +136,10 @@
 		left: 30%;
 	}
 	.slide4 {
-		-webkit-transform: translateZ(-4px);
-		transform: translateZ(-4px);
+		background-image: url(s2-front.png);
+		-webkit-transform: translateZ(-4px) scale(5);
+		transform: translateZ(-4px) scale(5);
+		z-index: 6;
 	}
 	.slide4 h1 {
 		position: absolute;
@@ -140,8 +147,10 @@
 		left: 40%;
 	}
 	.slide5 {
-		-webkit-transform: translateZ(-5px);
-		transform: translateZ(-5px);
+		background-image: url(s2-mid.png);
+		-webkit-transform: translateZ(-5px) scale(6);
+		transform: translateZ(-5px) scale(6);
+		z-index: 5;
 	}
 	.slide5 h1 {
 		position: absolute;
@@ -149,8 +158,10 @@
 		left: 20%;
 	}
 	.slide6 {
-		-webkit-transform: translateZ(-6px);
-		transform: translateZ(-6px);
+		background-image: url(s3-back.png);
+		-webkit-transform: translateZ(-6px) scale(7);
+		transform: translateZ(-6px) scale(7);
+		z-index: 4;
 	}
 	.slide6 h1 {
 		position: absolute;
