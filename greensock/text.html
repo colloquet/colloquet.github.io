@@ -44,10 +44,10 @@
 				"8.jpg",
 				"cover-home.jpg"
 			];
-
+			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 			// TweenMax can tween any property of any object. We use this object to cycle through the array
 			var obj = {curImg: 0};
-
+			TweenMax.set("#pin", {scale:1.5, transformOrigin: '50% 50%'});
 			// create tween
 			var tween = new TimelineMax()
 			.add([
@@ -59,12 +59,16 @@
 						immediateRender: true,			// load first image automatically
 						ease: Sine.easeIn,			// show every image the same ammount of time
 						onUpdate: function () {
-						  $("h1").css("background-image", "url("+images[obj.curImg]+")"); // set the image source
+						  $("#pin h1").css("background-image", "url("+images[obj.curImg]+")"); // set the image source
 						}
 					}
 				),
-				TweenMax.to("h1", 6, {opacity: 1, Sine: Circ.easeIn})
-			]);
+				TweenMax.to("#pin h1", 6, {opacity: 1, Sine: Circ.easeIn})
+			])
+			.add(TweenMax.to("#pin", 3, {scale: .8}), '-=3')
+			.add([
+				TweenLite.to(window, 2, {scrollTo:{y:h+200}, ease:Power2.easeOut})
+				]);
 
 			// init controller
 			var controller = new ScrollMagic({
@@ -98,22 +102,113 @@
 	    width: 100%;
 	    height: 100%;
 	}
-	h1 {  
+	#pin h1 {  
 	    font-size: 5em;  
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 	    background-image: url(cover-home.jpg);  
+	    text-align: center;
 	    /*background-size: cover;*/
 	  
 	    -webkit-background-clip: text;  
 	    background-clip: text;  
 	  	opacity: 0;
 	    color: rgba(0,0,0,0);  
-	}  
+	} 
+	#pin img {
+		max-width: 100%;
+		height: auto;
+	}
+	.quote {
+		text-decoration: none;
+		color: black;
+		padding: 20px;
+		border: 4px solid;
+		-webkit-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	.quote:hover {
+		text-decoration: none;
+		color: white;
+		background: black;
+		border-color: black;
+	}
+	.content {
+		margin-top: 200px;
+		padding-bottom: 200px;
+		position: relative;
+		float: left;
+		min-height: 100vh;
+		width: 100%;
+		overflow: visible;
+		background-color: #f5f5f5;	
+	}
+	.projects {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.projectWrapper {
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	.project img {
+		width: 100%;
+		height: auto;
+	}
+	.footer {
+		position: absolute;
+		background-color: #222;
+		width: 100%;
+		text-align: center;
+		padding: 20px 0;
+		color: gray;
+		bottom: 0;
+	} 
 	</style>
 </head>
 <body>	
 	<section id="pin" class="scroll-magic-section">
-		<!-- <img id="myimg"> -->
+		<img src="mbp_white.png">
 		<h1>Grayscale Hong Kong</h1>
+	</section>
+	<section class="content">
+		<h1 align="center">Check out our projects</h1>
+		<div class="pure-g projects">
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+			<div class="pure-u-1 pure-u-md-1-3 projectWrapper">
+				<div class="project"><img src="http://placehold.it/300x300" alt=""></div>
+			</div>
+		</div>
+		<h2 align="center"><a href="#" class="quote">Get a free quote</a></h2>
+		<div class="footer">
+			<p>Grayscale Web Design 2014</p>
+		</div>
 	</section>
 </body>
 </html>

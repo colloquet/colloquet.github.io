@@ -40,7 +40,7 @@
 
 			var tweens1 = new TimelineMax()
 						.add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));            
-			new ScrollScene({triggerElement: ".content", duration: 0, reverse: false, trggerHook: 'onCenter'}) // define 'scene' and add to controller. MUST! 
+			new ScrollScene({triggerElement: ".content", duration: 0, reverse: false, trggerHook: 'onCenter'}) // define 'scene' and add to controller. MUST! 			
 							.setTween(tweens1) // point to defined Tweens
 			                .addTo(controller); // add scene to controller
 		});
