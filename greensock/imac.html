@@ -20,32 +20,28 @@
 			var h = window.innerHeight;
 			var counter = { var: 0 }; // define counter here for later use
 			// init controller for ScrollMagic, MUST!
-			var controller = new ScrollMagic({
-			    globalSceneOptions: {
-			        triggerHook: "onLeave"
-			    }
-			});
+			var controller = new ScrollMagic();
 			// define the screen height here for later use
 			var h = window.innerHeight;
 			var counter = { var: 0 }; // define counter here for later use
 			// create a new timeline, can add Tweens using .add(), each .add will perform after each other
+			TweenMax.set(".slide0", {scale:1.5, transformOrigin: '50% 50%'});
 			var tweens = new TimelineMax()
 						.add([
-							TweenMax.to(".slide0", 1, {transform: 'translateZ(10px)'}),
-							TweenMax.to(".slide1", 2, {transform: 'translateZ(10px)'}),
-							TweenMax.to(".slide2", 3, {transform: 'translateZ(10px)'}),
-							TweenMax.to(".slide3", 4, {transform: 'translateZ(10px)'}),
-							TweenMax.to(".slide4", 5, {transform: 'translateZ(10px)'}),
-							TweenMax.to(".slide5", 6, {transform: 'translateZ(10px)'}),
-							TweenMax.to(".slide6", 8, {transform: 'translateZ(5px)'}),
-							])
-						.add(TweenMax.to(".slide8", 2, {opacity: 1}), '-=1')
-						.add(TweenLite.to(window, 1, {scrollTo:{y:h}, ease:Power2.easeOut}));
+							TweenMax.to(".slide0", 1, {scale: .8})
+							]);
 						// .add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));
 
-			new ScrollScene({triggerElement: "section#pin", duration: 00}) // define 'scene' and add to controller. MUST! 
+			new ScrollScene({triggerElement: "section#pin", duration: 5000, triggerHook: "onLeave"}) // define 'scene' and add to controller. MUST! 
 							.setTween(tweens) // point to defined Tweens
 			                .setPin("#pin") // pins the element for a scroll distance of 100px
+			                .addTo(controller); // add scene to controller
+
+
+			var tweens1 = new TimelineMax()
+						.add(TweenMax.staggerFrom('.projectWrapper', 2, {scale:0, ease:Elastic.easeOut}, 0.1));            
+			new ScrollScene({triggerElement: ".content", duration: 0, reverse: false, trggerHook: 'onCenter'}) // define 'scene' and add to controller. MUST! 
+							.setTween(tweens1) // point to defined Tweens
 			                .addTo(controller); // add scene to controller
 		});
 	</script>
@@ -54,7 +50,7 @@
 	body,html {
 		height: 100%;
 		margin: 0;
-		background-color: #C8D3DB;
+		background-color: #fff;
 		background-attachment: fixed;
 		/*background-image: url(cover-home.jpg);
 		background-repeat: no-repeat;
@@ -68,7 +64,7 @@
 		width: 150px;
 	}
 	#pin {
-		overflow: hidden;
+		overflow: visible;
 	    width: 100%;
 	    height: 100%;
 	    -webkit-perspective: 10px;
@@ -78,114 +74,25 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		height: 100%;
+		/*height: 100%;*/
 		width: 100%;
 		overflow: visible;
-		background-size: cover;
-		color: white;
-		background-repeat: no-repeat;
-		/*background-position: center;*/
-		background-attachment: fixed;
-		background-size: cover;
+	}
+	.slide0 {
+		/*background-image: url(imac.jpg);*/
+		text-align: center;
+		transform-origin: center top;
+	}
+	.slide img {
 	}
 	.slide h1 {
-		font-size: 80px;
-		
-	}
-	.slide0 h1 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-	}
-	.slide1 {
-		background-image: url(s1-front.png);
-		-webkit-transform: translateZ(-1px) scale(1.1);
-		transform: translateZ(-1px) scale(1.1);
-		z-index: 9;
-	}
-	.slide1 h1 {
-		position: absolute;
-		top: 10%;
-		left: 50%;
-	}
-	.slide2 {
-		background-image: url(s1-mid.png);
-		-webkit-transform: translateZ(-2px) scale(1.2);
-		transform: translateZ(-2px) scale(1.2);
-		z-index: 8;
-	}
-	.slide2 h1 {
-		position: absolute;
-		top: 50%;
-		left: 10%;
-	}
-	.slide3 {
-		background-image: url(s1-back.png);
-		-webkit-transform: translateZ(-3px) scale(1.3);
-		transform: translateZ(-3px) scale(1.3);
-		z-index: 7;
-	}
-	.slide3 h1 {
-		position: absolute;
-		top: 20%;
-		left: 30%;
-	}
-	.slide4 {
-		background-image: url(s2-front.png);
-		-webkit-transform: translateZ(-4px) scale(1.4);
-		transform: translateZ(-4px) scale(1.4);
-		z-index: 6;
-	}
-	.slide4 h1 {
+		font-size: 40px;
+		color: #fff;
 		position: absolute;
 		top: 40%;
-		left: 40%;
-	}
-	.slide5 {
-		background-image: url(s2-mid.png);
-		-webkit-transform: translateZ(-5px) scale(1.5);
-		transform: translateZ(-5px) scale(1.5);
-		z-index: 5;
-	}
-	.slide5 h1 {
-		position: absolute;
-		top: 70%;
-		left: 20%;
-	}
-	.slide6 {
-		background-image: url(s3-back.png);
-		-webkit-transform: translateZ(-6px) scale(1.6);
-		transform: translateZ(-6px) scale(1.6);
-		z-index: 4;
-	}
-	.slide6 h1 {
-		position: absolute;
-		top: 30%;
-		left: 70%;
-	}
-	.slide7 {
-		-webkit-transform: translateZ(-7px);
-		transform: translateZ(-7px);
-	}
-	.slide7 h1 {
-		position: absolute;
-		top: 90%;
-		left: 10%;
-	}
-	.slide8 {
-		display: -webkit-flex;
-		-webkit-justify-content: center;
-		-webkit-align-items: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		opacity: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		z-index: 9;
-		/*-webkit-transform: translateZ(8px);
-		transform: translateZ(8px);*/
-	}
-	.slide8 h1 {
-		text-align: center;
 	}
 	.quote {
 		text-decoration: none;
@@ -202,13 +109,14 @@
 		border-color: black;
 	}
 	.content {
-		padding: 100px 0 200px 0;
+		margin-top: 200px;
+		padding-bottom: 200px;
 		position: relative;
 		float: left;
 		min-height: 100vh;
 		width: 100%;
-		overflow: hidden;
-		background-color: #fff;	
+		overflow: visible;
+		background-color: #f5f5f5;	
 	}
 	.projects {
 		max-width: 1200px;
@@ -237,21 +145,8 @@
 	
 	<section id="pin" class="scroll-magic-section">
 		<div class="slide slide0">
-		</div>
-		<div class="slide slide1">
-		</div>
-		<div class="slide slide2">
-		</div>
-		<div class="slide slide3">
-		</div>
-		<div class="slide slide4">
-		</div>
-		<div class="slide slide5">
-		</div>
-		<div class="slide slide6">
-		</div>
-		<div class="slide slide8">
-			<h1><img src="http://grayscale.com.hk/assets/images/logo-122px.png" alt="" id="logo"><br>Grayscale HK</h1>
+			<img src="mbp.png">
+			<h1><img src="http://grayscale.com.hk/assets/images/logo-122px.png" alt="" id="logo"><br>Grayscale Hong Kong</h1>
 		</div>
 	</section>
 	<section class="content">
