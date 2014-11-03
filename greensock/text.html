@@ -63,7 +63,7 @@
 						}
 					}
 				),
-				TweenMax.to("h1", 6, {scale:1.5, Sine: Circ.easeIn})
+				TweenMax.to("h1", 6, {opacity: 1, Sine: Circ.easeIn})
 			]);
 
 			// init controller
@@ -88,6 +88,9 @@
 		background-color: #fff;
 	}
 	#pin {
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		-webkit-align-items: center;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -102,7 +105,7 @@
 	  
 	    -webkit-background-clip: text;  
 	    background-clip: text;  
-	  
+	  	opacity: 0;
 	    color: rgba(0,0,0,0);  
 	}  
 	</style>
