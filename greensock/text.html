@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/plugins/ScrollToPlugin.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.scrollmagic.min.js"></script>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css">
+	<script>
+		$(document).ready(function($) {
+			// define images
+			var images = [
+				"cover-home.jpg",
+				"2.jpg",
+				"3.jpg",
+				"5.jpg",
+				"6.jpg",
+				"7.jpg",
+				"8.jpg",
+				"2.jpg",
+				"3.jpg",
+				"5.jpg",
+				"6.jpg",
+				"7.jpg",
+				"8.jpg",
+				"2.jpg",
+				"3.jpg",
+				"5.jpg",
+				"6.jpg",
+				"7.jpg",
+				"8.jpg",
+				"2.jpg",
+				"3.jpg",
+				"5.jpg",
+				"6.jpg",
+				"7.jpg",
+				"8.jpg",
+				"2.jpg",
+				"3.jpg",
+				"5.jpg",
+				"6.jpg",
+				"7.jpg",
+				"8.jpg",
+				"cover-home.jpg"
+			];
+
+			// TweenMax can tween any property of any object. We use this object to cycle through the array
+			var obj = {curImg: 0};
+
+			// create tween
+			var tween = new TimelineMax()
+			.add([
+				TweenMax.to(obj, 5,
+					{
+						curImg: images.length - 1,	// animate propery curImg to number of images
+						roundProps: "curImg",				// only integers so it can be used as an array index
+						repeat: 0,									// repeat 3 times
+						immediateRender: true,			// load first image automatically
+						ease: Sine.easeIn,			// show every image the same ammount of time
+						onUpdate: function () {
+						  $("h1").css("background-image", "url("+images[obj.curImg]+")"); // set the image source
+						}
+					}
+				),
+				TweenMax.to("h1", 6, {scale:1.5, Sine: Circ.easeIn})
+			]);
+
+			// init controller
+			var controller = new ScrollMagic({
+			    globalSceneOptions: {
+			        triggerHook: "onLeave"
+			    }
+			});
+
+			// build scene
+			var scene = new ScrollScene({triggerElement: "#pin", duration: 000})
+							.setTween(tween)
+							.setPin("#pin")
+							.addTo(controller);
+
+		});
+	</script>
+
+	<style type="text/css">
+	body,html {
+		height: 100%;
+		background-color: #fff;
+	}
+	#pin {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: visible;
+	    width: 100%;
+	    height: 100%;
+	}
+	h1 {  
+	    font-size: 5em;  
+	    background-image: url(cover-home.jpg);  
+	    /*background-size: cover;*/
+	  
+	    -webkit-background-clip: text;  
+	    background-clip: text;  
+	  
+	    color: rgba(0,0,0,0);  
+	}  
+	</style>
+</head>
+<body>	
+	<section id="pin" class="scroll-magic-section">
+		<!-- <img id="myimg"> -->
+		<h1>Grayscale Hong Kong</h1>
+	</section>
+</body>
+</html>
