@@ -59,11 +59,11 @@
 			.add([
 				TweenMax.to(obj, 6,
 					{
-						curImg: images.length - 1,	// animate propery curImg to number of images
-						roundProps: "curImg",				// only integers so it can be used as an array index
-						repeat: 0,									// repeat 3 times
-						immediateRender: true,			// load first image automatically
-						ease: Sine.easeIn,			// show every image the same ammount of time
+						curImg: images.length - 1,
+						roundProps: "curImg",
+						repeat: 0,
+						immediateRender: true,
+						ease: Sine.easeIn,
 						onUpdate: function () {
 						  $("#pin h1").css("background-image", "url("+images[obj.curImg]+")"); // set the image source
 						}
