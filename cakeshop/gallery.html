@@ -103,20 +103,16 @@
 	      font-weight: bold;
 	      font-size: 13px;
 	      color: #000;
-	      -webkit-transition: all 500ms ease-in-out;
-	      -moz-transition: all 500ms ease-in-out;
-	      -o-transition: all 500ms ease-in-out;
-	      transition: all 500ms ease-in-out;
 	      font-family: 'Bitter', serif;
 	    }
 	    .navitem {
 	    	display: inline-block;
 	    	position: relative;
 	    	float: left;
-	    	padding: 15px 15px 10px 15px;
+	    	padding: 10px 15px 15px 15px;
 	    	cursor: pointer;
-	    	border-bottom: 5px solid #fff;
-	    	/*transition: border-bottom-color 0.5s ease-in-out;*/
+	    	border-top: 5px solid #fff;
+	    	/*transition: border-top-color 0.5s ease-in-out;*/
 	    	opacity: 0.5;
 	    	-webkit-transition: all 200ms ease-in-out;
 	      	-moz-transition: all 200ms ease-in-out;
@@ -124,7 +120,7 @@
 	      	transition: all 200ms ease-in-out;
 	    }
 	    .navitem:hover {
-	    	border-bottom-color: #000;
+	    	border-top-color: #000;
 	    }
 	    .navbar a {
 	    	color: #000;
@@ -157,7 +153,7 @@
 	    	padding: 15px;
 	    }
 	    .to-gallery{
-	    	border-bottom-color: #000;
+	    	border-top-color: #000;
 	    	opacity: 1;
 	    }
 	    label {
@@ -256,13 +252,13 @@
 		    	color: #fff;
 		    }
 		    .navbar {
-	    		font-size: 15px;
+	    		font-size: 13px;
 	    	}
 	    	.grid {
 		    	margin-bottom: 0px;
 		    }
 	    }
-	    @media screen and (max-width: 480px) {
+	    @media screen and (max-width: 550px) {
 	    	.main section h1 {
 	    		font-size: 3em;
 	    		text-align: center;
@@ -286,7 +282,7 @@
 		    	margin-top: 70px;
 		    }
 		    .navitem {
-		    	width: 18%;
+		    	width: 20%;
 		    	text-align: center;
 		    	padding-left: 0px;
 		    	padding-right: 0px;
@@ -325,7 +321,7 @@
 	</style>
 </head>
 <body>
-<div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div>
+<!-- <div class="loading-overlay"><i class="fa fa-cog fa-spin loading"></i></div> -->
   <div class="main" id="main">
     <section class="page3 clearfix">
     <div class="overlay">
@@ -383,8 +379,8 @@
 		  	<a href="index.html#3"><div class="navitem to-gallery">Gallery</div></a>
 		  	<a href="index.html#4"><div class="navitem to-classes">Classes</div></a>
 		  	<a href="index.html#5"><div class="navitem to-contact">Contact</div></a>
-		  	<a href="#"><div class="navitem globe"><i class="fa fa-globe fa-lg"></i></div></a>
-		  	<div class="nav-lang"><a href="gallery_chi.html">中</a> ｜ <a href="gallery.html">Eng</a></div>
+		  	<!-- <a href="#"><div class="navitem globe"><i class="fa fa-globe fa-lg"></i></div></a>
+		  	<div class="nav-lang"><a href="gallery_chi.html">中</a> ｜ <a href="gallery.html">Eng</a></div> -->
 		  	<div class="nav-social"><a href="#" style="color: #663300;"><i class="fa fa-instagram"></i></a></div>
 		  	<div class="nav-social"><a href="#" style="color: #4099FF;"><i class="fa fa-twitter-square"></i></a></div>
 		  	<div class="nav-social"><a href="http://www.facebook.com/thecakeshophk" style="color: #3B5998;"><i class="fa fa-facebook-square"></i></a></div>
@@ -408,9 +404,9 @@
 	<script type="text/javascript" src="js/waypoints-sticky.min.js"></script>
 	<script type="text/javascript">
 		$(window).load(function () {
-			$(".loading-overlay").fadeOut(function() {
-				$(".loading-overlay").html("");
-			});
+			// $(".loading-overlay").fadeOut(function() {
+			// 	$(".loading-overlay").html("");
+			// });
 			$('.image-link').magnificPopup({
 			  type: 'image',
 			  gallery:{

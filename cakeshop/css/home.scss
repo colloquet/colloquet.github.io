@@ -28,25 +28,25 @@ a {
 }
 .page1 {
 	background-image: url("../img/bg1.jpg");
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 }
 .page2 {
 	background-image: url("../img/bg2.jpg");
-	background-size: 100%;
+	background-size: cover;
 }
 .page3 {
 	background-image: url("../img/bg11.jpg");
-	background-size: 100%;
+	background-size: cover;
 }
 .page4 {
 	background-image: url("../img/bg4.jpg");
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 }
 .page5 {
 	background-image: url("../img/bg5.jpg");
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 }
 .main section.page5 a{
@@ -110,10 +110,6 @@ a {
 	font-weight: bold;
 	font-size: 13px;
 	color: #000;
-	-webkit-transition: all 500ms ease-in-out;
-	-moz-transition: all 500ms ease-in-out;
-	-o-transition: all 500ms ease-in-out;
-	transition: all 500ms ease-in-out;
 	font-family: 'Bitter', serif;
 }
 .navbar a {
@@ -124,9 +120,9 @@ a {
 	display: inline-block;
 	position: relative;
 	float: left;
-	padding: 15px 15px 10px 15px;
+	padding: 10px 15px 15px 15px;
 	cursor: pointer;
-	border-bottom: 5px solid #fff;
+	border-top: 5px solid #fff;
 	opacity: 0.5;
 	-webkit-transition: all 200ms ease-in-out;
   	-moz-transition: all 200ms ease-in-out;
@@ -163,26 +159,26 @@ a {
 }
 .navitem:hover {
 	color: #000;
-	border-bottom-color: #000;
+	border-top-color: #000;
 }
 .viewing-page-1 .to-home{
-	border-bottom-color: #000;
+	border-top-color: #000;
 	opacity: 1;
 }
 .viewing-page-2 .to-aboutus{
-	border-bottom-color: #000;
+	border-top-color: #000;
 	opacity: 1;
 }
 .viewing-page-3 .to-gallery{
-	border-bottom-color: #000;
+	border-top-color: #000;
 	opacity: 1;
 }
 .viewing-page-4 .to-classes{
-	border-bottom-color: #000;
+	border-top-color: #000;
 	opacity: 1;
 }
 .viewing-page-5 .to-contact{
-	border-bottom-color: #000;
+	border-top-color: #000;
 	opacity: 1;
 }
 label {
@@ -193,7 +189,7 @@ label {
 .Collage{
 	font-size: 0;
     padding-right:20px;
-    width: 60%;
+    width: 50%;
     display: inline-block;
 }
 .Collage img{
@@ -336,27 +332,22 @@ label {
 	}
 	.page1 {
 		background-image: url("../img/bg.jpg");
-		background-size: auto 100%;
 		background-position:center;
 	}
 	.page2 {
 		background-image: url("../img/bg2.jpg");
-		background-size: auto 100%;
 		background-position:center;
 	}
 	.page3 {
 		background-image: url("../img/bg11.jpg");
-		background-size: 100% auto;
 		background-position:center;
 	}
 	.page4 {
 		background-image: url("../img/bg4.jpg");
-		background-size: 100% auto;
 		background-position:center;
 	}
 	.page5 {
 		background-image: url("../img/bg5.jpg");
-		background-size: auto 100%;
 		background-position:center;
 	}
 
@@ -390,13 +381,14 @@ label {
 @media screen and (max-width: 550px) {
 	.page3 {
 		background-image: url("../img/bg11.jpg");
-		background-size: auto 100%;
 		background-position:center;
 	}
 	.page4 {
 		background-image: url("../img/bg4.jpg");
-		background-size: auto 100%;
 		background-position:center;
+	}
+	.page2 p {
+		text-align: center;
 	}
 	.main section.page1 h1 {
 		font-size: 2.5em;
