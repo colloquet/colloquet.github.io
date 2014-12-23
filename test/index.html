@@ -68,6 +68,7 @@
 						<div class="pure-menu pure-menu-open pure-menu-horizontal">
 						    <ul>
 						        <li><a href="#">Home</a></li>
+						        <li><a href="link.html">Link</a></li>
 						        <li><a href="#about-us">About</a></li>
 						        <li><a href="#contact">Contact</a></li>
 						    </ul>
@@ -90,6 +91,7 @@
 						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						      <ul class="nav navbar-nav navbar-right">
 						        <li><a href="#">Home</a></li>
+						        <li><a href="link.html">Link</a></li>
 						        <li><a href="#about-us">About</a></li>
 						        <li><a href="#contact">Contact</a></li>
 						      </ul>
@@ -182,6 +184,7 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="http://www.yourwebsite.com/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
 	<script type="text/javascript">
 		$(window).scroll(function(){
 		    // $(".counter").html($(window).scrollTop());
@@ -211,6 +214,35 @@
 	            }
 	        });
 		});
+	</script>
+	<script>
+	$(function() {
+
+	    // Prepare
+	    var History = window.History; // Note: We are using a capital H instead of a lower h
+	    if ( !History.enabled ) {
+	         // History.js is disabled for this browser.
+	         // This is because we can optionally choose to support HTML4 browsers or not.
+	        return false;
+	    }
+
+	    // Bind to StateChange Event
+	    History.Adapter.bind(window,'statechange',function() { // Note: We are using statechange instead of popstate
+	        var State = History.getState();
+	        $('body').load(State.url);
+	        /* Instead of the line above, you could run the code below if the url returns the whole page instead of just the content (assuming it has a `#content`):
+	        $.get(State.url, function(response) {
+	            $('#content').html($(response).find('#content').html()); });
+	        */
+	        });
+
+
+	    // Capture all the links to push their url to the history stack and trigger the StateChange Event
+	    $('a').click(function(evt) {
+	        evt.preventDefault();
+	        History.pushState(null, $(this).text(), $(this).attr('href'));
+	    });
+	});
 	</script>
 </body>
 </html>
