@@ -1,0 +1,401 @@
+html {
+  border-top: 4px solid #ffdc12;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #3a2e37;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: "Museo Slab";
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.14286rem;
+  color: #ffdc12;
+}
+
+h2 {
+  font-size: 1.57143rem;
+  color: #fff;
+}
+
+h3 {
+  font-size: 1.28571rem;
+  color: #ffdc12;
+}
+
+p {
+  font-family: "Museo Sans";
+  font-weight: 300;
+  color: #fff;
+}
+
+a {
+  font-family: "Montserrat";
+  color: #ffdc12;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 2px solid #665362;
+  margin: 40px 0;
+  padding: 0;
+}
+
+.btn {
+  transition: background-color 0.1s ease-out;
+  display: inline-block;
+  background-color: #ffdc12;
+  padding: 5px;
+  border-bottom: 2px solid #b79713;
+  min-width: 130px;
+  font-size: 0.85714rem;
+  font-weight: bold;
+  color: #3a2e37;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #eac115;
+  border-bottom: 2px solid #b79713;
+  text-decoration: none;
+}
+.btn:active {
+  margin-top: 2px;
+  border-bottom: 0;
+}
+
+.header {
+  padding-bottom: 50px;
+}
+.header .toolbar-l {
+  padding-top: 10px;
+}
+.header .logo-link {
+  font-family: "Brandon Grotesque";
+  font-weight: 100;
+  color: #fff;
+}
+.header .toolbar-r {
+  text-align: right;
+}
+.header .toolbar-r a:not(.btn) {
+  font-family: "Museo Sans";
+  font-size: 0.85714rem;
+  font-weight: 100;
+}
+.header .toolbar-r .btn {
+  font-size: 0.85714rem;
+  width: 220px;
+}
+.header .toolbar-r .btn:active {
+  margin-top: 0;
+  border-bottom: 2px solid #b79713;
+}
+.header #logo {
+  margin: 0;
+  font-family: "Brandon Grotesque";
+  font-weight: 100;
+  font-size: 1.71429rem;
+}
+
+.navbar .level1 {
+  margin-left: -15px;
+  padding: 0;
+  list-style: none;
+}
+.navbar .level1 .nav-parents {
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+}
+.navbar .level1 .nav-parents:hover {
+  background-color: #ffdc12;
+}
+.navbar .level1 .nav-parents:hover > a {
+  border-bottom: 2px solid;
+}
+.navbar .level1 .nav-parents:hover a {
+  color: #3a2e37;
+}
+.navbar .level1 .nav-parents:hover .nav-dropdown {
+  display: block;
+  z-index: 10;
+}
+.navbar .level1 .nav-parents:hover .nav-dropdown a {
+  font-family: "Museo Slab";
+}
+.navbar .level1 .nav-parents > a {
+  border-bottom-width: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar .nav-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffdc12;
+  padding: 20px;
+  top: 38px;
+  left: 0;
+  list-style: none;
+}
+.navbar .nav-dropdown li {
+  white-space: nowrap;
+}
+
+.hero {
+  background-image: url("http://placehold.it/1280x320&text=HERO+IMAGE");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 320px;
+}
+.hero h1 {
+  color: #3a2e37;
+  font-size: 1.71429rem;
+  font-weight: 500;
+}
+.hero a {
+  border-bottom: 2px solid #3a2e37;
+  color: #3a2e37;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.hero .container {
+  padding-top: 30px;
+}
+.hero .story {
+  -webkit-animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 1s ease-out forwards;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0;
+}
+.hero .story:after {
+  position: absolute;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.hero .story svg {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+  position: absolute;
+  fill: #fff;
+  width: 40px;
+  top: 100%;
+  left: 50%;
+}
+.hero .story-from {
+  position: absolute;
+  padding-top: 20px;
+  top: 100%;
+  width: 160px;
+  font-family: "Museo Slab";
+  font-size: 14px;
+  text-align: right;
+}
+
+.intro {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+  text-align: center;
+}
+
+.intro-description {
+  padding: 0 40px;
+}
+.intro-description p {
+  font-size: 1.28571rem;
+}
+
+.intro-slider {
+  background-color: #665362;
+  padding: 5px;
+  line-height: 0;
+}
+.intro-slider .slider-description {
+  position: relative;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+.intro-slider .slider-description h3 {
+  font-weight: 900;
+}
+.intro-slider .slider-description p {
+  font-family: "Museo Slab";
+}
+.intro-slider .slider-control {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 0.85714rem;
+}
+.intro-slider .slider-control .next-btn {
+  background-color: #fff;
+  padding: 2px 8px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  color: #3a2e37;
+}
+
+.seminars-wrapper {
+  padding-bottom: 100px;
+}
+.seminars-wrapper .seminars-description {
+  text-align: right;
+}
+.seminars-wrapper .seminars-description p {
+  font-size: 1.28571rem;
+}
+.seminars-wrapper .seminar {
+  transition: border-color 0.3s ease-out;
+  position: relative;
+  background-color: #fff;
+  background-image: url("http://placehold.it/200x300&text=Poster");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #fff;
+  min-height: 300px;
+}
+.seminars-wrapper .seminar:hover {
+  border-color: #ffdc12;
+}
+.seminars-wrapper .seminar:hover .seminar-overlay, .seminars-wrapper .seminar:hover .seminar-title {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.seminars-wrapper .seminar:hover .seminar-details {
+  background-color: #ffdc12;
+}
+.seminars-wrapper .seminar-overlay {
+  transition: opacity 0.3s ease-out;
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.seminars-wrapper .seminar-title {
+  transition: all 0.3s ease-out;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  position: absolute;
+  bottom: 100%;
+  opacity: 0;
+}
+.seminars-wrapper .seminar-details {
+  transition: background-color 0.3s ease-out;
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  width: 100%;
+  bottom: 0;
+}
+.seminars-wrapper .seminar-time, .seminars-wrapper .seminar-location {
+  font-family: "Museo Slab";
+  color: #3a2e37;
+}
+.seminars-wrapper .seminar-time {
+  font-weight: 900;
+}
+.seminars-wrapper .seminar-location {
+  font-weight: 500;
+}
+
+.footer-bar {
+  background-color: #665362;
+}
+.footer-bar .footer-cat {
+  vertical-align: bottom;
+}
+.footer-bar .footer-cat h3 {
+  padding: 0 5px;
+  margin: 10px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0 5px;
+  line-height: 2;
+}
+
+.muted {
+  color: #8C8189;
+  font-size: 0.85714rem;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
