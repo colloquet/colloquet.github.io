@@ -53,7 +53,7 @@
 			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 			// TweenMax can tween any property of any object. We use this object to cycle through the array
 			var obj = {curImg: 0};
-			TweenMax.set("#pin", {scale:1.5, transformOrigin: '50% 50%'});
+			// TweenMax.set("#pin", {scale:1.5, transformOrigin: '50% 50%'});
 			// create tween
 			var tween = new TimelineMax()
 			.add([
@@ -63,27 +63,27 @@
 						roundProps: "curImg",
 						repeat: 0,
 						immediateRender: true,
-						ease: Sine.easeIn,
+						// ease: Sine.easeIn,
 						onUpdate: function () {
-						  $("#pin h1").css("background-image", "url("+images[obj.curImg]+")"); // set the image source
+						  $("#pic").attr("src", images[obj.curImg]); // set the image source
 						}
 					}
-				),
-				TweenMax.to("#pin h1", 6, {opacity: 1, Sine: Circ.easeIn})
-			])
-			.add(TweenMax.to("#pin", 5, {scale: .8}), '-=5')
-			.add(TweenMax.to("#pin h1 img", 1, {opacity: 1}))
-			.add([
-				TweenLite.to(window, 1, {scrollTo:{y:h+200}, ease:Power2.easeOut, delay: 1})
-				]);
+				)
+				// TweenMax.to("#pin h1", 6, {opacity: 1, Sine: Circ.easeIn})
+			]);
+			// .add(TweenMax.to("#pin", 5, {scale: .8}), '-=5')
+			// .add(TweenMax.to("#pin h1 img", 1, {opacity: 1}))
+			// .add([
+			// 	TweenLite.to(window, 1, {scrollTo:{y:h+200}, ease:Power2.easeOut, delay: 1})
+			// 	]);
 
 			// init controller
 			var controller = new ScrollMagic();
 
 			// build scene
-			new ScrollScene({triggerElement: "#pin", duration: 000, triggerHook: "onLeave"})
+			new ScrollScene({triggerElement: "#pin", duration: 3000, triggerHook: "onLeave"})
 							.setTween(tween)
-							.setPin("#pin")
+							// .setPin("#pin")
 							.addTo(controller);
 		});
 	</script>
@@ -115,8 +115,8 @@
 	    text-align: center;
 	    /*background-size: cover;*/
 	  
-	    -webkit-background-clip: text;  
-	    background-clip: text;  
+	    /*-webkit-background-clip: text;  */
+	    /*background-clip: text;  */
 	  	opacity: 0;
 	    color: rgba(0,0,0,0);  
 	} 
@@ -176,7 +176,8 @@
 </head>
 <body>	
 	<section id="pin" class="scroll-magic-section">
-		<img src="mbp_white.png">
+		<img src="cover-home.jpg" alt="" id="pic">
+		<!-- <img src="mbp_white.png"> -->
 		<h1><img src="http://grayscale.com.hk/assets/icons/icon-logo.png"><br>Grayscale Hong Kong</h1>
 	</section>
 	<section class="content">
