@@ -47,7 +47,8 @@ hr {
 }
 
 .project-list {
-  margin-top: -10px;
+  margin-top: -25px;
+  margin-bottom: 35px;
 }
 
 .project {
@@ -78,6 +79,11 @@ img {
 }
 
 @media (min-width: 768px) {
+  .project-list {
+    margin-top: -25px;
+    margin-bottom: 25px;
+  }
+
   .project {
     flex-basis: 33.33%;
   }
