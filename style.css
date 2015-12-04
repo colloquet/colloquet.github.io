@@ -1,0 +1,84 @@
+/* http://colloquet.github.io */
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #333;
+}
+
+main {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 200;
+}
+
+a {
+  color: #0088cc;
+}
+
+.job-title {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.uk-overlay {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.uk-overlay:hover {
+  box-shadow: 0 5px 11px rgba(0,0,0,0.6);
+}
+
+hr {
+  width: 30px;
+}
+
+.project-list {
+  margin-top: -10px;
+}
+
+.project {
+  display: block;
+  position: relative;
+  flex: 1;
+  flex-basis: 50%;
+  margin: 10px;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.uk-overlay-background {
+  background: rgba(0,0,0,.6);
+}
+
+@media (min-width: 768px) {
+  .project {
+    flex-basis: 33.33%;
+  }
+}
