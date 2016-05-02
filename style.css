@@ -8,6 +8,10 @@ body {
   color: #333;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 main {
   max-width: 768px;
   margin: 0 auto;
