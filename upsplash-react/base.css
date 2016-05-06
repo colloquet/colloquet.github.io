@@ -1,0 +1,19 @@
+.uk-container {
+  max-width: 960px;
+}
+
+.LazyLoad {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  background: #eee;
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+}
