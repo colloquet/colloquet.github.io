@@ -27,7 +27,7 @@
     <span class="job-title">Front-end Developer</span>
     <hr>
     <p>
-      Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Vue.js, Ionic and Swift. Currently trying out Vue.js and React.
+      Works for <a href="http://grayscale.com.hk" target="_blank">Grayscale</a>. Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Vue.js, Ionic and Swift. Been trying out Vue.js and React lately.
     </p>
     <p>
       Projects I have worked on:
@@ -35,7 +35,7 @@
 
     <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 project-list" v-cloak>
       <li class="uk-grid-margin" v-for="project in projects" v-on:click.prevent="openProjectModal(project, $index)">
-        <figure class="uk-overlay" id="project-{{ $index }}">
+        <figure class="uk-overlay" id="project-{{ $index }}" v-bind:class="{ 'is-open': project == chosenProject }">
           <img v-bind:src="project.thumbnail" v-bind:alt="project.title">
           <div class="uk-overlay-panel uk-overlay-bottom">
             <h3>{{ project.title }}</h3>

@@ -2,6 +2,7 @@ var vm = new Vue({
   el: 'body',
   data: {
     shouldShowProjectOverlay: false,
+    backgroundColor: "#3a4b60",
     chosenProject: {},
     chosenID: '',
     projects: [
@@ -132,7 +133,7 @@ var vm = new Vue({
       var placeholder = document.createElement("div");
 
       placeholder.style.position = "fixed";
-      placeholder.style.background = "#3a4b60";
+      placeholder.style.background = self.backgroundColor;
       placeholder.style.top = offsetTop + "px";
       placeholder.style.left = offsetLeft + "px";
       placeholder.style.width = width;
@@ -173,7 +174,7 @@ var vm = new Vue({
         var height = rect.height;
 
         placeholder.style.position = "fixed";
-        placeholder.style.background = "#3a4b60";
+        placeholder.style.background = self.backgroundColor;
         placeholder.style.top = 0;
         placeholder.style.left = 0;
         placeholder.style.width = "100%";
@@ -188,6 +189,7 @@ var vm = new Vue({
           var tl = new TimelineLite({
             onComplete: function() {
               placeholder.parentNode.removeChild(placeholder);
+              self.chosenProject = {};
             }
           });
 
