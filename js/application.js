@@ -181,17 +181,20 @@ var vm = new Vue({
 
         document.body.appendChild(placeholder);
 
-        self.shouldShowProjectOverlay = false;
+        TweenMax.to(".animate", 0.5, {y: 20, opacity: 0, onComplete: closeModal});
 
-        var tl = new TimelineLite({
-          onComplete: function() {
-            placeholder.parentNode.removeChild(placeholder);
-          }
-        });
+        function closeModal() {
+          self.shouldShowProjectOverlay = false;
+          var tl = new TimelineLite({
+            onComplete: function() {
+              placeholder.parentNode.removeChild(placeholder);
+            }
+          });
 
-        tl.to(placeholder, 0.4, {top: offsetTop + 'px', left: offsetLeft + "px", width: width, height: height});
-        tl.to(placeholder, 0.3, {opacity: 0});
-        tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "-=100%", opacity: 1}, "-=0.4");
+          tl.to(placeholder, 0.4, {top: offsetTop + 'px', left: offsetLeft + "px", width: width, height: height});
+          tl.to(placeholder, 0.3, {opacity: 0});
+          tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "-=100%", opacity: 1}, "-=0.4");
+        }
       }
     }
   }
