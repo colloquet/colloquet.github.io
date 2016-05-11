@@ -204,6 +204,7 @@
         self.chosenProject = project;
         self.chosenID = 'project-' + index;
 
+        var viewportWidth = document.documentElement.clientWidth;
         var projectOverlay = document.getElementById('fullscreen-project-overlay');
         var originNode = document.getElementById(self.chosenID);
         var rect = originNode.getBoundingClientRect();
@@ -231,8 +232,15 @@
           TweenMax.staggerFromTo(".animate", 0.5, {y: "20px", opacity: 0}, {y: 0, opacity: 1}, 0.1);
         }});
 
-        tl.to(placeholder, 0.2, {opacity: 1});
-        tl.to(placeholder, 0.4, {top: 0, left: 0, width: "100%", height: "100%"});
+        if (viewportWidth < 768) {
+          tl.to(placeholder, 0.2, {opacity: 1});
+          tl.to(placeholder, 0.3, {top: 0, left: 0, width: "100%", height: "100%"});
+        } else {
+          tl.to(placeholder, 0.2, {opacity: 1});
+          tl.to(placeholder, 0.3, {top: 0, height: "100%"});
+          tl.to(placeholder, 0.3, {left: 0, width: "100%"});
+        }
+
       },
       closeProjectModal: function() {
         var self = this;
