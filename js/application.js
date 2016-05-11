@@ -156,7 +156,7 @@ var vm = new Vue({
       if (viewportWidth < 768) {
         tl.to(placeholder, 0.3, {top: 0, left: 0, width: "100%", height: "100%"});
       } else {
-        tl.to(placeholder, 0.4, {top: 0, height: "100%"});
+        tl.to(placeholder, 0.4, {top: 0, height: "100%"}, "-=0.1");
         tl.to(placeholder, 0.3, {left: 0, width: "100%"});
       }
 
@@ -191,7 +191,7 @@ var vm = new Vue({
 
         tl.to(placeholder, 0.4, {top: offsetTop + 'px', left: offsetLeft + "px", width: width, height: height});
         tl.to(placeholder, 0.3, {opacity: 0});
-        tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "-=100%", opacity: 1}, "-=0.3");
+        tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "-=100%", opacity: 1}, "-=0.4");
       }
     }
   }

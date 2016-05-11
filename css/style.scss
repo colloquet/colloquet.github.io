@@ -1,5 +1,7 @@
 /* http://colloquet.github.io */
 
+$color-main: #3a4b60;
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
   font-size: 18px;
@@ -91,20 +93,18 @@ img {
 #fullscreen-project-overlay {
   /*display: none;*/
   position: fixed;
-  background: #3a4b60;
+  background: $color-main;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   color: #f3f3f3;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
   z-index: 9;
 
   &:after {
     content: '';
     position: fixed;
-    background: linear-gradient(to top, #3a4b60, rgba(58,75,96,0) 90%);
+    background: linear-gradient(to top, $color-main, rgba($color-main,0) 90%);
     bottom: 0;
     left: 0;
     height: 70px;
@@ -116,12 +116,41 @@ img {
     position: absolute;
     top: 20px;
     right: 20px;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      z-index: 2;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+
+      svg {
+        width: 40px;
+        height: 40px;
+
+        > g > g {
+          stroke: $color-main;
+        }
+      }
+    }
   }
 
   .project-details-container {
+    box-sizing: border-box;
     padding: 100px 25px 25px;
     margin: 0 auto;
+    height: 100%;
     max-width: 720px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 768px) {
+      padding: 25px 25px 100px;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
