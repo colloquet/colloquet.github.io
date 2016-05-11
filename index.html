@@ -21,19 +21,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body v-on:keyup.esc="closeProjectModal">
   <main>
     <h1 class="name">Colloque Tsui</h1>
     <span class="job-title">Front-end Developer</span>
     <hr>
     <p>
-      Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Vue.js, Ionic and Swift.<br>
+      Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Vue.js, Ionic and Swift. Currently trying out Vue.js and React.
+    </p>
+    <p>
       Projects I have worked on:
     </p>
 
     <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 project-list" data-uk-grid-margin v-cloak>
-      <li class="uk-grid-margin" v-for="project in projects">
-        <figure class="uk-overlay uk-overlay-hover">
+      <li class="uk-grid-margin" v-for="project in projects" v-on:click.prevent="openProjectModal(project, $index)">
+        <figure class="uk-overlay uk-overlay-hover" id="project-{{ $index }}">
           <img v-bind:src="project.thumbnail" v-bind:alt="project.title">
           <div class="uk-overlay-panel uk-flex uk-flex-center uk-flex-middle uk-text-center uk-overlay-fade uk-overlay-background">
             <h3>{{ project.title }}</h3>
@@ -44,53 +46,234 @@
     </ul>
 
     <hr>
-    <ul>
+
+    <ul class="uk-list">
       <li>
-        <a href="http://hk.linkedin.com/pub/colloque-tsui/39/855/832/" target="_blank">LinkedIn</a>
+        <span class="uk-icon-linkedin-square" style="color: #007bb5;"></span> <a href="http://hk.linkedin.com/pub/colloque-tsui/39/855/832/" target="_blank">LinkedIn</a>
       </li>
       <li>
-        <a href="https://twitter.com/colloquet" target="_blank">Twitter</a>
+        <span class="uk-icon-twitter-square" style="color: #55acee;"></span> <a href="https://twitter.com/colloquet" target="_blank">Twitter</a>
       </li>
       <li>
-        <a href="mailto:colloquet@icloud.com?subject=Hello">Email</a>
+        <span class="uk-icon-envelope-square"></span> <a href="mailto:colloquet@icloud.com?subject=Hello">Email</a>
       </li>
     </ul>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+  <div id="fullscreen-project-overlay" v-show="shouldShowProjectOverlay" v-cloak>
+    <a href="#" class="close animate" v-on:click.prevent="closeProjectModal">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 21 21" version="1.1">
+        <title>icon-close</title>
+        <desc>Close Icon</desc>
+        <defs/>
+        <g id="Container" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="icon-close" stroke="#fff" stroke-linecap="square">
+            <path d="M5,5 L16.3137085,16.3137085" id="Line-Copy-8"/>
+            <path d="M5,16.3137086 L16.3137084,5" id="Line-Copy-7"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <div class="project-details-container">
+      <h1 class="animate">{{ chosenProject.title }}</h1>
+      <h4 class="animate">
+        <span class="uk-icon-globe"></span> <a v-bind:href="chosenProject.url" target="_blank">{{ chosenProject.url }}</a><br>
+        <span class="built-with" v-show="chosenProject.builtWith">
+          <span class="uk-icon-wrench"></span>
+          <template v-for="(index, tool) in chosenProject.builtWith">
+            <a v-bind:href="tool.url">{{ tool.name }}</a>{{ (index + 1) < chosenProject.builtWith.length? ', ' : '' }}
+          </template>
+        </span>
+      </h4>
+      <div class="animate">{{{ chosenProject.description }}}</div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.22/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
   <script>
   var vm = new Vue({
-    el: 'main',
+    el: 'body',
     data: {
+      shouldShowProjectOverlay: false,
+      chosenProject: {},
+      chosenID: '',
       projects: [
+        {
+          title: 'Work Well Done',
+          url: 'http://workwelldone.cathaypacific.com',
+          thumbnail: 'screenshot-wwd.png',
+          description: '<p>Work Well Done is a relatively simple project. The purpose of the site is to allow Cathay Pacific staff to write thank you card to each other.</p><p>For a better user experience, I have built the wall of cards using Vue.js. By using a reactive JS library, I can make this part of the website interactive. Users are able to fetch more cards or search for cards without the need of reloading the whole page. The API that fetches the cards are built with <a href="https://wordpress.org/plugins/rest-api/" target="_blank">WP REST API</a> plugin, which conveniently turns your WordPress database into JSON api.</p><p>I have decided to use Vue.js because it is lightweight, fast, well documented and easy to use. You can just mount it to your HTML template and it just works. It plays well with other JS libraries such as jQuery and GSAP. It is perfect if you only want a part of the website interactive. I would use it again in future projects.</p><p>Other than the website, I have also made email templates that was sent out to all Cathay Pacific staff. The template is made by Foundation Email, which saves me from writing a lot of tables.</p><p>Overall, I enjoyed doing project a lot. It is very satisfying to see Cathay Pacific staff actually using the system I built to write thank you card to each other.</p>',
+          builtWith: [
+            {
+              name: 'WordPress',
+              url: 'https://wordpress.org/'
+            },
+            {
+              name: 'Vue.js',
+              url: 'http://vuejs.org/'
+            },
+            {
+              name: 'uikit',
+              url: 'http://getuikit.com/'
+            },
+          ]
+        },
         {
           title: 'Cooltech',
           url: 'http://cooltechglobal.com',
-          thumbnail: 'screenshot-cooltech.png'
+          thumbnail: 'screenshot-cooltech.png',
+          description: 'Coming Soon',
+          builtWith: [
+            {
+              name: 'WordPress',
+              url: 'https://wordpress.org/'
+            },
+            {
+              name: 'AngularJS',
+              url: 'https://angularjs.org/'
+            },
+            {
+              name: 'bodymovin',
+              url: 'https://github.com/bodymovin/bodymovin'
+            },
+            {
+              name: 'uikit',
+              url: 'http://getuikit.com/'
+            },
+          ]
         },
         {
           title: 'OpenPort',
           url: 'http://www.openport.com',
-          thumbnail: 'screenshot-openport.png'
+          thumbnail: 'screenshot-openport.png',
+          description: 'Coming Soon',
         },
         {
           title: 'onActivity',
           url: 'http://onactivity.com',
-          thumbnail: 'screenshot-onactivity.png'
+          thumbnail: 'screenshot-onactivity.png',
+          description: 'Coming Soon',
+          builtWith: [
+            {
+              name: 'WordPress',
+              url: 'https://wordpress.org/'
+            },
+            {
+              name: 'smoothState.js',
+              url: 'http://miguel-perez.github.io/smoothState.js/'
+            },
+            {
+              name: 'uikit',
+              url: 'http://getuikit.com/'
+            },
+          ]
         },
         {
           title: 'Sterling Apparel',
           url: 'http://www.sterlingapparel.com.hk',
-          thumbnail: 'screenshot-sterling.png'
+          thumbnail: 'screenshot-sterling.png',
+          description: 'Coming Soon',
+          builtWith: [
+            {
+              name: 'WordPress',
+              url: 'https://wordpress.org/'
+            },
+            {
+              name: 'smoothState.js',
+              url: 'http://miguel-perez.github.io/smoothState.js/'
+            },
+            {
+              name: 'uikit',
+              url: 'http://getuikit.com/'
+            },
+          ]
         },
         {
           title: 'Big Bloom',
           url: 'http://bigbloom.hk',
-          thumbnail: 'screenshot-bigbloom.png'
+          thumbnail: 'screenshot-bigbloom.png',
+          description: 'Coming Soon',
         },
       ]
+    },
+    methods: {
+      openProjectModal: function(project, index) {
+        var self = this;
+        self.chosenProject = project;
+        self.chosenID = 'project-' + index;
+
+        var projectOverlay = document.getElementById('fullscreen-project-overlay');
+        var originNode = document.getElementById(self.chosenID);
+        var rect = originNode.getBoundingClientRect();
+        var offsetTop = rect.top;
+        var offsetLeft = rect.left;
+        var width = rect.width;
+        var height = rect.height;
+
+        var placeholder = document.createElement("div");
+
+        placeholder.style.position = "fixed";
+        placeholder.style.background = "#3a4b60";
+        placeholder.style.top = offsetTop + "px";
+        placeholder.style.left = offsetLeft + "px";
+        placeholder.style.width = width;
+        placeholder.style.height = height;
+        placeholder.style.opacity = 0;
+
+        document.body.appendChild(placeholder);
+
+        var tl = new TimelineMax({onComplete: function() {
+          self.shouldShowProjectOverlay = true;
+          placeholder.parentNode.removeChild(placeholder);
+
+          TweenMax.staggerFromTo(".animate", 0.5, {y: "20px", opacity: 0}, {y: 0, opacity: 1}, 0.1);
+        }});
+
+        tl.to(placeholder, 0.2, {opacity: 1});
+        tl.to(placeholder, 0.4, {top: 0, left: 0, width: "100%", height: "100%"});
+      },
+      closeProjectModal: function() {
+        var self = this;
+        if (self.shouldShowProjectOverlay) {
+          var placeholder = document.createElement("div");
+          var originNode = document.getElementById(self.chosenID);
+          var rect = originNode.getBoundingClientRect();
+          var offsetTop = rect.top;
+          var offsetLeft = rect.left;
+          var width = rect.width;
+          var height = rect.height;
+
+          placeholder.style.position = "fixed";
+          placeholder.style.background = "#3a4b60";
+          placeholder.style.top = 0;
+          placeholder.style.left = 0;
+          placeholder.style.width = "100%";
+          placeholder.style.height = "100%";
+
+          document.body.appendChild(placeholder);
+
+          self.shouldShowProjectOverlay = false;
+
+          var tl = new TimelineMax({
+            onComplete: function() {
+              placeholder.parentNode.removeChild(placeholder);
+            }
+          });
+
+          tl.to(placeholder, 0.4, {top: offsetTop + 'px', left: offsetLeft + "px", width: width, height: height});
+          tl.to(placeholder, 0.2, {opacity: 0});
+        }
+      }
     }
   });
+
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body);
+    }, false);
+  }
   </script>
 </body>
 
