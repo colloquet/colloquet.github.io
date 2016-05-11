@@ -141,21 +141,22 @@ var vm = new Vue({
 
       document.body.appendChild(placeholder);
 
-      var tl = new TimelineMax({onComplete: function() {
+      var tl = new TimelineLite({onComplete: function() {
         self.shouldShowProjectOverlay = true;
         placeholder.parentNode.removeChild(placeholder);
 
         TweenMax.staggerFromTo(".animate", 0.5, {y: "20px", opacity: 0}, {y: 0, opacity: 1}, 0.1);
       }});
 
+      tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "+=100%", opacity: 0});
+      tl.to(placeholder, 0.3, {opacity: 1}, "-=0.3");
+
       // if on small device, simply animate to fullscreen
       // if on large device, animate to full height first then full width
       if (viewportWidth < 768) {
-        tl.to(placeholder, 0.2, {opacity: 1});
         tl.to(placeholder, 0.3, {top: 0, left: 0, width: "100%", height: "100%"});
       } else {
-        tl.to(placeholder, 0.2, {opacity: 1});
-        tl.to(placeholder, 0.3, {top: 0, height: "100%"});
+        tl.to(placeholder, 0.4, {top: 0, height: "100%"});
         tl.to(placeholder, 0.3, {left: 0, width: "100%"});
       }
 
@@ -182,14 +183,15 @@ var vm = new Vue({
 
         self.shouldShowProjectOverlay = false;
 
-        var tl = new TimelineMax({
+        var tl = new TimelineLite({
           onComplete: function() {
             placeholder.parentNode.removeChild(placeholder);
           }
         });
 
         tl.to(placeholder, 0.4, {top: offsetTop + 'px', left: offsetLeft + "px", width: width, height: height});
-        tl.to(placeholder, 0.2, {opacity: 0});
+        tl.to(placeholder, 0.3, {opacity: 0});
+        tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "-=100%", opacity: 1}, "-=0.3");
       }
     }
   }

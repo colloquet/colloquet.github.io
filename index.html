@@ -33,7 +33,7 @@
       Projects I have worked on:
     </p>
 
-    <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 project-list" data-uk-grid-margin v-cloak>
+    <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 project-list" v-cloak>
       <li class="uk-grid-margin" v-for="project in projects" v-on:click.prevent="openProjectModal(project, $index)">
         <figure class="uk-overlay" id="project-{{ $index }}">
           <img v-bind:src="project.thumbnail" v-bind:alt="project.title">

@@ -39,10 +39,20 @@ a {
 
 .uk-overlay {
   box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
   transition: box-shadow 0.2s ease;
 
   &:hover {
     box-shadow: 0 5px 11px rgba(0,0,0,0.6);
+  }
+}
+
+.uk-overlay-panel {
+  background: linear-gradient(to top, #2b2b2b, rgba(43,43,43,0) 90%);
+  padding: 30px 10px 10px;
+
+  h3 {
+    font-weight: 300;
   }
 }
 
@@ -76,19 +86,6 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
-}
-
-.uk-overlay {
-  cursor: pointer;
-}
-
-.uk-overlay-panel {
-  background: linear-gradient(to top, #2b2b2b, rgba(43,43,43,0) 90%);
-  padding: 30px 10px 10px;
-
-  h3 {
-    font-weight: 300;
-  }
 }
 
 #fullscreen-project-overlay {
