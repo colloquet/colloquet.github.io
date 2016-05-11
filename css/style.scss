@@ -39,11 +39,11 @@ a {
 
 .uk-overlay {
   box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  transition: box-shadow 0.3s ease;
-}
+  transition: box-shadow 0.2s ease;
 
-.uk-overlay:hover {
-  box-shadow: 0 5px 11px rgba(0,0,0,0.6);
+  &:hover {
+    box-shadow: 0 5px 11px rgba(0,0,0,0.6);
+  }
 }
 
 hr {
@@ -78,8 +78,17 @@ img {
   height: auto;
 }
 
-.uk-overlay-background {
-  background: rgba(0,0,0,.6);
+.uk-overlay {
+  cursor: pointer;
+}
+
+.uk-overlay-panel {
+  background: linear-gradient(to top, #2b2b2b, rgba(43,43,43,0) 90%);
+  padding: 30px 10px 10px;
+
+  h3 {
+    font-weight: 300;
+  }
 }
 
 #fullscreen-project-overlay {
@@ -94,48 +103,39 @@ img {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 9;
-}
 
-#fullscreen-project-overlay:after {
-  content: '';
-  position: fixed;
-  background: linear-gradient(to top, #3a4b60, rgba(58,75,96,0) 90%);
-  bottom: 0;
-  left: 0;
-  height: 70px;
-  width: 100%;
-  z-index: 1;
-}
+  &:after {
+    content: '';
+    position: fixed;
+    background: linear-gradient(to top, #3a4b60, rgba(58,75,96,0) 90%);
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+  }
 
-#fullscreen-project-overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
-#fullscreen-project-overlay .project-details-container {
-  padding: 100px 25px 25px;
-  margin: 0 auto;
-  max-width: 720px;
-}
+  .project-details-container {
+    padding: 100px 25px 25px;
+    margin: 0 auto;
+    max-width: 720px;
+  }
 
-#fullscreen-project-overlay h1,
-#fullscreen-project-overlay h2,
-#fullscreen-project-overlay h3,
-#fullscreen-project-overlay h4,
-#fullscreen-project-overlay h5,
-#fullscreen-project-overlay h6 {
-  font-weight: 300;
-  color: inherit;
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: inherit;
+  }
 
-#fullscreen-project-overlay a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-#fullscreen-project-overlay .built-with {
-  /*color: #ccc;*/
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
 
 @media (min-width: 768px) {
