@@ -203,6 +203,11 @@ var vm = new Vue({
 
         var html = document.documentElement;
         var body = document.body;
+        
+        html.removeAttribute("style");
+        body.removeAttribute("style");
+        window.scrollTo(0, self.scrollPos);
+
         var originNode = document.getElementById(self.chosenID);
         var rect = originNode.getBoundingClientRect();
         var offsetTop = rect.top;
@@ -220,11 +225,6 @@ var vm = new Vue({
         placeholder.style.zIndex = 5;
 
         document.body.appendChild(placeholder);
-
-        html.removeAttribute("style");
-        body.removeAttribute("style");
-        window.scrollTo(0, self.scrollPos);
-
 
         TweenMax.to(".animate", 0.5, {y: 20, opacity: 0, onComplete: function() {
           self.shouldShowProjectOverlay = false;
