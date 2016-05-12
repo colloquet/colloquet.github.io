@@ -36,7 +36,7 @@ var vm = new Vue({
         cssClass: 'project-cooltech',
         url: 'http://cooltechglobal.com',
         thumbnail: 'images/screenshot-cooltech.png',
-        description: 'Coming Soon',
+        description: '<p>Cooltech Global was a fun website to work on. The most challenging part of the website was the <a href="http://cooltechglobal.com/diesel/#?hz=50&brand=cummins" target="_blank">Genset table</a>. It should be able to filter Gensets, and the URL should reflect those filter options making it sharable to other users.</p><p>I tackled the problem using the <a href="http://lorenzofox3.github.io/smart-table-website/" target="_blank">SmartTable</a> module for AngularJS. The API for Genset data was provided by <a href="https://wordpress.org/plugins/rest-api/" target="_blank">WP REST API</a>.</p><p>The generator outline animation on landing page was done in AfterEffect, exported to JSON and displayed via <a href="https://github.com/bodymovin/bodymovin" target="_blank">bodymovin</a>.</p>',
         builtWith: [
           {
             name: 'WordPress',
@@ -203,7 +203,7 @@ var vm = new Vue({
 
         var html = document.documentElement;
         var body = document.body;
-        
+
         html.removeAttribute("style");
         body.removeAttribute("style");
         window.scrollTo(0, self.scrollPos);
