@@ -62,7 +62,9 @@
     </ul>
   </main>
 
-  <div id="fullscreen-project-overlay" v-show="shouldShowProjectOverlay" v-cloak>
+  <div id="modal-placeholder"></div>
+
+  <div id="fullscreen-project-overlay" v-show="shouldShowProjectOverlay" v-bind:style="{ backgroundColor: chosenProject.color }" v-cloak>
     <a href="#" class="close animate" v-on:click.prevent="closeProjectModal">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 21 21" version="1.1">
         <title>icon-close</title>
@@ -76,18 +78,20 @@
         </g>
       </svg>
     </a>
-    <div class="project-details-container">
-      <h1 class="animate">{{ chosenProject.title }}</h1>
-      <h4 class="animate">
-        <span class="uk-icon-globe"></span> <a v-bind:href="chosenProject.url" target="_blank">{{ chosenProject.url }}</a><br>
-        <span class="built-with" v-show="chosenProject.builtWith">
-          <span class="uk-icon-wrench"></span>
-          <template v-for="(index, tool) in chosenProject.builtWith">
-            <a v-bind:href="tool.url">{{ tool.name }}</a>{{ (index + 1) < chosenProject.builtWith.length? ', ' : '' }}
-          </template>
-        </span>
-      </h4>
-      <div class="animate">{{{ chosenProject.description }}}</div>
+    <div class="overflow-container">
+      <div class="project-details-container">
+        <h1 class="animate">{{ chosenProject.title }}</h1>
+        <h4 class="animate">
+          <span class="uk-icon-globe"></span> <a v-bind:href="chosenProject.url" target="_blank">{{ chosenProject.url }}</a><br>
+          <span class="built-with" v-show="chosenProject.builtWith">
+            <span class="uk-icon-wrench"></span>
+            <template v-for="(index, tool) in chosenProject.builtWith">
+              <a v-bind:href="tool.url">{{ tool.name }}</a>{{ (index + 1) < chosenProject.builtWith.length? ', ' : '' }}
+            </template>
+          </span>
+        </h4>
+        <div class="animate">{{{ chosenProject.description }}}</div>
+      </div>
     </div>
   </div>
 

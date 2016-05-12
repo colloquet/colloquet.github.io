@@ -100,17 +100,6 @@ img {
   left: 0;
   z-index: 9;
 
-  &:after {
-    content: '';
-    position: fixed;
-    background: linear-gradient(to top, $color-main, rgba($color-main,0) 90%);
-    bottom: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    z-index: 1;
-  }
-
   .close {
     position: absolute;
     top: 20px;
@@ -138,15 +127,18 @@ img {
     }
   }
 
+  .overflow-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+  }
+
   .project-details-container {
     box-sizing: border-box;
     padding: 100px 25px 25px;
     margin: 0 auto;
-    height: 100%;
     max-width: 768px;
     color: #f3f3f3;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
 
     @media (max-width: 768px) {
       padding: 25px 25px 100px;
