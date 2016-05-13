@@ -148,6 +148,7 @@ var vm = new Vue({
         var viewportWidth = window.innerWidth;
         var viewportHeight = window.innerHeight;
         var projectOverlay = document.getElementById('fullscreen-project-overlay');
+        var overflowContainer = document.getElementsByClassName('overflow-container');
         var originNode = document.getElementById(self.chosenID);
         var rect = originNode.getBoundingClientRect();
         var offsetTop = rect.top;
@@ -155,9 +156,6 @@ var vm = new Vue({
         var width = rect.width;
         var height = rect.height;
         var placeholder = document.createElement("div");
-
-        TweenMax.set("#dark-overlay", {zIndex: 4});
-        TweenMax.to("#dark-overlay", 0.5, {opacity: 1});
 
         html.style.marginTop = (-1 * self.scrollPos) + "px";
         body.style.position = "fixed";
@@ -209,6 +207,7 @@ var vm = new Vue({
         window.scrollTo(0, self.scrollPos);
 
         var originNode = document.getElementById(self.chosenID);
+        var overflowContainer = document.getElementsByClassName('overflow-container');
         var rect = originNode.getBoundingClientRect();
         var offsetTop = rect.top;
         var offsetLeft = rect.left;
@@ -227,21 +226,17 @@ var vm = new Vue({
         document.body.appendChild(placeholder);
 
         TweenMax.to(".animate", 0.5, {y: 20, opacity: 0, onComplete: function() {
+          overflowContainer[0].scrollTop = 0;
           self.shouldShowProjectOverlay = false;
           var tl = new TimelineLite({
             onComplete: function() {
-
               placeholder.parentNode.removeChild(placeholder);
               self.isAnimating = false;
               self.chosenProject = {};
             }
           });
 
-          tl.to(placeholder, 0.3, {top: offsetTop + 'px', left: offsetLeft + "px", width: width + "px", height: height + "px", onComplete: function() {
-            TweenMax.to("#dark-overlay", 0.3, {opacity: 0, onComplete: function() {
-              TweenMax.set("#dark-overlay", {zIndex: -1});
-            }});
-          }});
+          tl.to(placeholder, 0.3, {top: offsetTop + 'px', left: offsetLeft + "px", width: width + "px", height: height + "px"});
           tl.to(placeholder, 0.3, {opacity: 0});
           tl.to('#' + self.chosenID + ' .uk-overlay-panel h3', 0.3, {y: "-=100%", opacity: 1}, "-=0.4");
         }});
