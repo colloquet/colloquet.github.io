@@ -52,8 +52,17 @@ a {
   cursor: pointer;
   transition: box-shadow 0.2s ease;
 
+  span {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
   &:not(.is-open):hover {
     box-shadow: 0 5px 11px rgba(0,0,0,0.6);
+
+    span {
+      opacity: 1;
+    }
   }
 }
 

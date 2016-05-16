@@ -135,9 +135,18 @@ var vm = new Vue({
     ]
   },
   methods: {
+    convertToSlug: function(text) {
+      return text.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-');
+    },
+    onProjectClick: function(project, index) {
+      var self = this;
+      History.pushState({ project: project, index: index }, null, "?project=" + self.convertToSlug(project.title));
+    },
     openProjectModal: function(project, index) {
       var self = this;
+
       if (!self.shouldShowProjectOverlay && !self.isAnimating) {
+
         self.isAnimating = true;
         self.chosenProject = project;
         self.chosenID = 'project-' + index; // save chosen project ID for later when closing modal
@@ -156,6 +165,8 @@ var vm = new Vue({
         var width = rect.width;
         var height = rect.height;
         var placeholder = document.createElement("div");
+
+        console.log(self.scrollPos);
 
         html.style.marginTop = (-1 * self.scrollPos) + "px";
         body.style.position = "fixed";
@@ -198,6 +209,7 @@ var vm = new Vue({
       var self = this;
       if (self.shouldShowProjectOverlay && !self.isAnimating) {
         self.isAnimating = true;
+        History.pushState(null, null, "/");
 
         var html = document.documentElement;
         var body = document.body;
@@ -242,6 +254,19 @@ var vm = new Vue({
         }});
       }
     }
+  },
+  ready: function() {
+    var self = this;
+
+    History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+      console.log("log message");
+      var State = History.getState(); // Note: We are using History.getState() instead of event.state
+      if (State.data.project === undefined) {
+        self.closeProjectModal();
+      } else {
+        self.openProjectModal(State.data.project, State.data.index);
+      }
+    });
   }
 });
 
