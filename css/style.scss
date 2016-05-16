@@ -23,7 +23,7 @@ body {
 }
 
 main {
-  max-width: 768px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -111,9 +111,41 @@ hr {
   color: #f3f3f3;
   z-index: 9;
 
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &.project-cx {
+    &:after {
+      background: linear-gradient(to top, #006564, rgba(#006564, 0));
+    }
+  }
+
+  &.project-cooltech {
+    &:after {
+      background: linear-gradient(to top, #414d5c, rgba(#414d5c, 0));
+    }
+  }
+
+  &.project-openport {
+    &:after {
+      background: linear-gradient(to top, #3a4b60, rgba(#3a4b60, 0));
+    }
+  }
+
   &.project-quantifeed {
     background-color: #f5f9f9;
     color: #0c1847;
+
+    &:after {
+      background: linear-gradient(to top, #f5f9f9, rgba(#f5f9f9, 0));
+    }
 
     a {
       color: #e54b30;
@@ -124,8 +156,18 @@ hr {
     }
   }
 
+  &.project-onactivity {
+    &:after {
+      background: linear-gradient(to top, #2c3657, rgba(#2c3657, 0));
+    }
+  }
+
   &.project-sterling {
     color: #33394b;
+
+    &:after {
+      background: linear-gradient(to top, #fff, rgba(#fff, 0));
+    }
 
     a {
       color: #fc5455;
@@ -136,8 +178,34 @@ hr {
     }
   }
 
+  &.project-jachin-capital {
+    color: #23273c;
+
+    &:after {
+      background: linear-gradient(to top, #dfe6ea, rgba(#dfe6ea, 0));
+    }
+
+    a {
+      color: #23273c;
+    }
+
+    svg > g > g {
+      stroke: #23273c;
+    }
+  }
+
+  &.project-theedge {
+    &:after {
+      background: linear-gradient(to top, #e31e26, rgba(#e31e26, 0));
+    }
+  }
+
   &.project-bigbloom {
     color: #000;
+
+    &:after {
+      background: linear-gradient(to top, #fff, rgba(#fff, 0));
+    }
 
     a {
       color: #e9175a;

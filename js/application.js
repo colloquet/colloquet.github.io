@@ -10,6 +10,7 @@ var vm = new Vue({
     projects: [
       {
         title: 'Work Well Done',
+        slug: 'work-well-done',
         color: '#006564',
         cssClass: 'project-cx',
         url: 'http://workwelldone.cathaypacific.com',
@@ -32,6 +33,7 @@ var vm = new Vue({
       },
       {
         title: 'Cooltech Global',
+        slug: 'cooltech-global',
         color: '#414d5c',
         cssClass: 'project-cooltech',
         url: 'http://cooltechglobal.com',
@@ -58,6 +60,7 @@ var vm = new Vue({
       },
       {
         title: 'OpenPort',
+        slug: 'openport',
         color: '#3a4b60',
         cssClass: 'project-openport',
         url: 'http://www.openport.com',
@@ -66,6 +69,7 @@ var vm = new Vue({
       },
       {
         title: 'Quantifeed',
+        slug: 'quantifeed',
         color: '#f5f9f9',
         cssClass: 'project-quantifeed',
         url: 'https://www.quantifeed.com/',
@@ -74,6 +78,7 @@ var vm = new Vue({
       },
       {
         title: 'onActivity',
+        slug: 'onactivity',
         color: '#2c3657',
         cssClass: 'project-onactivity',
         url: 'http://onactivity.com',
@@ -96,6 +101,7 @@ var vm = new Vue({
       },
       {
         title: 'Sterling Apparel',
+        slug: 'sterling-apparel',
         color: '#fff',
         cssClass: 'project-sterling',
         url: 'http://www.sterlingapparel.com.hk',
@@ -117,7 +123,17 @@ var vm = new Vue({
         ]
       },
       {
+        title: 'Jachin Capital',
+        slug: 'jachin-capital',
+        color: '#dfe6ea',
+        cssClass: 'project-jachin-capital',
+        url: 'https://www.jachincapital.com/',
+        thumbnail: 'images/screenshot-jachin.png',
+        description: 'Coming Soon'
+      },
+      {
         title: 'The Edge',
+        slug: 'the-edge',
         color: '#e31e26',
         cssClass: 'project-theedge',
         url: 'http://theedge.com.hk/',
@@ -126,6 +142,7 @@ var vm = new Vue({
       },
       {
         title: 'Big Bloom',
+        slug: 'big-bloom',
         color: '#fff',
         cssClass: 'project-bigbloom',
         url: 'http://bigbloom.hk',
@@ -135,21 +152,18 @@ var vm = new Vue({
     ]
   },
   methods: {
-    convertToSlug: function(text) {
-      return text.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-');
-    },
-    onProjectClick: function(project, index) {
+    onProjectClick: function(project) {
       var self = this;
-      History.pushState({ project: project, index: index }, null, "?project=" + self.convertToSlug(project.title));
+      History.pushState({ project: project }, project.title, "?project=" + project.slug);
     },
-    openProjectModal: function(project, index) {
+    openProjectModal: function(project) {
       var self = this;
 
       if (!self.shouldShowProjectOverlay && !self.isAnimating) {
 
         self.isAnimating = true;
         self.chosenProject = project;
-        self.chosenID = 'project-' + index; // save chosen project ID for later when closing modal
+        self.chosenID = 'project-' + project.slug; // save chosen project ID for later when closing modal
         self.scrollPos = window.pageYOffset;
 
         var html = document.documentElement;
@@ -166,7 +180,6 @@ var vm = new Vue({
         var height = rect.height;
         var placeholder = document.createElement("div");
 
-        console.log(self.scrollPos);
 
         html.style.marginTop = (-1 * self.scrollPos) + "px";
         body.style.position = "fixed";
@@ -259,14 +272,15 @@ var vm = new Vue({
     var self = this;
 
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-      console.log("log message");
       var State = History.getState(); // Note: We are using History.getState() instead of event.state
       if (State.data.project === undefined) {
         self.closeProjectModal();
       } else {
-        self.openProjectModal(State.data.project, State.data.index);
+        self.openProjectModal(State.data.project);
       }
     });
+
+    History.replaceState(null, "Colloque Tsui", "/");
   }
 });
 
