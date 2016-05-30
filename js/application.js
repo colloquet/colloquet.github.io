@@ -157,6 +157,8 @@ var vm = new Vue({
       History.pushState({ project: project }, project.title, "?project=" + project.slug);
     },
     openProjectModal: function(project) {
+      ga('send', 'event', 'Projects', 'open', project.title);
+
       var self = this;
 
       if (!self.shouldShowProjectOverlay && !self.isAnimating) {
