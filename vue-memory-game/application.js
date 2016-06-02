@@ -9,7 +9,7 @@ var vm = new Vue({
   el: 'body', // initialize Vue.js on body
   data: {
     numberOfPair: 8, // size of the board
-    score: 0,
+    numberOfMatched: 0,
     numberOfTries: 0,
     tiles: [],
     matchingArray: [], // to match 2 tiles later
@@ -27,6 +27,9 @@ var vm = new Vue({
       return this.tiles.every(function(tile) {
         return tile.matched;
       });
+    },
+    computedScore: function() {
+      return Math.round((this.numberOfMatched / this.numberOfTries) * 100);
     }
   },
   methods: {
@@ -41,7 +44,7 @@ var vm = new Vue({
       if (self.playerName !== "") {
         self.$firebaseRefs.scoreBoard.push({
           name: self.playerName,
-          score: self.score * 1 // make sure it's an interger not string
+          score: self.computedScore // make sure it's an interger not string
         });
       }
 
@@ -53,7 +56,7 @@ var vm = new Vue({
 
       // reset state after 500ms
       setTimeout(function() {
-        self.score = 0;
+        self.numberOfMatched = 0;
         self.numberOfTries = 0;
         self.tiles = [];
         self.matchingArray = [];
@@ -99,10 +102,10 @@ var vm = new Vue({
         return;
       }
 
-      // flip the tile again and reset the matchingArray if user click on same tile twice
+      // do nothing if user click on same tile twice
       if (this.matchingArray[0] == tile) {
-        tile.flipped = !tile.flipped;
-        this.matchingArray = [];
+        // tile.flipped = !tile.flipped;
+        // this.matchingArray = [];
         return;
       }
 
@@ -132,7 +135,7 @@ var vm = new Vue({
       if (self.matchingArray[0].number == self.matchingArray[1].number) {
         self.matchingArray[0].matched = true;
         self.matchingArray[1].matched = true;
-        self.score++;
+        self.numberOfMatched++;
         self.matchingArray = [];
       } else {
         // else, flip the tiles back and reset the matchingArray

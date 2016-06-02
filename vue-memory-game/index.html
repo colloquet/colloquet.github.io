@@ -27,14 +27,14 @@
               <h3 class="uk-panel-title">Vue.js memory game</h3>
               <div class="uk-grid">
                 <div class="uk-width-1-2">
-                  <p>Score: <strong>{{ score }}</strong></p>
+                  <p>Matched: <strong>{{ numberOfMatched }}</strong></p>
                 </div>
                 <div class="uk-width-1-2">
                   <p>Number of tries: <strong>{{ numberOfTries }}</strong></p>
                 </div>
               </div>
               <div class="uk-grid uk-grid-collapse">
-                <div class="uk-width-1-4" v-for="tile in tiles" track-by="$index">
+                <div class="uk-width-1-{{ Math.sqrt(numberOfPair*2) }}" v-for="tile in tiles" track-by="$index">
                   <div class="tile" v-on:click="toggleTile(tile)" v-bind:class="{'flipped': tile.flipped || tile.matched, 'isMatched': tile.matched}">
                     <div class="front"></div>
                     <div class="back uk-flex uk-flex-center uk-flex-middle uk-cover-background" v-bind:style="{backgroundImage: 'url(https://source.unsplash.com/random/300x30' + tile.number + ')'}">
@@ -62,7 +62,7 @@
       <div class="uk-text-center modal-mask" v-show="showModal" transition="modal">
         <div class="modal-wrapper">
           <div class="modal-container">
-            <h3>You won! Your score is {{ score }}!</h3>
+            <h3>Finished! Your score is <strong>{{ computedScore }}</strong>!</h3>
             <form class="uk-form" v-on:submit.prevent="resetBoard">
               <input id="name" type="text" placeholder="your name" autofocus v-model="playerName">
             </form>
