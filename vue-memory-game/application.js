@@ -1,11 +1,25 @@
-new Vue({
-  el: '.board', // initialize Vue.js on .board
+var scoreBoardRef = new Firebase('https://burning-fire-4995.firebaseio.com/');
+
+// when leadboard loaded from Firebase, we change the flag to true
+scoreBoardRef.on('value', function(snapshot) {
+  vm.$set('isScoreBoardLoaded', true);
+});
+
+var vm = new Vue({
+  el: 'body', // initialize Vue.js on body
   data: {
-    numberOfPair: 8, // size of the board
+    numberOfPair: 2, // size of the board
     score: 0,
     numberOfTries: 0,
     tiles: [],
-    matchingArray: [] // to match 2 tiles later
+    matchingArray: [], // to match 2 tiles later
+    playerName: "",
+    isScoreBoardLoaded: false, // to show loading status of scoreboard
+    showModal: false // determine if we should show modal
+  },
+  firebase: {
+    // get leaderboard from Firebase
+    scoreBoard: scoreBoardRef.limitToLast(10)
   },
   computed: {
     isGameFinished: function() {
@@ -19,6 +33,14 @@ new Vue({
     resetBoard: function() {
       var self = this;
 
+      // if user didn't type anything, don't push to Firebase
+      if (self.playerName !== "") {
+        self.$firebaseRefs.scoreBoard.push({
+          name: self.playerName,
+          score: self.score * 1 // make sure it's an interger not string
+        });
+      }
+
       // flip all cards before we reset the state
       self.tiles.forEach(function(tile) {
         tile.flipped = false;
@@ -31,6 +53,7 @@ new Vue({
         self.numberOfTries = 0;
         self.tiles = [];
         self.matchingArray = [];
+        self.playerName = "";
         self.generateTiles();
       }, 500);
     },
@@ -98,7 +121,7 @@ new Vue({
       if (self.matchingArray.length < 2) {
         return;
       }
-      
+
       self.numberOfTries++;
 
       // if both number matched, increase score and reset matchingArray
@@ -116,6 +139,12 @@ new Vue({
         }, 500);
       }
 
+    }
+  },
+  watch: {
+    // if game is over, show modal
+    'isGameFinished': function (val, oldVal) {
+      this.showModal = val;
     }
   },
   ready: function() {
