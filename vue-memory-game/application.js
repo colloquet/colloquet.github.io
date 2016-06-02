@@ -8,7 +8,7 @@ scoreBoardRef.on('value', function(snapshot) {
 var vm = new Vue({
   el: 'body', // initialize Vue.js on body
   data: {
-    numberOfPair: 2, // size of the board
+    numberOfPair: 8, // size of the board
     score: 0,
     numberOfTries: 0,
     tiles: [],
