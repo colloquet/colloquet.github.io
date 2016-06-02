@@ -18,7 +18,7 @@
     <![endif]-->
 
   </head>
-  <body>
+  <body v-on:keyup.esc="resetBoard">
     <div class="uk-container uk-container-center uk-margin-large-bottom" v-cloak>
       <div class="game-container">
         <div class="uk-grid uk-grid-divider">
@@ -27,17 +27,17 @@
               <h3 class="uk-panel-title">Vue.js memory game</h3>
               <div class="uk-grid">
                 <div class="uk-width-1-2">
-                  <p>Score: {{ score }}</p>
+                  <p>Score: <strong>{{ score }}</strong></p>
                 </div>
                 <div class="uk-width-1-2">
-                  <p>Number of tries: {{ numberOfTries }}</p>
+                  <p>Number of tries: <strong>{{ numberOfTries }}</strong></p>
                 </div>
               </div>
               <div class="uk-grid uk-grid-collapse">
                 <div class="uk-width-1-4" v-for="tile in tiles" track-by="$index">
                   <div class="tile" v-on:click="toggleTile(tile)" v-bind:class="{'flipped': tile.flipped || tile.matched, 'isMatched': tile.matched}">
                     <div class="front"></div>
-                    <div class="back uk-flex uk-flex-center uk-flex-middle">
+                    <div class="back uk-flex uk-flex-center uk-flex-middle uk-cover-background" v-bind:style="{backgroundImage: 'url(https://source.unsplash.com/random/300x30' + tile.number + ')'}">
                       <h1 class="uk-margin-remove">{{ tile.number }}</h1>
                     </div>
                   </div>

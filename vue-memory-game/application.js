@@ -33,6 +33,10 @@ var vm = new Vue({
     resetBoard: function() {
       var self = this;
 
+      if (!self.isGameFinished) {
+        return;
+      }
+
       // if user didn't type anything, don't push to Firebase
       if (self.playerName !== "") {
         self.$firebaseRefs.scoreBoard.push({
