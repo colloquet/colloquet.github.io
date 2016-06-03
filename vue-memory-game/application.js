@@ -1,4 +1,4 @@
-var scoreBoardRef = new Firebase('https://burning-fire-4995.firebaseio.com/');
+var scoreBoardRef = new Firebase('https://burning-fire-4995.firebaseio.com/scores');
 
 // when leadboard loaded from Firebase, we change the flag to true
 scoreBoardRef.on('value', function(snapshot) {
