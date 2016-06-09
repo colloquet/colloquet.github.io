@@ -7,114 +7,103 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var Score = React.createClass({
-  render: function() {
-    return (
-      <li><span className="uk-text-truncate">{this.props.score.name}</span><strong className="uk-float-right">{this.props.score.score}</strong></li>
-    );
-  }
-});
+function Score(props, context) {
+  return (
+    <li><span className="uk-text-truncate">{props.score.name}</span><strong className="uk-float-right">{props.score.score}</strong></li>
+  );
+};
 
-var LeaderBoard = React.createClass({
-  render: function() {
-    var reversedScores = _.orderBy(this.props.scores, ['score'], ['desc']);
-    var scores = reversedScores.map(function(score) {
-      return <Score score={score} />;
+function LeaderBoard(props, context) {
+  var reversedScores = _.orderBy(props.scores, ['score'], ['desc']);
+  var scores = reversedScores.map(function(score) {
+    return <Score score={score} />;
+  });
+
+  var noScore = <p>No scores yet</p>;
+  var loading = <p>fetching scores...</p>;
+
+  return (
+    <div className="uk-width-medium-1-3 uk-grid-margin">
+      <div className="uk-panel uk-panel-header">
+        <h3 className="uk-panel-title">Leaderboard</h3>
+        {props.isScoreBoardLoaded? null : loading}
+        {(scores.length == 0 && props.isScoreBoardLoaded)? noScore : null}
+        <ul className="uk-list">
+          {scores}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+function GameTile(props, context) {
+  var tileStyle = {
+    backgroundImage: 'url(https://source.unsplash.com/random/300x30' + props.tile.number + ')'
+  };
+  var tileClassName = props.tile.matched? "tile flipped isMatched" : props.tile.flipped? "tile flipped" : "tile";
+  var gridClassName = "uk-width-1-" + Math.sqrt(props.numberOfPair*2);
+
+  return (
+    <div className={gridClassName}>
+      <div className={tileClassName} onClick={props.toggleTile.bind(null, props.tile)}>
+        <div className="front"></div>
+        <div className="back uk-flex uk-flex-center uk-flex-middle uk-cover-background" style={tileStyle}>
+          <h1 className="uk-margin-remove">{props.tile.number}</h1>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GameBoard(props, context) {
+  var tiles;
+
+  if (props.tiles.length > 0) {
+    tiles = props.tiles.map(function(tile) {
+      return <GameTile tile={tile} key={tile.id} toggleTile={props.toggleTile} numberOfPair={props.numberOfPair} />;
     });
-
-    var noScore = <p>No scores yet</p>;
-    var loading = <p>fetching scores...</p>;
-
-    return (
-      <div className="uk-width-medium-1-3 uk-grid-margin">
-        <div className="uk-panel uk-panel-header">
-          <h3 className="uk-panel-title">Leaderboard</h3>
-          {this.props.isScoreBoardLoaded? null : loading}
-          {(scores.length == 0 && this.props.isScoreBoardLoaded)? noScore : null}
-          <ul className="uk-list">
-            {scores}
-          </ul>
-        </div>
-      </div>
-    );
   }
-});
 
-var GameTile = React.createClass({
-  render: function() {
-    var tileStyle = {
-      backgroundImage: 'url(https://source.unsplash.com/random/300x30' + this.props.tile.number + ')'
-    };
-    var tileClassName = this.props.tile.matched? "tile flipped isMatched" : this.props.tile.flipped? "tile flipped" : "tile";
-    var gridClassName = "uk-width-1-" + Math.sqrt(this.props.numberOfPair*2);
 
-    return (
-      <div className={gridClassName}>
-        <div className={tileClassName} onClick={this.props.toggleTile.bind(null, this.props.tile)}>
-          <div className="front"></div>
-          <div className="back uk-flex uk-flex-center uk-flex-middle uk-cover-background" style={tileStyle}>
-            <h1 className="uk-margin-remove">{this.props.tile.number}</h1>
+  return (
+    <div className="uk-width-medium-2-3 uk-grid-margin">
+      <div className="uk-panel uk-panel-header">
+        <h3 className="uk-panel-title">React memory game</h3>
+        <div className="uk-grid">
+          <div className="uk-width-1-2">
+            <p>Matched: <strong>{props.numberOfMatched}</strong></p>
+          </div>
+          <div className="uk-width-1-2">
+            <p>Number of tries: <strong>{props.numberOfTries}</strong></p>
           </div>
         </div>
-      </div>
-    );
-  }
-});
-
-var GameBoard = React.createClass({
-  render: function() {
-    var self = this;
-    var tiles;
-
-    if (this.props.tiles.length > 0) {
-      tiles = this.props.tiles.map(function(tile) {
-        return <GameTile tile={tile} key={tile.id} toggleTile={self.props.toggleTile} numberOfPair={self.props.numberOfPair} />;
-      });
-    }
-
-
-    return (
-      <div className="uk-width-medium-2-3 uk-grid-margin">
-        <div className="uk-panel uk-panel-header">
-          <h3 className="uk-panel-title">React memory game</h3>
-          <div className="uk-grid">
-            <div className="uk-width-1-2">
-              <p>Matched: <strong>{this.props.numberOfMatched}</strong></p>
-            </div>
-            <div className="uk-width-1-2">
-              <p>Number of tries: <strong>{this.props.numberOfTries}</strong></p>
-            </div>
-          </div>
-          <div className="uk-grid uk-grid-collapse">
-            {tiles}
-          </div>
+        <div className="uk-grid uk-grid-collapse">
+          {tiles}
         </div>
       </div>
-    );
-  }
-});
+    </div>
+  );
+};
 
-var GameContainer = React.createClass({
-  render: function() {
-    return (
-      <div className="game-container">
-        <div className="uk-grid uk-grid-divider">
-          <GameBoard
-            tiles={this.props.tiles}
-            toggleTile={this.props.toggleTile}
-            numberOfPair={this.props.numberOfPair}
-            numberOfMatched={this.props.numberOfMatched}
-            numberOfTries={this.props.numberOfTries}
-          />
-        <LeaderBoard
-          scores={this.props.scores}
-          isScoreBoardLoaded={this.props.isScoreBoardLoaded}
+function GameContainer(props, context) {
+  return (
+    <div className="game-container">
+      <div className="uk-grid uk-grid-divider">
+        <GameBoard
+          tiles={props.tiles}
+          toggleTile={props.toggleTile}
+          numberOfPair={props.numberOfPair}
+          numberOfMatched={props.numberOfMatched}
+          numberOfTries={props.numberOfTries}
         />
-        </div>
+      <LeaderBoard
+        scores={props.scores}
+        isScoreBoardLoaded={props.isScoreBoardLoaded}
+      />
       </div>
-    );
-  }
-});
+    </div>
+  );
+};
 
 var MemoryGame = React.createClass({
   mixins: [ReactFireMixin],

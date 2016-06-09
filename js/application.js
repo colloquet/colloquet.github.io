@@ -9,6 +9,29 @@ var vm = new Vue({
     chosenID: '',
     projects: [
       {
+        title: 'Eqibeat',
+        slug: 'eqibeat',
+        color: '#2f3c5d',
+        cssClass: 'project-eqibeat',
+        url: 'http://eqibeat.com/',
+        thumbnail: 'images/screenshot-eqibeat.png',
+        description: 'Coming soon',
+        builtWith: [
+          {
+            name: 'WordPress',
+            url: 'https://wordpress.org/'
+          },
+          {
+            name: 'AngularJS',
+            url: 'https://angularjs.org/'
+          },
+          {
+            name: 'uikit',
+            url: 'http://getuikit.com/'
+          },
+        ]
+      },
+      {
         title: 'Work Well Done',
         slug: 'work-well-done',
         color: '#006564',
