@@ -1,9 +1,10 @@
 var vm = new Vue({
-  el: 'body',
+  el: '#app',
   data: {
     shouldShowProjectOverlay: false,
     isAnimating: false,
     scrollPos: 0,
+    isModalOpened: false,
     backgroundColor: "#3a4b60",
     chosenProject: {},
     chosenID: '',
@@ -227,6 +228,7 @@ var vm = new Vue({
           placeholder.parentNode.removeChild(placeholder);
           TweenMax.staggerFromTo(".animate", 0.5, {y: "20px", opacity: 0}, {y: 0, opacity: 1, onComplete: function() {
             self.isAnimating = false;
+            self.isModalOpened = true;
           }}, 0.1);
         }});
 
@@ -243,11 +245,14 @@ var vm = new Vue({
         }
       }
     },
+    handleCloseProjectModal: function() {
+      console.log('asd');
+      History.pushState(null, null, "/");
+    },
     closeProjectModal: function() {
       var self = this;
       if (self.shouldShowProjectOverlay && !self.isAnimating) {
         self.isAnimating = true;
-        History.pushState(null, null, "/");
 
         var html = document.documentElement;
         var body = document.body;
@@ -282,6 +287,7 @@ var vm = new Vue({
             onComplete: function() {
               placeholder.parentNode.removeChild(placeholder);
               self.isAnimating = false;
+              self.isModalOpened = false;
               self.chosenProject = {};
             }
           });
@@ -293,8 +299,21 @@ var vm = new Vue({
       }
     }
   },
-  ready: function() {
+  mounted: function() {
     var self = this;
+
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ("key" in evt) {
+        isEscape = evt.key == "Escape";
+      } else {
+        isEscape = evt.keyCode == 27;
+      }
+      if (isEscape && self.isModalOpened) {
+        self.handleCloseProjectModal();
+      }
+    };
 
     History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
       var State = History.getState(); // Note: We are using History.getState() instead of event.state
