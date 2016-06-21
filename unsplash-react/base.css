@@ -21,3 +21,16 @@
   position: absolute;
   width: 100%;
 }
+
+@media (max-width: 767px) {
+  .photo-header-container,
+  .photo-footer-container {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .photo-responsive-container {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+}
