@@ -10,6 +10,29 @@ var vm = new Vue({
     chosenID: '',
     projects: [
       {
+        title: 'Russia.com',
+        slug: 'russia',
+        color: '#0e2163',
+        cssClass: 'project-russia',
+        url: 'http://russia.com/',
+        thumbnail: 'images/screenshot-russia.png',
+        description: 'Coming soon',
+        builtWith: [
+          {
+            name: 'WordPress',
+            url: 'https://wordpress.org/'
+          },
+          {
+            name: 'Vue.js',
+            url: 'http://vuejs.org/'
+          },
+          {
+            name: 'uikit',
+            url: 'http://getuikit.com/'
+          },
+        ]
+      },
+      {
         title: 'Eqibeat',
         slug: 'eqibeat',
         color: '#2f3c5d',
