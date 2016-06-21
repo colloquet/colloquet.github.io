@@ -196,6 +196,26 @@ var vm = new Vue({
         thumbnail: 'images/screenshot-bigbloom.png',
         description: 'Coming Soon',
       },
+    ],
+    sideProjects: [
+      {
+        title: 'Vue Memory Game',
+        slug: 'vue-memory-game',
+        color: '#fff',
+        cssClass: 'project-vue-memory-game',
+        url: 'http://colloquet.github.io/vue-memory-game',
+        thumbnail: 'images/screenshot-vue-memory-game.png',
+        description: 'Coming Soon',
+      },
+      {
+        title: 'React Unsplash Client',
+        slug: 'react-unsplash-client',
+        color: '#fff',
+        cssClass: 'project-react-unsplash-client',
+        url: 'http://colloquet.github.io/unsplash-react',
+        thumbnail: 'images/screenshot-unsplash-react.png',
+        description: 'Coming Soon',
+      },
     ]
   },
   methods: {

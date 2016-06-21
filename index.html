@@ -30,12 +30,26 @@
         <p>
           Currently working in <a href="http://grayscale.com.hk" target="_blank">Grayscale</a>. Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Ionic and Swift. Been trying out Vue.js and React lately.
         </p>
-        <p>
-          Projects I have worked on:
-        </p>
+        <p>Projects I have worked on:</p>
 
         <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 project-list" v-cloak>
           <li class="uk-grid-margin" v-for="project in projects" v-on:click.prevent="onProjectClick(project)">
+            <figure class="uk-overlay" v-bind:id="'project-' + project.slug" v-bind:class="{ 'is-open': project == chosenProject }">
+              <img v-bind:src="project.thumbnail" v-bind:alt="project.title">
+              <div class="uk-overlay-panel uk-overlay-bottom">
+                <h3 class="uk-flex uk-flex-space-between uk-flex-middle">
+                  {{ project.title }}
+                  <span class="uk-icon-expand"></span>
+                </h3>
+              </div>
+            </figure>
+          </li>
+        </ul>
+
+        <p>Side projects:</p>
+
+        <ul class="uk-grid uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3 project-list" v-cloak>
+          <li class="uk-grid-margin" v-for="project in sideProjects" v-on:click.prevent="onProjectClick(project)">
             <figure class="uk-overlay" v-bind:id="'project-' + project.slug" v-bind:class="{ 'is-open': project == chosenProject }">
               <img v-bind:src="project.thumbnail" v-bind:alt="project.title">
               <div class="uk-overlay-panel uk-overlay-bottom">

@@ -2,10 +2,14 @@
   max-width: 960px;
 }
 
-.LazyLoad {
+.image-container .LazyLoad {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.user-link .LazyLoad {
+  display: inline-block;
 }
 
 .image-container {
