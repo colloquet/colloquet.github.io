@@ -105,6 +105,17 @@ function GameContainer(props, context) {
   );
 };
 
+function Footer(props, context) {
+  return (
+    <footer>
+      <div className="uk-margin-large-top uk-margin-large-bottom uk-text-center content-container">
+        <hr />
+        <p>Made with <span className="uk-icon-heart uk-text-danger"></span> by <a href="http://colloquet.github.io">Colloque Tsui</a></p>
+      </div>
+    </footer>
+  );
+};
+
 var MemoryGame = React.createClass({
   mixins: [ReactFireMixin],
 
@@ -307,6 +318,7 @@ var MemoryGame = React.createClass({
           isScoreBoardLoaded={this.state.isScoreBoardLoaded}
           scores={this.state.scores}
         />
+        <Footer />
       { this.state.isGameFinished? <Modal resetBoard={this.resetBoard} playerName={this.state.playerName} onNameChange={this.onNameChange} computedScore={computedScore} /> : null }
       </div>
     );

@@ -82,6 +82,11 @@
   color: #fff;
 }
 
+footer {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .modal-mask {
   position: fixed;
   z-index: 9998;
