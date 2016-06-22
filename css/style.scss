@@ -216,6 +216,23 @@ hr {
     }
   }
 
+  &.project-vue-memory-game,
+  &.project-react-unsplash-client {
+    color: #000;
+
+    &:after {
+      background: linear-gradient(to top, #fff, rgba(#fff, 0));
+    }
+
+    a {
+      color: #000;
+    }
+
+    svg > g > g {
+      stroke: #000;
+    }
+  }
+
   .close {
     position: absolute;
     top: 20px;

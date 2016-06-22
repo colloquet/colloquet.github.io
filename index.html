@@ -101,7 +101,7 @@
               <span class="uk-icon-globe"></span> <a v-bind:href="chosenProject.url" target="_blank">{{ chosenProject.url }}</a><br>
               <span class="built-with" v-show="chosenProject.builtWith">
                 <span class="uk-icon-wrench"></span>
-                <template v-for="(index, tool) in chosenProject.builtWith">
+                <template v-for="(tool, index) in chosenProject.builtWith">
                   <a v-bind:href="tool.url">{{ tool.name }}</a>{{ (index + 1) < chosenProject.builtWith.length? ', ' : '' }}
                 </template>
               </span>
