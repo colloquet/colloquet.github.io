@@ -221,7 +221,9 @@ var vm = new Vue({
   methods: {
     onProjectClick: function(project) {
       var self = this;
-      History.pushState({ project: project }, project.title, "?project=" + project.slug);
+      if (!self.isAnimating) {
+        History.pushState({ project: project }, project.title, "?project=" + project.slug);
+      }
     },
     openProjectModal: function(project) {
       ga('send', 'event', 'Projects', 'open', project.title);
