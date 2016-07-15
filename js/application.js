@@ -241,6 +241,12 @@ var vm = new Vue({
         var body = document.body;
         var viewportWidth = window.innerWidth;
         var viewportHeight = window.innerHeight;
+
+        html.style.marginTop = (-1 * self.scrollPos) + "px";
+        body.style.position = "fixed";
+        body.style.width = viewportWidth + "px";
+        body.style.height = viewportHeight + "px";
+
         var projectOverlay = document.getElementById('fullscreen-project-overlay');
         var overflowContainer = document.getElementsByClassName('overflow-container');
         var originNode = document.getElementById(self.chosenID);
@@ -250,12 +256,6 @@ var vm = new Vue({
         var width = rect.width;
         var height = rect.height;
         var placeholder = document.createElement("div");
-
-
-        html.style.marginTop = (-1 * self.scrollPos) + "px";
-        body.style.position = "fixed";
-        body.style.width = viewportWidth + "px";
-        body.style.height = viewportHeight + "px";
 
         placeholder.style.position = "fixed";
         placeholder.style.background = self.chosenProject.color || self.backgroundColor;
