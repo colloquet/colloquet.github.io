@@ -1,3 +1,6 @@
+var html = document.documentElement;
+var body = document.body;
+
 var vm = new Vue({
   el: '#app',
   data: {
@@ -231,14 +234,11 @@ var vm = new Vue({
       var self = this;
 
       if (!self.shouldShowProjectOverlay && !self.isAnimating) {
-
         self.isAnimating = true;
         self.chosenProject = project;
         self.chosenID = 'project-' + project.slug; // save chosen project ID for later when closing modal
         self.scrollPos = window.pageYOffset;
 
-        var html = document.documentElement;
-        var body = document.body;
         var viewportWidth = window.innerWidth;
         var viewportHeight = window.innerHeight;
 
@@ -247,8 +247,6 @@ var vm = new Vue({
         body.style.width = viewportWidth + "px";
         body.style.height = viewportHeight + "px";
 
-        var projectOverlay = document.getElementById('fullscreen-project-overlay');
-        var overflowContainer = document.getElementsByClassName('overflow-container');
         var originNode = document.getElementById(self.chosenID);
         var rect = originNode.getBoundingClientRect();
         var offsetTop = rect.top;
@@ -291,16 +289,13 @@ var vm = new Vue({
       }
     },
     handleCloseProjectModal: function() {
-      console.log('asd');
       History.pushState(null, null, "/");
     },
     closeProjectModal: function() {
       var self = this;
+
       if (self.shouldShowProjectOverlay && !self.isAnimating) {
         self.isAnimating = true;
-
-        var html = document.documentElement;
-        var body = document.body;
 
         html.removeAttribute("style");
         body.removeAttribute("style");
