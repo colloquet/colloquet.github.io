@@ -98,8 +98,6 @@ footer {
   display: table;
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
-  -webkit-transform: translateZ(1px);
-  transform: translateZ(1px);
 }
 
 .modal-wrapper {
@@ -108,6 +106,7 @@ footer {
 }
 
 .modal-container {
+  position: relative;
   width: 300px;
   margin: 0px auto;
   padding: 20px 30px;
@@ -117,15 +116,16 @@ footer {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  z-index: 9999;
 }
 
 /*transition for modal*/
-.modal-enter, .modal-leave {
+.modal-enter, .modal-leave-active {
   opacity: 0;
 }
 
 .modal-enter .modal-container,
-.modal-leave .modal-container {
+.modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }

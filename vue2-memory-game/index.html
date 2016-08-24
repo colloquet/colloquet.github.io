@@ -19,7 +19,7 @@
 
   </head>
   <body>
-    <div id="app" v-on:keyup.esc="resetBoard">
+    <div id="app">
       <div class="uk-container uk-container-center uk-margin-large-bottom" v-cloak>
         <div class="game-container">
           <div class="uk-grid uk-grid-divider">
@@ -31,9 +31,10 @@
                     <p>Matched: <strong>{{ numberOfMatched }}</strong></p>
                   </div>
                   <div class="uk-width-1-2">
-                    <p>Number of tries: <strong>{{ numberOfTries }}</strong></p>
+                    <p>Time: <strong>{{ computedTime }}</strong></p>
                   </div>
                 </div>
+                <!-- game board START -->
                 <div class="uk-grid uk-grid-collapse">
                   <div v-bind:class="computedTileClass" v-for="tile in tiles" v-bind:key="tile.id">
                     <div class="tile" v-on:click="toggleTile(tile)" v-bind:class="{'flipped': tile.flipped || tile.matched, 'isMatched': tile.matched}">
@@ -44,17 +45,25 @@
                     </div>
                   </div>
                 </div>
+                <!-- game board END -->
               </div>
             </div>
             <div class="uk-width-medium-1-3 uk-grid-margin">
+              <!-- score board START -->
               <div class="uk-panel uk-panel-header">
                 <h3 class="uk-panel-title">Leaderboard</h3>
                 <p v-show="!isScoreBoardLoaded">fetching scores...</p>
-                <p v-show="isScoreBoardLoaded && scoreBoard.length == 0">No scores yet</p>
+                <p v-show="isScoreBoardLoaded && sortedScoreBoard.length == 0">No scores yet</p>
                 <ul class="uk-list">
-                  <li v-for="score in sortedScoreBoard"><span class="uk-text-truncate">{{ score.name }}</span><strong class="uk-float-right">{{ score.score }}</strong></li>
+                  <li v-for="score in sortedScoreBoard">
+                    <span class="uk-text-truncate">{{ score.name }}</span>
+                    <div class="uk-float-right">
+                      <strong>{{ score.score }}</strong> ({{score.time}}s)
+                    </div>
+                  </li>
                 </ul>
               </div>
+              <!-- score board START -->
             </div>
           </div>
         </div>
@@ -67,24 +76,27 @@
         </footer>
 
         <!-- only show this when game is over -->
-        <div class="uk-text-center modal-mask" v-show="showModal" transition="modal">
-          <div class="modal-wrapper">
-            <div class="modal-container">
-              <h3>Finished! Your score is <strong>{{ computedScore }}</strong>!</h3>
-              <form class="uk-form" v-on:submit.prevent="resetBoard">
-                <input id="name" type="text" placeholder="your name" autofocus v-model="playerName">
-              </form>
-              <p class="uk-margin-bottom-remove"><button class="uk-button uk-button-primary" v-on:click="resetBoard">Submit and play again</button></p>
+        <transition name="modal">
+          <div class="uk-text-center modal-mask" v-show="isGameFinished">
+            <div class="modal-wrapper">
+              <div class="modal-container">
+                <h3>Finished! Your score is <strong>{{ computedScore }}</strong> in {{ timeInSec }} seconds!</h3>
+                <form class="uk-form" v-on:submit.prevent="resetBoard">
+                  <input id="name" type="text" placeholder="your name" autofocus v-model="playerName">
+                </form>
+                <p class="uk-margin-bottom-remove"><button class="uk-button uk-button-primary" v-on:click="resetBoard">Submit and play again</button></p>
+              </div>
             </div>
           </div>
-        </div>
+        </transition>
       </div>
     </div>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-alpha.6/vue.js"></script>
-    <script src="//cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-    <script src="//cdn.jsdelivr.net/vuefire/1.0.0/vuefire.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.3/vue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vuefire/1.2.0/vuefire.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
     <script src="application.js"></script>
   </body>
 </html>
