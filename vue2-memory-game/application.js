@@ -17,7 +17,7 @@ scoreBoardRef.on('value', function(snapshot) {
 var vm = new Vue({
   el: '#app', // initialize Vue.js on body
   data: {
-    numberOfPair: 8, // size of the board (must be square number, duh!)
+    numberOfPair: 2, // size of the board (must be square number, duh!)
     numberOfMatched: 0,
     numberOfTries: 0,
     tiles: [],
@@ -26,7 +26,8 @@ var vm = new Vue({
     isScoreBoardLoaded: false, // to show loading status of scoreboard
     timeInSec: 0, // keep track of time spent
     gameStarted: false,
-    timer: null
+    timer: null,
+    showModal: false
   },
   firebase: {
     // get leaderboard from Firebase
@@ -79,6 +80,8 @@ var vm = new Vue({
           time: self.timeInSec
         });
       }
+
+      self.showModal = false;
 
       // flip all cards before we reset the state
       self.tiles.forEach(function(tile) {
@@ -186,6 +189,10 @@ var vm = new Vue({
         if (self.isGameFinished) {
           self.gameStarted = false;
           this.stopTimer();
+
+          setTimeout(function() {
+            self.showModal = true;
+          }, 500);
         }
       });
 

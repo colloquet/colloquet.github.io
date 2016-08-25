@@ -7,7 +7,7 @@
 
     <title>Vue.js 2.0 Memory game</title>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.3/css/uikit.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.26.4/css/uikit.min.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -77,7 +77,7 @@
 
         <!-- only show this when game is over -->
         <transition name="modal">
-          <div class="uk-text-center modal-mask" v-show="isGameFinished">
+          <div class="uk-text-center modal-mask" v-show="showModal">
             <div class="modal-wrapper">
               <div class="modal-container">
                 <h3>Finished! Your score is <strong>{{ computedScore }}</strong> in {{ timeInSec }} seconds!</h3>
