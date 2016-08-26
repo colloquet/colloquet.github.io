@@ -55,9 +55,9 @@
                 <p v-show="!isScoreBoardLoaded">fetching scores...</p>
                 <p v-show="isScoreBoardLoaded && sortedScoreBoard.length == 0">No scores yet</p>
                 <ul class="uk-list">
-                  <li v-for="score in sortedScoreBoard">
-                    <span class="uk-text-truncate">{{ score.name }}</span>
-                    <div class="uk-float-right">
+                  <li class="uk-flex uk-flex-space-between score-item" v-for="score in sortedScoreBoard">
+                    <span class="uk-text-truncate uk-flex-item-1">{{ score.name }}</span>
+                    <div>
                       <strong>{{ score.score }}</strong> ({{score.time}}s)
                     </div>
                   </li>

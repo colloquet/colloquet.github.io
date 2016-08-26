@@ -17,7 +17,7 @@ scoreBoardRef.on('value', function(snapshot) {
 var vm = new Vue({
   el: '#app', // initialize Vue.js on body
   data: {
-    numberOfPair: 2, // size of the board (must be square number, duh!)
+    numberOfTiles: 16, // size of the board (must be even and square number, duh!)
     numberOfMatched: 0,
     numberOfTries: 0,
     tiles: [],
@@ -31,9 +31,12 @@ var vm = new Vue({
   },
   firebase: {
     // get leaderboard from Firebase
-    scoreBoard: scoreBoardRef.limitToLast(10)
+    scoreBoard: scoreBoardRef.orderByChild("score").limitToLast(10)
   },
   computed: {
+    numberOfPair: function() {
+      return this.numberOfTiles / 2;
+    },
     isGameFinished: function() {
       // if all tiles is matched, game is over
       return this.tiles.every(function(tile) {
