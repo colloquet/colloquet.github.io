@@ -41,19 +41,20 @@
           <thead>
             <tr>
               <th></th>
-              <th>香港, Canton Road</th>
-              <th>香港, Causeway Bay</th>
-              <th>香港, Festival Walk</th>
-              <th>香港, ifc mall</th>
-              <th>香港, New Town Plaza</th>
+              <th>Canton Road</th>
+              <th>Causeway Bay</th>
+              <th>Festival Walk</th>
+              <th>ifc mall</th>
+              <th>New Town Plaza</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="model in models">
-              <td>
+              <td class="uk-text-nowrap">
                 <span class="uk-icon-button uk-icon-volume-off" v-show="!model.notification" @click="model.notification = true"></span>
                 <span class="uk-icon-button uk-icon-volume-up" v-show="model.notification" @click="model.notification = false"></span>
-                <span class="uk-margin-left">{{ model.label }}</span>
+                <img :src="images[model.color]" alt="" width="20" class="uk-margin-left">
+                <span class="uk-margin-left uk-text-truncate">{{ model.label }}</span>
               </td>
               <td :class="getClass(r499[model.modelNumber])">{{ r499[model.modelNumber] || '-' }}</td>
               <td :class="getClass(r409[model.modelNumber])">{{ r409[model.modelNumber] || '-' }}</td>
@@ -93,76 +94,97 @@
         isLoading: false,
         timer: null,
         lastUpdated: null,
+        images: {
+          roseGold: "https://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/plus/iphone7-plus-rosegold-select-2016_AV2?wid=78&qlt=95&.v=1471567471062&fmt=png-alpha",
+          gold: "https://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/plus/iphone7-plus-gold-select-2016_AV2?wid=78&qlt=95&.v=1471567408566&fmt=png-alpha",
+          silver: "https://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/plus/iphone7-plus-silver-select-2016_AV2?wid=78&qlt=95&.v=1471567499972&fmt=png-alpha",
+          black: "https://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/plus/iphone7-plus-black-select-2016_AV2?wid=78&qlt=95&.v=1471567373453&fmt=png-alpha",
+          jetBlack: "https://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone7/plus/iphone7-plus-jetblack-select-2016_AV2?wid=78&qlt=95&.v=1471567438056&fmt=png-alpha"
+        },
         models: [
           {
             modelNumber: "MNQL2ZP/A",
             label: "iPhone 7 Plus (32GB) 玫瑰金色",
             notification: false,
+            color: "roseGold"
           },
           {
             modelNumber: "MNQK2ZP/A",
             label: "iPhone 7 Plus (32GB) 金色",
             notification: false,
+            color: "gold"
           },
           {
             modelNumber: "MNQJ2ZP/A",
             label: "iPhone 7 Plus (32GB) 銀色",
             notification: false,
+            color: "silver"
           },
           {
             modelNumber: "MN4D2ZP/A",
-            label: "iPhone 7 Plus (32GB) 亮黑色",
+            label: "iPhone 7 Plus (32GB) 黑色",
             notification: false,
+            color: "black"
           },
           {
             modelNumber: "MN4C2ZP/A",
             label: "iPhone 7 Plus (128GB) 玫瑰金色",
             notification: false,
+            color: "roseGold"
           },
           {
             modelNumber: "MN4A2ZP/A",
             label: "iPhone 7 Plus (128GB) 金色",
             notification: false,
+            color: "gold"
           },
           {
             modelNumber: "MN492ZP/A",
             label: "iPhone 7 Plus (128GB) 銀色",
             notification: false,
+            color: "silver"
           },
           {
             modelNumber: "MN482ZP/A",
             label: "iPhone 7 Plus (128GB) 黑色",
             notification: false,
+            color: "black"
           },
           {
             modelNumber: "MN4D2ZP/A",
             label: "iPhone 7 Plus (128GB) 亮黑色",
             notification: false,
+            color: "jetBlack"
           },
           {
             modelNumber: "MN4K2ZP/A",
             label: "iPhone 7 Plus (256GB) 玫瑰金色",
             notification: false,
+            color: "roseGold"
           },
           {
             modelNumber: "MN4J2ZP/A",
             label: "iPhone 7 Plus (256GB) 金色",
             notification: false,
+            color: "gold"
           },
           {
             modelNumber: "MN4F2ZP/A",
             label: "iPhone 7 Plus (256GB) 銀色",
             notification: false,
+            color: "silver"
           },
           {
             modelNumber: "MN4E2ZP/A",
             label: "iPhone 7 Plus (256GB) 黑色",
             notification: false,
+            color: "black"
           },
           {
             modelNumber: "MN4L2ZP/A",
             label: "iPhone 7 Plus (256GB) 亮黑色",
             notification: false,
+            color: "jetBlack"
           },
         ]
       },
