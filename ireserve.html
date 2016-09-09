@@ -49,29 +49,17 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>iPhone 7 Plus (128GB) 亮黑色</td>
-              <td :class="getClass(r499['MN4D2ZP/A'])">{{ r499['MN4D2ZP/A'] || '-' }}</td>
-              <td :class="getClass(r409['MN4D2ZP/A'])">{{ r409['MN4D2ZP/A'] || '-' }}</td>
-              <td :class="getClass(r485['MN4D2ZP/A'])">{{ r485['MN4D2ZP/A'] || '-' }}</td>
-              <td :class="getClass(r428['MN4D2ZP/A'])">{{ r428['MN4D2ZP/A'] || '-' }}</td>
-              <td :class="getClass(r610['MN4D2ZP/A'])">{{ r610['MN4D2ZP/A'] || '-' }}</td>
-            </tr>
-            <tr>
-              <td>iPhone 7 Plus (128GB) 黑色</td>
-              <td :class="getClass(r499['MN482ZP/A'])">{{ r499['MN482ZP/A'] || '-' }}</td>
-              <td :class="getClass(r409['MN482ZP/A'])">{{ r409['MN482ZP/A'] || '-' }}</td>
-              <td :class="getClass(r485['MN482ZP/A'])">{{ r485['MN482ZP/A'] || '-' }}</td>
-              <td :class="getClass(r428['MN482ZP/A'])">{{ r428['MN482ZP/A'] || '-' }}</td>
-              <td :class="getClass(r610['MN482ZP/A'])">{{ r610['MN482ZP/A'] || '-' }}</td>
-            </tr>
-            <tr>
-              <td>iPhone 7 Plus (128GB) 銀色</td>
-              <td :class="getClass(r499['MN492ZP/A'])">{{ r499['MN492ZP/A'] || '-' }}</td>
-              <td :class="getClass(r409['MN492ZP/A'])">{{ r409['MN492ZP/A'] || '-' }}</td>
-              <td :class="getClass(r485['MN492ZP/A'])">{{ r485['MN492ZP/A'] || '-' }}</td>
-              <td :class="getClass(r428['MN492ZP/A'])">{{ r428['MN492ZP/A'] || '-' }}</td>
-              <td :class="getClass(r610['MN492ZP/A'])">{{ r610['MN492ZP/A'] || '-' }}</td>
+            <tr v-for="model in models">
+              <td>
+                <span class="uk-icon-button uk-icon-volume-off" v-show="!model.notification" @click="model.notification = true"></span>
+                <span class="uk-icon-button uk-icon-volume-up" v-show="model.notification" @click="model.notification = false"></span>
+                <span class="uk-margin-left">{{ model.label }}</span>
+              </td>
+              <td :class="getClass(r499[model.modelNumber])">{{ r499[model.modelNumber] || '-' }}</td>
+              <td :class="getClass(r409[model.modelNumber])">{{ r409[model.modelNumber] || '-' }}</td>
+              <td :class="getClass(r485[model.modelNumber])">{{ r485[model.modelNumber] || '-' }}</td>
+              <td :class="getClass(r428[model.modelNumber])">{{ r428[model.modelNumber] || '-' }}</td>
+              <td :class="getClass(r610[model.modelNumber])">{{ r610[model.modelNumber] || '-' }}</td>
             </tr>
           </tbody>
         </table>
@@ -104,7 +92,79 @@
         autoRefresh: true,
         isLoading: false,
         timer: null,
-        lastUpdated: null
+        lastUpdated: null,
+        models: [
+          {
+            modelNumber: "MNQL2ZP/A",
+            label: "iPhone 7 Plus (32GB) 玫瑰金色",
+            notification: false,
+          },
+          {
+            modelNumber: "MNQK2ZP/A",
+            label: "iPhone 7 Plus (32GB) 金色",
+            notification: false,
+          },
+          {
+            modelNumber: "MNQJ2ZP/A",
+            label: "iPhone 7 Plus (32GB) 銀色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4D2ZP/A",
+            label: "iPhone 7 Plus (32GB) 亮黑色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4C2ZP/A",
+            label: "iPhone 7 Plus (128GB) 玫瑰金色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4A2ZP/A",
+            label: "iPhone 7 Plus (128GB) 金色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN492ZP/A",
+            label: "iPhone 7 Plus (128GB) 銀色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN482ZP/A",
+            label: "iPhone 7 Plus (128GB) 黑色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4D2ZP/A",
+            label: "iPhone 7 Plus (128GB) 亮黑色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4K2ZP/A",
+            label: "iPhone 7 Plus (256GB) 玫瑰金色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4J2ZP/A",
+            label: "iPhone 7 Plus (256GB) 金色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4F2ZP/A",
+            label: "iPhone 7 Plus (256GB) 銀色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4E2ZP/A",
+            label: "iPhone 7 Plus (256GB) 黑色",
+            notification: false,
+          },
+          {
+            modelNumber: "MN4L2ZP/A",
+            label: "iPhone 7 Plus (256GB) 亮黑色",
+            notification: false,
+          },
+        ]
       },
       methods: {
         getJSON: function() {
@@ -158,89 +218,69 @@
       },
       watch: {
         "r499": function(value) {
-          if (value['MN482ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 黑色 is available at 香港, Canton Road!",
-            });
-          }
-          if (value['MN492ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 銀色 is available at 香港, Canton Road!",
-            });
-          }
-          if (value['MN4D2ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 亮黑色 is available at 香港, Canton Road!",
-            });
-          }
+          this.models.forEach(function(model) {
+            if (value[model.modelNumber] != 'NONE' && model.notification) {
+              var notification = new Notification('iReserve', {
+                body: model.label + " is available at 香港, Canton Road!",
+              });
+
+              notification.onclick = function () {
+                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R499");
+              };
+            }
+          });
         },
         "r409": function(value) {
-          if (value['MN482ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 黑色 is available at 香港, Causeway Bay!",
-            });
-          }
-          if (value['MN492ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 銀色 is available at 香港, Causeway Bay!",
-            });
-          }
-          if (value['MN4D2ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 亮黑色 is available at 香港, Causeway Bay!",
-            });
-          }
+          this.models.forEach(function(model) {
+            if (value[model.modelNumber] != 'NONE' && model.notification) {
+              var notification = new Notification('iReserve', {
+                body: model.label + " is available at 香港, Causeway Bay!",
+              });
+
+              notification.onclick = function () {
+                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R409");
+              };
+            }
+          });
         },
         "r485": function(value) {
-          if (value['MN482ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 黑色 is available at 香港, Festival Walk!",
-            });
-          }
-          if (value['MN492ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 銀色 is available at 香港, Festival Walk!",
-            });
-          }
-          if (value['MN4D2ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 亮黑色 is available at 香港, Festival Walk!",
-            });
-          }
+          this.models.forEach(function(model) {
+            if (value[model.modelNumber] != 'NONE' && model.notification) {
+              var notification = new Notification('iReserve', {
+                body: model.label + " is available at 香港, Festival Walk!",
+              });
+
+              notification.onclick = function () {
+                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R485");
+              };
+            }
+          });
         },
         "r428": function(value) {
-          if (value['MN482ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 黑色 is available at 香港, ifc mall!",
-            });
-          }
-          if (value['MN492ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 銀色 is available at 香港, ifc mall!",
-            });
-          }
-          if (value['MN4D2ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 亮黑色 is available at 香港, ifc mall!",
-            });
-          }
+          this.models.forEach(function(model) {
+            if (value[model.modelNumber] != 'NONE' && model.notification) {
+              var notification = new Notification('iReserve', {
+                body: model.label + " is available at 香港, ifc mall!",
+              });
+
+              notification.onclick = function () {
+                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R428");
+              };
+            }
+          });
         },
         "r610": function(value) {
-          if (value['MN482ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 黑色 is available at 香港, New Town Plaza!",
-            });
-          }
-          if (value['MN492ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 銀色 is available at 香港, New Town Plaza!",
-            });
-          }
-          if (value['MN4D2ZP/A'] != 'NONE') {
-            var notification = new Notification('iReserve', {
-              body: "iPhone 7 Plus (128GB) 亮黑色 is available at 香港, New Town Plaza!",
-            });
-          }
+          this.models.forEach(function(model) {
+            if (value[model.modelNumber] != 'NONE' && model.notification) {
+              var notification = new Notification('iReserve', {
+                body: model.label + " is available at 香港, New Town Plaza!",
+              });
+
+              notification.onclick = function () {
+                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R610");
+              };
+            }
+          });
         },
       },
       mounted: function() {
