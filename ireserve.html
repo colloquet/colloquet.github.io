@@ -62,11 +62,13 @@
     <div id="app" class="uk-container uk-container-center uk-margin-top">
       <h1>iReserve ({{ date }})</h1>
 
+      <hr>
+
       <div class="uk-overflow-container">
         <table class="uk-table">
           <thead>
             <tr>
-              <th></th>
+              <th><span class="uk-text-muted">最後更新: {{ lastUpdated || '-' }}</span></th>
               <th>Canton Road</th>
               <th>Causeway Bay</th>
               <th>Festival Walk</th>
@@ -91,12 +93,11 @@
           </tbody>
         </table>
 
-        <button class="uk-button" @click="startAutoRefresh" v-show="!autoRefresh">Start auto refresh</button>
-        <button class="uk-button" @click="stopAutoRefresh" v-show="autoRefresh">Stop auto refresh</button>
+        <button class="uk-button" @click="startAutoRefresh" v-show="!autoRefresh">開始自動更新</button>
+        <button class="uk-button" @click="stopAutoRefresh" v-show="autoRefresh">停止自動更新</button>
 
         <div class="uk-float-right">
           <p class="uk-text-muted uk-text-right">
-            <span>Last updated: {{ lastUpdated || '-' }}</span><br>
             To get data from Apple you need to install this <a href="https://chrome.google.com/webstore/detail/cors-toggle/omcncfnpmcabckcddookmnajignpffnh?hl=zh-TW" target="_blank">Chrome extension</a>.
           </p>
         </div>
