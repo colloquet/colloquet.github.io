@@ -40,6 +40,21 @@
         bottom: 0;
         left: 0;
       }
+
+      .uk-icon-button-primary {
+        background: #009dd8;
+        color: #fff;
+      }
+
+      .uk-icon-button-primary:hover {
+        background: #00aff2;
+        color: #fff;
+      }
+
+      .uk-icon-button-primary:active {
+        background: #008abf;
+        color: #fff;
+      }
     </style>
 
   </head>
@@ -63,7 +78,7 @@
             <tr v-for="model in models">
               <td class="uk-text-nowrap">
                 <span class="uk-icon-button uk-icon-volume-off" v-show="!model.notification" @click="model.notification = true"></span>
-                <span class="uk-icon-button uk-icon-volume-up" v-show="model.notification" @click="model.notification = false"></span>
+                <span class="uk-icon-button uk-icon-button-primary uk-icon-volume-up" v-show="model.notification" @click="model.notification = false"></span>
                 <img :src="images[model.color]" alt="" width="20" class="uk-margin-left">
                 <span class="uk-margin-left uk-text-truncate">{{ model.label }}</span>
               </td>
