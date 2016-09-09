@@ -265,66 +265,86 @@
       },
       watch: {
         "r499": function(value) {
+          var self = this;
           this.models.forEach(function(model) {
             if (value[model.modelNumber] != 'NONE' && model.notification) {
               var notification = new Notification('iReserve', {
+                icon: "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/apple-128.png",
                 body: model.label + " is available at 香港, Canton Road!",
               });
 
               notification.onclick = function () {
-                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R499");
+                window.open(self.getLink(model.modelNumber, 'R499'));
+                notification.close();
+                model.notification = false;
               };
             }
           });
         },
         "r409": function(value) {
+          var self = this;
           this.models.forEach(function(model) {
             if (value[model.modelNumber] != 'NONE' && model.notification) {
               var notification = new Notification('iReserve', {
+                icon: "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/apple-128.png",
                 body: model.label + " is available at 香港, Causeway Bay!",
               });
 
               notification.onclick = function () {
-                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R409");
+                window.open(self.getLink(model.modelNumber, 'R409'));
+                notification.close();
+                model.notification = false;
               };
             }
           });
         },
         "r485": function(value) {
+          var self = this;
           this.models.forEach(function(model) {
             if (value[model.modelNumber] != 'NONE' && model.notification) {
               var notification = new Notification('iReserve', {
+                icon: "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/apple-128.png",
                 body: model.label + " is available at 香港, Festival Walk!",
               });
 
               notification.onclick = function () {
-                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R485");
+                window.open(self.getLink(model.modelNumber, 'R485'));
+                notification.close();
+                model.notification = false;
               };
             }
           });
         },
         "r428": function(value) {
+          var self = this;
           this.models.forEach(function(model) {
             if (value[model.modelNumber] != 'NONE' && model.notification) {
               var notification = new Notification('iReserve', {
+                icon: "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/apple-128.png",
                 body: model.label + " is available at 香港, ifc mall!",
               });
 
               notification.onclick = function () {
-                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R428");
+                window.open(self.getLink(model.modelNumber, 'R428'));
+                notification.close();
+                model.notification = false;
               };
             }
           });
         },
         "r610": function(value) {
+          var self = this;
           this.models.forEach(function(model) {
             if (value[model.modelNumber] != 'NONE' && model.notification) {
               var notification = new Notification('iReserve', {
+                icon: "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/apple-128.png",
                 body: model.label + " is available at 香港, New Town Plaza!",
               });
 
               notification.onclick = function () {
-                window.open("https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + model.modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=R610");
+                window.open(self.getLink(model.modelNumber, 'R610'));
+                notification.close();
+                model.notification = false;
               };
             }
           });
