@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>iReserve</title>
+    <title>iReserve Monitor</title>
 
     <link href="/favicon.ico" rel="shortcut icon">
 
@@ -21,13 +21,24 @@
 
     <style>
       .none {
+        position: relative;
         background: #fff1f0;
         color: #d85030;
       }
 
       .all {
+        position: relative;
         background: #f2fae3;
         color: #659f13;
+      }
+
+      .table-cell-link {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
       }
     </style>
 
@@ -56,11 +67,11 @@
                 <img :src="images[model.color]" alt="" width="20" class="uk-margin-left">
                 <span class="uk-margin-left uk-text-truncate">{{ model.label }}</span>
               </td>
-              <td :class="getClass(r499[model.modelNumber])">{{ r499[model.modelNumber] || '-' }}</td>
-              <td :class="getClass(r409[model.modelNumber])">{{ r409[model.modelNumber] || '-' }}</td>
-              <td :class="getClass(r485[model.modelNumber])">{{ r485[model.modelNumber] || '-' }}</td>
-              <td :class="getClass(r428[model.modelNumber])">{{ r428[model.modelNumber] || '-' }}</td>
-              <td :class="getClass(r610[model.modelNumber])">{{ r610[model.modelNumber] || '-' }}</td>
+              <td :class="getClass(r499[model.modelNumber])">{{ r499[model.modelNumber] || '-' }} <a :href="getLink(model.modelNumber, 'R499')" target="_blank" class="table-cell-link" v-show="r499[model.modelNumber] != 'NONE'"></a></td>
+              <td :class="getClass(r409[model.modelNumber])">{{ r409[model.modelNumber] || '-' }} <a :href="getLink(model.modelNumber, 'R409')" target="_blank" class="table-cell-link" v-show="r409[model.modelNumber] != 'NONE'"></a></td>
+              <td :class="getClass(r485[model.modelNumber])">{{ r485[model.modelNumber] || '-' }} <a :href="getLink(model.modelNumber, 'R485')" target="_blank" class="table-cell-link" v-show="r485[model.modelNumber] != 'NONE'"></a></td>
+              <td :class="getClass(r428[model.modelNumber])">{{ r428[model.modelNumber] || '-' }} <a :href="getLink(model.modelNumber, 'R428')" target="_blank" class="table-cell-link" v-show="r428[model.modelNumber] != 'NONE'"></a></td>
+              <td :class="getClass(r610[model.modelNumber])">{{ r610[model.modelNumber] || '-' }} <a :href="getLink(model.modelNumber, 'R610')" target="_blank" class="table-cell-link" v-show="r610[model.modelNumber] != 'NONE'"></a></td>
             </tr>
           </tbody>
         </table>
@@ -76,6 +87,17 @@
         </div>
       </div>
     </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51297067-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue/2.0.0-rc.5/vue.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.1/vue-resource.min.js"></script>
@@ -221,6 +243,9 @@
             default:
               return 'none';
           }
+        },
+        getLink: function(modelNumber, location) {
+          return "https://reserve-hk.apple.com/HK/zh_HK/reserve/iPhone?partNumber=" + modelNumber.replace("/", "%2F") + "&channel=1&rv=&path=&sourceID=&iPP=false&appleCare=&iUID=&iuToken=&carrier=&store=" + location;
         },
         startAutoRefresh: function() {
           var self = this;
