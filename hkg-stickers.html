@@ -32,6 +32,11 @@
       box-shadow: -40px 40px 160px 0 rgba(0,0,0,0.08),-8px 8px 15px 0 rgba(120,120,120,0.04),3px 3px 30px 0 rgba(0,0,0,0.04);
     }
 
+    .image-shadow img {
+      z-index: 1;
+      position: relative;
+    }
+
     .screenshots {
       margin: 0 auto;
       max-width: 720px;
@@ -72,13 +77,13 @@
       <div class="uk-margin-large-bottom screenshots">
         <div class="uk-grid uk-grid-width-1-2">
           <div>
-            <a href="hkg-icon-stickers-1.png" data-uk-lightbox="{group:'screenshots'}">
-              <img src="hkg-icon-stickers-1.png" alt="" class="image-shadow" />
+            <a href="hkg-icon-stickers-1.png" class="uk-panel image-shadow" data-uk-lightbox="{group:'screenshots'}">
+              <img src="hkg-icon-stickers-1.png" alt="" />
             </a>
           </div>
           <div>
-            <a href="hkg-icon-stickers-2.png" data-uk-lightbox="{group:'screenshots'}">
-              <img src="hkg-icon-stickers-2.png" alt="" class="image-shadow" />
+            <a href="hkg-icon-stickers-2.png" class="uk-panel image-shadow" data-uk-lightbox="{group:'screenshots'}">
+              <img src="hkg-icon-stickers-2.png" alt="" />
             </a>
           </div>
         </div>
@@ -86,7 +91,7 @@
       <div class="uk-margin-large-bottom">
         <h3>
           搞笑高登icon貼圖，陸續會加入更多其他系列！<br>
-          如有任何侵權問題，請與本人聯絡！
+          如有任何侵權問題，請與本人<a href="mailTo:colloquet@icloud.com">聯絡</a>！
         </h3>
         <h3>鳴謝：高登icon，腦魔icon</h3>
         <img src="appstore-soon-badge.png" alt="" width="150">
