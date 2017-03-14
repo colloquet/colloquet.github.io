@@ -1,34 +1,100 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Error 404 - Colloque Tsui</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Colloque Tsui</title>
+  <link href="/favicon.ico" rel="shortcut icon">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@colloquet">
   <meta name="twitter:title" content="Colloque Tsui">
-  <meta name="twitter:description" content="This is Colloque Tsui's personal homepage. You can check out his portfolios and resume here.">
+  <meta name="twitter:description" content="Currently working in Grayscale. Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Ionic and Swift. Been trying out Vue.js and React lately.">
   <meta name="twitter:creator" content="@colloquet">
   <meta name="twitter:image" content="http://colloquet.github.io/img/profile.jpg">
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="title" content="Colloque Tsui | Web design" />
+  <meta name="title" content="Colloque Tsui" />
   <meta name="author" content="Colloque Tsui" />
   <meta name="keywords" content="Colloque Tsui, HTML, CSS, Web design, Web developer, Hong Kong, Fresh graduate, IT, Accounting and Finance" />
-  <meta name="description" content="This is Colloque Tsui's personal homepage. You can check out his portfolios and resume here." />
+  <meta name="description" content="Familiar with WordPress, HTML, CSS, Javascript, AngularJS, Ionic and Swift. Been trying out Vue.js and React lately." />
   <meta name="msvalidate.01" content="00109AC3B0C479B5E31744AE0C80AAA7" />
   <link rel="canonical" href="http://colloquet.github.io/" />
-  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/uikit.min.css">
-  <link rel="stylesheet" href="/dist/css/main.css">
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lato:300|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <main>
-		<h1 class="name">Colloque Tsui</h1>
-    <span class="job-title">Front-end Developer</span>
-    <hr>
-		<h3>Error 404 Page not found.</h3>
-		<a href="/">Back to home</a>
-  </main>
-</body>
+  <div id="app" v-cloak>
+    <div class="container">
 
+      <h1>Colloque Tsui</h1>
+      <p class="subtitle">Front-end Developer at <a href="" target="_blank">JWT Hong Kong</a></p>
+
+      <hr>
+
+      <h1>404 not found.</h1>
+
+      <a href="/">Back to Home</a>
+    </div>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.3/vue.min.js"></script>
+  <script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      projects: [
+        {
+          name: 'LIHKG (Official)',
+          thumb: 'lihkg.png',
+          url: 'https://lihkg.com',
+          featured: true,
+        },
+        {
+          name: 'LIHKG (Vue)',
+          thumb: 'lihkg-vue.png',
+          url: 'https://lihk-forum.firebaseapp.com',
+        },
+        {
+          name: 'iReserve Monitor',
+          thumb: 'ireserve-monitor.png',
+          url: 'https://ireserve-monitor.firebaseapp.com/',
+        },
+        {
+          name: 'BasicLaw.hk',
+          thumb: 'basiclaw.png',
+          url: 'https://basiclaw.hk/',
+        },
+        {
+          name: 'Work Well Done',
+          thumb: 'workwelldone.png',
+          url: 'http://workwelldone.cathaypacific.com/',
+        },
+        {
+          name: 'Sterling Apparel',
+          thumb: 'sterling-apparel.png',
+          url: 'http://www.sterlingapparel.com.hk/',
+        },
+        {
+          name: 'Cooltech Global',
+          thumb: 'cooltech-global.png',
+          url: 'http://www.cooltechglobal.com/',
+        },
+        {
+          name: 'Eqibeat',
+          thumb: 'eqibeat.png',
+          url: 'http://eqibeat.com/',
+        },
+        {
+          name: 'onActivity',
+          thumb: 'onactivity.png',
+          url: 'http://onactivity.com/',
+        },
+      ],
+    },
+  });
+  </script>
+</body>
 </html>
