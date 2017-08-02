@@ -51,6 +51,7 @@ img {
 
 .info {
   position: relative;
+  padding-left: 15px;
   width: 100%;
   text-align: center;
 }
@@ -187,6 +188,7 @@ img {
 
   .info {
     float: left;
+    padding-left: 0;
     width: 33.33333333333%;
   }
 
