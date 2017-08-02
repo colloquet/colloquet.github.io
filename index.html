@@ -22,56 +22,51 @@
   <link rel="canonical" href="http://colloquet.github.io/" />
   
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link href="//fonts.googleapis.com/css?family=Lato:300|Montserrat" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="app" v-cloak>
-    <div class="container">
-
-      <h1>Colloque Tsui</h1>
-      <p class="subtitle">Web Developer</p>
-
-      <hr>
-
-      <p>Familiar with WordPress, HTML, CSS, Javascript, Vue.js and React.</p>
-
-      <h4>Projects</h4>
-      <div class="grid">
-        <div class="grid-item" v-for="project in projects" :class="{featured: project.featured}">
-          <a :href="project.url" target="_blank" class="project">
-            <div class="project-thumbnail">
-              <img :src="'assets/screenshots/' + project.thumb" :alt="project.name">
-            </div>
-            <div class="project-body">
-              <img src="assets/icons/link.svg" alt="Open in new tab" class="link-icon">
-              <p class="project-title">{{ project.name }}</p>
-            </div>
-          </a>
+    <div class="grid">
+      <div class="info">
+        <div class="info-inner">
+          <h1 class="name">Colloque Tsui</h1>
+          <p class="position">Web Developer</p>
         </div>
       </div>
 
-      <hr>
-
-      <ul class="contact-list">
-        <li>
-          <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="icons">
-          <a href="http://hk.linkedin.com/pub/colloque-tsui/39/855/832/" target="_blank">Colloque Tsui</a>
-        </li>
-        <li>
-          <img src="assets/icons/twitter.svg" alt="Twitter" class="icons">
-          <a href="https://twitter.com/colloquet" target="_blank">@colloquet</a>
-        </li>
-        <li>
-          <img src="assets/icons/github.svg" alt="GitHub" class="icons">
-          <a href="https://github.com/colloquet" target="_blank">colloquet</a>
-        </li>
-        <li>
-          <img src="assets/icons/email.svg" alt="Email" class="icons">
-          <a href="mailto:colloquet@icloud.com?subject=Hello">colloquet@icloud.com</a>
-        </li>
-      </ul>
+      <div class="grid-item" v-for="project in projects" :class="{featured: project.featured}">
+        <a :href="project.url" target="_blank" class="project">
+          <div class="project-thumbnail">
+            <img :src="'assets/screenshots/' + project.thumb" :alt="project.name">
+          </div>
+          <div class="project-body">
+            <img src="assets/icons/link.svg" alt="Open in new tab" class="link-icon">
+            <p class="project-title">{{ project.name }}</p>
+          </div>
+        </a>
+      </div>
     </div>
+
+    <ul class="contact-list">
+      <li>
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="icons">
+        <a href="http://hk.linkedin.com/pub/colloque-tsui/39/855/832/" target="_blank">Colloque Tsui</a>
+      </li>
+      <li>
+        <img src="assets/icons/twitter.svg" alt="Twitter" class="icons">
+        <a href="https://twitter.com/colloquet" target="_blank">@colloquet</a>
+      </li>
+      <li>
+        <img src="assets/icons/github.svg" alt="GitHub" class="icons">
+        <a href="https://github.com/colloquet" target="_blank">colloquet</a>
+      </li>
+      <li>
+        <img src="assets/icons/email.svg" alt="Email" class="icons">
+        <a href="mailto:colloquet@icloud.com?subject=Hello">colloquet@icloud.com</a>
+      </li>
+    </ul>
   </div>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.3/vue.min.js"></script>
@@ -80,12 +75,6 @@
     el: '#app',
     data: {
       projects: [
-        // {
-        //   name: 'LIHKG (Official)',
-        //   thumb: 'lihkg.png',
-        //   url: 'https://lihkg.com',
-        //   featured: true,
-        // },
         {
           name: 'LIHKG (Vue)',
           thumb: 'lihkg-vue.png',
@@ -93,29 +82,9 @@
           featured: true,
         },
         {
-          name: 'iReserve Monitor',
-          thumb: 'ireserve-monitor.png',
-          url: 'https://ireserve-monitor.firebaseapp.com/',
-        },
-        {
-          name: 'BasicLaw.hk',
-          thumb: 'basiclaw.png',
-          url: 'https://basiclaw.hk/',
-        },
-        // {
-        //   name: 'Work Well Done',
-        //   thumb: 'workwelldone.png',
-        //   url: 'http://workwelldone.cathaypacific.com/',
-        // },
-        {
           name: 'Sterling Apparel',
           thumb: 'sterling-apparel.png',
           url: 'http://www.sterlingapparel.com.hk/',
-        },
-        {
-          name: 'Cooltech Global',
-          thumb: 'cooltech-global.png',
-          url: 'http://www.cooltechglobal.com/',
         },
         {
           name: 'Eqibeat',
@@ -123,9 +92,24 @@
           url: 'http://eqibeat.com/',
         },
         {
+          name: 'BasicLaw.hk',
+          thumb: 'basiclaw.png',
+          url: 'https://basiclaw.hk/',
+        },
+        {
           name: 'onActivity',
           thumb: 'onactivity.png',
           url: 'http://onactivity.com/',
+        },
+        {
+          name: 'iReserve Monitor',
+          thumb: 'ireserve-monitor.png',
+          url: 'https://ireserve-monitor.firebaseapp.com/',
+        },
+        {
+          name: 'Cooltech Global',
+          thumb: 'cooltech-global.png',
+          url: 'http://www.cooltechglobal.com/',
         },
       ],
     },
